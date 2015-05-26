@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content="  Android e OpenVPN, parte II (adesso coi certificati dal lato client). &middot;  KEIN PFUSCH, BITTE!" />
+  <meta property="og:site_name" content="KEIN PFUSCH, BITTE!" />
+  <meta property="og:url" content="http://www.wolfstep.cc/blogger/2014-10-11-android-e-openvpn-parte-ii-adesso-coi-certificati-dal-lato-client/" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2014-10-11T12:15:50&#43;01:00" />
+  
+  
+
+  <title>
+      Android e OpenVPN, parte II (adesso coi certificati dal lato client). &middot;  KEIN PFUSCH, BITTE!
+  </title>
+
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/main.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/github.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="http://www.wolfstep.cc//images/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://www.wolfstep.cc//images/apple-touch-icon.png" />
+  <link href="" rel="alternate" type="application/rss+xml" title="KEIN PFUSCH, BITTE!" />
+</head>
+<body>
+
+
+  <header class="global-header">
+    <section class="header-text">
+      <h1><a href="http://www.wolfstep.cc/">KEIN PFUSCH, BITTE!</a></h1>
+      
+      <div class="tag-line">
+        Comunicare, ammesso sia possibile, e&#39; perfettamente inutile
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+      
+      <a href="http://www.wolfstep.cc/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary"> Android e OpenVPN, parte II (adesso coi certificati dal lato client).</h1>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2014-10-11T12:15:50&#43;01:00">
+          Oct 11, 2014
+        </time>
+      </div>
+      <div class="pull-right">
+        
+      </div>
+    </div>
+  </header>
+  <section>
+<div style="text-align: justify;">
+    <div class='post'>
+<div style="text-align: justify;">Nel post precedente abbiamo messo su un server OpenVPN, avendo cura di portare le stesse chiavi usate dal server sul client. Ma come ho detto nello scorso post, questa e' una cattiva pratica per un dispositivo mobile, perche' chi venisse in possesso del dispositivo potrebbe, in linea teorica, (recuperando la password della chiave privata) simulare il vostro server. Da quel momento, il rischio che qualcuno si sostituisca al server stesso sarebbe troppo alto. Dunque, adesso andiamo a creare certificati ad hoc per il client.</div><div><a name='more'></a><div style="text-align: justify;">Per prima cosa: nel caso io smarrisca il cellulare o, peggio, un malware mi porti via le chiavi, di quanto aumenta la mia sicurezza rispetto al caso di prima?</div></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Di fatto, avendo quelle chiavi , diciamo "lato client" &nbsp;e il certificato "cacert" , non possono ancora sostituirsi al server, ma possono pur sempre entrare nella vostra VPN: per questa ragione, pero', esiste un meccanismo abbastanza ingegnoso, che e' la revoca della firma digitale. Ma andiamo avanti, per capire.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Prima di iniziare c'e' una cosa: un lettore mi ha scritto dicendo che su una versione di PF, su FreeBSD, scrivendo&nbsp;<span style="background-color: white; font-family: 'Courier New', Courier, monospace; font-size: 13px; line-height: 18.2000007629395px; text-align: justify;">vpnnet= $vpn_if:network&nbsp;</span>non si ottiene la rete collegata alla tun0, perche' e' una connessione ppp. Quindi, dovrete specificare a mano la rete, tipo&nbsp;<span style="background-color: white; font-family: 'Courier New', Courier, monospace; font-size: 13px; line-height: 18.2000007629395px; text-align: justify;">vpnnet= "192.168.3.128/255.255.255.128" .</span></div><div><span style="background-color: white; font-family: 'Courier New', Courier, monospace; font-size: 13px; line-height: 18.2000007629395px; text-align: justify;"><br /></span></div><div style="text-align: justify;"><span style="font-family: inherit;"><span style="background-color: white; line-height: 18.2000007629395px;">Detto questo, andiamo al punto. Nello scorso post abbiamo creato alcuni certificati ed una cacert, cioe' il certificato di una CA, una certification authority. La domanda cioe', e' : ma se il cellulare usa i suoi certificati selfsigned, come fa il server a sapere che siano "suoi"?&nbsp;</span></span></div><div style="text-align: justify;"><span style="font-family: inherit;"><span style="background-color: white; line-height: 18.2000007629395px;"><br /></span></span></div><div style="text-align: justify;"><span style="font-family: inherit;"><span style="background-color: white; line-height: 18.2000007629395px;">La risposta e' che tali certificati verranno certificati, e verranno certificati usando la Certification Authority di cui abbiamo, appunto, creato il certificato.</span></span></div><div style="text-align: justify;"><span style="font-family: inherit;"><span style="background-color: white; line-height: 18.2000007629395px;"><br /></span></span></div><div style="text-align: justify;"><span style="font-family: inherit;"><span style="background-color: white; line-height: 18.2000007629395px;">Nella puntata precedente abbiamo:</span></span></div><div style="text-align: justify;"><span style="font-family: inherit;"><span style="background-color: white; line-height: 18.2000007629395px;"><br /></span></span></div><div style="text-align: justify;"><ol><li style="border: none; margin: 0px 0px 0.25em; padding: 0.25em 0px;"><span style="font-size: xx-small;"><span style="background-color: white; font-family: 'Courier New', Courier, monospace;"><span style="color: red;"><b>openssl genrsa -des3 -out key.pem 2048</b></span></span></span></li><li style="border: none; margin: 0px 0px 0.25em; padding: 0.25em 0px;"><span style="font-size: xx-small;"><span style="background-color: white; font-family: 'Courier New', Courier, monospace;"><span style="color: red;"><b>openssl req -new -x509 -key key.pem -out cacert.pem -days 365</b></span></span></span></li><li style="border: none; margin: 0px 0px 0.25em; padding: 0.25em 0px;"><span style="font-size: xx-small;"><span style="background-color: white; font-family: 'Courier New', Courier, monospace;"><span style="color: blue;">openssl req -new -key key.pem -out server.csr</span></span></span></li><li style="border: none; margin: 0px 0px 0.25em; padding: 0.25em 0px;"><span style="font-size: xx-small;"><span style="background-color: white; font-family: 'Courier New', Courier, monospace;"><span style="color: red;"><b>openssl x509 -req -days 365 -in server.csr -signkey key.pem -out cert.pem</b></span></span></span></li><li style="border: none; color: #666666; margin: 0px 0px 0.25em; padding: 0.25em 0px;"><span style="font-family: inherit;"><span style="font-size: x-small;"><span style="font-size: xx-small;"><span style="background-color: white; font-family: 'Courier New', Courier, monospace;">openssl dhparam -out dh.pem 2048</span></span></span></span></li></ol><div><br /></div><div><span style="color: #666666; font-family: Courier New, Courier, monospace; font-size: xx-small;"><span style="line-height: 18.2000007629395px;"><br /></span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;">Nella 1) abbiamo creato una chiave. Lo so, ci avete messo un pochino. Ma e' esattamente cosi' che deve essere, quindi va bene che ci abbiate messo un sacco di tempo. Nella 2) abbiamo creato un certificato che certifica l'identita' del certificatore, ovvero abbiamo istituito una specie di ufficio anagrafe. Nella 3) invece abbiamo creato una RICHIESTA di certificato , cioe' un certificato che non certifica nulla perche' nessuno lo ha firmato. Avete presente quando vi dicono che un documento non vale perche' "manca un timbro?". Ecco, quel certificato, il .csr , e' una carta di identita', ma senza la firma del sindaco e il timbro dell'anagrafe.&nbsp;</span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;"><br /></span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;">Chiaramente, adesso bisogna farla firmare dall'anagrafe. Sfortunatamente, pero', quella non e' la carta di identita' giusta: abbiamo creato un certificato usando la chiave del server, e la chiave e' un pochino come la foto nella vostra carta di identita'. Se volete certificare qualcosa, dovete proprio metterci la vostra, di foto.</span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;"><br /></span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;">Allora, ricominciamo daccapo. Cosa dobbiamo certificare? Diciamo un cellulare samsung. Allora iniziamo col creare una chiave per il samsung, poi crediamo una richiesta di certificato usando quella chiave, e infine ci mettiamo la firma del "sindaco":</span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;"><br /></span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;"><br /></span></span></div><div><ol><li style="border: none; margin: 0px 0px 0.25em; padding: 0.25em 0px;"><span style="font-size: xx-small;"><span style="background-color: white; font-family: 'Courier New', Courier, monospace;"><span style="color: red;"><b>openssl genrsa -des3 -out samsung.pem 2048</b></span></span></span></li><li style="border: none; margin: 0px 0px 0.25em; padding: 0.25em 0px;"><span style="font-size: xx-small;"><span style="background-color: white; font-family: 'Courier New', Courier, monospace;"><span style="color: blue;">openssl req -new -key samsung.pem -out samsung.csr</span></span></span></li><li style="border: none; margin: 0px 0px 0.25em; padding: 0.25em 0px;"><span style="font-size: xx-small;"><span style="background-color: white; font-family: 'Courier New', Courier, monospace;"><span style="color: blue;"><b></b><!--StartFragment--><span style="font-family: 'Sans'; font-size: 10pt;"><b>openssl x509 -req -days 365 -in samsung.csr -CA cacert.pem -CAkey key.pem -CAcreateserial -out samsung.pem</b></span><!--EndFragment--></span></span></span></li></ol></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;">qui abbiamo fatto cose diverse:</span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;"><br /></span></span></div><div><ol><li><span style="line-height: 18.2000007629395px;">Abbiamo creato una chiave privata ad hoc per il cellulare, cosi' non ci dobbiamo mettere la stessa del server.&nbsp;</span></li><li><span style="line-height: 18.2000007629395px;">Abbiamo creato una richiesta di certificato, ovvero una carta di identita' senza la firma del sindaco e dell'anagrafe.</span></li><li><span style="line-height: 18.2000007629395px;">Abbiamo poi certificato la richiesta, facendone un vero certificato, ovvero una cosa che certifica l 'identita' di qualcuno.</span></li></ol></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;"><br /></span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;">Adesso torniamo un attimo indietro ed andiamo alla configurazione di OpenVPN:</span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;"><br /></span></span></div><div><ul style="font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif; font-size: 13px; line-height: 18.2000007629395px; list-style-image: initial; list-style-position: initial; margin: 0.5em 0px; padding: 0px 2.5em;"><li style="border: none; margin: 0px 0px 0.25em; padding: 0.25em 0px;"><span style="background-color: white; font-family: 'Courier New', Courier, monospace;"><b><span style="color: red;">ca&nbsp;&nbsp; certs/cacert.pem</span></b></span></li><li style="border: none; margin: 0px 0px 0.25em; padding: 0.25em 0px;"><span style="background-color: white; font-family: 'Courier New', Courier, monospace;">cert certs/cert.pem</span></li><li style="border: none; margin: 0px 0px 0.25em; padding: 0.25em 0px;"><span style="background-color: white; font-family: 'Courier New', Courier, monospace;">key&nbsp; certs/key.pem</span></li><li style="border: none; margin: 0px 0px 0.25em; padding: 0.25em 0px;"><span style="background-color: white; font-family: 'Courier New', Courier, monospace;">dh&nbsp;&nbsp; certs/dh.pem</span></li></ul></div><div><span style="color: #666666; font-family: Courier New, Courier, monospace; font-size: xx-small;"><span style="line-height: 18.2000007629395px;"><br /></span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;">che cosa significa la prima riga in rosso? Significa che il nostro server OpenVPN accettera' anche altri certificati , A PATTO CHE SIANO CERTIFICATI dalla Certification Authority , il cui certificato e' contenuto in cacert.pem Non importa che non siano generati con la stessa chiave privata, questo e' un problema di chi richiede il certificato. In linea teorica, il certificato dal lato client viene generato da un'altra parte, alla CA viene inviata solo la richiesta di certificato, e la chiave privata del client rimane sul client.</span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;"><br /></span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;">Ed e' per questo che adesso abbiamo creato dei certificati per il samsung, ma li abbiamo fatti firmare dalla CA accettata dal server.</span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;"><br /></span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;">Adesso, che cosa dovete portare sul cellulare? Dovete portare:</span></span></div><div><span style="font-family: inherit;"><span style="line-height: 18.2000007629395px;"><br /></span></span></div><div><ol><li><span style="line-height: 18.2000007629395px;">La cacert.pem , cioe' la certification authority (ma SOLO il certificato: nessuna chiave!)</span></li><li><span style="line-height: 18.2000007629395px;">Il file samsung.key, che contiene la chiave privata del client.(ma SOLO quella del client)</span></li><li><span style="line-height: 18.2000007629395px;">Il file samsung.pem, che contiene il certificato dedicato per il cellulare (ma SOLO quello!)</span></li></ol><div><span style="line-height: 18.2000007629395px;">questi sono gli UNICI tre file di cui avete bisogno. Gli altri NON devono trovarsi sul cellulare.</span></div></div><div><span style="line-height: 18.2000007629395px;"><br /></span></div><div><span style="line-height: 18.2000007629395px;">Fatto questo, non dovete fare altro che riprendere in mano il cellulare, TOGLIERE i certificati di prima, che da ora in avanti staranno SOLO sul server, e usare questi tre files per stabilire la VPN.</span></div><div><span style="line-height: 18.2000007629395px;"><br /></span></div><div><span style="line-height: 18.2000007629395px;">Cosa succede se vi fregano il cellulare? Se lo fanno, succedera' che le credenziali (e la certification authority) caschino nelle mani del delinquente. Ma:</span></div><div><span style="line-height: 18.2000007629395px;"><br /></span></div><div><ol><li><span style="line-height: 18.2000007629395px;">Quel certificato di CA non puo' essere usato per creare altri certificati, perche' sul cellulare MANCA la CHIAVE associata alla CA (</span><b style="background-color: white; color: blue; font-family: Sans; font-size: 13px;">-CAkey key.pem sopra</b><span style="line-height: 18.2000007629395px;">) , e &nbsp;quindi il nostro criminale non ne viene in possesso.</span></li><li><span style="line-height: 18.2000007629395px;">La chiave del Samsung ha bisogno di una password, che vi e' stata chiesta quando avete generato la chiave. Se l'avete scritta nel client perche' siete pigri, allora quel cellulare puo' ancora entrare nella VPN con quelle credenziali.</span></li></ol></div><div><span style="line-height: 18.2000007629395px;"><br /></span></div><div><span style="line-height: 18.2000007629395px;">quindi, dobbiamo revocare quelle credenziali.</span></div><div><br /></div><div>Per fare questo, prima creeremo un file per i certificati revocati, csr, e poi spiegheremo a openVPN di controllare che i certificati non siano stati revocati. Lo facciamo dentro la stessa cartella dove stanno gli altri certificati.&nbsp;</div><div><br /></div><div><ul><li style="text-align: left;">echo "1000" &gt;&gt; index.txt&nbsp;</li><li><span style="text-align: -webkit-center;">openssl ca -gencrl -keyfile <i>key.pem</i></span><span style="text-align: -webkit-center;">&nbsp;-cert&nbsp;</span><i style="text-align: -webkit-center;">cacert.pem</i><span style="text-align: -webkit-center;">&nbsp;-out revoked.crl&nbsp;</span><span style="text-align: start;">&nbsp;</span><i style="text-align: start;">-crldays 366</i></li></ul><div style="text-align: left;">Il file index.txt servira' per avere una lista rapida dei certificati annullati.</div><div style="text-align: left;"><br /></div><div style="text-align: left;">a quel punto aggiungiamo alla configurazione di OpenVPN la richiesta di controllare che i certificati siano revocati:</div></div><div style="text-align: left;"><br /></div><div style="text-align: left;"><pre style="background-color: whitesmoke; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; border-top-left-radius: 4px; border-top-right-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.14902); color: #333333; font-family: Menlo, Monaco, 'Courier New', monospace; font-size: 12.025px; line-height: 18px; margin-bottom: 9px; padding: 8.5px; white-space: pre-wrap; word-break: break-all; word-wrap: break-word;">crl-verify certs/revoked.crl</pre></div><div><br /></div><div>Adesso possiamo revocare il certificato del samsung:</div><div><br /></div><div><ul><li><span style="text-align: -webkit-center;">openssl ca -revoke samsung.pem</span><span style="text-align: -webkit-center;">&nbsp;-keyfile&nbsp;<i>key.pem</i></span><span style="text-align: -webkit-center;">&nbsp;-cert&nbsp;</span><i style="text-align: -webkit-center;">cacert.pem</i></li></ul><div style="text-align: left;"><i><br /></i></div></div><div style="text-align: left;">Se tutto va bene e avete eseguito il comando dentro la directory certs, adesso anche il file index.txt dovrebbe essere stato aggiornato. Adesso avete revocato il vostro certificato, ma dovete ficcarlo dentro il contenitore di crl, di certificati malvagi.&nbsp;</div><div style="text-align: left;"><br /></div><div style="text-align: left;">Per farlo, ridiamo il comando che abbiamo usato per generare il file dei certificati malvagi la prima volta.</div><div style="text-align: left;"><br /></div><div style="text-align: left;"><ul><li><span style="text-align: -webkit-center;">openssl ca -gencrl -keyfile&nbsp;<i>key.pem</i></span><span style="text-align: -webkit-center;">&nbsp;-cert&nbsp;</span><i style="text-align: -webkit-center;">cacert.pem</i><span style="text-align: -webkit-center;">&nbsp;-out revoked.crl&nbsp;</span>&nbsp;<i>-crldays 366</i></li></ul><div style="text-align: justify;">e a questo punto , verra' generata una nuova crl con il certificato annullato dentro, e riavviando openvpn, da quel momento il certificato apparira' come revocato e non potra' piu' accedere.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Ovviamente, dopo la prima volta, soltanto gli ultimi due comandi saranno necessari per revocare un certificato, e il fatto che abbiamo indicato una durata di 366 giorni, sicuramente superiore alla durata del certificato stesso (che avevamo messo a 365) , ci da' la sicurezza che la nostra lista di certificati malvagi scadra' dopo il certificato malvagio, e non saremo mai in rete "scoperti".</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">E se un malware vi frega le chiavi e tutto a vostra insaputa? Otterrete che qualcuno possa collegarsi alla vostra VPN. Questo e' un male dal momento che dentro c'e' il vostro tessssooro e voi ci tenete un sacco al vostro anello.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Allora, avete ancora il comando del vostro server. Il quale logga: tra parentesi, ricordate di ruotare i log di openvpn, se non volete trovarvi il disco pieno. Quindi, per esempio, potreste dare un'occhiatina ai log di accesso.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Oppure, se avete solo un cellulare da collegare, come me, potete agire sulla configurazione di OpenVPN, e rimuovere la voce:</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><ul><li><pre style="background: rgb(238, 238, 238); border: 0px; font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif; font-size: 14px; line-height: 17.8048000335693px; margin-bottom: 10px; max-height: 600px; overflow: auto; padding: 5px; text-align: left; vertical-align: baseline; width: auto; word-wrap: normal;"><code style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; border: 0px; font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif; margin: 0px; padding: 0px; vertical-align: baseline; white-space: inherit;">duplicate-cn</code></pre></li></ul></div><div style="text-align: justify;">a questo punto, se state collegati H24, non c'e' nessun altro che potra' ricollegarsi, perche' NON accettera' due volte le stesse credenziali.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Adesso andiamo alla vexata quaestio: ma la VPN deve uscire su internet? Molti di voi stanno usando la tecnologia VPN (cioe' il tunnel IPsec) allo scopo di creare un proxy IP, che nasconda l'indirizzo originale del chiamante.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Non ho voglia di discutere la parziale inutilita' di questa misura in un mondo ove mega e mega di javascript girano sul vostro browser, ma il punto e' un altro. Usare una tecnologia tipica delle VPN, il tunnel IPsec, per ottenere un proxy IP non fa una VPN. Fa un IP proxy.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">VPN e' una Rete PRIVATA Virtuale. "Privata" significa "privata". Per quanto i fanatici del non- network splitting siano numerosi, una VPN che esce verso internet e' uno stupido IP Proxy, ma non stiamo parlando di una VPN. VPN aperta ad internet e' come dire "Carro Armato Cabrio", o "Bunker Sotterraneo con Veranda sul Mare": potete farla, ma poi non vi lamentate se avete costruito una cosa diversa da quella che credevate, e vi ritrovate con <b><u>un falso senso di sicurezza.</u></b></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">In generale quando siete in una VPN siete nel vostro bunker sotterraneo. Non parlate con l'esterno, se non attraverso degli intermediari, che comunque devono impedire il contatto. Quindi certo, quando siete in vpn e leggete la posta la leggete da una macchina che la scarica con fetchmail, ma lo fa seguendo un altro percorso, che NON e' un percorso attraverso il quale si possa entrare nella VPN. Insomma, nel bunker potete avere il telefono,<b><u> a patto che dai fili non ci passino le persone.</u></b></div><div style="text-align: justify;"><br /></div></div></div></div>
+<h2></h2>
+<div class='comments'>
+</div>
+
+<br>
+<div class="addthis_native_toolbox"></div>
+
+</div>
+
+  </section>
+  <footer>
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        <h1 class="author-name text-primary">Uriel Fanelli</h1>
+        
+        
+      </div>
+      
+      <div class="author-contact col-md-4">
+        <a href="mailto:uriel.fanelli@gmx.de">
+          <i class="fa fa-envelope-o"></i>
+          &nbsp;Contact me
+        </a>
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="http://www.wolfstep.cc/blogger/2014-10-10-cellulari-android-e-openvpn/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next"><a href="http://www.wolfstep.cc/blogger/2014-10-12-sul-matrimonio-tra-napoletani-della-stessa-citta/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+
+
+
+<iframe id="forum_embed"
+  src="javascript:void(0)"
+  scrolling="no"
+  frameborder="0"
+  width="100%"
+  height="700">
+</iframe>
+
+<script type="text/javascript">
+  document.getElementById('forum_embed').src =
+     'https://groups.google.com/forum/embed/?place=forum/kein-pfusch'
+     + '&showsearch=false&showpopout=true&showtabs=false&hl=it&theme=Light'
+     + '&parenturl=' + encodeURIComponent(window.location.href);
+</script>
+
+
+
+
+
+
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      
+    </div>
+    <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+  </footer>
+
+  <script src="http://www.wolfstep.cc//js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f32bcd406c5e50" async="async"></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content="  Cellulari Android e OpenVPN &middot;  KEIN PFUSCH, BITTE!" />
+  <meta property="og:site_name" content="KEIN PFUSCH, BITTE!" />
+  <meta property="og:url" content="http://www.wolfstep.cc/blogger/2014-10-10-cellulari-android-e-openvpn/" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2014-10-10T12:15:50&#43;01:00" />
+  
+  
+
+  <title>
+      Cellulari Android e OpenVPN &middot;  KEIN PFUSCH, BITTE!
+  </title>
+
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/main.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/github.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="http://www.wolfstep.cc//images/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://www.wolfstep.cc//images/apple-touch-icon.png" />
+  <link href="" rel="alternate" type="application/rss+xml" title="KEIN PFUSCH, BITTE!" />
+</head>
+<body>
+
+
+  <header class="global-header">
+    <section class="header-text">
+      <h1><a href="http://www.wolfstep.cc/">KEIN PFUSCH, BITTE!</a></h1>
+      
+      <div class="tag-line">
+        Comunicare, ammesso sia possibile, e&#39; perfettamente inutile
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+      
+      <a href="http://www.wolfstep.cc/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary"> Cellulari Android e OpenVPN</h1>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2014-10-10T12:15:50&#43;01:00">
+          Oct 10, 2014
+        </time>
+      </div>
+      <div class="pull-right">
+        
+      </div>
+    </div>
+  </header>
+  <section>
+<div style="text-align: justify;">
+    <div class='post'>
+<div style="text-align: justify;">Siccome stanno arrivando due nuove Grandi Paure, ovvero IS e Ebola , e quindi i governi con aspirazioni fasciste, come gli USA, ne approfitteranno di certo (noto anche una certa attenzione dei governi europei) , ho deciso di postare una breve guida per collegare il proprio cellulare Android a una openvpn che terrete a casa. Insomma, l' unico cloud di cui fidarvi e' il vostro cloud.</div><div style="text-align: justify;"></div><a name='more'></a><br /><div style="text-align: justify;">Quando vorrete usare i servizi google, tipo play, non dovrete fare altro che spegnere la VPN e navigare normalmente. In questo modo, quando siete in VPN non vi si raggiunge da internet, quando siete su internet non si raggiunge la rete di casa dal vostro cellulare. </div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">La prima cosa da tener presente e' che quanto sto per scrivere richiede l'uso di un *BSD, ovvero di un sistema nel quale funzioni PF, Packet Filter, un firewall piuttosto potente <u><i>e piuttosto ben scritto.&nbsp; </i></u></div><br />Le istruzioni che vi posto richiedono di leggere un minimo di documentazione. Se non riuscite a leggerla, NON dovreste provarci.Richiedono anche l'uso di un ddns server, come www.no-ip.org .<br /><br /><div style="text-align: justify;"><blockquote class="tr_bq"><b><span style="color: red;">Attenzione, pero': usando le stesse chiavi e  certificati da entrambi i lati, teoricamente uno spyware che vi ciuffi  le chiavi&nbsp; e i certificati dal cellulare puo' compromettere  definitivamente la cosa: chiunque potrebbe simulare il vostro server.  Quindi, usatela come primo passo in openvpn, per avere una  configurazione funzionante da implementare.</span></b> </blockquote></div><br />Personalmente vi consiglio OpenBSD, ma anche FreeBSD va bene.<br /><br />Una volta installati e configurati:<br /><br /><ul><li>Per FreeBSD: <a href="https://www.freebsd.org/doc/handbook/firewalls-pf.html">https://www.freebsd.org/doc/handbook/firewalls-pf.html</a></li><li>Per OpenBSD: <a href="http://www.openbsd.org/faq/pf/">http://www.openbsd.org/faq/pf/ </a></li></ul><div style="text-align: justify;">dovrete installare sul vostro cellulare android un client per OpenVPN. Personalmente uso&nbsp; <a href="https://play.google.com/store/apps/details?id=it.colucciweb.free.openvpn">https://play.google.com/store/apps/details?id=it.colucciweb.free.openvpn</a>&nbsp; , che non richiede diritti di ROOT e che vi stampa le tavole di routing , in modo da rendere piu' semplice capire che cosa non vada nella vostra rete.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Supponiamo per ipotesi che abbiate due interfacce, una che da' sulla rete pubblica e una che da' verso la vostra rete privata. Diciamo em0 e em1.<br /><br />La rete che volete raggiungere sta dentro alla rete privata, che e' nattata verso la rete pubblica, ovvero il server ove mettiamo OpenVPN e' il default router della rete privata. E' fondamentale per via del routing.<br /><br />la prima cosa da capire e' che quando avrete la vostra VPN (del tipo che vi sto raccontando) , avrete:<br /><br /><ul><li>Una nuova sottorete, che deve essere diversa da quella esistente.</li><li>Una nuova interfaccia di rete, che sara' una tun0 , come configuriamo. </li></ul><br />Allora, dopo aver installato OpenVPN sulla macchina che avete, immaginiamo che la sua directory di configurazione "naturale" sia /usr/local/etc/openvpn , e che il file di configurazione di atteso da OpenVPN sia chiamato openvpn.conf<br /><br />Configurerete quindi lo script di startup<br /><a href="https://www.blogger.com/goog_1808157340"><br /></a><br /><ul><li><a href="http://www.openbsd.org/cgi-bin/man.cgi?query=rc.conf.local&amp;sektion=8">http://www.openbsd.org/cgi-bin/man.cgi?query=rc.conf.local&amp;sektion=8</a></li><li><a href="https://www.freebsd.org/cgi/man.cgi?rc.conf%285%29">https://www.freebsd.org/cgi/man.cgi?rc.conf%285%29</a></li></ul><br /><blockquote class="tr_bq"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">openvpn_enable="YES"<br />openvpn_configfile="/usr/local/etc/openvpn/openvpn.conf"</span></blockquote>fatto questo, alla partenza della macchina il demone verra' alzato.<br /><br />Adesso vediamo: esistono diversi tipi di criptazione e di meccanismi di autenticazione. Quello che espongo qui e' molto semplice, e si basa sul fatto che sia sul vostro cellulare che sul server ci siano gli stessi certificati.<br /><br />Sono possibili altre configurazioni, ma se state iniziando , per prendere confidenza, potete iniziare cosi'. Chiaramente, potrete anche creare una directory "client" e creare i medesimi certificati per i client, e poi configurare ulteriormente OpenVPN. In ogni caso, gia' a questo punto ci avrete preso confidenza, per cui poi potrete svilupparvi da voi.<br /><br />Creerete quindi una directory dentro <span style="font-family: &quot;Courier New&quot;,Courier,monospace;">/usr/local/etc/openvpn ,</span>che chiamerete cert, e ci metterete dentro alcuni certificati, che dovremo creare.<br /><br />Allora, dobbiamo creare quattro files:<br /><br /><ul><li><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">ca&nbsp;&nbsp; certs/cacert.pem</span></li><li><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">cert certs/cert.pem</span></li><li><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">key&nbsp; certs/key.pem</span></li><li><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">dh&nbsp;&nbsp; certs/dh.pem</span></li></ul><span style="font-family: inherit;"><span style="font-size: small;">si tratta di una chiave privata, una chiave per la certification authority, un certificato per il server, e una chiave Diffie Hellman.</span></span><br /><span style="font-family: inherit;"><span style="font-size: small;"><br /></span></span><span style="font-family: inherit;"><span style="font-size: small;">Quindi , da dentro la directory certs:</span></span><br /><br /><ul><li><span style="font-size: x-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">openssl genrsa -des3 -out key.pem 2048</span></span></li><li><span style="font-size: x-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">openssl req -new -x509 -key key.pem -out cacert.pem -days 365</span></span></li><li><span style="font-size: x-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">openssl req -new -key key.pem -out server.csr</span></span></li><li><span style="font-size: x-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">openssl x509 -req -days 365 -in server.csr -signkey key.pem -out cert.pem</span></span></li><li><span style="font-family: inherit;"><span style="font-size: small;"><span style="font-size: x-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">openssl dhparam -out dh.pem 2048 </span></span></span></span></li></ul><span style="font-family: inherit;"><span style="font-size: small;">&nbsp;le chiavi cosi' prodotte ovviamente scadranno tra un anno. </span></span></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Adesso diamo un nome alle reti.<br /><br />Diciamo che la rete privata fa 192.168.172.0/24 , e che la rete "pubblica", (diciamo che il vostro router gira al server la porta <strike>1194</strike> 443) sia 192.168.1.0/24 .<br /><br />Detto questo, diciamo che il vostro server sia su una 192.168.1.54 . In quel caso,&nbsp; avrete una configurazione come questa:<br /><br /><blockquote class="tr_bq"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">local 192.168.1.54<br />port 443<br />proto tcp <br />dev tun0<br />ca&nbsp;&nbsp; certs/cacert.pem<br />cert certs/cert.pem<br />key&nbsp; certs/key.pem<br />dh&nbsp;&nbsp; certs/dh.pem<br />cipher AES-256-CBC<br />client-to-client<br />push "route 192.168.1.0 255.255.255.0"<br />push "route 192.168.172.0 255.255.255.0"<br />push "redirect-gateway"<br />comp-lzo<br />server 192.168.3.128 255.255.255.128<br />duplicate-cn<br />keepalive 10 120<br />max-clients 10<br />user nobody<br />group nobody<br />persist-key<br />persist-tun<br />log&nbsp;&nbsp;&nbsp; /var/log/openvpn-server.log<br />status /var/log/openvpn-server-status.log<br />verb 3<br />mute 20</span></blockquote>abbiamo diversa carne al fuoco. Ovviamente la prima riga dice quale sia l'interfaccia ove bindarsi in attesa. Segue la porta di ascolto, che ho settato come 443. La ragione e' che i firewall vi lascieranno passare. Certo, sarebbe riservata ad altri protocolli, ma d'altro canto la costituzione vieta di intercettarmi senza ragione. Anche io posso rompere le regole , darling. </div><div style="text-align: justify;"><br />Uso il protocollo TCP perche' voglio fingere di essere una connessione su https, in modo che i firewall mi lascino passare, e perche' dalla mia rete interna NON vanno pacchetti UDP verso internet. Se non avete gia' vietato questa possibilita' fatelo ora. Permetteteli solo verso il DNS, unico servizio che ne ha bisogno, e solo verso il DNS di fiducia. Il resto deve morire.<br /><br />Dev tun0 sceglie la finta interfaccia di rete che andremo ad usare.<br /><br />Seguono le chiavi ed i certificati che abbiamo creato.<br /><br />Poi c'e' la scelta di un metodo di encryption per le prime fasi della negoziazione. AES-256-CBC e' abbastanza robusto , anche se alcuni attacchi per 8 e 9 passaggi 9x10^29 FLOP . <i>Ritengo che spendere questo potere di calcolo per migliaia di persone sia tutt'ora fuori dai limiti della maggior parte degli spioni, nel 2014.</i><br /><br />Poi specifichiamo che stiamo lavorando client-to-client, in modo da avere la modalita' di cui parlavo sopra, e <br /><br /><ul><li><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">push "route 192.168.1.0 255.255.255.0"<br />push "route 192.168.172.0 255.255.255.0"<br />push "redirect-gateway"<br />comp-lzo<br />server 192.168.3.128 255.255.255.128</span></li></ul>serve a portare alcune rotte sul vostro android. La prima regola dice ad android che per ogni destinazione nella vostra rete dal lato esterno, deve passare per la VPN. La seconda dice che da quel momento, per accedere alla rete privata, deve passare per la VPN.<br /><br />La terza e' ridondante, ma dice che OGNI pacchetto debba passare per la vpn, da quel momento.LA metto perche' poi, sulla app per android , potrete verificare le tabelle di routing.<br /><br />La parte con "server" dice che l'interfaccia tun0 occupera' un indirizzo disponibile a partire da 192.168.3.128 sino a 192.168.3.255 , e ogni cellulare che si connette avra' un numero successivo.<br /><br />Adesso andate sul client android. La cosa che noterete subito e' che alla voce "remote server" permette piu' di un server. Cosi' potrete scrivere li' dentro SIA l' IP che il vostro server VPN ha dentro la wifi (quando siete in casa) che l'hostname dinamico che avete configurato da fuori (es: casamia.no-ip.org)<br /><br />In questo modo la connessione potra' essere fatta identicamente quando siete in WIFI e quando siete fuori.<br /><br />Quando andate in "Authentication", scegliete "Certificates (TLS)" . A quel punto dovrete aver messo sul vostro cellulare le chiavi che avete generato prima. Tutte tranne il dh.pem</div><div style="text-align: justify;"><br />A quel punto, caricate cacert.pem alla voce "Certification Authority", cert.pem alla voce Certificate, la chiave privata alla voce "Private Key.<br /><br />Sotto c'e' "save private key password" e ci metterete la password per sbloccare la chiave privata.<br /><br />Fatto questo, dovrete aprire il firewall di Open/FreeBSD e decidere cosa fare dei pacchetti. Io personalmente NON voglio che i pacchetti , arrivati a casa mia, escano da li' verso internet: quando sono in VPN, non devo essere su internet, perche' sto leggendo la mia posta, sincronizzando i miei file, whatever.<br /><br />Normalmente sto collegato alla VPN H24, tranne quando mi serve usare google play. La posta aziendale viene scaricata da un fetchmail sul server di casa, come tutte le altre.&nbsp; Ma queste sono scelte vostre.<br /><br />Allora, la prima parte importante di PF sara' come questa, ottimizzazioni a parte:<br /><br /><blockquote class="tr_bq"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">ext_if="em1"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">int_if="em0" </span></blockquote><blockquote class="tr_bq"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">vpn_if="tun0" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">localnet = $int_if:network&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">homenet =&nbsp; $ext_if:network</span></blockquote><blockquote class="tr_bq"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">vpnnet= $vpn_if:network </span></blockquote><blockquote class="tr_bq"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><br /></span><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">icmp_types = "echoreq"</span><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><br /></span><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><br /></span><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">set loginterface $ext_if</span><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">set optimization aggressive </span><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">set timeout { tcp.closing 10, tcp.established 120, interval 2, tcp.tsdiff 5, tcp.first 5,&nbsp; tcp.closed 5, tcp.finwait 5}</span><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">set limit&nbsp;&nbsp; { states 512, src-nodes 512 }</span><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">scrub in all</span><br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><b><span style="color: red;">nat on $ext_if from $localnet to !$ext_if -&gt; ($ext_if)</span></b></span></blockquote>la parte in rosso e' quella che natta i pacchetti che arrivano dalla rete locale verso la rete che va verso internet. Quelle prima sono ottimizzazioni dello stack, potete usarle o meno. Bisogna capire che , vista la sintassi ESPLICITA di PF, con la parte in rosso state girando verso l'esterno SOLO i pachetti che arrivano da localnet , e NON quelli che potrebbero passare per l'interfaccia esterna.<br /><br />Quindi, siccome i vostri pacchetti NON vengono da "localnet" ma da "vpnnet", non passeranno. Se anche passassero, del resto, il destinatario non saprebbe che farsene perche' non sa come raggiungere la rete "vpnnet".<br /><br />Se volete ANCHE nattare la rete vpn, chiaramente dovrete aggiungere una seconda riga, come:<br /><br /><blockquote class="tr_bq"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="color: blue;"><b>nat on $ext_if from $vpnnet to !$ext_if -&gt; ($ext_if)</b></span></span></blockquote>ma da quel momento le applicazioni del vostro cellulare inizieranno a vedere internet. Non ha senso farlo, IMHO. Se volete che quando siete dentro la VPN allora siete SOLO dentro la VPN, NON aggiungete la riga blu.<br /><br />A questo punto, dovrete far passare i pacchetti per la vostra openvpn:<br /><br /><blockquote class="tr_bq">&nbsp;<span style="font-family: &quot;Courier New&quot;,Courier,monospace;">pass proto tcp from any to $ext_if port 443 </span></blockquote>poi dovremo evitare che eventuali pacchetti IP vadano verso internet, udp o tcp che siano. Alla prima regola:<br /><br /><blockquote class="tr_bq"><span style="font-size: x-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">block inet proto {udp} from $int_if:network to !$ext_if:network</span></span></blockquote>che era gia' presente (1), aggiungete: <br /><blockquote class="tr_bq"><span style="font-size: x-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">block inet proto {udp,udp} from $vpn_if:network to !$ext_if:network&nbsp; </span></span></blockquote><blockquote class="tr_bq">&nbsp; </blockquote>adesso siete in una rete ove i vostri pacchetti appaiono sull'interfaccia tun0 con un indirizzo che inizia per 192.168.3.&lt;qualcosa&gt; , e:&nbsp;</div><div style="text-align: justify;"></div><div style="text-align: justify;"><ol><li>Se sono diretti alla rete&nbsp; interna (ove avete il mailserver, il repository dei files, etc) ci possono andare perche' il server VPN ha l'interfaccia di rete in quella rete, quindi li sa girare. A sua volta, siccome quei server usano il sistema ove gira la VPN come default router, sanno come inoltrare le risposte.</li><li>Se il pacchetto e' diretto verso internet, viene bloccato, anche nel caso la macchina ove gira il servr VPN avesse una rotta di default verso il vostro router xDSL.</li></ol></div><div style="text-align: justify;"></div><div style="text-align: justify;">in questo modo, quando il vostro cellulare e' collegato alla VPN, e' CHIUSO dentro la vostra vpn di casa.&nbsp;</div><br /><br /><div style="text-align: justify;">Se volete controllare cosa stia cercando di fare il vostro cellulare, in tempo reale, potete semplicemente installare trafshow sul computer ove gira openvpn, e vedrete coi vostri occhi, interfaccia per intercfaccia, chi cerca di fare cosa.</div><br /><a href="http://www.openbsd.org/4.5_packages/i386/trafshow-3.1.tgz-long.html">http://www.openbsd.org/4.5_packages/i386/trafshow-3.1.tgz-long.html</a><br /><br /><div style="text-align: justify;">Questa e' ovviamente una configurazione semplice, se non avete mai configurato openvpn e non siete in grado di debuggarlo. Presa familiarita', <span style="color: red;"><b>DOVRETE&nbsp; </b></span>aggiungere una directory "clients", e iniziare a giocare coi certificati costruiti ad hoc per i client.</div><div style="text-align: justify;"><blockquote class="tr_bq"><b><span style="color: red;">Attenzione, pero': usando le stesse chiavi e certificati da entrambi i lati, teoricamente uno spyware che vi ciuffi le chiavi&nbsp; e i certificati dal cellulare puo' compromettere definitivamente la cosa: chiunque potrebbe simulare il vostro server. Quindi, usatela come primo passo in openvpn, per avere una configurazione funzionante da implementare.</span></b></blockquote><br /><br />Questa configurazione, cioe', oltre che per impratichirvi, vi serve a poter sniffare il traffico del vostro cellulare quando il cellulare crede di essere collegato via UMTS/HSDPA/LTE. </div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Da quel momento, cioe', avrete messo un VOSTRO firewall tra il cellulare ed internet. Potete anche nattare la rete vpn verso internet, per dire, e magari bloccare le CDN e/o Facebook , akamai, o chi vi pare. Una volta che voi gestite il traffico, potete decidere VOI cosa faccia il vostro cellulare quando e' su internet.<br /><br />Insomma, usando questa configurazione NON siete al sicuro, ma potete esaminare, <u><b>visto che vi siete messi in mezzo</b></u>, il traffico che il vostro cellulare EFFETTIVAMENTE genera.<br /><br />Al prossimo post, vediamo come configurare certificati e chiave per il client in modo da non dover duplicare quelli del server. </div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"></div><br /><div style="text-align: justify;"></div><div class="separator" style="clear: both; text-align: center;"><object class="BLOGGER-youtube-video" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" data-thumbnail-src="https://ytimg.googleusercontent.com/vi/-ilUS3Vefm4/0.jpg" height="266" width="320"><param name="movie" value="https://youtube.googleapis.com/v/-ilUS3Vefm4&source=uds" /><param name="bgcolor" value="#FFFFFF" /><param name="allowFullScreen" value="true" /><embed width="320" height="266"  src="https://youtube.googleapis.com/v/-ilUS3Vefm4&source=uds" type="application/x-shockwave-flash" allowfullscreen="true"></embed></object></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"></div><div style="text-align: justify;"></div></div>
+<h2></h2>
+<div class='comments'>
+</div>
+
+<br>
+<div class="addthis_native_toolbox"></div>
+
+</div>
+
+  </section>
+  <footer>
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        <h1 class="author-name text-primary">Uriel Fanelli</h1>
+        
+        
+      </div>
+      
+      <div class="author-contact col-md-4">
+        <a href="mailto:uriel.fanelli@gmx.de">
+          <i class="fa fa-envelope-o"></i>
+          &nbsp;Contact me
+        </a>
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="http://www.wolfstep.cc/blogger/2014-10-09-la-finta-occupazione/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next"><a href="http://www.wolfstep.cc/blogger/2014-10-11-android-e-openvpn-parte-ii-adesso-coi-certificati-dal-lato-client/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+
+
+
+<iframe id="forum_embed"
+  src="javascript:void(0)"
+  scrolling="no"
+  frameborder="0"
+  width="100%"
+  height="700">
+</iframe>
+
+<script type="text/javascript">
+  document.getElementById('forum_embed').src =
+     'https://groups.google.com/forum/embed/?place=forum/kein-pfusch'
+     + '&showsearch=false&showpopout=true&showtabs=false&hl=it&theme=Light'
+     + '&parenturl=' + encodeURIComponent(window.location.href);
+</script>
+
+
+
+
+
+
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      
+    </div>
+    <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+  </footer>
+
+  <script src="http://www.wolfstep.cc//js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f32bcd406c5e50" async="async"></script>
+
+
+</body>
+</html>
+

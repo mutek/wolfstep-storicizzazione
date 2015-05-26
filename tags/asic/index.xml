@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Asic on KEIN PFUSCH, BITTE!</title>
+    <link>http://www.wolfstep.cc/tags/asic/</link>
+    <description>Recent content in Asic on KEIN PFUSCH, BITTE!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Apr 2015 20:55:46 +0200</lastBuildDate>
+    <atom:link href="http://www.wolfstep.cc/tags/asic/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ancora sulla sensazione di asteroide</title>
+      <link>http://www.wolfstep.cc/post/tirannobaldo/</link>
+      <pubDate>Wed, 29 Apr 2015 20:55:46 +0200</pubDate>
+      
+      <guid>http://www.wolfstep.cc/post/tirannobaldo/</guid>
+      <description>&lt;p&gt;In questi giorni scrivo meno perche&amp;rsquo; sono impegnato professionalmente, (e spendo tempo nell&amp;rsquo;esercitarmi con golang, visto che mi sto divertendo) nel senso che il futuro bussa alle porte e dopo un gran parlare le case automobilistiche iniziano a fare sul serio col M2M (Machine to Machine). Si tratta proprio dei momenti nei quali mi prende la sensazione di asteroide, e volevo spiegarla un attimo, mentre mi si spiega davanti agli occhi.&lt;/p&gt;
+
+&lt;p&gt;Sinora le case automobilisiche non avevano mai cercato di fare cose &lt;strong&gt;davvero&lt;/strong&gt; informatiche. Hanno il loro IT, i loro centri di calcolo, i loro simulatori, e tutto quanto come e&amp;rsquo; ovvio che sia, ma di informatica dentro le auto ne e&amp;rsquo; entrata poca. Viene da ridere quando vi vendono l&amp;rsquo;auto &amp;ldquo;che ha il bluetooth&amp;rdquo; come se fosse scienza spaziale, quando insomma, il bluetooth il genere umano ce l&amp;rsquo;ha&amp;hellip; &amp;ldquo;mica da mo&amp;rsquo; &amp;ldquo;.&lt;/p&gt;
+
+&lt;p&gt;Sto iniziando a vedere il problema dal lato loro.&lt;/p&gt;
+
+&lt;p&gt;Sinora le case hanno avuto migliaia di ingegneri elettronici a costruire la circuitazione di bordo. Il nostro cliente ne ha circa 3300.&lt;/p&gt;
+
+&lt;p&gt;Questi elettronici stanno a progettare e a rendere &amp;ldquo;robusta&amp;rdquo; per anni di lavoro (tra una cosa e l&amp;rsquo;altra calcolano in 15 anni il tempo di vita di un&amp;rsquo;auto) , e quando intendono robusta intendono una cosa che regga ad urto, cambi di temperatura, umidita&amp;rsquo;, vibrazioni su ogni frequenza, e non tradisca mai.&lt;/p&gt;
+
+&lt;p&gt;Fanno un uso massivo di SoC , FPGA e Asic, come e&amp;rsquo; ovvio che sia.&lt;/p&gt;
+
+&lt;p&gt;Ora, quali sono i requisiti di un SoC o di un Asic moderno?&lt;/p&gt;
+
+&lt;p&gt;Beh, costruirne uno e&amp;rsquo; mostruosamente costoso, all&amp;rsquo;inizio. Solo la fonderia e&amp;rsquo; un investimento da ~5 MILIARDI di Euro. C&amp;rsquo;e&amp;rsquo; poi la fase di bench test , che e&amp;rsquo; orribilmente costosa. Il processore viene descritto in un linguaggio di programmazione &amp;ldquo;descrittivo&amp;rdquo;, come Verilog, e poi viene &amp;ldquo;testato&amp;rdquo; praticamente in tutte le condizioni di uso.&lt;/p&gt;
+
+&lt;p&gt;Un tempo per fare questo si usavano &amp;ldquo;normali&amp;rdquo; simulatori, poi si vide che in alcune situazioni alcuni multiplexer ponevano dei problemi non polinomiali e si usarono tecniche diverse, sino alle reti neurali, e gli ultimi ritrovati fanno addirittura una verifica &lt;strong&gt;formale&lt;/strong&gt; del processore (descritto come programma) , usando le &lt;a href=&#34;http://en.wikipedia.org/wiki/Hoare_logic&#34;&gt;logiche di Hoare&lt;/a&gt; L&amp;rsquo;uso delle logiche di Hoare rende davvero &lt;strong&gt;formale&lt;/strong&gt;, ovvero matematico, il processo di test.&lt;/p&gt;
+
+&lt;p&gt;Quando si esce da questo genere di prova, il processore semplicemente NON-HA-BACHI.&lt;/p&gt;
+
+&lt;p&gt;Di quale complessita&amp;rsquo; stiamo parlando? Se il processore i7 ha ~800 milioni di transistor, e supponiamo che si descriva il singolo transistor in Verilog, il metodo sarebbe valido per testare 800 milioni di righe, almeno.&lt;/p&gt;
+
+&lt;p&gt;In realta&amp;rsquo; poi ci sono tutte le tecniche di sintesi, ma un processore come i7 mostra comunque piu&amp;rsquo; complessita&amp;rsquo; di un kernel di Linux, per dire.&lt;/p&gt;
+
+&lt;p&gt;Eppure, sebbene a costi ripugnanti per l&amp;rsquo;uomo comune (ci potete comprare un paesello di qualche decina di migliaia di abitanti, sino all&amp;rsquo;ultimo chiodo) , fare questa operazione e&amp;rsquo; possibile.&lt;/p&gt;
+
+&lt;p&gt;Sia chiaro, non e&amp;rsquo; fantascienza:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://cps-vo.org/node/1371&#34;&gt;Intel ha sostituito i test con una verifica formale&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cps-vo.org/node/1371&#34;&gt;Succede gia&amp;rsquo; dal P4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/DVClub/mainline-functional-verification-of-ibms-power7-processor-core&#34;&gt;Anche IBM lo fa sui PPC&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Morale: i chip vengono verificati &lt;strong&gt;formalmente&lt;/strong&gt;, ovvero con un processo equivalente in bonta&amp;rsquo; ad una &lt;strong&gt;dimostrazione matematica&lt;/strong&gt;.  In un chip che implementi SSL, &lt;a href=&#34;http://link.springer.com/chapter/10.1007%2F0-306-48709-8_13&#34;&gt;per fare un esempio&lt;/a&gt;, un baco come Heartbleed non poteva passare questo genere di verifica.&lt;/p&gt;
+
+&lt;p&gt;Da qui potete capire che questi ingegneri, nell&amp;rsquo; Automotive , quando comprano un prodotto che fa la tal cosa, hanno ottime ragioni per fidarsi. Se per esempio comprano un &lt;a href=&#34;http://www.asix.com.tw/products.php?op=pItemdetail&amp;amp;PItemID=90;72;103&#34;&gt;Asic con dentro il TCP/IP, il DNS e FTP&lt;/a&gt;, sanno che e&amp;rsquo; stato testato in questo modo, per cui se ne possono fidare ciecamente, o quasi.&lt;/p&gt;
+
+&lt;p&gt;In pratica, essi vivono in una specie di mondo fatato nel quale il &amp;ldquo;software&amp;rdquo;, o meglio cio&amp;rsquo; che noi chiamiamo &amp;ldquo;software&amp;rdquo;, semplicemente funziona. Sempre. Per definizione. E fa quello che si dice che fa, ovvero sino all&amp;rsquo;ultimo bit. Per questo nella vostra auto non ci sono DUE centraline, ma UNA. Trovatemi una sola applicazione mission-critical che non abbia ridondanza, nel mondo IT. Beh, per loro e&amp;rsquo; normale. Perche&amp;rsquo; dovrebbe rompersi?&lt;/p&gt;
+
+&lt;p&gt;Adesso immaginate questi signori, che vengono dal pianeta &amp;ldquo;l&amp;rsquo;algoritmo funziona&amp;rdquo; ed entrano nel mondo IT. Cercando dei software affidabili per fare l&amp;rsquo; OS automotive.&lt;/p&gt;
+
+&lt;p&gt;E immaginate che , corroborati da anni di lavoro su SoC e Asic che &lt;em&gt;semplicemente funzionano&lt;/em&gt; si trovano con gente che gli dice:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Che bisogna ridondare perche&amp;rsquo; il guasto capita sempre.&lt;/li&gt;
+&lt;li&gt;Che comunque il baco e&amp;rsquo; inevitabile, e in 15 anni se ne scopriranno un sacco, qualsiasi software comprino.&lt;/li&gt;
+&lt;li&gt;Che devono ragionare di cambiare il software per fare delle patch ogni &lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;12&lt;/sub&gt; mesi, come ogni software di questo mondo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ovviamente credono di essere finiti in qualche incubo.&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; come se Bosch dicesse loro che l&amp;rsquo;auto deve tornare al concessionario ogni 6 mesi per le patch. Oppure che dopo l&amp;rsquo;ultimo upgrade - obbligatorio - la centralina e&amp;rsquo; troppo lenta e devono cambiare modello altrimenti non va abbastanza in fretta per l&amp;rsquo;auto.&lt;/p&gt;
+
+&lt;p&gt;Delirio.&lt;/p&gt;
+
+&lt;p&gt;La verita&amp;rsquo; e&amp;rsquo; che esistono sistemi embedded capaci di fare questo, come quelli che vanno sui satelliti artificiali, che non sono proprio proprio semplici da manutenere. Ma a parte il fatto che l&amp;rsquo; OS si aggiorna a distanza anche sui satelliti, &lt;a href=&#34;http://polysat.calpoly.edu/download/Fitzsimmons_softwareupdates.pdf&#34;&gt;almeno sui piu&amp;rsquo; recenti&lt;/a&gt;, sinora nessuna casa ha ancora corso il rischio di fornire una scatolina che:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Venga installata su ~10 milioni di auto /anno&lt;/li&gt;
+&lt;li&gt;Lavori per 15 anni&lt;/li&gt;
+&lt;li&gt;Abbia una percentuale di guasti/fermi inferiore a E, con &amp;ldquo;E&amp;rdquo; nello stesso ordine di un motore d&amp;rsquo;auto.&lt;/li&gt;
+&lt;li&gt;Nei primi anni di garanzia questa percentuale scenda a un numero microscopico, a patto di eseguire un diagnostico.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sono state interpellate case di software MOLTO, MOLTO, MOLTO famose per il loro &amp;ldquo;software affidabile&amp;rdquo;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Ma si e&amp;rsquo; scoperto che il software e&amp;rsquo; cosi&amp;rsquo; affidabile perche&amp;rsquo; viene venduto con sistemisti al seguito (mainframe), perche&amp;rsquo; viene ridondato abbestia (cluster) , e perche&amp;rsquo; c&amp;rsquo;e&amp;rsquo; di continuo una presenza di monitoring e call duty (controlli industriali vari).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Niente che si possa implementare su un&amp;rsquo;auto.&lt;/p&gt;
+
+&lt;p&gt;Cosi&amp;rsquo; le case vogliono trasformare le auto in una specie di cyborg con le ruote, ma hanno un problema serio: arriva al pettine il nodo del millennio, ovvero &lt;strong&gt;che non esiste nessuna legge di Moore per il software&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;La legge di Moore, nel mondo dell&amp;rsquo;hardware, ha sempre mantenuto le proprie promesse. Non solo per i processori. Paragonate un CRT del 1995 con un retina del 2015. Paragonate la potenza di una CPU, di una scheda di rete, di una scheda grafica, di un hard disk, di un controller per i dischi, QUALSIASI MALEDETTA COSA, e scoprirete che il mondo dell&amp;rsquo;hardware ha prodotto roba SEMPRE MIGLIORE nel tempo. Il mondo del silicio, cioe&amp;rsquo;, si e&amp;rsquo; evoluto BENE  e TANTO&lt;/p&gt;
+
+&lt;p&gt;Il mondo del software, invece? Evoluto? Windows aveva una barra &amp;ldquo;start&amp;rdquo; in basso nel 1995, e ne ha una oggi. Apple aveva una barra in alto e un cestino nel desktop nel 1995, e ne ha uno ora. Il sistema operativo piu&amp;rsquo; usato nell&amp;rsquo;embedded si ispira a Unix, una roba che ha 44 anni.&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; piu&amp;rsquo; affidabile? Alzi la mano chi ha mai visto MS DOS in crash. Poi chi ha visto Windows 8 in crash. Uhm. La seconda che ho detto.&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; piu&amp;rsquo; sicuro? Uhm. Non direi.&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; piu&amp;rsquo; leggero? Fate girare un sistema operativo moderno su una macchina del 1995 e mi saprete dire.&lt;/p&gt;
+
+&lt;p&gt;Ma allora in cosa e&amp;rsquo; migliorato il software? In niente, o quasi.&lt;/p&gt;
+
+&lt;p&gt;Il software fa schifo.&lt;/p&gt;
+
+&lt;p&gt;Ed e&amp;rsquo; questo che salta fuori oggi, mentre si inizia a fare SUL SERIO con gli IoT, con la &amp;ldquo;internet delle cose&amp;rdquo;. Se vogliamo mettervi un computer nella lavatrice, ed essere sicuri che non vi mandera&amp;rsquo; a fuoco la casa, dobbiamo metterne due? Ed eseguire manutenzione a tutte le lavatrici vendute ogni &lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;8&lt;/sub&gt; mesi per un upgrade? Sul serio? Scherziamo?&lt;/p&gt;
+
+&lt;p&gt;Il mondo IoT deve convincere l&amp;rsquo;hardware a fare le cose che fanno i nostri computer. Allora io sono un consulente e vado da una grande azienda a parlare di domotica. Mettiamo interruttori IoT ovunque, lampadine IoT ovunque, facciamole comunicare, e con un bel server controlliamo le luci ottimizzando i consumi, prenotando l&amp;rsquo;accensione delle sale riunione solo quando c&amp;rsquo;e&amp;rsquo; la riunione eccetera.&lt;/p&gt;
+
+&lt;p&gt;Fico?&lt;/p&gt;
+
+&lt;p&gt;Fico. Ma poi devi spiegare che non e&amp;rsquo; UN server. Sono due, ridondati. Serve a garantire continuita&amp;rsquo;. E poi hanno bisogno di alarming. E poi hanno bisogno di sistemisti di supporto.
+Sapete cosa vi diranno i manager?&lt;/p&gt;
+
+&lt;p&gt;Che installano dei pannelli solari per risparmiare energia, e la vostra domotica ve la ficcate nel culo: un interruttore manuale non costa quasi nulla di contratti di assistenza, non si guasta quasi mai, funziona di sicuro, non ha bisogno di replicazione, di software o di sistemisti, allarmi e replicazione.&lt;/p&gt;
+
+&lt;p&gt;Certo, se poteste andare con una scatolina di controllo che la piazzate e ve la dimenticate sarebbe diverso. Ma del resto, se esistesse il sistema operativo che lo piazzate e ve lo dimenticate, non avremmo quel che abbiamo oggi. Se esistesse la suite office che la installiamo e ce ne dimentichiamo, non saremmo ad usare quel che usiamo. E se esistesse una scatolina che fa tutto questo in hardware, la installiamo e la dimentichiamo, oggi l&amp;rsquo;informatica sarebbe molto diversa.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Stiamo entrando nel mondo dell&amp;rsquo; IoT e non abbiamo i software adatti. IoT inplica almeno il pareggio della qualita&amp;rsquo; tra software ed hardware, ma se il silicio e&amp;rsquo; praticamente perfetto, il software fa cagare.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sono anni che nel mondo dell&amp;rsquo;auto si cerca di portare il computer nell&amp;rsquo;auto. E sono anni che gli ingegneri scuotono la testa dicendo &amp;ldquo;se solo ci fossero i software che ci servono&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Ma adesso non possono piu&amp;rsquo; tirarsi indietro. L&amp;rsquo; e-call , di cui avevo parlato in passato, &lt;a href=&#34;http://ec.europa.eu/growth/tools-databases/newsroom/cf/itemdetail.cfm?item_id=8243&amp;amp;lang=en&amp;amp;tpa_id=0&amp;amp;title=European-Parliament-approves-eCall&#34;&gt;e&amp;rsquo; stato approvato&lt;/a&gt; e se per questo basta un &amp;ldquo;volgare&amp;rdquo; chip GSM da due lire, questo momento rappresenta uno spartiacque. Lo IoT e&amp;rsquo; ormai LEGGE. E&amp;rsquo; nella mente di tutti.&lt;/p&gt;
+
+&lt;p&gt;Tutti &lt;strong&gt;vogliono&lt;/strong&gt; le auto intelligenti. E siccome si sa che il primo arrivato vincera&amp;rsquo;, tutti ci stanno provando come dei forsennati.&lt;/p&gt;
+
+&lt;p&gt;E stanno fallendo.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;h1&gt; E il problema non e&amp;rsquo; &lt;u&gt;MAI&lt;/u&gt; l&amp;rsquo; hardware. MAI il silicio&lt;/h1&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;C&amp;rsquo;e&amp;rsquo; una certa disperazione, e come consulenti siamo chiamati, ovviamente, a portare lumi. E sapete cosa stiamo consigliando?&lt;/p&gt;
+
+&lt;p&gt;Di usare gli SoC.&lt;/p&gt;
+
+&lt;p&gt;Sulle schede grafiche attuali c&amp;rsquo;e&amp;rsquo; abbastanza codice da costruire finestre per un&amp;rsquo;interfaccia grafica. Hanno gia&amp;rsquo; le primitive per ruotare solidi, disegnare pulsanti e tutto. Sulle schede RAID ci sono SoC e ASIC che hanno tutte le primitive per  gestire un filesystem. Le schede di rete montano SoC per TCP/IP, ethernet, GSM, LTE. HTTP &lt;a href=&#34;https://www.altera.com/products/processors/support.html&#34;&gt;e&amp;rsquo; negli ASIC mica da mo&lt;/a&gt; . Ma che cavolo se ne fanno di un &amp;ldquo;sistema operativo? e del &lt;a href=&#34;https://www.altera.com/support/support-resources/design-examples/intellectual-property/embedded/nios-ii/exm-micro_tutorial.html&#34;&gt;&amp;ldquo;middleware?&amp;rdquo;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;C&amp;rsquo;e&amp;rsquo; gia&amp;rsquo; tutto, su silicio. E le proposte per l&amp;rsquo; IoT &lt;a href=&#34;http://www.newelectronics.co.uk/electronics-news/dsp-core-set-to-meet-iot-wearables-processing-requirements/76091/&#34;&gt;cominciano a fioccare&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Volete Java su silicio? &lt;a href=&#34;http://www.eetimes.com/document.asp?doc_id=1184723&#34;&gt;Eccovelo&lt;/a&gt;
+Volete sicurezza? &lt;a href=&#34;http://www.arm.com/products/processors/technologies/trustzone/index.php&#34;&gt;ARM Trustzone&lt;/a&gt;. Tutto silicio e niente spine.&lt;/p&gt;
+
+&lt;p&gt;Sia chiaro: non sono io l&amp;rsquo; unico a dire che le cose andranno a cambiare: &lt;a href=&#34;http://www.eetimes.com/document.asp?doc_id=1325949&#34;&gt;se ne sono gia&amp;rsquo; accorti&lt;/a&gt;. E stanno gia&amp;rsquo; nascendo soluzioni che sono, su silicio, delle vere e proprie macchine all purposes, comprese delle funzionalita&amp;rsquo; che di solito assegnamo ad un sistema operativo, e molte di quelle che di solito &lt;a href=&#34;http://www.eetimes.com/document.asp?doc_id=1325799&#34;&gt;ci aspettiamo da un applicativo server&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Il significato?&lt;/p&gt;
+
+&lt;p&gt;Il significato e&amp;rsquo; semplice: o chi scrive software si da una mossa, oppure tutti, e non solo le case automobilistiche, si rivolgeranno al mondo del silicio. Le case di auto ormai a cercare una software house ci hanno rinunciato. Tutte. Faranno tutto su silicio.&lt;/p&gt;
+
+&lt;p&gt;E se questo succede, e&amp;rsquo; assolutamente possibile che tra 10 anni il mondo sara&amp;rsquo; invaso dalla &amp;ldquo;internet of things&amp;rdquo;, ma questo NON significhi AFFATTO che gli sviluppatori di software ed i programmatori lavoreranno di piu&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Potrebbe significare che NON lavoreranno AFFATTO.&lt;/p&gt;
+
+&lt;p&gt;E gia&amp;rsquo; oggi, qualche segno della tendenza a portare su silicio si nota: a chi sa fare verifica di SoC, Asic &amp;amp; co, per trovare lavoro &lt;a href=&#34;https://www.google.de/search?client=opera&amp;amp;q=open+position+Soc+Asic+verification&amp;amp;sourceid=opera&amp;amp;ie=UTF-8&amp;amp;oe=UTF-8&#34;&gt;basta cercare con google&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ecco il vostro asteroide.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;iframe width=&#34;420&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/zguCFjHyVeM&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

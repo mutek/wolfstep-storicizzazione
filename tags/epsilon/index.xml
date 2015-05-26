@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Epsilon on KEIN PFUSCH, BITTE!</title>
+    <link>http://www.wolfstep.cc/tags/epsilon/</link>
+    <description>Recent content in Epsilon on KEIN PFUSCH, BITTE!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Apr 2015 22:13:56 +0200</lastBuildDate>
+    <atom:link href="http://www.wolfstep.cc/tags/epsilon/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ancora su documentazione e tests</title>
+      <link>http://www.wolfstep.cc/post/epsilonmamma/</link>
+      <pubDate>Thu, 16 Apr 2015 22:13:56 +0200</pubDate>
+      
+      <guid>http://www.wolfstep.cc/post/epsilonmamma/</guid>
+      <description>&lt;p&gt;E&amp;rsquo; bello scatenare una guerra di religione in un forum moderato perche&amp;rsquo; poi alla fine parlando senza dichiarare guerre sante si arriva a focalizzare meglio i concetti. Nel caso dell&amp;rsquo;articolo che ho scritto sulla programmazione, la questione della documentazione, dei javadoc e dei godoc ha toccato alcuni nervi scoperti. In particolare, quelli di chi dice che &amp;ldquo;il codice si documenta da solo&amp;rdquo; e di chi dice che &amp;ldquo;i test sono documentazione&amp;rdquo;. Vediamo di fare due esempi.&lt;/p&gt;
+
+&lt;p&gt;Prendiamo la prima affermazione, &amp;ldquo;il codice si documenta da solo&amp;rdquo;, e facciamo un esempio abnorme usando un linguaggio &lt;strong&gt;abnorme&lt;/strong&gt;, in questo caso Perl.&lt;/p&gt;
+
+&lt;p&gt;Guardiamo che meraviglia di modo che si usa per documentare &amp;ldquo;map&amp;rdquo;:&lt;/p&gt;
+
+&lt;pre&gt;
+my @names = qw(Foo Bar Baz);
+my @invited = map {$_ =&gt; 1} @names;
+print &#34;@invited\n&#34;
+&lt;/pre&gt;
+
+&lt;p&gt;sembra bello, giusto? Funziona benissimo, se abbiamo tre invitati. E funziona benissimo anche con 100 invitati.
+Domanda: se ci faccio passare un file di log di 200MB, mappando una riga per elemento dell&amp;rsquo;array, che succede?&lt;/p&gt;
+
+&lt;p&gt;Beh, chi conosce Perl sa bene che impieghero&amp;rsquo; secoli per manipolarlo. La ragione e&amp;rsquo; legata al fatto che map produrra&amp;rsquo; innanzitutto una copia dell&amp;rsquo;intero array sulla quale lavorare, &lt;strong&gt;e ne fara&amp;rsquo; una diversa ad ogni invocazione di map&lt;/strong&gt;. Se quel &amp;ldquo;map&amp;rdquo; su grandi file io lo infilassi in un ciclo di loop, cioe&amp;rsquo;, sarei nella cacca pura.&lt;/p&gt;
+
+&lt;p&gt;Ma c&amp;rsquo;e&amp;rsquo; di peggio. Guardiamo un attimo la funzione &amp;ldquo;grep&amp;rdquo; di perl.&lt;/p&gt;
+
+&lt;p&gt;Viene documentata , per fare un esempio, cosi&amp;rsquo;:&lt;/p&gt;
+
+&lt;pre&gt;
+ #!/usr/bin/perl
+    use strict;
+    use warnings;
+
+    my @strs = qw(potatoes lemons apricots apples bananas ostriches flamingoes);
+    my @short_strs = grep { length $_ &lt; 8 } @strs;
+    for my $str (@short_strs) {
+        print &#34;$str\n&#34;;
+    }
+&lt;/pre&gt;
+
+&lt;p&gt;Ora, sinche&amp;rsquo; avete roba del genere, funziona. Ma ripeto la domanda: se io ci sbatto dentro un file di log da 200MB, funzionera&amp;rsquo; leggendo ogni riga come un elemento dell&amp;rsquo;array? Sapete bene che avro&amp;rsquo; problemi ancora peggiori che con map: non solo perl costruira&amp;rsquo; una copia del file in memoria, ma lo fara&amp;rsquo; ogni volta che viene invocato grep.&lt;/p&gt;
+
+&lt;p&gt;In pratica abbiamo qualcosa (grep, map) che &lt;strong&gt;POSSONO&lt;/strong&gt; essere invocate su un array da 200MB di stringhe. E&amp;rsquo; sintatticamente corretto. Ma non e&amp;rsquo; &lt;strong&gt;consigliabile&lt;/strong&gt; farlo.&lt;/p&gt;
+
+&lt;p&gt;Quando vado a pubblicare il mio &lt;strong&gt;codice come documentazione&lt;/strong&gt;, pero&amp;rsquo;, io questo non lo leggo. Leggo un interessante esempio con 7 stringhe, ma non vedo scritto che non possano essere 14 milioni, da nessuna parte. Leggendo il codice &lt;strong&gt;che si documenta da solo&lt;/strong&gt; sto leggendo la sintassi , so come invocare grep e map, ma &lt;strong&gt;NON&lt;/strong&gt; ho la piu&amp;rsquo; pallida idea di come funzioni la cosa. Otto vanno bene. E nove? Vanno bene. E diciotto milioni? Anche. OOPS.&lt;/p&gt;
+
+&lt;p&gt;Ogni pezzo di codice fara&amp;rsquo; delle cose in un certo modo. Questo modo avra&amp;rsquo; dei pro e dei contro. Ad ogni &amp;ldquo;contro&amp;rdquo; corrisponde un&amp;rsquo;azione che, se anche e&amp;rsquo; sintatticamente corretta, NON e&amp;rsquo; per nulla &lt;strong&gt;consigliabile&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Il problema del dire che il codice &amp;ldquo;si documenta da solo&amp;rdquo; e&amp;rsquo; che  si &amp;ldquo;documenta da sola&amp;rdquo; &lt;strong&gt;la sintassi&lt;/strong&gt;. Niente altro che la sintassi. Quando si va a vedere se per caso stiamo anche usando il codice come lo aveva pensato chi lo ha scritto, la semplice sintassi &lt;strong&gt;non ce lo dice&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Certo, &lt;strong&gt;conoscendo perl&lt;/strong&gt; sappiamo che non e&amp;rsquo; il modo giusto di fare il parsing di un file da 200MB. Ma se conosciamo &lt;strong&gt;POCO&lt;/strong&gt; il perl, allora sappiamo che &amp;ldquo;perl e&amp;rsquo; fantastico per manipolare stringhe&amp;rdquo;. Lo dicono tutti, giusto?  La prima cosa che ci viene in mente di fare per cercare una riga di log in un file , ovviamente, e&amp;rsquo; usare la grep di perl esattamente come usiamo la grep di unix.&lt;/p&gt;
+
+&lt;p&gt;Quindi, non solo usare il codice come documentazione e&amp;rsquo; un errore per via dell&amp;rsquo;incompletezza: e&amp;rsquo; un errore per via dell&amp;rsquo;ambiguita&amp;rsquo; .&lt;/p&gt;
+
+&lt;p&gt;Andiamo ad un altro punto: &amp;ldquo;il test e&amp;rsquo; una documentazione sufficiente&amp;rdquo;. No, non lo e&amp;rsquo;.E per dimostrarlo scrivero&amp;rsquo; un codice che ha gigantesche limitazioni concettuali, quasi invisibili sui test, che al massimo mostreranno dei fallimenti puntuali. E lo scrivero&amp;rsquo; semplice. Facile da leggere.&lt;/p&gt;
+
+&lt;p&gt;Allora, prendiamo questa formula :&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;http://upload.wikimedia.org/math/9/d/8/9d8a4981a192a8871f949249c67b0f5a.png&#34; alt=&#34;derivata&#34; /&gt;
+
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;e trasformiamola &lt;strong&gt;bovinamente&lt;/strong&gt; in c:&lt;/p&gt;
+
+&lt;pre&gt;
+
+// &#34;derivata&#34; della stessa 
+
+double derivata( double icszero )
+    {
+    double d1,d,acca;
+    d=0;d1=1;
+    acca = 1;
+    while ( d != d1  ) //vabe&#39;, almeno proviamoci
+        {           
+        d1 = d; 
+        d=(funzione(icszero+acca)- funzione(icszero))/(acca);
+        acca = acca / 2.0; 
+        }
+    return d;
+    }
+
+
+
+&lt;/pre&gt;
+
+&lt;p&gt;Come vedete, a leggerlo il codice fa ESATTAMENTE quello che dice la formula. Ha senso. Con una scelta oculata dei nomi delle variabili, si &lt;em&gt;pronuncia&lt;/em&gt; persino allo stesso modo. Sul piano del codice, potete dire quel che volete, ma e&amp;rsquo; esattamente l&amp;rsquo;esecuzione di quella formula. Quindi, il codice dice che sto facendo quella roba.&lt;/p&gt;
+
+&lt;p&gt;Certo, &lt;strong&gt;se potessi documentare&lt;/strong&gt; dovrei dire che la funzione NON va a fare alcun controllo sulla derivabilita&amp;rsquo;, tantomeno della continuita&amp;rsquo;. Ma non posso, e quindi dovete capirlo da soli, oppure vedete una formula implementata cosi com&amp;rsquo;e&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Allora mi direte che se scriviamo dei test, allora capiremo tutto. Ok.&lt;/p&gt;
+
+&lt;p&gt;Allora:&lt;/p&gt;
+
+&lt;pre&gt;
+double funzione(double x)
+    {
+    return x*x ;
+    }
+&lt;/pre&gt;
+
+&lt;p&gt;Ehi, funziona! Se deriviamo per x=3, ci restituisce 6! Successone! Siamo gia&amp;rsquo; pronti a lanciarci nel mondo del meraviglioso calcolo differenziale! Siamo dei leoni.&lt;/p&gt;
+
+&lt;p&gt;E allora proviamo ancora e&amp;hellip;.&lt;/p&gt;
+
+&lt;pre&gt;
+double funzione(double x)
+    {
+    return sin(x);
+    }
+&lt;/pre&gt;
+
+&lt;p&gt;Scriviamo il test per x=1 e anche questo va! Fantastico. Siamo gia&amp;rsquo; pronti ad arruolarci nella Dinamo RungeKutta. Ma come ho scritto, questa roba funziona bene nell&amp;rsquo;insieme dei reali, e funziona un &lt;strong&gt;pochino&lt;/strong&gt; peggio nel mondo dei numeri discreti.&lt;/p&gt;
+
+&lt;p&gt;E allora adesso mettiamo i nostri test negativi. Scriviamo il nostro bel &amp;ldquo;failing_test.c&amp;rdquo; e ci mettiamo i casi in cui fallisce. Uno e&amp;rsquo; ovvio.&lt;/p&gt;
+
+&lt;pre&gt;
+double funzione(double x)
+    {
+    return (x != 3)? 1.0 : 0.0 ;
+    }
+&lt;/pre&gt;
+
+&lt;p&gt;E siccome siamo personcine amabili, andiamo a calcolare la &amp;ldquo;derivata&amp;rdquo; nel punto x = 3.&lt;/p&gt;
+
+&lt;p&gt;Come vedete(1), il risultato e&amp;rsquo; sbagliato. (ovvio, visto che non ne esiste uno giusto). Ma quel che e&amp;rsquo; peggio lo potrete vedere stampando, iterazione dopo iterazione, i valori di &amp;ldquo;d&amp;rdquo; e di &amp;ldquo;acca&amp;rdquo;: &lt;em&gt;terrificante, vero&lt;/em&gt;?(1) Specialmente quel &amp;ldquo;saltino&amp;rdquo; da 4.611.686.018.427.387.904 a &amp;hellip; zero, che trovo commovente: del resto stiamo stampando l&amp;rsquo;inverso di un numero piu&amp;rsquo; piccolo dell&amp;rsquo;epsilon di macchina&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Faccio presente, pero&amp;rsquo;, che se avessi calcolato la derivata in QUALSIASI altro valore di x, non si sarebbe notato nulla.&lt;/strong&gt; Avrei potuto scrivere lo stesso test per un altro valore di x  ANCHE nei test che si concludono &lt;strong&gt;con successo&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;Adesso, chi ha studiato sa cosa stia succedendo ma&amp;hellip; voi non scrivereste una cosa simile. Pero&amp;rsquo; siamo al punto in cui chi legge NON SA , e deve capire leggendo i test. Quanto &lt;strong&gt;spiega&lt;/strong&gt; questo test fallito, a chi non aveva capito il problema da subito?&lt;/p&gt;
+
+&lt;p&gt;Quando io avessi mostrato al tizio che trova su google il nostro sito e vuole un metodo rapido per fare la derivata (che in questo esempio fallisce), cosa ci ha capito?  Cosa capisce da questo  test, che e&amp;rsquo; chiarissimo praticamente per chiunque programmi? Chiarito questo, cosa sa il nostro eroe di quanto succede in un altro caso, diciamo un punto angoloso tipo abs() per x=0?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Se potesse capire, si sarebbe scritto lui lo stesso codice&lt;/strong&gt;. Se ha bisogno di un codice del genere, e non ne capisce i limiti a guardarlo, &lt;strong&gt;che cosa dedurra&amp;rsquo; dal fatto che adesso la funzione fallisce?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Se siete fortunati, dira&amp;rsquo; una cosa come &amp;ldquo;&lt;em&gt;si ma le derivate sono per le funzioni coi numeri, mica per gli &lt;strong&gt;if&lt;/strong&gt;. Mica e&amp;rsquo; programmazione.&lt;/em&gt;&amp;rdquo; Sentito con le mie orecchie.&lt;/p&gt;
+
+&lt;p&gt;Cosi&amp;rsquo;, diciamo che di quelli che trovano questo codice su google, circa 30 non hanno capito i suoi limiti, e lo useranno per calcolare la derivata di abs(x) in x=0. Gli altri eviteranno, perche&amp;rsquo; hanno capito il concetto dal primo esempio.&lt;/p&gt;
+
+&lt;p&gt;Ma i nostri trenta pensano che se non ci sono if o altri costrutti &amp;ldquo;da programazione&amp;rdquo; la derivata vada bene. Cosi&amp;rsquo; proviamo a proporre questo test fallito, con una funzione semplice, senza if, for, etc. In modo che anche lui possa capire:&lt;/p&gt;
+
+&lt;p&gt;&lt;pre&gt;
+double funzione(double x)
+    {
+    return sin (1/x);
+    }
+&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;scriviamo il nostro secondo test, chiediamo &amp;lsquo;derivata(0)&amp;rsquo; e mostriamo che questa roba fallisce. Siamo ancora nelle condizioni mancanti di verifica di derivabilita&amp;rsquo; e nelle stesse condizioni  di comprensione della funzione, ma adesso non c&amp;rsquo;e&amp;rsquo; nessun if. Quindi il nostro eroe che ha imparato a programmare &amp;ldquo;per il web&amp;rdquo; , che cosa capisce da questo fallimento? Quasi nulla. Diciamo che abbiamo qui una settantina di quei 100 che lo useranno senza ritegno , anche in condizioni di cuspidi, discontinuita&amp;rsquo; di ogni genere, e compagnia bella.&lt;/p&gt;
+
+&lt;p&gt;Cosi&amp;rsquo; facciamo un esempio ancora piu&amp;rsquo; semplice con una cosa semplicissimissima.&lt;/p&gt;
+
+&lt;p&gt;E scriviamo un altro test fallito, e siccome non siamo figli di maria, sempre per x=3:&lt;/p&gt;
+
+&lt;pre&gt;
+double funzione(double x)
+    {
+    return (1/x);
+    }
+&lt;/pre&gt;
+
+&lt;p&gt;voi direte: ma perche&amp;rsquo; dici che fallisce?&lt;/p&gt;
+
+&lt;p&gt;Mettiamola cosi&amp;rsquo;: e&amp;rsquo; concepito per amplificare l&amp;rsquo;errore di macchina. Sul mio compilatore c, in questo momento, usando un double restituisce -0.11111110448837280273 , credendo che sia -&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;9&lt;/sub&gt; . Per aver usato dei &amp;ldquo;double&amp;rdquo; potremmo avere di meglio, ma anche usando dei long double, otteniamo -0.11111111112404614687! Un po&amp;rsquo; schifino,  diciamo. Si, i primi decimali sono corretti, ma per essere -&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;9&lt;/sub&gt; fa &amp;ldquo;schifetto&amp;rdquo;. Non ha proprio fallito-fallito: ha mostrato i propri limiti di precisione, ecco.&lt;/p&gt;
+
+&lt;p&gt;Sono curioso di sapere cosa restituisca in altri linguaggi, ma a meno che i vostri compilatori siano molto furbi, oltre questo non mi aspetto nulla di buono.  Quell&amp;rsquo;algoritmo fa schifo.&lt;/p&gt;
+
+&lt;p&gt;Allora, che succede? Abbiamo scritto un pezzo di codice, che sul piano del codice sembra fare esattamente quello che dice la formula matematica. A dire il vero lo fa, con il piccolo dettaglio che siamo in un insieme discreto e non nel mondo dei reali (motivo per il quale l&amp;rsquo;algoritmo termina, btw).&lt;/p&gt;
+
+&lt;p&gt;Adesso riflettiamo e chiediamoci, di quei 100 che ci hanno trovato cercando su github un metodo veloce per fare le derivate, quanti hanno capito i tre test falliti. Risposta: quelli che possono capire i tre test falliti il codice se lo scrivono da soli, sono poche righe. Tutti gli altri, da quei test falliti &lt;strong&gt;NON CAPIRANNO NIENTE&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Che lavoro fanno quelli che non capiscono? Oggi come oggi, potenzialmente sono ovunque. Banche, assicurazioni, ospedali, ovunque. E se pensate che ADA possa fermare il problema, vi sbagliate di grosso: la stessa funzione scritta in ADA nello stesso modo ha gli stessi identici problemi che mi sono cercato.&lt;/p&gt;
+
+&lt;p&gt;Se potessimo scrivere documentazione potremmo dire chiaramente che stiamo calcolando una derivata &amp;ldquo;destra&amp;rdquo; , e che in un ambiente discreto in alcuni casi tutto si riduce alla stampa di un inverso dell&amp;rsquo;epsilon di macchina con una verifica che arriva troppo tardi. Potremmo scrivere che non facciamo controlli sulla derivabilita&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Ma avendo solo il codice e i test, posso scommettere quanto volete che un sacco di persone ricicleranno questa funzione, credendo che in fondo si, qualche volta non funziona, ha qualche problema di precisione (LOL) ma  in fondo, si, i numeri che deve macinare li macina.&lt;/p&gt;
+
+&lt;p&gt;Quindi no: &lt;strong&gt;ne&amp;rsquo; il codice ne&amp;rsquo; i test possono sostituire la documentazione&lt;/strong&gt;. I limiti &lt;strong&gt;concettuali&lt;/strong&gt; di un algoritmo NON sono spiegabili con dei test , positivi o negativi che siano. Serve proprio la documentazione.&lt;/p&gt;
+
+&lt;p&gt;Se qualcuno prendesse quel pezzo di codice sopra e iniziasse ad usarlo per fare cose serie, i risultati potrebbero essere comici. I problemi salterebbero fuori solo in alcuni casi, gli errori di accumulerebbero lentamente, sino a che &amp;hellip;. paf.  Il vostro conto in banca sparisce.&lt;/p&gt;
+
+&lt;p&gt;Il codice pericoloso NON viene fermato ne&amp;rsquo; leggendo il codice ne&amp;rsquo; leggendo i test. Anche quando i test falliscano, e noi forniamo i test che falliscono, &lt;strong&gt;SOLO ALCUNI&lt;/strong&gt; avranno capito perche&amp;rsquo; falliscono e quali altri casi analoghi fallirano.&lt;/p&gt;
+
+&lt;p&gt;Il resto, se il codice e&amp;rsquo; abbastanza complicato, non capira&amp;rsquo; affatto il problema. Si limiteranno ad usare un codice che e&amp;rsquo; limitatissimo senza averne capiti i limiti concettuali.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/3Jvui3-dlJA&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;(1)
+&lt;pre&gt;
+acca 1.00000000000000000000 , D:1.00000000000000000000&lt;br /&gt;
+acca 0.50000000000000000000 , D:2.00000000000000000000&lt;br /&gt;
+acca 0.25000000000000000000 , D:4.00000000000000000000&lt;br /&gt;
+acca 0.12500000000000000000 , D:8.00000000000000000000&lt;br /&gt;
+acca 0.06250000000000000000 , D:16.00000000000000000000&lt;br /&gt;
+acca 0.03125000000000000000 , D:32.00000000000000000000&lt;br /&gt;
+acca 0.01562500000000000000 , D:64.00000000000000000000&lt;br /&gt;
+acca 0.00781250000000000000 , D:128.00000000000000000000&lt;br /&gt;
+acca 0.00390625000000000000 , D:256.00000000000000000000&lt;br /&gt;
+acca 0.00195312500000000000 , D:512.00000000000000000000&lt;br /&gt;
+acca 0.00097656250000000000 , D:1024.00000000000000000000&lt;br /&gt;
+acca 0.00048828125000000000 , D:2048.00000000000000000000&lt;br /&gt;
+acca 0.00024414062500000000 , D:4096.00000000000000000000&lt;br /&gt;
+acca 0.00012207031250000000 , D:8192.00000000000000000000&lt;br /&gt;
+acca 0.00006103515625000000 , D:16384.00000000000000000000&lt;br /&gt;
+acca 0.00003051757812500000 , D:32768.00000000000000000000&lt;br /&gt;
+acca 0.00001525878906250000 , D:65536.00000000000000000000&lt;br /&gt;
+acca 0.00000762939453125000 , D:131072.00000000000000000000&lt;br /&gt;
+acca 0.00000381469726562500 , D:262144.00000000000000000000&lt;br /&gt;
+acca 0.00000190734863281250 , D:524288.00000000000000000000&lt;br /&gt;
+acca 0.00000095367431640625 , D:1048576.00000000000000000000&lt;br /&gt;
+acca 0.00000047683715820312 , D:2097152.00000000000000000000&lt;br /&gt;
+acca 0.00000023841857910156 , D:4194304.00000000000000000000&lt;br /&gt;
+acca 0.00000011920928955078 , D:8388608.00000000000000000000&lt;br /&gt;
+acca 0.00000005960464477539 , D:16777216.00000000000000000000&lt;br /&gt;
+acca 0.00000002980232238770 , D:33554432.00000000000000000000&lt;br /&gt;
+acca 0.00000001490116119385 , D:67108864.00000000000000000000&lt;br /&gt;
+acca 0.00000000745058059692 , D:134217728.00000000000000000000&lt;br /&gt;
+acca 0.00000000372529029846 , D:268435456.00000000000000000000&lt;br /&gt;
+acca 0.00000000186264514923 , D:536870912.00000000000000000000&lt;br /&gt;
+acca 0.00000000093132257462 , D:1073741824.00000000000000000000&lt;br /&gt;
+acca 0.00000000046566128731 , D:2147483648.00000000000000000000&lt;br /&gt;
+acca 0.00000000023283064365 , D:4294967296.00000000000000000000&lt;br /&gt;
+acca 0.00000000011641532183 , D:8589934592.00000000000000000000&lt;br /&gt;
+acca 0.00000000005820766091 , D:17179869184.00000000000000000000&lt;br /&gt;
+acca 0.00000000002910383046 , D:34359738368.00000000000000000000&lt;br /&gt;
+acca 0.00000000001455191523 , D:68719476736.00000000000000000000&lt;br /&gt;
+acca 0.00000000000727595761 , D:137438953472.00000000000000000000&lt;br /&gt;
+acca 0.00000000000363797881 , D:274877906944.00000000000000000000&lt;br /&gt;
+acca 0.00000000000181898940 , D:549755813888.00000000000000000000&lt;br /&gt;
+acca 0.00000000000090949470 , D:1099511627776.00000000000000000000&lt;br /&gt;
+acca 0.00000000000045474735 , D:2199023255552.00000000000000000000&lt;br /&gt;
+acca 0.00000000000022737368 , D:4398046511104.00000000000000000000&lt;br /&gt;
+acca 0.00000000000011368684 , D:8796093022208.00000000000000000000&lt;br /&gt;
+acca 0.00000000000005684342 , D:17592186044416.00000000000000000000&lt;br /&gt;
+acca 0.00000000000002842171 , D:35184372088832.00000000000000000000&lt;br /&gt;
+acca 0.00000000000001421085 , D:70368744177664.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000710543 , D:140737488355328.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000355271 , D:281474976710656.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000177636 , D:562949953421312.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000088818 , D:1125899906842624.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000044409 , D:2251799813685248.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000022204 , D:4503599627370496.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000011102 , D:9007199254740992.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000005551 , D:18014398509481984.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000002776 , D:36028797018963968.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000001388 , D:72057594037927936.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000000694 , D:144115188075855872.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000000347 , D:288230376151711744.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000000173 , D:576460752303423488.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000000087 , D:1152921504606846976.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000000043 , D:2305843009213693952.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000000022 , D:4611686018427387904.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000000011 , D:0.00000000000000000000&lt;br /&gt;
+acca 0.00000000000000000005 , D:0.00000000000000000000&lt;br /&gt;
+&lt;/pre&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bambini on KEIN PFUSCH, BITTE!</title>
+    <link>http://www.wolfstep.cc/categories/bambini/</link>
+    <description>Recent content in Bambini on KEIN PFUSCH, BITTE!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Mar 2015 20:22:22 +0100</lastBuildDate>
+    <atom:link href="http://www.wolfstep.cc/categories/bambini/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Coder Dojo, scratch, pro &amp; cons.</title>
+      <link>http://www.wolfstep.cc/post/scratch/</link>
+      <pubDate>Wed, 18 Mar 2015 20:22:22 +0100</pubDate>
+      
+      <guid>http://www.wolfstep.cc/post/scratch/</guid>
+      <description>&lt;p&gt;Si fa un gran parlare dei Coder Dojo per i giovanissimi (dai 7 anni in poi) e dopo aver esaminato diverse alternative via webcast, ed aver osservato sia quelli organizzati dall&amp;rsquo; azienda (i Family day si sprecano) e dalla scuola di mia figlia, sono arrivato a formarmi un opinione. Diciamo che ho una opinione positiva, ma sollevo alcuni problemi, legati ad una visione dell&amp;rsquo;informatica molto &amp;ldquo;naif&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Occorre innanitutto definire un concetto: per come si sta evolvendo l&amp;rsquo;economia dei servizi e l&amp;rsquo;economia della produzione, una certa capacita&amp;rsquo; di programmare un computer sara&amp;rsquo; richiesta a tutti. Quando dico tutti intendo dire che da qui a 20 anni, chi sara&amp;rsquo; privo di tali abilita&amp;rsquo; sara&amp;rsquo; semplicemente un barbone.&lt;/p&gt;
+
+&lt;p&gt;Ovviamente l&amp;rsquo;espressione &amp;ldquo;programmare un computer&amp;rdquo; ha una gamma enorme di significati , che vanno dallo sviluppo web allo sviluppo di applicazioni residenti, al padroneggiare linguaggi di macro utili per fare ,c he so io, big data, sino a linguaggi &amp;ldquo;matematici&amp;rdquo; come MathLab, Mathematica, etc.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;abilita&amp;rsquo; di programmare un computer, cioe&amp;rsquo;, la uso nella seguente accezione:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;la capacita&amp;rsquo; di definire nei dettagli &lt;strong&gt;quantitativi&lt;/strong&gt; il risultato da ottenere.&lt;/li&gt;
+&lt;li&gt;la capacita&amp;rsquo; di descrivere e &lt;em&gt;tipare&lt;/em&gt; la situazione iniziale ed i dati iniziali.&lt;/li&gt;
+&lt;li&gt;la capacita&amp;rsquo; di descrivere una serie di operazioni automatiche che portano dalla soluzione iniziale a quella finale.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Questa capacita&amp;rsquo; di &amp;ldquo;programmare un computer&amp;rdquo; e&amp;rsquo; ovviamente una capacita&amp;rsquo; che in astratto descrive quello che sinora si e&amp;rsquo; chiamato &amp;ldquo;fasi di lavorazione&amp;rdquo; in qualsiasi parte dell&amp;rsquo;industria. Infatti, il mondo dell&amp;rsquo;industria e&amp;rsquo; proprio quello che viene automatizzato di piu&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Se pero&amp;rsquo; pensiamo alla direzione di un&amp;rsquo;azienda o alla burocrazia, cose come &amp;ldquo;prendi la domanda X e la porti all&amp;rsquo; ufficio Y, poi va all&amp;rsquo;approvazione all&amp;rsquo;ufficio Z, infine produce la tale azione dall&amp;rsquo; ente K&amp;rdquo; , e&amp;rsquo; un algoritmo a tutti gli effetti, e spesso e&amp;rsquo; la descrizione di un &amp;ldquo;processo&amp;rdquo; per chi si occupa di ERP.&lt;/p&gt;
+
+&lt;p&gt;Possiamo a sua volta descrivere questa attitudine come una specie di &amp;ldquo;piano di lavorazione&amp;rdquo;:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Definire in termini formali il risultato finale.&lt;/li&gt;
+&lt;li&gt;Definire in termini formali lo stato iniziale.&lt;/li&gt;
+&lt;li&gt;Definire in termini formali una lista di azioni a(1),a(2),&amp;hellip;.a(n) che passi da llo stato iniziale al risultato finale.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Poi c&amp;rsquo;e&amp;rsquo; un altro lato della programmazione, che non e&amp;rsquo; cosi&amp;rsquo; astratta, ma e&amp;rsquo; la &amp;ldquo;produzione di software&amp;rdquo; , ed e&amp;rsquo; piu&amp;rsquo; specifica. Essa comprende come pre-requisito una abilita&amp;rsquo; nel programmare un computer, e poi arrivano tutti i tecnicismi:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;La scelta della piattaforma&lt;/li&gt;
+&lt;li&gt;La scelta dell&amp;rsquo;infrastruttura.&lt;/li&gt;
+&lt;li&gt;Il dimensionamento della stessa.&lt;/li&gt;
+&lt;li&gt;La definizione dei KPI.&lt;/li&gt;
+&lt;li&gt;La definizione degli SLA.&lt;/li&gt;
+&lt;li&gt;La scelta del sistema di sviluppo.&lt;/li&gt;
+&lt;li&gt;La scrittura dei testbook.&lt;/li&gt;
+&lt;li&gt;La scrittura della documentazione.&lt;/li&gt;
+&lt;li&gt;La realizzazione del software stesso in un dato linguaggio.&lt;/li&gt;
+&lt;li&gt;La gestione dei tempi e del budget del progetto.&lt;/li&gt;
+&lt;li&gt;La gestione dei rischi a software in produzione.&lt;/li&gt;
+&lt;li&gt;Il lifecycle management (manutenzione, patch, CR, etc).&lt;/li&gt;
+&lt;li&gt;Il ciclo di transizione (dismissione del prodotto, migrazione ad altre piattaforme, etc)&lt;/li&gt;
+&lt;li&gt;Varie&amp;amp;Eventuali&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;queste abilita&amp;rsquo;, che sono implementative, le indichero&amp;rsquo; in futuro come &amp;ldquo;produzione del software&amp;rdquo;, ovvero il momento in cui la serie di azioni e metodi che avete in mente si trasforma in un programma eseguito in autonomia dalla macchina.&lt;/p&gt;
+
+&lt;p&gt;Fatta la distinzione tra &amp;ldquo;abilita&amp;rsquo; nel programmare&amp;rdquo; e &amp;ldquo;capacita&amp;rsquo; di produrre software&amp;rdquo;, torniamo al Coder Dojo. Tutti gli esempi che ho visto usavano Scratch, un linguaggio che definirei &amp;ldquo;macro di automazione&amp;rdquo; sviluppata appositamente per i bambini.&lt;/p&gt;
+
+&lt;p&gt;Nella sua forma meno &amp;ldquo;scritta&amp;rdquo;, diciamo adatta per bambini piccoli e/o tablet, esso appare in questo modo:&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://a4.mzstatic.com/us/r30/Purple4/v4/b4/24/71/b42471fb-ed88-f0d4-ad13-c574f4f81a0e/screen480x480.jpeg&#34; alt=&#34;Scratch&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Le operazioni da far compiere ai personaggi sono descritte dai blocchetti che vengono messi in sequenza.Il personaggio (o piu&amp;rsquo; di uno) parte da una posizione iniziale nello scenario, e poi interagisce con gli altri a seconda di una sequenza definita, appunto, dalla sequenza di blocchetti.&lt;/p&gt;
+
+&lt;p&gt;Ovviamente, e&amp;rsquo; possibile avere anche interfacce piu&amp;rsquo; sofisticate per bambini piu&amp;rsquo; grandi e capaci di leggere e far di conto , che ricordano di piu&amp;rsquo; una descrizione a blocchi dei programmi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://upload.wikimedia.org/wikipedia/commons/7/76/Scratch_2.0_Default_screen.png&#34; alt=&#34;Scratch2&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Alla fine , sebbene non si abbiano dei veri e propri programmi, e&amp;rsquo; possibile usare questo paradigma per insegnare quella che ho chiamato &amp;ldquo;abilita&amp;rsquo; nel programmare&amp;rdquo;, ovvero descrivere il risultato voluto a partire dalla situazione iniziale piu&amp;rsquo; una serie di passaggi, eseguiti dalla macchina.&lt;/p&gt;
+
+&lt;p&gt;Adesso siamo al punto: pensare agli obiettivi da raggiungere in termini di azioni necessarie a raggiungerlo e&amp;rsquo; sicuramente l&amp;rsquo; ABC della programmazione, cosi&amp;rsquo; come e&amp;rsquo; l&amp;rsquo; ABC del design industriale, ed essenzialmente l&amp;rsquo; ABC di qualsiasi cosa sia &amp;ldquo;fare le cose pensando a come farle&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Se giudico la questione del Coder Dojo in questi termini, il mio giudizio e&amp;rsquo; &lt;strong&gt;positivISSIMO&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Adesso pero&amp;rsquo; andiamo alla differenza tra requisiti ed aspettative.&lt;/p&gt;
+
+&lt;p&gt;Se il requisito e&amp;rsquo; quello di insegnare ai bambini una mentalita&amp;rsquo; capace di prendere un obiettivo, osservare le risorse a disposizione, le azioni possibili e definire il raggiungimento dell&amp;rsquo;obiettivo, esso e&amp;rsquo; stato raggiunto. Ma qual&amp;rsquo;e&amp;rsquo; l&amp;rsquo;aspettativa che sta dietro a questo requisito?&lt;/p&gt;
+
+&lt;p&gt;Se l&amp;rsquo;aspettativa e&amp;rsquo; quella di aver &amp;ldquo;avvicinato il bambino alla programmazione&amp;rdquo;, beh, non e&amp;rsquo; vero. Non soltanto perche&amp;rsquo; era possibile stimolare la stessa forma mentis con dei normalissimi Lego, ma perche&amp;rsquo; di fatto non e&amp;rsquo; programmazione. Quello che abbiamo fatto e&amp;rsquo; aver creato una specie di Lego per computer, e in questo abbiamo avvicinato il bambino al computer, non alla programmazione.&lt;/p&gt;
+
+&lt;p&gt;Sia chiaro: non sto dicendo che si dovrebbe insegnare Wirth ai bambini. Come ho detto il mio giudizio e&amp;rsquo; positivissimo. Sto solo dicendo che questo stimola un&amp;rsquo;abilita&amp;rsquo; cosi&amp;rsquo; generica e visuale che non bisogna aspettarsi che questa abilita&amp;rsquo; si traduca necessariamente in una qualche abilita&amp;rsquo; informatica.&lt;/p&gt;
+
+&lt;p&gt;La stessa abilita&amp;rsquo; e&amp;rsquo; necessaria al muratore come al manager, dal momento che alla fine si tratta di partire dalle risorse  e dalle azioni disponibili per realizzare cio&amp;rsquo; che si ha in mente. Anche il piu&amp;rsquo; bravo tra i bambini che si metta ad allenarsi con lo Scratch non necessariamente sviluppera&amp;rsquo;  abilita&amp;rsquo; informatiche: potrebbe diventare abilissimo nello scolpire statue, e il tipo di pensiero sarebbe esattamente identico.&lt;/p&gt;
+
+&lt;p&gt;Adesso e&amp;rsquo; piu&amp;rsquo; chiaro cosa intendo quando dico che bisogna distinguere le aspettative dai requisiti: Scratch insegna una mentalita&amp;rsquo; generale e visuale per descrivere il processo di passare dallo stato A allo stato B in un mondo deterministico.&lt;/p&gt;
+
+&lt;p&gt;Si tratta di un&amp;rsquo;abilita&amp;rsquo; generale, cosi&amp;rsquo; generale che non necessariamente &amp;ldquo;avvicina all&amp;rsquo;informatica&amp;rdquo;.  Diciamo che, siccome si pratica con un computer, al limite avvicina al computer.&lt;/p&gt;
+
+&lt;p&gt;Ed e&amp;rsquo; l&amp;rsquo;aspettativa la parte piu&amp;rsquo; criticabile di questa cosa: se io dovessi consigliare Scratch, non lo consiglierei ai bambini che vogliono fare gli informatici: lo consiglierei a tutti, come esercizio di concentrazione. Non e&amp;rsquo; un esercizio di informatica quanto non lo siano i Lego: e&amp;rsquo; una specie di Lego per computer, in definitiva. Consigliereste i lego per imparare informatica? Di sicuro. E per imparare ad espandere la mente? Di sicuro? A chi? A tutti. Ma poi direste che vostro figlio sara&amp;rsquo; un eccellente astronauta solo perche&amp;rsquo; coi lego ha costruito un disco volante? &lt;strong&gt;NO&lt;/strong&gt;, ed e&amp;rsquo; questo il punto.&lt;/p&gt;
+
+&lt;p&gt;La pretesa di specificita&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;La critica che faccio ai Coder Dojo che propongono scratch alle scuole e&amp;rsquo; di presentarlo dicendo che questa sia una preparazione all&amp;rsquo;informatica, o che questo dia ai bambini qualcuna delle capacita&amp;rsquo; - cosi&amp;rsquo; richieste nel mondo della &lt;em&gt;way newer economy delle startup&lt;/em&gt; - che oggi vengono osannate.&lt;/p&gt;
+
+&lt;p&gt;La verita&amp;rsquo; e&amp;rsquo; che si tratta di un esercizio mentale che aggiunge focalizzazione e capacita&amp;rsquo; implementativa a qualsiasi bambino voglia fare qualsiasi cosa.&lt;/p&gt;
+
+&lt;p&gt;Ma ho parlato di una differenza tra &amp;ldquo;abilita&amp;rsquo; nel programmare&amp;rdquo; e &amp;ldquo;produzione del software&amp;rdquo;. L&amp;rsquo;ho fatto perche&amp;rsquo; vorrei sottolineare una cosa: l&amp;rsquo;abilita&amp;rsquo; nel programmare, sia programmi al computer che procedure per lavorare, e&amp;rsquo; necessaria per avere successo al lavoro, ma non sufficiente.&lt;/p&gt;
+
+&lt;p&gt;Se dovessi dire che una persona riesce nel lavoro perche&amp;rsquo; ha abilita&amp;rsquo; nel programmare, direi di no. E&amp;rsquo; il minimo richiesto. Ad essere pagate sono le capacita&amp;rsquo; specifiche, ovvero la produzione di qualcosa, software compreso.&lt;/p&gt;
+
+&lt;p&gt;Il fatto che si chiami &amp;ldquo;Coder Dojo&amp;rdquo; e&amp;rsquo; scorretto perche&amp;rsquo; si lascia trasparire l&amp;rsquo;illusione che facendo questo il bambino sia sul cammino per diventare un programmatore. Sono palle. E sono palle pericolose perche&amp;rsquo;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I genitori che vedono un bambino bravo in scratch penseranno che sia destinato a lavorare coi computer. La verita&amp;rsquo;, stanno solo notando che il bambino sara&amp;rsquo; bravo a &lt;strong&gt;fare&lt;/strong&gt; qualsiasi cosa.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Se siete in grado di descrivere con accuratezza la procedura per passare da uno stato iniziale ad uno stato , diciamo, immaginato o progettato, non siete solo ottimi informatici. Siete ottimi &lt;strong&gt;qualsiasicosa&lt;/strong&gt;: e&amp;rsquo; un&amp;rsquo;abilita&amp;rsquo; cosi&amp;rsquo; generica che potreste usarla con successo in ogni campo.  Spingere un bambino verso la programmazione e l&amp;rsquo;informatica solo perche&amp;rsquo; eccelle in scratch e&amp;rsquo; insensato.&lt;/p&gt;
+
+&lt;p&gt;E quindi, voglio dare la mia opinione, suddivisione tra &amp;ldquo;pro&amp;rdquo; e &amp;ldquo;contro&amp;rdquo; del Coder Dojo e dello Scratch:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Pro: allena la mente dei bambini ad una generale abilita&amp;rsquo; nell&amp;rsquo;osservare lo stato iniziale, immaginare il risultato desiderato, e disegnare la sequenza di azioni che serve per ottenere quanto desiderato.&lt;/li&gt;
+&lt;li&gt;Contro: insinua nei genitori la convinzione sbagliatissima che il bambino stia acquisendo abilita&amp;rsquo; in un preciso settore, l&amp;rsquo;informatica, quando sta acquisendo una capacita&amp;rsquo; utilissima, necessaria, &lt;strong&gt;ma estremamente polimorfa&lt;/strong&gt;. E piazza sul bambino la responsabilita&amp;rsquo;/aspettativa (presente e futura) di &amp;ldquo;aver imparato a programmare&amp;rdquo;, cosa che non ha fatto.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In parole povere: portate i vostri figli al Coder Dojo e fateli giocare con lo scratch. Ma consideratelo come considerate i Lego: il fatto che &lt;strong&gt;ci facciano le casette non ne fa dei futuri architetti&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ne fa dei personaggi abili &lt;strong&gt;a fare da soli le cose che hanno in mente di fare&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Abilita&amp;rsquo; che indica sia il vostro idraulico che Alessandro il Grande. &amp;ldquo;Come&amp;rdquo; fare le cose e &amp;ldquo;Cosa fare&amp;rdquo; sono due concetti  assolutamente &lt;strong&gt;ortogonali&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;420&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/1ybaiCgOFUQ&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

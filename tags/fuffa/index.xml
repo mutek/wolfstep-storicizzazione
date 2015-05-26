@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fuffa on KEIN PFUSCH, BITTE!</title>
+    <link>http://www.wolfstep.cc/tags/fuffa/</link>
+    <description>Recent content in Fuffa on KEIN PFUSCH, BITTE!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 May 2015 13:41:15 +0200</lastBuildDate>
+    <atom:link href="http://www.wolfstep.cc/tags/fuffa/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>I programmofoni</title>
+      <link>http://www.wolfstep.cc/post/cavalletteplusplus/</link>
+      <pubDate>Fri, 01 May 2015 13:41:15 +0200</pubDate>
+      
+      <guid>http://www.wolfstep.cc/post/cavalletteplusplus/</guid>
+      <description>&lt;p&gt;Ero in altre faccende affaccendato quando nacque e si sviluppo&amp;rsquo; Java, cosi&amp;rsquo; non ho potuto seguire la sua interminabile morte.(1) Idem per Python ed altri. Sto invece osservando il mondo di golang, non tanto perche&amp;rsquo; intenda darmi alla programmazione ma perche&amp;rsquo; mi sta divertendo. Chi ha scritto golang &lt;em&gt;si e&amp;rsquo; divertito&lt;/em&gt; , questo e&amp;rsquo; certo. E sto vedendo come la programmazione diventi merda. Parlandone.&lt;/p&gt;
+
+&lt;p&gt;Non sto scherzando. golang e&amp;rsquo; ancora usato per il 2.5% dei progetti del mondo, quindi di per se&amp;rsquo; dovrebbe essere un linguaggio agli albori che discute le sue primitive di base e le sue librerie piu&amp;rsquo; usate. Invece, sono gia&amp;rsquo; arrivati i programmofoni.&lt;/p&gt;
+
+&lt;p&gt;I programmofoni si dividono in diverse categorie. Quando ho scritto su un forum che volevo scrivere un programma che facesse un server NNTP e condividesse i post via P2P, chiedendo se qualcuno conoscesse delle librerie ad hoc, mi hanno proposto cinque o sei librerie, tra NNTP, P2P e UPnP. A parte lo stato pietoso del codice (ho dovuto scaricare una copia mia del software dell&amp;rsquo; UpNP e bonificarlo(2) ) , indice di immaturita&amp;rsquo;, ho pensato subito &amp;ldquo;ma guarda quanta bella gente servizievole che c&amp;rsquo;e&amp;rsquo; qui&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Invece, poi ho scoperto la verita&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Tutto quel codice fa schifo. E fa schifo perche&amp;rsquo; e&amp;rsquo; stato scritto in fretta senza voler raggiungere un obiettivo. Se voi avete un obiettivo, e avete un programma in mente, dovete fare quello. Se invece scrivete delle librerie dht per scrivere delle librerie dht, ma senza uno use-case in mente, &lt;em&gt;scriverete roba di merda&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ma allora perche&amp;rsquo; li scrivono? Scrivono perche&amp;rsquo; vogliono diventare programmofoni. Il programmofono e&amp;rsquo; uno che scrive codice, ma non programma: &lt;em&gt;il suo scopo e&amp;rsquo; di essere pagato per parlare di programmazione&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Scrivono librerie sperando che gli altri le usino. Quando gli altri le usano le loro librerie diventeranno famose, e si faranno pagare per i talk alle convention e per gli articoli sui giornali. Niente idee. Niente bisogni da risolvere.&lt;/p&gt;
+
+&lt;p&gt;Uno dei tipi piu&amp;rsquo; pericolosi di programmofono e&amp;rsquo; chi scrive i framework. Normalmente per scrivere un framework VERO occorre una squadra di esperti, e occorrono anni di analisi dei requisiti.(3) Invece su golang stanno iniziando a piovere framework (identici a quelli che hanno gia&amp;rsquo; fallito in Java, btw). E non sono framework scritti da team di esperti di grandi aziende che vogliono intercettare i bisogni dei clienti: sono scritti in pochi mesi da UN individuo , spesso giovanissimo.&lt;/p&gt;
+
+&lt;p&gt;Perche&amp;rsquo; scrivono framework e non un vero programma? Perche&amp;rsquo; manca loro l&amp;rsquo;idea, o manca il bisogno. Quando ho iniziato a riempire di Raspberry casa mia, ho avuto bisogno di un coso semplice che mi dicesse sul browser in che stato fosse l&amp;rsquo; OS. Avevo un &lt;strong&gt;bisogno&lt;/strong&gt;. Quando mi e&amp;rsquo; venuto in mente di scrivere un server NNTP che condividesse i post su P2P anziche&amp;rsquo; usare il sistema centralzzato attuale, avevo un&amp;rsquo;idea.&lt;/p&gt;
+
+&lt;p&gt;Chi scrive un framework NON ha un&amp;rsquo;idea. E neanche un bisogno. Si limita a scrivere nella &lt;strong&gt;speranza&lt;/strong&gt; che &lt;strong&gt;ALTRI&lt;/strong&gt; abbiano qualche idea su come usarlo, o che abbiano &lt;strong&gt;bisogno&lt;/strong&gt; di usarlo.&lt;/p&gt;
+
+&lt;p&gt;Quando scrivono questo codice senza idee ne&amp;rsquo; bisogni, cioe&amp;rsquo; seza use-case che non siano &amp;ldquo;esempi&amp;rdquo; (In pratica, &amp;ldquo;Hello World&amp;rdquo;) , cosa fanno per prima cosa? I programmofoni. Cioe&amp;rsquo; vanno a dare un talk a qualche convention di go. Se osservate i nuovi &amp;ldquo;framework&amp;rdquo; di golang, saranno &lt;strong&gt;TUTTI&lt;/strong&gt; presentati a qualche talk dal loro creatore.&lt;/p&gt;
+
+&lt;p&gt;Il quale avra&amp;rsquo; vita facile: andra&amp;rsquo; li&amp;rsquo; e mostrera&amp;rsquo; gli esempi. Solo esempi. Non casi reali. Non &lt;em&gt;case study&lt;/em&gt;. No: esempi. Ideati da loro medesimi.&lt;/p&gt;
+
+&lt;p&gt;Ho qualcosa contro gli esempi? No. Ma gli esempi non hanno quasi nulla a che fare con la realta&amp;rsquo;. Se per esempio osservate QUALSIASI esempio di Fibonacci, scoprirete che viene usato per spiegare la ricorsione. E funziona BENISSIMO. Per spiegarla, intendo. Ma se prendete un Fibonacci e ci fate una funzione Fibonacci()  e gli date un numero lungo 16 bit in ingresso, ci si aspetta che presumiate di calcolare Fibonacci(65535) in maniera ricorsiva. Non vi consiglio proprio di farlo, per il bene del vostro stack. E&amp;rsquo; un ottimo esempio, ma mi vengono in mente altri modi iterativi.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&#34;http://upload.wikimedia.org/math/d/6/0/d6003177b224c767463fd1e8fd19bdab.png&#34; alt=&#34;fibonacci&#34; /&gt;
+
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Questo e&amp;rsquo; il punto degli esempi: servono a capire, ma non necessariamente a fare. Ed e&amp;rsquo; per questo che il nostro programmofono va al &amp;ldquo;talk&amp;rdquo; a sbrodolare fuffa.&lt;/p&gt;
+
+&lt;p&gt;Questa e&amp;rsquo; la ragione per la quale tutti mi proponevano librerie dicendo &amp;ldquo;io! io! usa la mia!&amp;rdquo;: volevano poter dire &amp;ldquo;la mia libreria e&amp;rsquo; usata&amp;rdquo;. Per la cronaca, sto implementando un &amp;lsquo;interfaccia NNTP partendo dagli RFC: questa roba che mi offrivano e&amp;rsquo; scritta in fretta e furia (4) , per arrivare primi a calcare i &amp;ldquo;talk&amp;rdquo;. Siccome gli organizzatori hanno poca gente da chiamare , se fai un framework per golang, ti chiamano di sicuro.&lt;/p&gt;
+
+&lt;p&gt;Dopo il &amp;ldquo;talk&amp;rdquo; arrivano i giornalisti di informatica-dev e i vari blogger professionali. Che iniziano a parlare dei talk. Il talk di secondo ordine. Allora, innanzitutto occorre che il vostro linguaggio abbia delle parole fiche. Golang e&amp;rsquo; idiomatico. Ovunque leggerete che sia idiomatico. Se osserviamo quanto sia usata l&amp;rsquo;idiomaticita&amp;rsquo;, scopriamo che se ne fa un uso scadentissimo, e sempre (o quasi) a danno della leggibilita&amp;rsquo;.  Ma parlare di &amp;ldquo;idiomaticita&amp;rsquo;&amp;rdquo; fa fico. Evoca l&amp;rsquo;umanizzazione. Sembra quasi intelligenza artificiale.&lt;/p&gt;
+
+&lt;p&gt;E allora sbrodoliamoci di idiomaticita&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Questa altra classe di programmofoni, i giornalisti che scrivono di programmazione sulle riviste e sui e&amp;rsquo; simile agli animali da talk, nel senso che ne condivide lo scopo esistenziale: vivere di programmazione SENZA programmazione, ovvero parlando di programmazione. La stessa definizione di programmofono.&lt;/p&gt;
+
+&lt;p&gt;A quel punto saltano fuori i programmofoni di &lt;strong&gt;terzo&lt;/strong&gt; livello. Quelli che non programmano, ma sono figure tipo &amp;ldquo;solution designer&amp;rdquo; (5), o manager &amp;ldquo;che ti capiscono, perche&amp;rsquo; loro un tempo erano tecnici.&amp;rdquo; Questo tipo di manager, che e&amp;rsquo; normalmente appassionato di talk (molti volevano farsi preti per la libidine di poter parlare da un pulpito. La crisi delle vocazioni ha fatto il resto), vede i brillanti talk di questi personaggi , legge sulle riviste specializzate (perche&amp;rsquo; adesso lui e&amp;rsquo; un  manager, ma si sente ancora attirato dalle origini. Il richiamo della foresta, dicono. ) e allora via, l&amp;rsquo;indomani irrompe in una stanza di programmatori e dice &amp;ldquo; questo framework e&amp;rsquo; quello che ci serve&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Adesso mi chiederete un esempio. Prendero&amp;rsquo; cosi&amp;rsquo; una stringa casuale di cinque lettere, e vi mostrero&amp;rsquo; come diventa , grazie ai programmofoni, un &amp;ldquo;framework Hello World&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Prendiamo una stringa di 5 caratteri a casaccio: &amp;ldquo;Corba&amp;rdquo;. Si tratta della parola &amp;ldquo;Cobra&amp;rdquo; scritta da un dislessico di 6 anni, e non ha significato alcuno, ma come esempio casuale andra&amp;rsquo; benissimo. Tanto nessuno lavorerebbe con una cosa che si chiama &amp;ldquo;Corba&amp;rdquo;.(6)&lt;/p&gt;
+
+&lt;p&gt;Allora, ad un certo punto nasce Corba. Una parola senza alcun significato, ma piace un sacco ai programmofoni di primo livello. I quali scrivono codice a casaccio senza avere use case e senza chiedersi se per caso serva a qualcosa, e decidono che &amp;ldquo;adesso ci faccio un talk&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Corba&amp;rdquo; ovviamente non serve a nessuno (come potrebbe , una cosa con un nome cosi&amp;rsquo; stupido?) , e&amp;rsquo; orribilmente RAM-intensive, CPU-intensive, NETWORK-intensive, e chi lo ha scritto non aveva in mente alcuno use-case. MA aveva degli esempi.&lt;/p&gt;
+
+&lt;p&gt;Allora i primi programmofoni di ordine uno si presentano ai talk e fanno vedere che hanno due programmi che girano. Uno scrive &amp;ldquo;Ciao Mamma&amp;rdquo;, e sull&amp;rsquo;altro compare una finestra &amp;ldquo;Ciao Mamma&amp;rdquo; . Applausi del pubblico. Delirio. La soluzione di tutti i nostri problemi, dalle emorroidi alla congettura di Poincare&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Di fronte a tale esibizione di un computer che scrive &amp;ldquo;ciao mamma&amp;rdquo; su una finestra e un altro computer che scrive &amp;ldquo;ciao mamma&amp;rdquo; sullo schermo, i giornalisti imparano due o tre parole. Diciamo, a casaccio, &amp;ldquo;serializzazione&amp;rdquo; e &amp;ldquo;interoperabilita&amp;rsquo; &amp;rdquo; e, visto che si siamo, &amp;ldquo;suocerismo&amp;rdquo;. Il suocerismo, alla fine, e&amp;rsquo; l&amp;rsquo;unica cosa buona di Corba, ma tutti lo scopriranno dopo, e nessun programmofono ne parlera&amp;rsquo; mai. Qualcuno di voi ha mai sentiro parlare di Corba come paradigma suoceristico? No? QED.&lt;/p&gt;
+
+&lt;p&gt;Comunque, i programmofoni di secondo ordine hanno nuove parole, e possono scrivere articoli e pagine di blog piene di &amp;ldquo;serializzazione&amp;rdquo;, &amp;ldquo;interoperabilita&amp;rsquo;&amp;rdquo; e &amp;ldquo;suocerismo&amp;rdquo;. E cominciano a fare esempi. Meta&amp;rsquo; di loro sono una scopiazzatura bella e buona delle slide del &amp;ldquo;talk&amp;rdquo;. &amp;ldquo;&amp;ldquo;Ciao mamma&amp;rdquo; invade i monitor del mondo.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;altra meta&amp;rsquo; e&amp;rsquo; fatta di &amp;ldquo;guarda come mi diverto&amp;rdquo; e infine qualcuno cerca di farci qualcosa, sentendosi dire che &amp;ldquo;Corba non e&amp;rsquo; nato per questo&amp;rdquo;, che &amp;ldquo;esiste gia&amp;rsquo; il TCP/IP per questo&amp;rdquo; e il resto si sente dire che gli serve il doppio dei server.&lt;/p&gt;
+
+&lt;p&gt;A questo punto, quando &amp;ldquo;Corba il greco&amp;rdquo; e&amp;rsquo; ormai sulla bocca di tutti, arriva il programmofono di terzo ordine, che legge tutta questa roba, brucia di invidia per il tipo fico del talk, e piomba l&amp;rsquo;indomani in azienda dicendo che &amp;ldquo;occorre qualcosa di moderno. Ci serve Corba!&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Questa cosa, che &lt;em&gt;notoriamente&lt;/em&gt; non e&amp;rsquo; mai successa (che diavolo di porcheria potra&amp;rsquo; mai essere una cosa dal nome cosi&amp;rsquo; ridicolo? Dai, siamo seri. ) e&amp;rsquo; un esempio di come i programmofoni distruggono un ambiente lavorativo.&lt;/p&gt;
+
+&lt;p&gt;Oggi come oggi,&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Siamo pieni di framework che funzionano solo sugli esempi di come usarli, e mai nella vita reale.&lt;/li&gt;
+&lt;li&gt;Questi framework sono necessari perche&amp;rsquo; sono famosi.&lt;/li&gt;
+&lt;li&gt;Questi framework sono famosi perche&amp;rsquo; tutti ne parlano.&lt;/li&gt;
+&lt;li&gt;Quando si cerca di usarli per casi reali si scopre che i loro limiti sono tali e tanti che e&amp;rsquo; meglio farsi tutto da soli. E che &amp;ldquo;&lt;em&gt;gli stessi autori consigliano un&amp;rsquo;altra libreria&lt;/em&gt;&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Nessuno trova lavoro se non conosce uno di questi framework famosi. Nessuno li utilizza davvero, perche&amp;rsquo; il programma reale viene poi splittato su altre 15 librerie. Consigliate dagli stessi autori. Le stesse librerie soffrono il problema, quindi erano nate per fare altro.&lt;/p&gt;
+
+&lt;p&gt;Questa merda ha distrutto Java. Ha distrutto Javascript. Python. Perl. Ha distrutto praticamente ogni linguaggio, per una semplice ragione: il programmofono non vuole scrivere programmi. Non ha un problema da risolvere e non ha un&amp;rsquo;idea. Vuole scrivere codice dicendo che servira&amp;rsquo; a chi ha i problemi e le idee. E il suo ruolo nei problemi reali e nell idee reali? Lui fa il talk.&lt;/p&gt;
+
+&lt;p&gt;Ma a questo punto arriva in scena il becchino, l&amp;rsquo;ultima categoria di programmofoni. Quelli che discutono a posteriori di paradigmi.&lt;/p&gt;
+
+&lt;p&gt;Voi avete delle scimmie che scrivono software di merda, arriva il programmofono e vi fa un bell&amp;rsquo;articolo su un giornale: &amp;ldquo;ma il paradigma OOP ha fallito?&amp;rdquo;. E via di filosofia.&lt;/p&gt;
+
+&lt;p&gt;Ora, dire che &amp;ldquo;il paradigma OOP ha fallito&amp;rdquo; non e&amp;rsquo; giusto o sbagliato. E&amp;rsquo; senza senso.&lt;/p&gt;
+
+&lt;p&gt;Stiamo parlando di strumenti. Se Michelangelo prende uno scalpello ci fa il David. Se io prendo uno scalpello, ci spacco delle pietre. Ma non posso dire &amp;ldquo;ma il paradigma dello scalpello ha fallito&amp;rdquo;. No. Potrebbe dirlo Michelangelo, e&amp;rsquo; vero: se dopo aver scolpito il David con uno scalpello ne prende un altro e gli riesce una ciofeca, allora puo&amp;rsquo; dire &amp;ldquo;questo paradigma di scalpello cinese ha fallito&amp;rdquo;. Ma puo&amp;rsquo; farlo LUI. E DOPO aver scolpito il David.&lt;/p&gt;
+
+&lt;p&gt;Allora adesso arriva un mondo che NON ha MAI prodotto niente di simile a &amp;ldquo;David&amp;rdquo;. Se escludiamo Donald Knuth e pochi altri, roba del genere non si e&amp;rsquo; mai vista. Del resto, Knuth non fa discorsi tipo &amp;ldquo;ma il paradigma OOP ha fallito?&amp;rdquo; (7), lui dice che ha sempre pensato a quel modo, e semmai invece di usare un linguaggio specifico preferisce l&amp;rsquo; AUTODISCIPLINA nel pensare.&lt;/p&gt;
+
+&lt;p&gt;Ma il quarto tipo di programmofono ha quasi vent&amp;rsquo;anni di fallimenti da commentare, e quindi puo&amp;rsquo; facilmente scriverci degli articoli.&lt;/p&gt;
+
+&lt;p&gt;In realta&amp;rsquo; cosa sia andato storto e&amp;rsquo; chiaro:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Linguaggi vicini alla macchina. Ottimo codice, ma programmatori troppo pagati.&lt;/li&gt;
+&lt;li&gt;Linguaggi imperativi classici. Codice ancora decente, ma i programmatori iniziano a essere molti.&lt;/li&gt;
+&lt;li&gt;Linguaggi funzionali. Codice &amp;ldquo;abbastanza buono da metterlo sul mercato&amp;rdquo;, e i programmatori sono pagati quanto un operaio.&lt;/li&gt;
+&lt;li&gt;Linguaggi OOP: codice di merda, e un programmatore indiano costa $20 al giorno.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Ora, anche tornando ai linguaggi funzionali , e tirando fuori roba tipo erlang o ripescando il prolog, il problema del peggioramento del codice e&amp;rsquo; chiaro: se qualcuno scrive programmi di merda, non e&amp;rsquo; colpa &amp;ldquo;del paradigma&amp;rdquo;. Non e&amp;rsquo; colpa dello scalpello se io non so fare il David.&lt;/p&gt;
+
+&lt;p&gt;La velocita&amp;rsquo; con cui nascono e crescono i nuovi linguaggi e&amp;rsquo; aumentata mano a mano che il software diventava piu&amp;rsquo; scadente: in una specie di legge di Moore al contrario, il codice odierno riesce a sprecare piu&amp;rsquo; risorse di quante la legge di Moore riesca a produrre. Il vostro cellulare e&amp;rsquo; quello che vent&amp;rsquo;anni fa vendevo come supercomputer. E alcuni software &amp;ldquo;ci girano a malapena&amp;rdquo;. La gente ci simulava galassie, sul vostro quad core con un GB di RAM. E voi fate fatica a farci una app stabile.&lt;/p&gt;
+
+&lt;p&gt;E siccome i fallimenti sono sempre di piu&amp;rsquo;, sempre piu&amp;rsquo; velocemente i programmofoni di quarto ordine devono inventarsi &amp;ldquo;il fallimento del paradigma n-1&amp;rdquo;. Perche&amp;rsquo; si potrebbe seguire l&amp;rsquo;approccio Wirth e dire &amp;ldquo;se questo programma fa cagare, licenzia chi lo ha scritto&amp;rdquo;. Ma ovviamente bisogna salvare la pappa, e allora si dice che &amp;ldquo;ha fallito il padadigma OOP&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Adesso arriva l&amp;rsquo;idiomaticita&amp;rsquo;. Vedo gia&amp;rsquo; codice idiomatico scritto per i talk. Stanno arrivando i programmofoni. Tra qualche anno saremo pieni di codice di merda scritto in golang. Dagli stessi che hanno gia&amp;rsquo; fallito in Python, Ruby, PhP, Java e Scala. E anziche&amp;rsquo; mandare a casa questi programmatori, sapete cosa scriveranno i giornalisti di informatica?&lt;/p&gt;
+
+&lt;p&gt;Che &amp;ldquo;ha fallito il paradigma idiomatico&amp;rdquo;. Perche&amp;rsquo; la colpa e&amp;rsquo; sempre dello scalpello.&lt;/p&gt;
+
+&lt;p&gt;Succedera&amp;rsquo; anche a golang? Non so. Non e&amp;rsquo; questioni di esserne tifoso o meno, e&amp;rsquo; questione che di fatto si tratta di un C migliorato. Quando programmi in C/C++ per prima cosa ti scrivi le classi per fare le cose di base (accedere file, gestire socket, etc) , il famoso utils.c , poi vai avanti col programma. Golang e&amp;rsquo; semplicemente un c con meno perdite di tempo e tutte queste cose gia&amp;rsquo; scritte. Quindi e&amp;rsquo; molto difficile che sia molto fico per i programofoni, per quanto sia fico dire &amp;ldquo;idiomatico&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Poi, ovviamente, chi vivra&amp;rsquo; vedra&amp;rsquo; , se la colpa e&amp;rsquo; dei pittori o dei pennelli.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/BMxaLEGCVdg&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;(1) Si, e&amp;rsquo; morto. Lo stipendio medio dei programmatori java sta decrescendo ogni giorno, e Scala e&amp;rsquo; solo un palliativo. In questo momento Java e&amp;rsquo; nello stato di &amp;ldquo;balena spiaggiata&amp;rdquo;: prima che scompaia occorreranno mesi, se non anni, di decomposizione. Ma il fatto che la carcassa di Java dara&amp;rsquo; da mangiare ancora per anni non significa che sia vivo. Significa che e&amp;rsquo; una carcassa molto grande e ci mette molto a decomporsi.&lt;/p&gt;
+
+&lt;p&gt;(2) Il cinese che lo ha scritto crede davvero che se un server remoto ti manda qualcosa che non capisci, allora la soluzione migliore sia &amp;ldquo;&lt;a href=&#34;http://blog.golang.org/defer-panic-and-recover&#34;&gt;panic()&lt;/a&gt;&amp;rdquo;. A me invece sembra carino che i programmi sopravvivano alla propria esecuzione. Cosi l&amp;rsquo;ho bonificato gestendo degli errori qui e li&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;(3) Altrimenti succede questo: quando usate il framework con gli esempi forniti, siete capaci di scrivere &amp;ldquo;Hello World&amp;rdquo;. Ma quando piazzate il framework in un ambiente lavorativo e dovete farci delle cose senza limitarvi a degli esempi, scoprite che il tale framework questo lo fa ma non cosi&amp;rsquo;, quello lo fa ma non e&amp;rsquo; il suo core business, l&amp;rsquo;altro lo fa ma performa male, e che quell&amp;rsquo;altra tale cosa sarebbe meglio farla con altre librerie, parola degli stessi sviluppatori del framework. Risultato? Il framework esegue benissimo gli esempi di utilizzo e va bene per le minchiatine.&lt;/p&gt;
+
+&lt;p&gt;(4)Il software che sto scrivendo e&amp;rsquo; scritto per me stesso, e io &lt;strong&gt;non sono&lt;/strong&gt; un programmatore. Non funziona ancora, e lo mando avanti quando mi diverte programmare. Prima o poi lo commentero&amp;rsquo; e lo riordinero&amp;rsquo;. Per ora sto provando tutte le tecniche di golang, una ad una. E&amp;rsquo; un progetto personale e NON pretendo che abbia qualita&amp;rsquo;, almeno non adesso.&lt;/p&gt;
+
+&lt;p&gt;(5) E&amp;rsquo; il lato oscuro degli architetti di sistema. Quando ne incontro uno, di solito mi salutano dicendo &amp;ldquo;Io sono tuo padre&amp;rdquo;. Io faccio la parte tecnica. Loro fanno il powerpoint. Riunioni di ore nella quale la loro domanda e&amp;rsquo; &amp;ldquo;ma in che dominio e&amp;rsquo; questo elemento che chiamiamo &amp;ldquo;Billing&amp;rdquo;? Nella zona verde a destra o in quella rosa a sinistra?&amp;rdquo; E io a spiegare che cosa sia un BSS, sinche&amp;rsquo; non mi viene detto &amp;ldquo;non sono cosi&amp;rsquo; tecnico&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;(6) Lo so, lo so. Ma nessuno lo ammettera&amp;rsquo; mai. Si vergognano troppo.&lt;/p&gt;
+
+&lt;p&gt;(7)&lt;a href=&#34;http://tex.loria.fr/historique/interviews/knuth-clb1993.html&#34;&gt;http://tex.loria.fr/historique/interviews/knuth-clb1993.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;CLB&lt;/strong&gt;: What about object-oriented programming? Is it just a current buzzword, or does this approach appeal to you?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Knuth&lt;/strong&gt;: I&amp;rsquo;ve always thought of programming in that way, but I haven&amp;rsquo;t used languages that help enforce the discipline; &lt;strong&gt;&lt;em&gt;I&amp;rsquo;ve always enforced the discipline myself in other languages&lt;/em&gt;&lt;/strong&gt;. Programming languages can now catch you if you make a mistake, and they make it easier for you to hide information from one part of the program to another. In my own programs, with older languages, I wouldn&amp;rsquo;t use what I wasn&amp;rsquo;t supposed to use; I would have to discipline myself to follow these rules. I could, so I did. There weren&amp;rsquo;t programs I couldn&amp;rsquo;t write&amp;hellip; but the new tools do help.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Morire di morbillo nel 2015</title>
+      <link>http://www.wolfstep.cc/post/darwinawards/</link>
+      <pubDate>Sun, 15 Mar 2015 13:59:13 +0100</pubDate>
+      
+      <guid>http://www.wolfstep.cc/post/darwinawards/</guid>
+      <description>&lt;p&gt;Ho ripreso il titolo del thread nel forum, perche&amp;rsquo; stiamo parlando di un fenomeno globale, ovvero il fenomeno dell&amp;rsquo;ignoranza come punto di vista. e mi sembra adeguato proprio perche&amp;rsquo; si sta verificando un caso per il quale l&amp;rsquo;ignoranza uccide. E&amp;rsquo; dovuto ad un preciso punto di vista molto anglosassone, quello per cui se un gruppo/setta/religione crede che, per esempio, sia utile non vaccinare i bambini, o mutilarli, o sottoporli a rituali piu&amp;rsquo; ridicoli che rispettabili, allora la loro ignoranza e&amp;rsquo; un punto di vista.&lt;/p&gt;
+
+&lt;p&gt;Tempo fa avrei semplicemente risposto in maniera molto darwinista: &amp;ldquo;abbiamo meno genoma dei fessi in giro&amp;rdquo;. Il che e&amp;rsquo; vero, ma si dimentica sempre che:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;I genitori dispongono ancora di molto genoma dei fessi da mettere in giro.&lt;/li&gt;
+&lt;li&gt;Questa moda di non vaccinare i figli mette in pericolo anche i non fessi.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;E&amp;rsquo; ora di iniziare a dire le cose come stanno: se pensate che vaccinare sia inutile, o dannoso, siete dei fessi. Le vostre ragioni non valgono, non se ne discute, e vi si chiama direttamente fessi. Se poi mi dite che in America o in Inghilterra i fessi abbiano tutto il rispetto, bene, mi avete appena spiegato come mai non voglio viverci. Ma , anche se in America o in Inghilterra i fessi hanno rispetto, &lt;em&gt;rimangono dei fessi&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Il guaio viene quando i fessi possono danneggiare anche te. ui in Germania un tempo i vaccini erano obbligatori. Prima di andare a ascuola vi chiamavano e , uno alla volta, da U1 a U15, vi facevano visite e vaccini. Poi qualcuno se n&amp;rsquo;e&amp;rsquo; uscito con la storia che la tale religione/teoria del complotto fosse un modo di pensare come un altro, e allora anche qui lo hanno reso facoltativo. E&amp;rsquo; facoltativo , con la sola clausola che la scuola puo&amp;rsquo; scegliere di non accettare bambini non vaccinati, e/o allontanarli in caso di epidemia, cioe&amp;rsquo; di dire ai genitori &amp;ldquo;o li vaccini o stanno a casa&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Adesso che c&amp;rsquo;e&amp;rsquo; una vera e propria epidemia dalle parti di Berlino, cioe&amp;rsquo; dove vivono i parlamentari, si scopre che il Bundestag vorrebbe rimettere le vaccinazioni obbligatorie. La liberta&amp;rsquo; di essere fessi ha dei limiti, evidentemente.&lt;/p&gt;
+
+&lt;p&gt;Ho girato un pochino sui forum ove i soliti fessi (si, siete dei fessi, e deve esservi detto. Con voi non si deve parlare, vi si deve dire &amp;ldquo;taci, fesso!&amp;rdquo;) vanno in giro a propagandare le loro solite stronzate antivacciniste, e ho visto argomentazioni che sono sin troppo facili da stroncare.&lt;/p&gt;
+
+&lt;p&gt;Eccone una:&lt;/p&gt;
+
+&lt;h2&gt; &#34;Ai miei tempi tutti ci ammalavamo di morbillo e nessuno moriva&#34; &lt;/h2&gt;
+
+&lt;p&gt;Innanzitutto, ai tuoi tempi non c&amp;rsquo;eri. Sono nato proprio quando non esistevano ancora vaccini contro tutte quelle malattie, ed effettivamente la stragrande maggioranza di noi ce la faceva.&lt;/p&gt;
+
+&lt;p&gt;La stragrande maggioranza NON significa, pero&amp;rsquo;  , tutti.&lt;/p&gt;
+
+&lt;p&gt;Alcuni si facevano i loro bei 2-3 mesi in un ospedale, perche&amp;rsquo; non tutti i bambini sono uguali. Alcuni sono gracili piu&amp;rsquo; di altri. Alcuni sono gia&amp;rsquo; malati (un virus influenzale, per esempio) e proprio in quel momento gli arriva il morbillo, per esempio. Altri hanno malattie croniche, perche&amp;rsquo; non tutti i bambini nascono sani.&lt;/p&gt;
+
+&lt;p&gt;Cosi&amp;rsquo; non e&amp;rsquo; vero che &amp;ldquo;tutti i bambini prendevano il morbillo e tutti si salvavano&amp;rdquo;. C&amp;rsquo;erano anche quelli che finivano in ospedale per quale settimana, per qualche mese, e c&amp;rsquo;erano anche quelli che morivano.&lt;/p&gt;
+
+&lt;p&gt;Morivano in pochi, certo. Una o due dozzine l&amp;rsquo;anno, su scala nazionale. Su 500.000 bambini, certo, e&amp;rsquo; una percentuale piccola.&lt;/p&gt;
+
+&lt;p&gt;E cosi&amp;rsquo; il problema e&amp;rsquo; semplice: adesso che abbiamo il vaccino, siamo disposti a vaccinarci tutti per proteggere quei 10-15 bambini che hanno malattie, o che capitano nel momento sbagliato, quando hanno gia&amp;rsquo; addosso un altro virus/malattia?&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; un problema di coscienza, o di visione civica.&lt;/p&gt;
+
+&lt;p&gt;Io scelgo di si. Penso che sia giusto vaccinare l&amp;rsquo;intera comunita&amp;rsquo; per impedire a &amp;ldquo;soli&amp;rdquo; 10,15 bambini di morire. Certo, io sono sopravvissuto. Ho avuto morbillo, varicella, rosolia, e parotite. Come tutti i bambini della mia eta&amp;rsquo; in quel periodo. Ma c&amp;rsquo;era chi non ce la faceva. Pochi, certo. Ma la situazione non era cosi&amp;rsquo; rassicurante come dite, perche&amp;rsquo; ricordo benissimo che il morbillo andava segnalato al medico di famiglia, che passava per le case ogni tre giorni. E non era cosi&amp;rsquo; semplice muoverli dal loro studio.&lt;/p&gt;
+
+&lt;p&gt;Quindi no, non si salvavano &amp;ldquo;tutti&amp;rdquo;. Si salvava il 99.999% della popolazione. Il resto, &amp;ldquo;poche decine&amp;rdquo;, semplicemente moriva o rimaneva in ospedale per mesi.  E potete vederlo PROPRIO da quella bambina che e&amp;rsquo; morta: se era una cosa innocua, com&amp;rsquo;e&amp;rsquo; che e&amp;rsquo; morta?&lt;/p&gt;
+
+&lt;p&gt;Il modo di salvarli e&amp;rsquo; di vaccinarci tutti, in modo da non far venire il virus in contatto con quei bambini che non possono reggerlo, e neanche vaccinarsi.&lt;/p&gt;
+
+&lt;p&gt;E quindi torniamo alla vexata quaestio:&lt;/p&gt;
+
+&lt;h1&gt; Voi, come persone, siete disposti a vaccinarvi per proteggere lo 0.001% dei bambini?&lt;/h1&gt;
+
+&lt;p&gt;E&amp;rsquo; una libera scelta. Chiamatela pure questione di coscienza. Ok, io dico di si&amp;rsquo;. Mia figlia e&amp;rsquo; vaccinatissima, cosi&amp;rsquo; non solo non se lo prende, ma non lo porta alla sua amica Thiam, che e&amp;rsquo; un pochino gracilina e sta passando un brutto periodo.&lt;/p&gt;
+
+&lt;p&gt;Perche&amp;rsquo; il problema e&amp;rsquo; sociale: cosa siete disposti a fare per i bambini degli altri? Come membri di una comunita&amp;rsquo; siete disposti a fare qualcosa per gli altri membri della comunita&amp;rsquo;?&lt;/p&gt;
+
+&lt;p&gt;Credo che ci sia una profonda linea di demarcazione antropologica in questa scelta:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Puoi scegliere di affrontare la terrrrrrrificante esperienza della vaccinazione, e decidere di fare qualcosa tu per proteggere ANCHE altri. Siamo tutti sicuri che i nostri figli siano forti come  soldati spartani, ma andiamoci piano con il Monte Taigeto, eh?&lt;/li&gt;
+&lt;li&gt;Puoi scegliere che te ne fotti degli altri, tu sei sicuro che tuo figlio ce la fara&amp;rsquo;, i numeri sono dalla tua parte, e per colpa tua moriranno altri bambini. &lt;strong&gt;In tal caso, sei un pezzo di merda&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Certo, adesso mi direte che se e&amp;rsquo; una libera scelta allora non ho il diritto di dare del pezzo di merda a chi sceglie diversamente da me.&lt;/p&gt;
+
+&lt;p&gt;E questo e&amp;rsquo; il grande malinteso riguardo alla liberta&amp;rsquo;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;il fatto che qualcosa sia una libera scelta non sospende il giudizio su di voi. Lo sospende SOLO se la vostra libera scelta &lt;em&gt;NON ha conseguenze su altri&lt;/em&gt;. Se la vostra libera scelta HA conseguenze su altri, gli altri hanno il diritto di giudicarvi. Eccome.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Un altro motivo sbroccotronico che leggo in giro e&amp;rsquo; che &amp;ldquo;sui vaccini le multinazionali del pharma fanno i soldi&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Si, a chi fa cose capita di guadagnare soldi.&lt;/p&gt;
+
+&lt;p&gt;Che cosa fanno le multinazionali del pharma? Fanno medicine. Cosa si fa con le medicine? Si cura la gente.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Perche&amp;rsquo; mai, in linea di principio, dovrei avere qualcosa in contrario al fatto che guadagni soldi chi fa medicine?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Posso avere qualcosa in contrario sul fatto che un calciatore guadagni miliardi. Posso avere qualcosa in contrario sul fatto che guadagni miliardi una soubrette con  il labbro salvagoccia.&lt;/p&gt;
+
+&lt;p&gt;Ma se c&amp;rsquo;e&amp;rsquo; qualcuno che secondo me fa qualcosa che merita di essere pagato, e&amp;rsquo; chi &lt;em&gt;&lt;strong&gt;fa le medicine&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2&gt; Non ho NIENTE in contrario al fatto che chi fa le medicine guadagni un sacco di soldi &lt;/h2&gt;
+
+&lt;p&gt;Fare le medicine e&amp;rsquo; una cosa buona, bella, e ci si cura la gente. Milioni di vite vengono salvate dalle medicine. Se anche guadagnassero dieci volte tanto, non ci sarebbe poi  cosi&amp;rsquo; tanto di sbagliato.&lt;/p&gt;
+
+&lt;p&gt;le multinazionali fanno i soldi coi vaccini? Ok, mi sta bene. Chi e&amp;rsquo; vecchio abbastanza da aver avuto il morbillo ha avuto anche dei compagni di classe o di scuola, poliomelitici. Adesso c&amp;rsquo;e&amp;rsquo; il vaccino per la poliomelite. E le multinazionali ci fanno i soldi. E mia figlia non ha compagni poliomelitici. Le multinazionali ci fanno i soldi?&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/JQCP85FngzE&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Anche perche&amp;rsquo; poi la moda antivaccinista non e&amp;rsquo; che faccia fare MENO soldi alle multinazionali.&lt;/p&gt;
+
+&lt;p&gt;Quello che sta succedendo a Berlino e&amp;rsquo; emblematico. E&amp;rsquo; arrivata un&amp;rsquo;epidemia di morbillo, ed e&amp;rsquo; morto un bambino. Risultato: Tagesmutter, Kindergarten e Grundschule non accettano piu&amp;rsquo; bambini non vaccinati. Perche&amp;rsquo; il farlocco che ha la scienza alternativa cambia idea, MA TROPPO TARDI.&lt;/p&gt;
+
+&lt;p&gt;Allora adesso sono tutti li&amp;rsquo; a cercare di vaccinarsi. Solo che il servizio nazionale ha finito le dosi perche&amp;rsquo; Berlino e&amp;rsquo; una citta&amp;rsquo; grande, e allora stanno andando dai privati a vaccinarsi. Pagando il 100% del prezzo, al prezzo di mercato, e in condizioni di domanda elevatissima.&lt;/p&gt;
+
+&lt;p&gt;Se questi sono i nemici delle multinazionali del pharma, vi consiglio di comprare azioni di Glaxo. Non calera&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Ed e&amp;rsquo; qui la seconda parte della cosa ridicola di questi buffoni: che erano tutti li&amp;rsquo; a dirvi che il vaccini fanno male e i vaccini di qui e i vaccini di qua, ma appena e&amp;rsquo; arrivato il PROBLEMA, sono tutti a cercare il vaccino. Le loro idee, cioe&amp;rsquo;, valgono solo a cena nei bistro radicalchic (Ciki-viki, detti anche hochnase, nasini all&amp;rsquo;insu&amp;rsquo;) : non appena arriva il momento SHTF (Shit Hits The Fan) , cambiano TUTTI idea, improvvisamente, e tutti insieme.&lt;/p&gt;
+
+&lt;p&gt;E a quel punto iniziano pure le polemiche perche&amp;rsquo; il Gesundheitsamt (il servizio  sanitario nazionale) non aveva previsto che i lemming avrebbero cambiato idea tutti insieme.&lt;/p&gt;
+
+&lt;p&gt;E cosi&amp;rsquo; i nostri lemming, che cambiano tutti idea nel momento SHTF poi si incazzano quando il governo risponde piu&amp;rsquo; o meno in questo modo:&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://cdn.someecards.com/someecards/usercards/1346333345312_322530.png&#34; alt=&#34;CARD&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Siccome poi questi personaggi non vogliono sentirsi in imbarazzo per le cazzate che hanno predicato sino al giorno prima, ovviamente se ne escono dicendo &lt;em&gt;&amp;ldquo;ehi, ma se devo farlo per forza, allora rendetela obbligatoria per tutti&amp;rdquo;&lt;/em&gt;!
+Come se potesse essere obbligatoria solo per i fessi. Certo, fessi, che adesso le renderanno obbligatorie: erano obbligatorie anche prima, quando voi fessi non avevate ancora deciso che essere stupidi sia un bellissimo vestito da sera, e che meritasse lo stesso rispetto di ogni altro vestito da sera.&lt;/p&gt;
+
+&lt;p&gt;Ripeto, e&amp;rsquo; difficile ridere di una bambina morta. Specialmente poi se i due genitori scoprono che si, il morbillo puo&amp;rsquo; uccidere se arriva insieme ad altre patologie, o se nasconde altre patologie. O se i medici, che credevano di vivere nel 2015, la considerano alla stregua di vaiolo o poliomelite: malattie estinte.&lt;/p&gt;
+
+&lt;p&gt;Possiamo discutere quanto volete sul comportamento dell&amp;rsquo;ospedale e chiederci se gli ospedali abbiano fatto tutto il possibile.&lt;/p&gt;
+
+&lt;p&gt;Ma la vera domanda e&amp;rsquo;: &lt;strong&gt;i genitori&lt;/strong&gt; hanno fatto TUTTO il possibile per evitare che la figlia non morisse?? Tutto? Ma proprio TUTTO?&lt;/p&gt;
+
+&lt;p&gt;No, una cosa non l&amp;rsquo;hanno fatta: &lt;strong&gt;vaccinare la bambina&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ed e&amp;rsquo; un fatto.&lt;/p&gt;
+
+&lt;p&gt;Quindi, se deve essere denunciato l&amp;rsquo;ospedale con il sospetto di non avere fatto tutto il possibile, la stessa denuncia dovrebbe cadere sui genitori.&lt;/p&gt;
+
+&lt;p&gt;Perche&amp;rsquo; se la bambina fosse stata vaccinata contro il morbillo, di sicuro non le sarebbe venuto.&lt;/p&gt;
+
+&lt;p&gt;Per come la vedo io, quei due sono parte del problema che ha ucciso la figlia.&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; crudele dirlo?&lt;/p&gt;
+
+&lt;p&gt;Mai quanto sia crudele morire di morbillo da bambini, nel 2015. Quando si poteva evitare.&lt;/p&gt;
+
+&lt;p&gt;QUELLO e&amp;rsquo; crudele.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cosa mi piace del delirio makers</title>
+      <link>http://www.wolfstep.cc/post/fuffamakers/</link>
+      <pubDate>Wed, 11 Mar 2015 19:59:59 +0100</pubDate>
+      
+      <guid>http://www.wolfstep.cc/post/fuffamakers/</guid>
+      <description>&lt;p&gt;Esiste sicuramente un certo hype riguardo a tutta questa storia dei &amp;ldquo;Makers&amp;rdquo; e della prototipazione. Questo sta producendo un certo fastidio tra gli accademici e tra coloro che si erano nascosti (e ben sistemati) dietro alla storia della &amp;ldquo;ricerca pura&amp;rdquo;, ma personalmente non sono convinto del fatto che sia una cosa negativa.&lt;/p&gt;
+
+&lt;p&gt;Come tutti gli Hype, ovviamente ha i suoi contro e le sue esagerazioni: proporre un &amp;ldquo;concept&amp;rdquo; o un &amp;ldquo;prototipo&amp;rdquo; dell&amp;rsquo; LHC non e&amp;rsquo; semplice , e ovviamente il sistema si applica molto a quei settori , per usare una definizione corrente, &amp;ldquo;molto consumer&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Tuttavia, e&amp;rsquo; sicuramente un cambiamento positivo.&lt;/p&gt;
+
+&lt;p&gt;Quando si decise che ognuno dei nostri pargoli doveva essere un laureato e che &amp;ldquo;se non vai bene a scuola , male che va, vai a fare l&amp;rsquo;operaio&amp;rdquo;, di fatto si stava formalizzando quel disprezzo per il lavoro che era tipico della concezione gentiliana della scuola.&lt;/p&gt;
+
+&lt;p&gt;In questo modo, nella visione di Gentile - e nella scuola che lui ha poi partorito - esistevano due classi di persone.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;La prima era la classe dirigente. Gente per la quale &amp;ldquo;nessuna abilita&amp;rsquo; pratica&amp;rdquo; era motivo di vanto. Loro facevano lavori &amp;ldquo;di concetto&amp;rdquo; , il che escludeva tutto il resto tranne gli hobbies.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;La seconda era la classe lavoratrice. Il &amp;ldquo;buon uomo&amp;rdquo;, il servo, che di fatto poteva anche essere un bravissimo esecutore, ma non era destinato ne&amp;rsquo; ad avere visione ne&amp;rsquo; capacita&amp;rsquo; decisionale.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In questa visione, mediata dal medioevo (e ancora presente nelle aree nobiliari della cultura anglosassone, che sono nate nel medioevo) , chi comanda - e guadagna - fa un lavoro ipso facto &amp;ldquo;di concetto&amp;rdquo;,  il che lo solleva da incombenze pratiche.&lt;/p&gt;
+
+&lt;p&gt;Chiedere a chi ha incarichi di concetto di mostrare un prototipo o di misurare la sua competenza in termini di abilita&amp;rsquo; pratica era visto - ed e&amp;rsquo; visto ancora da queste persone - come un vero e proprio affronto alla propria professionalita&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;In questo modo, era pieno di gente che aveva un sacco di idee, ma non avendo mai realizzato nulla in pratica, non era capace di valutarne i pro ed i contro.&lt;/p&gt;
+
+&lt;p&gt;Si realizzava, almeno nell&amp;rsquo; it, una situazione per la quale:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Da un lato avevate i brillanti. Quelli entusiasti che sedevano al parco con il loro Mac, disegnavano un servizio che capisce se sei collegato &amp;ldquo;da internet&amp;rdquo; o &amp;ldquo;da wifi&amp;rdquo;  o da &amp;ldquo;mobile&amp;rdquo;, e disegnavano TRE interfacce utente diverse.&lt;/li&gt;
+&lt;li&gt;I tecnici, che arrivavano e dicevano &amp;ldquo;due use-cases sono identici, quindi ne realizziamo due su tre. L&amp;rsquo;altro e&amp;rsquo; fuori scope&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ovviamente, i brillanti della situazione erano sempre brillanti, e andavano sempre lamentando di questi tecnici &amp;ldquo;Doktor Nein&amp;rdquo; , che dicono sempre no a queste idee brillanti, tirando fuori scuse tipo la termodinamica o le specifiche tecniche. Se io posso immaginare il moto perpetuo, perche&amp;rsquo; tu non lo puoi fare? Ci servono tecnici migliori, piu&amp;rsquo; entusiasti! Piu&amp;rsquo; brillanti! Piu&amp;rsquo; agili! Piu&amp;rsquo; creativi!&lt;/p&gt;
+
+&lt;p&gt;Questa miserabile commedia, per fortuna, sta finendo.&lt;/p&gt;
+
+&lt;p&gt;Sono arrivati i software per la prototipazione di interfacce, che producono una specie di applicazioncina che fate girare sul telefono e simula la user experience. Anche per Mac (wow!). E adesso quando presentate il vostro prodotto dovete tirar fuori il vostro iPhone e farlo vedere.&lt;/p&gt;
+
+&lt;p&gt;Allora,  quando arriva il tipo che vuole il servizio che si comporta diversamente se &amp;ldquo;viene da internet&amp;rdquo; o se &amp;ldquo;viene dalla wifi&amp;rdquo; o viene &amp;ldquo;dalla rete mobile&amp;rdquo;, tutti si aspettano  un prototipo.&lt;/p&gt;
+
+&lt;p&gt;Il suo entusiasmo si ferma quando realizza una cosa: il suo cazzo di cellulare puo&amp;rsquo; solo usare la wifi o la rete mobile, perche&amp;rsquo; quei noiosoni di Apple non hanno voluto mettere una porta ethernet  sull&amp;rsquo; iPhone. Il terzo caso non esiste.&lt;/p&gt;
+
+&lt;p&gt;Questa mancanza di creativita&amp;rsquo; della Apple mi sconvolge sempre. Se esistono &lt;a href=&#34;http://en.wikipedia.org/wiki/Black_Shark_torpedo#Features&#34;&gt;siluri con 5 km di fibra&lt;/a&gt; per essere filoguidati , perche&amp;rsquo; non potete avere un telefono mobile col cavo ethernet? Che saranno mai quei 5km prolunga Apple da portare sempre con se&amp;rsquo;?  Ma torniamo seri.&lt;/p&gt;
+
+&lt;p&gt;Lo use case &amp;ldquo;si collega usando internet&amp;rdquo;, che ha riempito un intero capitolo &amp;ldquo;convergenza mobile-internet&amp;rdquo; nel design del suo servizio, scompare improvvisamente (ottenendo anche un documento piu&amp;rsquo; leggero da spedire).&lt;/p&gt;
+
+&lt;p&gt;Se pensate che sia poco, pero&amp;rsquo;, state sottovalutando un&amp;rsquo;altra cosa. Il senso di disprezzo che si respirava parlando coi manager. Neanche 10 anni fa, uno dei miei ex manager disse una cosa tipo &amp;ldquo;si, ma non concentrarti troppo sul saper fare le cose, tanto questo diventera&amp;rsquo; il lavoro dei negri, tipo in India. Devi acquisire dei &lt;em&gt;soft skills&lt;/em&gt;&amp;rdquo; , con quelli vai avanti&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Ed era vero. Era il periodo nel quale il Manager non doveva, per definizione, &amp;ldquo;sapere cosa faccia l&amp;rsquo;azienda. Lui doveva solo gestirla&amp;rdquo;. Questo disprezzo, visibile ed ostentato, per chiunque facesse oggi sta iniziando a scemare.&lt;/p&gt;
+
+&lt;p&gt;Sicuramente l&amp;rsquo; Hype del maker e&amp;rsquo; esagerato. Non tutte le cose che uno si stampa con una stampante 3D cambieranno il mondo. &lt;em&gt;Spesso sono solo cazzate di plastica&lt;/em&gt;. Non tutto quello che la gente fa con un Arduino e&amp;rsquo; scienza spaziale: spesso si tratta di aprire la porta del garage, o cose di analoga &lt;em&gt;e  titanica&lt;/em&gt; complessita&amp;rsquo; (che si potevano anche fare con meno, tra parentesi).&lt;/p&gt;
+
+&lt;p&gt;Ma il problema e&amp;rsquo; che se chiunque FACCIA qualcosa, anche la piu&amp;rsquo; piccola , e&amp;rsquo; visto come &amp;ldquo;La Madonna Con Il Bambino In Braccio&amp;rdquo; , chi non fa una cippa non sale mai sul palcoscenico.&lt;/p&gt;
+
+&lt;p&gt;E questo vi spiega come mai il signore che ci considerava negri (perche&amp;rsquo; facevamo cose) oggi mi fa sapere che ha comprato anche lui un RaspBerry Pi 2. Non e&amp;rsquo; chiaro cosa ci faccia, ma lo ha comprato. E adesso compra pure un Arduino.&lt;/p&gt;
+
+&lt;p&gt;Lui non sa perche&amp;rsquo;, ma Arduino l&amp;rsquo; Eporediese Creativo lo sa.&lt;/p&gt;
+
+&lt;p&gt;Ok, e&amp;rsquo; un Hype. Ok, e&amp;rsquo; solo l&amp;rsquo;ennesima categoria di farlocchi gasati.&lt;/p&gt;
+
+&lt;h1&gt;Onestamente: ci voleva.&lt;/h1&gt;
+
+&lt;p&gt;Ci voleva perche&amp;rsquo; questa stronzata del lavoro di concetto che non deve mostrare alcuna utilita&amp;rsquo; pratica doveva morire, prima o poi. Questa specie di nobilta&amp;rsquo; acquisita per titoli e scatti di anzianita&amp;rsquo; doveva finire. Non siamo piu&amp;rsquo; nell&amp;rsquo; &lt;em&gt;Ancien Regime&lt;/em&gt;, ove i nobili dovevano esibire una pelle bianca per dimostrare a tutti che non avevano mai lavorato nei campi.&lt;/p&gt;
+
+&lt;p&gt;Ora, capiamoci: il fatto che ogni anno dei venticinquenni salgano sul palco della convention annuale mostrando che usando la stampa 3D e un Arduino sono stati capaci di costruire una &amp;ldquo;internet of thing&amp;rdquo; che controlla lo spazzolino da denti e riduce la quantita&amp;rsquo; di dentifricio usata puo&amp;rsquo; sembrare seccante. Con meno soldi compri dentifricio per un paio di anni, ma il punto e&amp;rsquo; che la spocchia verso i tecnici si sta esaurendo.&lt;br /&gt;
+Quando questo ragazzo finisce di mostrare la sua applicazione big data che fa le statistiche su come laviamo i denti e ci suggerisce di andare piu&amp;rsquo; piano sui denti dietro, i manager sono tutti ad applaudire.&lt;/p&gt;
+
+&lt;p&gt;Prima lo avrebbero guardato con disprezzo: &lt;em&gt;non e&amp;rsquo; mica un pauerpoint. Dov&amp;rsquo;e&amp;rsquo; la sua presentazione?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;La differenza e&amp;rsquo; visibilissima, se pensate che negli anni precedenti salivano sul palco i &amp;ldquo;futurologi&amp;rdquo; che spiegavano che in futuro avremo cose incredibili (che loro non sapevano costruire, pero&amp;rsquo;): il ragazzo che ha costruito un simpatico oggettino in plastichina verdestronzo con dentro il sensore arduino che conta quanti brush fate ai denti puo&amp;rsquo;  dirmi che &amp;ldquo;un giorno ne avrete anche voi uno a casa&amp;rdquo;, esattamente come il futurologo, e posso rimanere scettico sulla cosa quanto lo ero col futurologo, MA ALMENO QUESTO RAGAZZO MI FA VEDERE QUALCOSA. Ha lavorato, per salire su quel palco. E oltre al merito esiste, insomma, almeno la falsificabilita&amp;rsquo; della sua teoria.&lt;/p&gt;
+
+&lt;p&gt;Un conto e&amp;rsquo; parlare del grande successo di qualcosa che c&amp;rsquo;e&amp;rsquo;, e un conto e&amp;rsquo; parlare del grande successo di una cosa che devo immaginare.&lt;/p&gt;
+
+&lt;p&gt;Prendete Prometeus e Casaleggio: mi faccia un prototipo di sta roba, me la faccia LUI, e a quel punto posso anche credere che dopo una guerra nucleare tutto il mondo sara&amp;rsquo; controllato da Internet, &lt;em&gt;zip war argainon&lt;/em&gt; . Ma se questo Prometeus io me lo devo solo immaginare, io continuo a pensare ad  un fabbro greco con dei gran problemi al fegato. E non e&amp;rsquo; la stessa cosa, &amp;ldquo;un giorno il mondo sara&amp;rsquo; controllato da un fabbro greco con gravi problemi epatici&amp;rdquo;. E&amp;rsquo; come dire &amp;ldquo;il paradigma del futuro e&amp;rsquo; la flatella da vino&amp;rdquo;. Non ha lo stesso fascino.&lt;/p&gt;
+
+&lt;p&gt;Oppure, negli anni precedenti, salivano sul palco i soliti dolicocefali denutriti che ci parlavano di &amp;ldquo;dove va il mercato del domani&amp;rdquo;. E iniziavano con dei gran segoni in powerpoint: e in powerpoint tutto e&amp;rsquo; semplice. Vuoi collegare due data center? Aha: usiamo una bella linea blu. Serve piu&amp;rsquo; banda? Riga rossa, e via.&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; piu&amp;rsquo; difficile per quelli di Ericsson mettere su un testbed per una connessione e farmelo vedere, questo link miracoloso su rame che lavora a 2000 Km di distanza senza ripetitori.  E non e&amp;rsquo; come tirare una riga sulla vostra presentazione. (lo so, scegliere il colore e&amp;rsquo; difficile. Ma non quanto fare 10 Tb su rame).&lt;/p&gt;
+
+&lt;p&gt;Arrivavano sociologi prestati all&amp;rsquo;informatica e ci dicevano:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;in futuro avremo una console omnicomprensiva che ci terra&amp;rsquo;informati in tempo reale su ogni genere di cosa accada sui social network del livestream. Questa console sara&amp;rsquo; modulare, autoorganizzante, e tramite una IA sapra&amp;rsquo; capire cosa vogliamo leggere, cosa ci interessa e cosa no: frattali, computer quantistici e startup big data!!!&amp;ldquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Aha. Facciamo qualche domanda pratica.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Mi fai vedere una cosa simile che funzioni?&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Ehm. No. Ma ti posso mostrare nei miei grafici che questa e&amp;rsquo; la tendenza del futuro. Vedi questa linea verde? E la &amp;ldquo;desideranza della convergenza&amp;rdquo;(1), e come vedi ha un andamento esponenziale(2), quindi e&amp;rsquo; destinato a superare la &amp;ldquo;lasagnilita&amp;rsquo; della rimanenza&amp;rdquo;, nella riga marrone merda (3), che quindi non cresce piu&amp;rsquo; , e di conseguenza e&amp;rsquo; destinata a morire(4). Gia&amp;rsquo; quando uscirai da questa stanza, Facebook sara&amp;rsquo; fallita e Zuckerberg sara&amp;rsquo; il mio cane.(5)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;E che dati hai usato per fare questo grafico?&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;E&amp;rsquo; &amp;hellip;e&amp;rsquo; big data. Sono troppi per mostrarli. Devi fidarti.(6)&lt;/li&gt;
+&lt;li&gt;Sai che se non mi fai vedere un prototipo per me e&amp;rsquo; tutto fumo?&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Ma no, io sono un esperto di dati, i prototipi non sono&amp;hellip;&lt;/li&gt;
+&lt;li&gt;Ha bestemmiato contro i Titanici Makers! Al rogo la strega! Brucia! Brucia! Brucia!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ecco, penso che tutto questo hype dei &amp;ldquo;makers&amp;rdquo; sia bello. Non salvera&amp;rsquo; il mondo, sia chiaro, non cambiera&amp;rsquo; il futuro, ma da quando i nuovi dei sono i makers, tutti gli altri sedicenti &amp;ldquo;architetti di sistema&amp;rdquo; del palazzo sono venuti a chiedermi &amp;ldquo;da dove si scarica Putty&amp;rdquo;?(sic!)&lt;/p&gt;
+
+&lt;p&gt;E se considerate che sino a pochi giorni prima mi definivano &amp;ldquo;datacenter architect&amp;rdquo; perche&amp;rsquo; i &lt;em&gt;veri architect non vanno oltre powerpoint e visio&lt;/em&gt;, si, qualche cosa nella mia vita e&amp;rsquo; cambiata.&lt;/p&gt;
+
+&lt;p&gt;Spero succeda anche a voi.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/qkTRamZ0PsQ&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;(1) La capacita&amp;rsquo; degli esperti di big data di inventare unita&amp;rsquo; di misura prive di consistenza dimensionale sta diventando parossistica. Fortunatamente sul piano linguistico il tedesco e l&amp;rsquo;italiano si prestano poco a entita&amp;rsquo; come &amp;ldquo;direct sexability&amp;rdquo; o &amp;ldquo;hardest ticklebreeding&amp;rdquo; , che a sentire gli &amp;ldquo;esperti di big data&amp;rdquo; sono unita&amp;rsquo; di misura. E per maggiore fortuna queste parole si traducono malissimo in italiano, mentre in tedesco producono quelle parole composte che solo i &lt;a href=&#34;https://www.youtube.com/watch?v=dw_T9pJ728U&#34;&gt;Dimmu Borgir&lt;/a&gt; sanno pronunciare correttamente. Diversamente, oggi sareste molto piu&amp;rsquo; preoccupati del vostro indice di rolloverabilita&amp;rsquo;: sotto i 100 punti, siete nella merda.&lt;/p&gt;
+
+&lt;p&gt;(2) Per gli &amp;ldquo;esperti di big data&amp;rdquo;, che ci tengono a farci sapere che non sono &amp;ldquo;solo&amp;rdquo; matematici o statistici, se non sei lineare sei esponenziale. Nessun compromesso. Se non sei ne&amp;rsquo; lineare ne&amp;rsquo; esponenziale, sei &lt;em&gt;sotto due sigma&lt;/em&gt;. Qualsiasi cosa voglia dire per loro.&lt;/p&gt;
+
+&lt;p&gt;(3) Per gli esperti di big data, il colore delle linee nei grafici ha sempre un perche&amp;rsquo;. Nessuna linea fucsia ha mai successo sul mercato, il viola ha sempre dei problemi a trovare finanziamenti e non fidatevi mai delle linee tratteggiate: brutta gente.&lt;/p&gt;
+
+&lt;p&gt;(4) Per gli esperti di big data, se smettete di crescere esponenzialmente siete destinati ad esplodere in tre secondi, a fallire, o altri destini atroci. Insomma, per voi e&amp;rsquo; finita. Crescete esponenzialmente o andate a esplodere da qualche altra parte, che qui si lavora.&lt;/p&gt;
+
+&lt;p&gt;(5) Se non succede quel che dice e&amp;rsquo; perche&amp;rsquo; gli avete chiesto di predire il futuro prima che arrivasse. La &lt;em&gt;new wave del big data&lt;/em&gt; predice il futuro , ma solo quando e&amp;rsquo; gia&amp;rsquo; arrivato, ovvero &lt;em&gt;predice il presente&lt;/em&gt;.In definitiva, e&amp;rsquo; come se anziche&amp;rsquo; fare una prognosi, il medico vi dicesse che il vostro stato di salute in questo momento evolve in maniera simile a quello di altre 328 persone nel raggio di duecento chilometri.&lt;/p&gt;
+
+&lt;p&gt;(6)Se volete pubblicare qualcosa e vi chiedono il raw data, riempite di /dev/random un cluster hadoop e rispondete che sono 400 TB di raw data, ma se vuole gli potete dare il dump in esadecimale. Un tempo la correlazione era il segreto dei fuffaroli, oggi non avete piu&amp;rsquo; bisogno di queste cose banali: &amp;ldquo;big data&amp;rdquo;, e via. E se avete escluso alcuni dati e vi accusano di cherrypicking, potete dire che avete usato &amp;ldquo;machine learning&amp;rdquo;, e che la macchina li ha considerati poco significativi.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spass on KEIN PFUSCH, BITTE!</title>
+    <link>http://www.wolfstep.cc/categories/spass/</link>
+    <description>Recent content in Spass on KEIN PFUSCH, BITTE!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Mar 2015 16:44:23 +0100</lastBuildDate>
+    <atom:link href="http://www.wolfstep.cc/categories/spass/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mescolanza tecnologica</title>
+      <link>http://www.wolfstep.cc/post/vielspass/</link>
+      <pubDate>Sat, 28 Mar 2015 16:44:23 +0100</pubDate>
+      
+      <guid>http://www.wolfstep.cc/post/vielspass/</guid>
+      <description>&lt;p&gt;Nei sabati uggiosi capita di giocare con le tecnologie. Questo esercizio serve a tenersi &amp;ldquo;sul pezzo&amp;rdquo; come &amp;ldquo;makers&amp;rdquo; , nel senso che non mi piacciono gli architetti di sistema che si mettono a scrivere le cose su Powerpoint e basta. Ma a volte capita di fare &amp;ldquo;mescolanze&amp;rdquo;. Per &amp;ldquo;mescolanza&amp;rdquo; intendo il gesto di mescolare una tecnologia molto vecchia con una nuova. E&amp;rsquo; divertente perche&amp;rsquo; vi fa capire &amp;ldquo;come poteva essere il mondo se&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Prendiamo i vecchi protocolli del passato: NNTP, detto anche &amp;ldquo;news&amp;rdquo; o &amp;ldquo;usenet&amp;rdquo;. Si trattava di servizi che scrivevano su una precisa directory, che era in genere /var/spool/news, (a meno di sistemi piu&amp;rsquo; sofisticati capaci di usare dischi e file in modalita&amp;rsquo; raw) e che furono i primi &amp;ldquo;forum&amp;rdquo; della rete. Chi ha meno di 15 anni di vita su internet probabilmente non li ricorda, oggi sopravvivono ancora quelli di mane, ma non e&amp;rsquo; questo il punto.&lt;/p&gt;
+
+&lt;p&gt;Avete mai configurato un server news? Di per se&amp;rsquo; non era difficile. O meglio, la parte locale era quasi banale. Il problema vero era il trasporto. Oh, niente di trascendentale, nel senso che alla fine ci si riusciva. Il problema era l&amp;rsquo;infrastruttura. Essa era cosi&amp;rsquo; centralizzata in pochi servers , che venivano gestiti da chi aveva servers con IP statico (normalmente ISP) che alla fine quando gli ISP decisero di uccidere il protocollo, non ci fu nulla da fare.&lt;/p&gt;
+
+&lt;p&gt;Era si&amp;rsquo; possibile che qualche volontario si mettesse a tenere un server news, ma la piccola quantita&amp;rsquo; di persone che potevano tenere una macchina con un server NNTP era limitante. Infatti, Usenet mori&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Ma adesso supponiamo per ipotesi che ci sia interesse.&lt;/p&gt;
+
+&lt;p&gt;Abbiamo detto che le news sono tenute in una precisa cartella, /var/spool/news/*&lt;/p&gt;
+
+&lt;p&gt;E abbiamo dei software che permettono di replicare dei filesystem, come per esempio &lt;a href=&#34;https://syncthing.net&#34;&gt;syncthing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Allora, che succede se replichiamo la cartella su un portatile linux (armato che so io di un sn o di un leafnode) e tutti usiamo un lettore come pan , puntato su &amp;ldquo;localhost&amp;rdquo;?&lt;/p&gt;
+
+&lt;p&gt;Beh, e&amp;rsquo; semplice: che abbiamo ricreato un&amp;rsquo;infrastruttura Usenet senza bisogno di IP statici. E senza bisogno di complessi meccanismi come uucp da configurare: quando un messaggio viene postato su localhost, se ne va a spasso per tutto il cluster di syncthing.&lt;/p&gt;
+
+&lt;p&gt;Ora, io ricordo il periodo della Satrapia di Usenet, quando tutti dipendevano da pochi tiranni che a volte concedevano la grazia di darvi un qualche tipo di liberta&amp;rsquo; di espressione. E ricordo bene quale fosse la fonte del loro potere: l&amp;rsquo;infrastruttura. Essi possedevano l&amp;rsquo;unica infrastruttura capace di avere server nntp. Se i newsgroups fossero sopravvissuti sino ad ora, o meglio se fosse sopravvissuto l&amp;rsquo;interesse verso di essi, oggi i &amp;ldquo;ribelli&amp;rdquo; avrebbero gia&amp;rsquo; costruito la propria infrastruttura usenet, semplicemente usando btsync, o syncthing.&lt;/p&gt;
+
+&lt;p&gt;Adesso proviamo a fare un passo indietro.&lt;/p&gt;
+
+&lt;p&gt;La posta che viene scaricata sui miei serverINI di casa arriva in un folder di tipo MAILDIR, dentro ~/mail , cioe&amp;rsquo; in una cartella contenuta dentro la mia directory di base. Allora devo usare una vpn e configurare un server IMAP se la voglio leggere.&lt;/p&gt;
+
+&lt;p&gt;Ma non e&amp;rsquo; indispensabile che le cose vadano cosi&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Riprendiamo in mano btsync o syncthing. Mettiamoli a girare sui server che ricevono la posta.&lt;/p&gt;
+
+&lt;p&gt;Poi replichiamo , usando DHT o &lt;a href=&#34;https://github.com/syncthing/specs/blob/master/BEPv1.md&#34;&gt;BEP&lt;/a&gt;, la cartella su un altro portatile (per fare un esempio).&lt;/p&gt;
+
+&lt;p&gt;A questo punto,  vi bastera&amp;rsquo; settare il vostro programma di email (es. thunderbird) per leggere una cartella locale, e avete fatto: non avete piu&amp;rsquo; bisogno del trasporto IMAP o POP3 per scaricare.&lt;/p&gt;
+
+&lt;p&gt;Stessa cosa succede col server smtp. Uso un server locale, che cerca di usare un relay inesistente. Poiche&amp;rsquo; non riesce ad usare un relay che non si risolve sui DNS, la posta rimane in coda, nello spool. Ma lo spool e&amp;rsquo; duplicato sul server smtp che gira sul raspberry di casa. E da li&amp;rsquo; la posta puo&amp;rsquo; uscire.&lt;/p&gt;
+
+&lt;p&gt;Questo sistema bypassa anche i DNS, e i loro campi MX, per dire. Se configuriamo il server SMTP &amp;ldquo;pippo&amp;rdquo; per rispondere ad alcuni domini inventati come se fossero locali, tipo&lt;/p&gt;
+
+&lt;p&gt;tuamadre.sesso&lt;/p&gt;
+
+&lt;p&gt;quando sul server SMTP &amp;ldquo;pluto&amp;rdquo; il messaggio viene inviato verso &amp;ldquo;hitler@tuamadre.sesso&amp;rdquo; esso rimane in coda, per il tempo che abbiamo ordinato al server di aspettare per la ricomparsa del relay. Ora , nel momento in cui la directory di spool di &amp;ldquo;pluto&amp;rdquo; viene duplicata sul server &amp;ldquo;pippo&amp;rdquo;, che invece crede di dover ricevere la mail per il dominio &amp;ldquo;tuamadre.sesso&amp;rdquo; , la posta viene mandata alla cartella locale &amp;ldquo;hitler&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;In questo modo, cioe&amp;rsquo;, abbiamo completamente bypassato la necessita&amp;rsquo; dei campi MX sui server: se vogliamo che i server comunichino, e vogliamo crearci la nostra rete privata di email, non dobbiamo fare altro che accordarci sui nomi da configurare sui server, e poi iniziare a condividere la posta.&lt;/p&gt;
+
+&lt;p&gt;Chiaramente il sistema ha un problema di sicurezza, nel senso che se il serber SMTP &amp;ldquo;gambadilegno&amp;rdquo; ha deciso di prendere la posta per &amp;ldquo;tuamadre.sesso&amp;rdquo;, una copia di questa email finira&amp;rsquo; nella cartella locale di &amp;ldquo;gambadilegno&amp;rdquo;. Motivo per cui una simile infrastruttura funziona bene solo a patto di usare qualcosa come GPG.&lt;/p&gt;
+
+&lt;p&gt;In definitiva, cioe&amp;rsquo;, potremmo creare una completa struttura di email &amp;ldquo;alternativa&amp;rdquo; solo usando programmi opensource, ancora in uso, e sopra metterci sopra una bella infrastruttura DHT o &lt;a href=&#34;https://github.com/syncthing/specs/blob/master/BEPv1.md&#34;&gt;BEP&lt;/a&gt;, evitando &lt;strong&gt;tutti&lt;/strong&gt; i protocolli di trasporto, e pure la tirannia del &lt;strong&gt;DNS&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Perche&amp;rsquo; questo esercizio e&amp;rsquo; importante?&lt;/p&gt;
+
+&lt;p&gt;Perche&amp;rsquo; vi fa capire una cosa: che moltissimi dei &amp;ldquo;grandi genii&amp;rdquo;, moltissime tecnologie come &amp;ldquo;il cloud&amp;rdquo; , spesso sono li&amp;rsquo; per pura coincidenza.&lt;/p&gt;
+
+&lt;p&gt;Sono li&amp;rsquo; soltanto perche&amp;rsquo; i protocolli DHT si sono sempre usati per condividere dei meri file, e pochi si sono accorti del fatto che, alla fine, &amp;ldquo;duplicare file&amp;rdquo; su Unix e&amp;rsquo; una cosa potentissima, se non onnipotente.&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; assolutamente possibile, ripeto, costruire una infrastruttura MOBILE e NASCOSTA di email, semplicemente installando un server smtp locale con un relay inventato, condividere la directory di spool per la posta in uscita (in questo caso, anche quella in bouncing se pensiamo a postfix) , e quando la coda viene duplicata su un server che invece ha istruzioni di ricevere posta per quel dominio, finira&amp;rsquo; nella cartella locale.&lt;/p&gt;
+
+&lt;p&gt;Questo si puo&amp;rsquo; fare su qualsiasi portatile perche&amp;rsquo; oggi i portatili maneggiano potenze non indifferenti, e in questo modo si possono creare infrastrutture potenti , distribuite, e praticamente anonime.&lt;/p&gt;
+
+&lt;p&gt;Procedendo in questo modo su vasta scala, e pacchettizzandolo in un .deb, e&amp;rsquo; possibile costruire una infrastruttura di email completamente parallela, anonima, replicata, mobile, senza dipendenze da provider e DNS.&lt;/p&gt;
+
+&lt;p&gt;Ma specialmente, senza possedere nessuna infrastruttura propria. Potrei fare il pacchetto .deb domani, con dentro postifx configurato come non-relay, una copia di btsync configurata per un dato cluster, la configurazione di Thunderbird con localhost come smtp server e come /var/mail/username come destinazione, e un dialogo che proponga di scegliere il nome di dominio.&lt;/p&gt;
+
+&lt;p&gt;Sicuramente questo e&amp;rsquo; il punto di vista del sistemista: se fossi un programmatore accanito potrei pensare ad un ibrido tra syncthing e un server SMTP, capace di ricevere posta su localhost, metterla in uno spool, condividere lo spool, ricevere gli spool condivisi, ed eventualmente i domini coincidano, mettere la cartella nelle caselle locali.&lt;/p&gt;
+
+&lt;p&gt;E con un solo software, avreste un sistema di email clandestino, intracciabile (tutti scaricano una copia dello spool, ma solo alcuni ne fanno uso in locale, e non c&amp;rsquo;e&amp;rsquo; modo di sapere chi da fuori) .&lt;/p&gt;
+
+&lt;p&gt;Perche&amp;rsquo; questo volo pindarico? Per dire che e&amp;rsquo; una pura fortuna che Gmail sia nato prima dei vari &lt;a href=&#34;https://github.com/syncthing/specs/blob/master/BEPv1.md&#34;&gt;BEP&lt;/a&gt;  e DHT. Se fossero arrivati prima loro, e ci fosse stato qualcuno a proporre l&amp;rsquo;idea, probabilmente adesso avreste la vostra mail svincolata dai DNS e dal bisogno di IP statici.&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; cosi&amp;rsquo; diverso da quanto fatto da google? Apparentemente si, ma in realta&amp;rsquo; non troppo: in fondo, anche google ha preso due protocolli &amp;ldquo;legacy&amp;rdquo; e li ha migliorati sbattendoci sopra un&amp;rsquo;altra feature, che era l&amp;rsquo;interfaccia web, un pochino piu&amp;rsquo; moderna. Se un&amp;rsquo;altra azienda avesse pensato di usare il protocollo di Torrent per farvi scaricare la posta, probabilmente oggi non ci sarebbe Gmail.&lt;/p&gt;
+
+&lt;p&gt;Molti dei social network non ci sarebbero se qualcuno avesse avuto l&amp;rsquo;idea di usare un sistema come btsync per condividere /var/spool/news, dal momento che, avendo un prodotto del genere, sarebbero proliferati i server news, anche sui PC domestici, e la gente non sarebbe fuggita dai satrapi delle gerarchie &amp;ldquo;ufficiali&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Giocare con la mescolanza di vecchi e nuovi protocolli vi mostra, in realta&amp;rsquo;, quanto sia stato un caso che i grandi di oggi siano grandi. In realta&amp;rsquo; hanno migliorato cose esistenti, ma questo miglioramento e&amp;rsquo; arrivato solo qualche istante prima di un altro, che avrebbe potuto salvare la tecnologia esistente.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/OhNyDuwDSW0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

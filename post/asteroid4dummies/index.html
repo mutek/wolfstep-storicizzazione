@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content=" EAL (Evaluation Assurance Level) e software. &middot;  KEIN PFUSCH, BITTE!" />
+  <meta property="og:site_name" content="KEIN PFUSCH, BITTE!" />
+  <meta property="og:url" content="http://www.wolfstep.cc/post/asteroid4dummies/" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2015-05-04T19:39:10&#43;02:00" />
+  
+  <meta property="og:article:tag" content="software" />
+  
+  <meta property="og:article:tag" content="EAL" />
+  
+  <meta property="og:article:tag" content="security" />
+  
+  
+
+  <title>
+     EAL (Evaluation Assurance Level) e software. &middot;  KEIN PFUSCH, BITTE!
+  </title>
+
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/main.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/github.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="http://www.wolfstep.cc//images/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://www.wolfstep.cc//images/apple-touch-icon.png" />
+  <link href="" rel="alternate" type="application/rss+xml" title="KEIN PFUSCH, BITTE!" />
+</head>
+<body>
+
+
+  <header class="global-header">
+    <section class="header-text">
+      <h1><a href="http://www.wolfstep.cc/">KEIN PFUSCH, BITTE!</a></h1>
+      
+      <div class="tag-line">
+        Comunicare, ammesso sia possibile, e&#39; perfettamente inutile
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+      
+      <a href="http://www.wolfstep.cc/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary">EAL (Evaluation Assurance Level) e software.</h1>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2015-05-04T19:39:10&#43;02:00">
+          May 4, 2015
+        </time>
+      </div>
+      <div class="pull-right">
+        
+        <span class="post-tag small"><a href="http://www.wolfstep.cc//tags/software">#software</a></span>
+        
+        <span class="post-tag small"><a href="http://www.wolfstep.cc//tags/eal">#EAL</a></span>
+        
+        <span class="post-tag small"><a href="http://www.wolfstep.cc//tags/security">#security</a></span>
+        
+      </div>
+    </div>
+  </header>
+  <section>
+<div style="text-align: justify;">
+    <p>I miei discorsi sul software sono stati presi con curiosita&rsquo;, nel senso che molti non credono/pensano che esista un sistema di certificazione rigoroso, ne&rsquo; che esistano delle patenti. E molti credono che tutti i sistemi operativi (in realta&rsquo; quelli mainstream ) siano molto diversi, ma misurano tale sicurezza in termini di &ldquo;mio cugino dice che&rdquo;.</p>
+
+<p>L&rsquo;esistenza di livelli di EAL in genere non finisce sulla stampa informatica mainstream, ne&rsquo; se ne occupano molto i programmofoni, perche&rsquo; alla fine dei conti si tratta di roba che non vogliono far sapere. Molti per esempio continuano a pensare che alla fine dei conti l&rsquo; OS &ldquo;A&rdquo; sia piu&rsquo;/meno sicuro dell&rsquo; OS &ldquo;B&rdquo;, e quindi non piacerebbe sapere loro che esistano delle classifiche , i cui risultati probabilmente non sono quelli che vorrebbero.</p>
+
+<p>EAL e&rsquo; un sistema che classifica software ed appliances a secondo del livello di &ldquo;sicurezza&rdquo;, ovvero un livello minimo di qualita&rsquo; accettabile per piazzare il software a fare una determinata cosa. Mettereste Windows95 a gestire una centrale nucleare? No. Ma che cosa dovreste metterci? Qual&rsquo;e&rsquo; il livello minimo? E che cosa le assicurazioni accetteranno?</p>
+
+<blockquote>
+<p>Quando si parla di sicurezza non si parla solo di anti-intrusione, ma si intende quella che in italia chiameremmo &ldquo;affidabilita&rsquo; &ldquo;, che comprende anche la sicurezza contro attacchi informatici, ma non solo.</p>
+</blockquote>
+
+<p>Quando dico &ldquo;siete a livello del portale sviluppato da vostro cugino&rdquo; intendo un prolema assicurativo: <em>ok, vostro cugino e&rsquo; bravo, ma siete disposti a mettere nero su bianco che pagherete 100 euro per ogni visitatore per ogni baco trovato?</em></p>
+
+<p>Allora, EAL elabora una serie di common practices (che e&rsquo; molto lungo studiare) e a seconda della loro applicazione classifica i sistemi in sette livelli. Tali livelli sono mappabili in altri sistemi di classificazione analoghi: EAL1 corrisponde a ITSEC E0-E1, che corrisponde a BSI ITS Q0-Q1, e a TSEC D-C1.</p>
+
+<table cellpadding="2" cellspacing="2">
+<colgroup>
+    <col style="width: 15%" />
+    <col style="width: 15%" />
+    <col style="width: 15%" />
+    <col style="width: 15%" />
+    <col style="width: 40%" />
+  </colgroup>
+<tbody><tr>
+<th style="background-color:#BBFFBB">CC EAL</th>
+<th style="background-color:#BBFFBB">ITSEC E</th>
+<th style="background-color:#BBFFBB">BSI ITS Q</th>
+<th style="background-color:#BBFFBB">TCSEC</th>
+<th style="background-color:#EEFFEE">In sintesi</th>
+</tr>
+<tr>
+<th style="background-color:#BBBBff">EAL1</th>
+<th style="background-color:#BBBBff">E0-E1</th>
+<th style="background-color:#BBBBff">Q0-Q1</th>
+<th style="background-color:#BBBBff">D-C1</th>
+<td style="background-color:#EEEEff">Il produttore dice che secondo lui funziona. Fidatevi di lui.</td>
+</tr>
+<tr>
+<th style="background-color:#BBBBBB">EAL2</th>
+<th style="background-color:#BBBBBB">E1</th>
+<th style="background-color:#BBBBBB">Q1</th>
+<th style="background-color:#BBBBBB">C1</th>
+<td style="background-color:#EEEEEE">Sono noti i test e le tecniche di sviluppo,ma non ci hanno messo altro sforzo.</td>
+</tr>
+<tr>
+<th style="background-color:#BBBBff">EAL3</th>
+<th style="background-color:#BBBBff">E2</th>
+<th style="background-color:#BBBBff">Q2</th>
+<th style="background-color:#BBBBff">C2</th>
+<td style="background-color:#EEEEff">Una terza parte ci ha dato un occhio e dice che  secondo loro funziona bene.Ma qui lo dicono e qui lo negano. Ancora niente ciccia per le assicurazioni.</td>
+</tr>
+<tr>
+<th style="background-color:#BBBBBB">EAL4</th>
+<th style="background-color:#BBBBBB">E3</th>
+<th style="background-color:#BBBBBB">Q3</th>
+<th style="background-color:#BBBBBB">B1</th>
+<td style="background-color:#EEEEEE">Auditing e separazione della sicurezza tra utenti. Alle assicurazioni sembra sufficiente.</td>
+</tr>
+<tr>
+<th style="background-color:#BBBBff">EAL5</th>
+<th style="background-color:#BBBBff">E4</th>
+<th style="background-color:#BBBBff">Q4</th>
+<th style="background-color:#BBBBff">B2</th>
+<td style="background-color:#EEEEff">Le policy di sicurezza sono formali, ma la verifica e' ancora euristica. </td>
+</tr>
+<tr>
+<th style="background-color:#BBBBBB">EAL6</th>
+<th style="background-color:#BBBBBB">E5</th>
+<th style="background-color:#BBBBBB">Q5</th>
+<th style="background-color:#BBBBBB">B3</th>
+<td style="background-color:#EEEEEE">Le policy di sicurezza formali sono testate formalmente , i test sono descritti formalmente ma sono eseguiti in maniera semiformale.</td>
+</tr>
+<tr>
+<th style="background-color:#BBBBff">EAL7</th>
+<th style="background-color:#BBBBff">E6</th>
+<th style="background-color:#BBBBff">Q6</th>
+<th style="background-color:#BBBBff">A</th>
+<td style="background-color:#EEEEff">Sia i test che le verifiche sono descritte formalmente ed eseguiti formalmente.</td>
+</tr>
+</tbody></table>
+
+<p>Faccio una carrellata sotto, menzionando solo i sistemi <strong>notevoli</strong>. Poi, siete sempre in tempo a chiedere che certificazione EAL abbia il vostro OS preferito. San Google vi aiutera&rsquo;.</p>
+
+<p><strong>EAL1</strong> e&rsquo; dedicato a quei sistemi per i quali si valuta che un malfunzionamento od un problema di robustezza/sicurezza non siano davvero problematici. Ci si aspetta che il software funzioni la maggior parte delle volte, ma non e&rsquo; cosi&rsquo; necessario che il software sia sicuro. Molte console di videogiochi sono su questo livello, specialmente se non si connettono ad Internet. Si, e&rsquo; gradito che funzionino, ma la sicurezza non e&rsquo; qualcosa per la quale un&rsquo;assicurazione pagherebbe mai. Nessuna assiurazione vi assicurera&rsquo; mai un diveogame, insomma. Non sono richieste azioni da parte degli sviluppatori per ottenere questo livello. Siamo al livello del portale sviluppato in php da vostro cugino.</p>
+
+<p><strong>EAL2</strong> e&rsquo; dedicato a quei sistemi nei quali gli sviluppatori sono tenuti a dirvi solo qualcosa riguardo all&rsquo;architettura (linguaggio usato, OOP o no, etc) e a darvi il risultato dei test eseguiti sotto forma di percentuale di successi. la descrizione dei test non deve essere formale. Nessun altro sforzo e&rsquo; richiesto, per cui potete considerarli un pochino come alcune console o alcuni giochi che vi dicono &ldquo;il motore e&rsquo; sviluppato in c++&rdquo; e vi dicono che hanno testato il gioco con 1000 testers, e il 99% dei testers erano soddisfatti. Siamo ancora a livello <em>bassino</em>. Siamo a livello dell&rsquo;interprete PHP, o dell&rsquo;opensource.</p>
+
+<p><strong>EAL3</strong> e&rsquo; quel momento in cui arriva un ente di certificazione esterno a dare un&rsquo;occhiata, ma si tratta di un ente di certificazione che NON si assume alcuna responsabilita&rsquo; assicurativa. E&rsquo; come Casaleggio che paga qualcuno per &ldquo;certificare&rdquo; la sua piattaforma di voto, ma se qualcosa va storto, pazienza. Non e&rsquo; vitale, nessuna infrastruttura dipende da questo, l&rsquo;operazione puo&rsquo; essere ripetuta. Siamo a livello di alcuni prodotti OpenSource con qualche auditing indipendente, ma ancora le assicurazioni non pagano. Tra i membri illustri spicca:</p>
+
+<ul>
+<li>Apple OSX <a href="https://www.commoncriteriaportal.org/files/epfiles/0536a_pdf.pdf">Link</a></li>
+</ul>
+
+<p><strong>EAL4</strong> si inizia a fare sul serio. A questa famiglia appartengono :</p>
+
+<ul>
+<li>AIX</li>
+<li>HP-UX</li>
+<li>FreeBSD</li>
+<li>Oracle Linux</li>
+<li>Novell NetWare</li>
+<li>Solaris</li>
+<li>SUSE Linux Enterprise Server 9</li>
+<li>SUSE Linux Enterprise Server 10</li>
+<li>Red Hat Enterprise Linux 5</li>
+<li>Windows 2000 Service Pack 3</li>
+<li>Windows 2003</li>
+<li>Windows XP</li>
+<li>Windows Vista</li>
+<li>Windows 7</li>
+<li>Windows Server 2008 R2</li>
+<li>IBM z/VM versione 5.3</li>
+</ul>
+
+<p>per ottenere questa certificazione occorre garantire ALMENO un livello di accesso alle risorse basato sui privilegi dell&rsquo;utente. occorre che la policy sia descritta formalmente e che sia descritto formalmente il test plan. Tutti i sistemi sopra hanno richiesto ed ottenuto questa certificazione <strong>con successo</strong>.</p>
+
+<p>Se andate oltre i requisiti minimi richiesti ma non siete abbastanza bravi per salire a EAL5 allora siete EAL4+:</p>
+
+<ul>
+<li>Trusted Solaris,</li>
+<li>Solaris 10 Release <sup>11</sup>&frasl;<sub>06</sub> Trusted Extensions,</li>
+<li>La prima versione di  XTS-400 (software per sistemi d&rsquo;arma sviluppato da BAE)</li>
+<li>VMware ESXi versione 5.0</li>
+<li>QNX Neutrino (ci stanno provando anche col multicore).</li>
+</ul>
+
+<p>capite che i programmofoni e i giornali di tifoseria informatica (linuxari, windowsari&amp;co ) non vi diranno mai queste cose. Oltre alla mancanza di Apple che spicca con forza, non tutti i linuxari ammetteranno mai che Linux non sia mai riuscito a salire a EAL4+, e si trovi nello stesso girone di certificazione di Windows Vista.</p>
+
+<p><strong>EAL5</strong> qui il gioco si fa piu&rsquo; duro. Il livello di pratica richiesto e&rsquo; molto piu&rsquo; duro, le informazioni fornite devono essere molto piu&rsquo; complete, e ci sarebbe da scrivere libri (e non post) a riguardo dei test che si possono fare. I sistemi che arrivano a EAL5 sono:</p>
+
+<ul>
+<li>Smartcard per Carte di credito.</li>
+<li>Tenix Interactive Link (un sistema di operazioni di rete in uso per la telefonia forense)</li>
+<li>XTS400 (sviluppato da BAE systems, fabbricanti di sistemi d&rsquo; arma) dallo STOP6 in poi.</li>
+<li>IBM LPAR su System z.(il sistema di virtualizzatione dei mainframe IBM)</li>
+</ul>
+
+<p>Alcuni sistemi per smartcard hanno bisogno di livelli di sicurezza un pelo superiori ad EAL5, come capita a:</p>
+
+<ul>
+<li>Siemens CardOS M4.3B mask: EAL 5+</li>
+</ul>
+
+<p>che viene usato su alcune smartcard molto sicure per questioni particolari (accesso a caveau, etc).</p>
+
+<p><strong>EAL6</strong> qui siamo ad applicazioni che non solo girano soldi, ma se vanno in cacca allora muore gente. Anche con i sistemi d&rsquo;arma di BAE systems muore gente, ma siccome sono sistemi d&rsquo;arma, non sempre e&rsquo; un problema. Qui invece girano soldi , le assicurazioni pagano una marea di soldi e non deve morire nessuno. La lista dei test e dei requisiti e&rsquo; enorme. Abbiamo:</p>
+
+<ul>
+<li>HP OpenVMS e SEVMS</li>
+</ul>
+
+<p>se andate oltre a EAL6, potete ottenere EAL6+ che ha un membro famoso:</p>
+
+<ul>
+<li>Integrity-178B (il sistema RTOS che gira su  B-2, F-16, F-22 and F-35, Airbus A380)</li>
+</ul>
+
+<p>per capire il livello di &ldquo;paranoia&rdquo;, su questi ultimi sistemi non e&rsquo; consentita l&rsquo;<strong>allocazione dinamica della memoria</strong>, che e&rsquo; considerata, a questo livello, uno strumento del demonio. Se ne conoscete altri che abbiano EAL6+, ditemelo. Non si finisce mai di imparare, in questo settore.</p>
+
+<p><strong>EAL7</strong> qui siamo a dei livelli estremi, ove la sicurezza viene garantita dal fatto che l&rsquo;hardware (di fatto, software implementato sotto forma di ASIC o SoC) abbia certe caratteristiche ed abbia superato delle verifiche formali.</p>
+
+<ul>
+<li>The Tenix Interactive Link Data Diode Device (un sistema di isolamento tra reti che consente solo un ascolto monodirezionale: io vedo te tu non vedi me)</li>
+<li>Fox-IT Fox Data Diode (il concorrente europeo del sistema di cui sopra)</li>
+</ul>
+
+<p>si tratta di strumenti per la misura di dati su rete e per la sicurezza estrema nell&rsquo;analisi dei protocolli.Si usano per separare delle reti ordinarie da reti di controllo con dei  Niente che la maggior parte di noi vedra&rsquo; mai all&rsquo;opera.</p>
+
+<p>Quali sono i test da passare? Si tratta di una serie di certificazioni intermedie, che per la Germania (ove la certificazione raggiunge livelli maniacali) sono riportate in questo modo:</p>
+
+<ul>
+<li>FAU (Sicherheitsprotokollierung)</li>
+<li>FCO (Kommunikation)</li>
+<li>FCS (Kryptographische Unterstützung)</li>
+<li>FDP (Schutz der Benutzerdaten)</li>
+<li>FIA (Identifikation und Authentisierung)</li>
+<li>FMT (Sicherheitsmanagement)</li>
+<li>FPR (Privatsphäre)</li>
+<li>FPT (Schutz der Sicherheitsfunktionen)</li>
+<li>FRU (Betriebsmittelnutzung)</li>
+<li>FTA (Schnittstelle)</li>
+<li>FTP (vertrauenswürdiger Pfad/Kanal)</li>
+</ul>
+
+<p>ognuna di queste sigle corrisponde ad una serie di test puntualmente mappati da ISO IEC/15408. Una comoda overview la trovate <a href="http://www.wolfstep.cc/images/FormalSecurityAnalysis.pdf">da parte di Siemens AG</a></p>
+
+<p>Adesso voi vi chiederete come mai si parli poco di questa roba.</p>
+
+<p>La prima e&rsquo; che si tratta di roba avvilente. Se superiamo il livello tipico dei videogiochi, di Windows <sup>95</sup>&frasl;<sub>98</sub>/2k , abbiamo quasi tutti i concorrenti concentrati sul livello EAL4 , sino a EAL4+ . Se gia&rsquo; cerchiamo EAL5 troviamo praticamente IBM ed i militari. Questo fa capire chiaramente per quale motivo oltre un certo livello di criticita&rsquo; trovate sempre dei mainframe IBM: basta scrivere che si vuole EAL5 , e oltre IBM non andrete.</p>
+
+<p>E&rsquo; inutile che i linuxari si azzuffino, dal momento che dal punto di vista di questi test, Windows Vista e Linux pari sono. Avete voglia di discutere di Zombix Trusted Security Fichissimus 4.5 , tanto da li&rsquo; non vi schiodate. Al massimo fate EAL4+. Non oltre.</p>
+
+<p>I fan di Apple hanno notizie ancora peggiori. <a href="https://www.commoncriteriaportal.org/files/epfiles/0536a_pdf.pdf">Apple MacOS X arriva  ad EAL3</a> il che significa che ha una certificazione inferiore a Linux e Windows. Apple e&rsquo; meno sicuro e robusto di Windows e Linux. (Se qualcuno mi sa mostrare la certificazione EAL4 di Apple Mac OS ovviamente sto sbagliando, ma attualmente non trovo niente oltre alla EAL3).</p>
+
+<p>Vedere che nei tre livelli superiori della sicurezza e dell&rsquo;affidabilita&rsquo; ci siano pochissimi sistemi, e che di fatto quasi ogni cosa conosciamo si fermi tra EAL4 ed EAL4+ non e&rsquo; un bel complimento per il software attuale. (Apple dovrebbe svegliarsi , per dire, <strong>se vuole entrare nell&rsquo; era dell&rsquo; IoT</strong>).</p>
+
+<p>Perche&rsquo; questo e&rsquo; un problema?</p>
+
+<p>Andiamo a vedere, per esempio, la centralina elettronica della vostra automobile.
+Abituati a lavorare direttamente con il silicio, ove si fa la verifica formale di tutto, le aspettative di qualita&rsquo; e sicurezza delle case automobilistiche si collocano tra EAL5 ed EAL6+.</p>
+
+<p>Ma la stragrande maggioranza del software che conosciamo sta SOTTO EAL4.</p>
+
+<p>E&rsquo; vero che dal momento che una centralina d&rsquo;auto non comunica e non e&rsquo; fisicamente accedibile (se non dal vostro meccanico) sia &ldquo;facile&rdquo; arrivare a questi livelli alti. Ma significa anche che <strong>quasi nessun sistema operativo e&rsquo; adatto per fare IoT sulla vostra auto</strong>, almeno sino a quando vorrete assicurarla.</p>
+
+<p>Questo e&rsquo;, almeno su un piano piu&rsquo; &ldquo;formale&rdquo; quello che intendo dire quando dico che col software non ci siamo. Non siamo pronti ne&rsquo; alla IoT ne&rsquo; a tutte quelle brave promesse di Robot che guidano le auto, di robot che fanno i chirurghi, di oggetti che prendono cura del nonno: nessuna assicurazione vorra&rsquo; coprirli, e in molti paesi del mondo praticamente ogni cosa della vostra casa e&rsquo; assicurata. (In Germania, per dire, l&rsquo;assicurazione sulla casa e&rsquo; obbligatoria).</p>
+
+<p>Perche&rsquo; non si dice sulla stampa &ldquo;specializzata&rdquo;? Perche&rsquo; molti, troppi, vivono convinti che &ldquo;Cuginix e&rsquo; piu&rsquo; sicuro di Wassoretis, e che ovviamente PuppaBSD sia ancora piu&rsquo; sicuro e stabile di Cuginix&rdquo;.</p>
+
+<p>No: <strong>sono tutti piu&rsquo; o meno li&rsquo;</strong>.</p>
+
+<p>E sono tutti insufficienti per il mondo che vorremmo.</p>
+
+<p><center>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/SpZskQIEMHU" frameborder="0" allowfullscreen></iframe>
+</center></p>
+
+<br>
+<div class="addthis_native_toolbox"></div>
+
+</div>
+
+  </section>
+  <footer>
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        <h1 class="author-name text-primary">Uriel Fanelli</h1>
+        
+        
+      </div>
+      
+      <div class="author-contact col-md-4">
+        <a href="mailto:uriel.fanelli@gmx.de">
+          <i class="fa fa-envelope-o"></i>
+          &nbsp;Contact me
+        </a>
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="http://www.wolfstep.cc/post/poliziottimambo/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next"><a href="http://www.wolfstep.cc/post/texasfire/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+
+
+
+<iframe id="forum_embed"
+  src="javascript:void(0)"
+  scrolling="no"
+  frameborder="0"
+  width="100%"
+  height="700">
+</iframe>
+
+<script type="text/javascript">
+  document.getElementById('forum_embed').src =
+     'https://groups.google.com/forum/embed/?place=forum/kein-pfusch'
+     + '&showsearch=false&showpopout=true&showtabs=false&hl=it&theme=Light'
+     + '&parenturl=' + encodeURIComponent(window.location.href);
+</script>
+
+
+
+
+
+
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      
+    </div>
+    <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+  </footer>
+
+  <script src="http://www.wolfstep.cc//js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f32bcd406c5e50" async="async"></script>
+
+
+</body>
+</html>
+

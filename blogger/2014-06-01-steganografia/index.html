@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content="  Steganografia. &middot;  KEIN PFUSCH, BITTE!" />
+  <meta property="og:site_name" content="KEIN PFUSCH, BITTE!" />
+  <meta property="og:url" content="http://www.wolfstep.cc/blogger/2014-06-01-steganografia/" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2014-06-01T12:15:50&#43;01:00" />
+  
+  
+
+  <title>
+      Steganografia. &middot;  KEIN PFUSCH, BITTE!
+  </title>
+
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/main.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/github.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="http://www.wolfstep.cc//images/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://www.wolfstep.cc//images/apple-touch-icon.png" />
+  <link href="" rel="alternate" type="application/rss+xml" title="KEIN PFUSCH, BITTE!" />
+</head>
+<body>
+
+
+  <header class="global-header">
+    <section class="header-text">
+      <h1><a href="http://www.wolfstep.cc/">KEIN PFUSCH, BITTE!</a></h1>
+      
+      <div class="tag-line">
+        Comunicare, ammesso sia possibile, e&#39; perfettamente inutile
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+      
+      <a href="http://www.wolfstep.cc/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary"> Steganografia.</h1>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2014-06-01T12:15:50&#43;01:00">
+          Jun 1, 2014
+        </time>
+      </div>
+      <div class="pull-right">
+        
+      </div>
+    </div>
+  </header>
+  <section>
+<div style="text-align: justify;">
+    <div class='post'>
+<div style="text-align: justify;">Ho ricevuto diverse richieste di spiegazioni sulla steganografia, specialmente da parte di curiosi che chiedono come iniziare a smanettarci, e devo dire che questa curiosita' mi fa piacere. Di seguito posto un esempio puramente didattico - ma potete iniziare a smanettarci se vi va - che vi spiega come steganografare un file dentro un altro.&nbsp;</div><a name='more'></a><br /><div style="text-align: justify;">Si tratta di una versione molto semplice della steganografia, per spiegare la quale usero' un linguaggio facile da reperire anche nelle installazioni aziendali piu' paranoiche, che e' perl.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Per la manipolazione grafica useremo una libreria, GD, semplice da leggere, cosi' anche chi non vuole usare perl potra' usare lo stesso concetto con qualsiasi altra libreria. Ripeto: lo scopo e' spiegare il concetto, per farlo avere cristallino in mente , non di fornire uno strumento. Chi e' un programmatore poi potra' sviluppare la cosa.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Partiremo da un'ipotesi semplice, di avere un'immagine "nascondiglio" a 256 colori. Ovviamente, per usare maschere piu' grandi, bastera' aver capito per estenderlo a piacere.<br /><br />Il file da nascondere nel nostro esempio e' un file di testo che contiene "Grosse tette." dentro. Per prima cosa dobbiamo trasformarlo in una maschera di bit. </div><blockquote class="tr_bq"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">open(my $FH, "&lt;", "danascondere.txt") or die("$!\n");<br />binmode($FH);<br />my $file; { local $/; $file = &lt;$FH&gt;; }<br />my $binary = unpack('B*', $file);<br />my @chars = split("", $binary);</span> </blockquote><blockquote class="tr_bq"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">#print $binary; # to test</span></blockquote>nel file "danascondere.txt" c'e' la vostra roba da nascondere. Quello che ottenete e' un oggetto contenente la rappresentazione della stringa che volete nascondere in binario. Se scommentate la parte con print , e lo fate su un file che contiene la stringa: "Grosse tette." ottenete questo:<br /><br /><blockquote class="tr_bq"><i>010001110111001001101111011100110111001101100101 001000000111010001100101011101000111010001100101 0010111000001010</i></blockquote>@chars non e' altro che un vettore contenente gli uni e gli zeri indicizzati.<br /><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Una volta splittato il file che volete in bit, dobbiamo andare a nasconderlo dentro un'immagine. Sia chiaro che dobbiamo scegliere bene l'immagine. Se la nostra immagine ha 8 bit per pixel di profondita' colore, per nascondere qualcosa ci serve otto volte la dimensione iniziale (a meno di compressioni , ma poi le menziono). Se andiamo ad usare una fotografia che usa 32 bit per ogni pixel, dobbiamo considerare che ci servono 32 bit per nasconderne uno.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">In generale, pero', rimane valida l'assunzione che ci serva un pixel per ogni bit.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Adesso andiamo ad operare sul file:</div><div style="text-align: justify;"><br /></div><blockquote class="tr_bq"><blockquote class="tr_bq"><div style="text-align: justify;"><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="color: #073763;"><b>use GD;<br />use strict;<br />use warnings;<br /><br /><br />#con questo apriamo il file <br /><br />open(my $FH, "&lt;", "danascondere.txt") or die("$!\n");<br />binmode($FH);<br />my $file; { local $/; $file = &lt;$FH&gt;; }<br />my $binary = unpack('B*', $file);<br />my @chars = split("", $binary); <br /><br />#dentro chars abbiamo il binario<br /><br /><br /># definiamo i file di immagine su cui lavorare<br />my $source = GD::Image-&gt;new( 'boobs.png' );<br /><br /># steg.png e' dove metteremo tutto, boobs.png e' dove nasconderemo le cose.<br /><br />my $numerobit = @chars; #vediamo quanti simboli ci sono dentro @chars<br />my $x; #definiamo le coordinate per i pixel<br />my $y; #definiamo le coordinate per i pixel</b></span></span></span></div></blockquote></blockquote><br /><blockquote class="tr_bq"><blockquote class="tr_bq"><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="color: #073763;"><b>#</b></span><span style="color: #0b5394;"><b>per tutti i bit dentro&nbsp;@chars </b></span></span></span></blockquote></blockquote><blockquote class="tr_bq"><blockquote class="tr_bq"><div style="text-align: justify;"><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="color: #073763;"><b>for my $n (0 .. $numerobit -1) {<br />&nbsp;&nbsp;&nbsp; $x = $n % $source-&gt;height; #trasformiamo in coordinate l'indice $n.<br />&nbsp;&nbsp;&nbsp; $y = $n / $source-&gt;height;<br />&nbsp; </b></span></span></span></div></blockquote></blockquote><blockquote class="tr_bq"><blockquote class="tr_bq"><div style="text-align: justify;"><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="color: #073763;"><b>my $m_idx = $chars[$n]; # prendiamo l'ennesimo elemento dell'array di bit<br />&nbsp;&nbsp;&nbsp; </b></span></span></span></div></blockquote><div style="text-align: justify;">&nbsp; &nbsp; &nbsp;&nbsp; <span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="color: #073763;"><b># otteniamo il colore in RGB del corrispondente&nbsp; pixel x,y:</b></span></span></span></div><div style="text-align: justify;"><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="color: #073763;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;"> my ( $int ) = $source-&gt;rgb( $source-&gt;getPixel( $x, $y ) );</span></b></span></span></span></div><div style="text-align: justify;"><span style="color: red;">&nbsp;</span><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="color: #073763;"><b><span style="color: red;"><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # andiamo a scrivere i nostri bit nel bit meno significativo del colore<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($m_idx=='0')<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $int = $int &amp; 254; # se e' uno zero , assegnamo 0 all'ultimo bit della maschera.<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; else<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $int = $int | 1; # se e' un uno, assegnamo 1 all'ultimo bit della maschera.<br />&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $source-&gt;setPixel( $x, $y, $int ); # correggiamo il colore dentro il nostro file.<br />&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br /><br />open OUT, "&gt;steg.png" || die $!;<br />binmode OUT;<br />print OUT $source-&gt;png; # e buttiamo fuori il file corretto con un altro nome<br />close OUT;</b></span></span></span></div><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><br /></span></span><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><br /></span></span></blockquote><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><br /></span></span><br /><div style="text-align: justify;"><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="font-size: small;"><span style="font-family: inherit;">in pratica, stiamo prendendo il file png che si chiama "boobs.png" , e stiamo correggendo lievemente alcuni bit, in modo da scriverci le cose che vogliamo nascondere. La parte interessante l'ho scritta<span style="color: red;"><b> in rosso. E' la parte in cui anneghiamo il contenuto nel bit meno significativo del colore.</b></span></span></span></span></span></div><div style="text-align: justify;"><br /></div><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="font-size: small;"><span style="font-family: inherit;">Ci sono ovviamente alcune precisazioni da fare:</span></span></span></span><br /><br /><ul style="text-align: justify;"><li><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="font-size: small;"><span style="font-family: inherit;">La maschera "254" ha senso se abbiamo otto bit per pixel. Se ce ne fossero sedici avremmo dovuto usare 65534 , e cosi' via. I programmatori in ascolto conosceranno un sacco di metodi alternativi per mettere a zero un bit.</span></span></span></span></li><li><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="font-size: small;"><span style="font-family: inherit;">Poiche' correggiamo i bit meno significativi, che vengono regolarmente potati via da JPEG, comprimere questa immagine di fatto cancella il messaggio. </span></span></span></span></li></ul><br /><div style="text-align: justify;"><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="font-size: small;"><span style="font-family: inherit;">&nbsp;questo esempio - e ripeto, e' un esempio scritto a mente (1)-, personalmente non uso questo , ma ADA non e' cosi' leggibile per spiegare.</span></span></span></span></div><div style="text-align: justify;"><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="font-size: small;"><span style="font-family: inherit;"><br /></span></span></span></span></div><div style="text-align: justify;"><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="font-size: small;"><span style="font-family: inherit;">Il concetto pero' e' semplice: se ogni pixel ha un colore, diciamo espresso in otto bit, cosi': 0000 0000 (nero) , nello steganografare andiamo a usare SOLO il bit meno significativo :&nbsp; </span></span></span></span><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="font-size: small;"><span style="font-family: inherit;">0000000<span style="background-color: #cc0000;"><b>0</b></span></span></span></span></span></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="font-size: small;"><span style="font-family: inherit;">Fatto in questo modo, ovviamente il metodo e' poco resistente all'analisi, e per questo non ho messo molta cura nello scrivere il codice dell'esempio: fare cosi' serve contro un attaccante che sa poco e niente, quindi contro la media dei "periti dei tribunali" italiani, moltissimi degli amministratori di dominio windows troppo curiosi, e molti degli "esperti" della Polizia Postale, ma non contro chiunque, perche' chi intende attaccare potrebbe notare che unendo insieme gli ultimi bit ottiene un messaggio compiuto.</span></span></span></span></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><span style="font-size: xx-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;"><span style="font-size: small;"><span style="font-family: inherit;">Questo problema si puo' risolvere facilmente criptando il messaggio PRIMA di inserirlo dentro l'immagine: a quel punto e' difficile capire SE ci sia un messaggio criptato nascosto dentro il file: normalmente il messaggio criptato in binario appare come una sequenza casuale. </span></span></span></span></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Un altro problema per chi LEGGE il file prodotto in questo modo e' che non sa bene quanto sia grande il messaggio. In questo senso, vi conviene zippare il messaggio prima di nasconderlo: zip, per sua natura, tiene un indice all'inizio del file, ed ignora tutto quello che eventualmente eccede la sua misura. Ha pero' lo svantaggio di creare un header visibile.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">ovviamente ne potrete produrre diverse varianti: potete agire solo sui pixel pari, su quelli dispari, su pixel scelti secondo una maschera a vostra scelta (per esempio un altro file di immagini della stessa dimensione).</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">I crittografi inorridiranno perche' mi diranno che una crittazione non deve basarsi sulla segretezza dell'algoritmo, ma il punto e' che non stiamo facendo crittazione, siamo facendo steganografia: non stiamo nascondendo il messaggio, MA IL CANALE.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">E la segretezza della cosa e' importante nella segretezza della cosa? Si.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">In pratica , per fare un esempio nel mondo dello spionaggio cinematografico, la cifratura e' un codice segreto, mentre la steganografia e' il modo segreto con cui comunichiamo con gli altri. Se il nostro agente incontra un altro agente e gli dice "Geronimo 123" e' crittazione. Se sono travestiti da assicuratori e si incontrano in un ufficio di un'agenzia di assicurazioni, e' steganografia. </div><div style="text-align: justify;"></div><div style="text-align: justify;">Le due cose non si escludono: un messaggio in codice nascosto dentro un barile di sarde in salamoia puo' essere cifrato. In quel caso, "nascosto nel barile delle sarde in salamoia" e' steganografia, mentre il codice usato per rendere illeggibile il messaggio e' crittografia.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">In maniera estremamente sintetica, la crittografia fa si che il messaggio sia <u><b>illeggibile</b></u>, la steganografia si preoccupa che il messaggio sia <b><u>introvabile</u></b>.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Perche' ho scritto che sia fondamentale nel mondo di NSA?</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Chiediamoci come NSA si paghi lo stipendio. Di certo non e' contro il terrorismo che fanno controlli a tappeto, e l'attentato alla maratona ne e' la prova: DOPO hanno trovato il profilo dei tizio ceceno, DOPO hanno trovato le sue comunicazioni, eccetera.</div><div style="text-align: justify;"><br /></div><blockquote class="tr_bq"><div style="text-align: justify;">NSA si paga le sovvenzioni governative che costa semplicemente intercettando le comunicazioni commerciali (le cosiddette "offerte" ) delle aziende, durante le grandi gare internazionali, per passarle ai concorrenti americani, in modo da farli vincere.</div></blockquote><br /><div style="text-align: justify;">nel fare questo, catturano a tappeto ogni cosa si scriva in qualsiasi cloud pubblico, qualsiasi cosa passi , in chiaro o meno , attraverso qualche dispositivo che loro hanno messo sotto sorveglianza.&nbsp;</div><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-P1iv33HFQ78/U4tokKGJAKI/AAAAAAAAMLo/QrsaV6x5-8E/s1600/nsa-pwn-cisco-640x373.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-P1iv33HFQ78/U4tokKGJAKI/AAAAAAAAMLo/QrsaV6x5-8E/s1600/nsa-pwn-cisco-640x373.jpg" height="330" width="640" /></a></div>nel fare questo, pero', non hanno solo bisogno di decodificare il traffico. <u><b>Hanno bisogno di individuare i dati che cercano nel traffico. </b></u><br /><br /><div style="text-align: justify;">Chiaramente, sanno come rompere i codici che hanno inventato. Ma rimane ancora il vecchio gioco di nascondere il dato. Con quello possono fare poco, perche' quando la ricerca del dato si fa spinta, il dato stesso e' piu' inventato che reale.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Prendiamo un programma di steganografia come quello che ho scritto (ma ne trovate diversi):</div><br /><ul style="text-align: justify;"><li>Mi chiede una password per crittografarlo e una per la posizione.</li><li>Lo crittografa.</li><li>Crittografa la posizione per sapere da dove cominci il documento.</li><li>Lo scrive nel file di immagini , partendo da un offset casuale anziche' dall'inizio. Usa uno degli ultimi 4 bit di 32, ma non sempre quello.</li><li>lo fa in modo che una minima modifica al formato di archiviazione sia fatale per il contenuto, producendo un jpg.</li></ul><div style="text-align: justify;">ora, i nostri eroi che vanno a leggere i miei file sul cloud microsoft che il mio cliente usa per "salvare" i suoi dati, vedono solo una raccolta di wallpapers. Tutto quello che e' classificato piu' di C2 viene messo in una serie di immagini salvate sul disco.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Adesso, spazzolando le immagini a tappeto, potrebbro fare diversi errori: il primo e' di pensare che siano solo immagini. Il secondo e' di archiviarle per un uso futuro comprimendole un minimo o cambiando il formato. Ma specialmente, non saprebbero mai da dove inizi il documento nascosto e dove finisca.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Possono tentare di ricostruirlo usando crittanalisi di OGNI bit del file di immagini? Certo. Ma la ricostruzione sarebbe piu' che altro un'invenzione. Dal loro punto di vista si tratta di:</div><div style="text-align: justify;"><br /></div><ul style="text-align: justify;"><li>Ipotizzare che ci sia qualcosa in un dato file. Che non succede per tutti i file.</li><li>Ipotizzare quale dei 4 bit si sia usato, pixel per pixel. </li><li>Ipotizzare che un dato insieme di bit sia il marcatore per l'inizio del documento nascosto.</li><li>Ipotizzare che sia criptato con un dato algoritmo.</li><li>Ipotizzare quale sia la chiave che ho usato per crittare oppure rompere la crittazione.</li></ul><div style="text-align: justify;"><br /></div><div style="text-align: justify;">il problema e' che per trovare il documento occorre rispondere a tutte queste ipotesi. E spazzolare OGNI documento del mondo chiedendosi se contenga qualche altra cosa , in questo modo, non e' semplicemente fattibile.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Cosi', se volete portare fuori qualcosa da un'azienda che vi concede accesso ad un servizio di cloud pubblico qualsiasi, ma controlla tutto cio' che entra ed esce, non avete da fare altro che avere una larga collezione di musica, wallpapers, video, e steganografarci dentro le cose.&nbsp;</div><div style="text-align: justify;"></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">In questo senso, il problema dell'attaccante NON e' SOLO di non saper decodificare il messaggio, ma di non avere modo di sapere che il messaggio sia li'. I file, infatti , sono assolutamente utilizzabili come immagini: nel file che vedete sotto ho nascosto un altro file di testo. Come vedete, appare ancora usabile quale immagine jpg. </div><br /><br /><br /><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-cmOET-eutQ0/U4tx4O3YLXI/AAAAAAAAML4/RQQPu_LkIrA/s1600/miosotis-booblivious-bignaturals-02.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-cmOET-eutQ0/U4tx4O3YLXI/AAAAAAAAML4/RQQPu_LkIrA/s1600/miosotis-booblivious-bignaturals-02.jpg" height="400" width="266" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Questo file contiene un altro file segreto.</td></tr></tbody></table><div style="text-align: justify;"><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-hUwtBN_iZS8/U4t1k5RescI/AAAAAAAAMME/WnBxsvqXUlE/s1600/miosotis-booblivious-bignaturals-02.old.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-hUwtBN_iZS8/U4t1k5RescI/AAAAAAAAMME/WnBxsvqXUlE/s1600/miosotis-booblivious-bignaturals-02.old.jpg" height="400" width="266" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Questo e' l'originale.</td></tr></tbody></table><br /><br /></div><div style="text-align: justify;">quindi, con buona pace di NSA, il terrorista (o Snowden), o l'azienda concorrente alla grande azienda americana,&nbsp; puo' fargli passare sotto il naso tutto quel che vuole, perche' con un sistema di monitoraggio di massa, che salva in gran parte i metadati , non e' letteralmente possibile avere la sorveglianza che cercano.<br /><br />Per questa ragione, sebbene la steganografia "fragile" (quella per la quale un minimo cambiamento di formato del file distrugge il dato nascosto) sia una tecnica relativamente semplice, non troverete molti tool di steganografia in giro: se qualcuno facesse oggi , negli USA, un tool di steganografia semplice da usare, riceverebbe una bella visita da FBI.<br /><br />Perche' trovare un disco criptato e' un conto: sapete che li' dentro c'e' nascosto qualcosa. Ma trovare un disco steganografato significa che vi metterete a cercare e non troverete nulla di nulla.<br /><br /><br /><br /><br /></div><div style="text-align: justify;">(1) Se facendolo girare ottenere qualche errore, consideratelo un compito a casa. Sto scrivendo un articolo su un blog, non sto lavorando che devo correggere tutto. </div></div>
+<h2></h2>
+<div class='comments'>
+</div>
+
+<br>
+<div class="addthis_native_toolbox"></div>
+
+</div>
+
+  </section>
+  <footer>
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        <h1 class="author-name text-primary">Uriel Fanelli</h1>
+        
+        
+      </div>
+      
+      <div class="author-contact col-md-4">
+        <a href="mailto:uriel.fanelli@gmx.de">
+          <i class="fa fa-envelope-o"></i>
+          &nbsp;Contact me
+        </a>
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="http://www.wolfstep.cc/blogger/2014-05-31-truecrypt/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next"><a href="http://www.wolfstep.cc/blogger/2014-06-02-i-brolli/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+
+
+
+<iframe id="forum_embed"
+  src="javascript:void(0)"
+  scrolling="no"
+  frameborder="0"
+  width="100%"
+  height="700">
+</iframe>
+
+<script type="text/javascript">
+  document.getElementById('forum_embed').src =
+     'https://groups.google.com/forum/embed/?place=forum/kein-pfusch'
+     + '&showsearch=false&showpopout=true&showtabs=false&hl=it&theme=Light'
+     + '&parenturl=' + encodeURIComponent(window.location.href);
+</script>
+
+
+
+
+
+
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      
+    </div>
+    <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+  </footer>
+
+  <script src="http://www.wolfstep.cc//js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f32bcd406c5e50" async="async"></script>
+
+
+</body>
+</html>
+

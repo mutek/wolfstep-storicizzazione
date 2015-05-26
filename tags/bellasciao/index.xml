@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bellasciao on KEIN PFUSCH, BITTE!</title>
+    <link>http://www.wolfstep.cc/tags/bellasciao/</link>
+    <description>Recent content in Bellasciao on KEIN PFUSCH, BITTE!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Mar 2015 00:21:31 +0100</lastBuildDate>
+    <atom:link href="http://www.wolfstep.cc/tags/bellasciao/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ancora Net Neutrality</title>
+      <link>http://www.wolfstep.cc/post/netneutrality/</link>
+      <pubDate>Sun, 01 Mar 2015 00:21:31 +0100</pubDate>
+      
+      <guid>http://www.wolfstep.cc/post/netneutrality/</guid>
+      <description>&lt;p&gt;C&amp;rsquo;e&amp;rsquo; tutto un hype riguardo alla storia della net neutrality, e del fatto che Obama abbia usato i suoi poteri presidenziali per fare della rete un &amp;ldquo;bene pubblico&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Che l&amp;rsquo;amministrazione americana avrebbe ascoltato i finanzieri (i quali minacciavano di non finanziare piu&amp;rsquo; le startup se si fossero fatte le slow lanes) era abbastanza scontato. Il problema e&amp;rsquo; che, come al solito, si sono fatte le cose senza cercare una mediazione, con il solito sfoggio di muscoli tipico di chi deve far capire che comanda, piu&amp;rsquo; che comandare nel modo giusto.&lt;/p&gt;
+
+&lt;p&gt;Il problema delle leggi e&amp;rsquo; molto semplice: esse non dovrebbero rappresentare una vittoria di una delle parti sull&amp;rsquo;altra, ma il compromesso che soddisfa tutte le parti. Per una ragione: far stravincere i contenuti sull&amp;rsquo;infrastruttura sembra sensato solo in termini politici, ovvero nella misura in cui siamo tutti degli ammiratori di Obama, e ci piace quando fa il negro.&lt;/p&gt;
+
+&lt;p&gt;Ma questo non implica che mettere in difficolta&amp;rsquo; gli ISP sia una cosa saggia.&lt;/p&gt;
+
+&lt;p&gt;Il punto e&amp;rsquo; che , mentre i piu&amp;rsquo; identificano la internet americana con la Silicon VAlley dove tutti hanno 1 Gb/s anche nel bagno, la realta&amp;rsquo; odierna e&amp;rsquo; un pelo diversa:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.nytimes.com/2014/10/31/upshot/why-the-us-has-fallen-behind-in-internet-speed-and-affordability.html?_r=0&#34;&gt;http://www.nytimes.com/2014/10/31/upshot/why-the-us-has-fallen-behind-in-internet-speed-and-affordability.html?_r=0&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In realta&amp;rsquo; c&amp;rsquo;e&amp;rsquo; anche un problema serio di oligopolio, ma il punto e&amp;rsquo; che gli americani, escluse alcune zone privilegiate, tutta questa buona connettivita&amp;rsquo; non ce l&amp;rsquo;hanno.&lt;/p&gt;
+
+&lt;p&gt;Oltre al monopolio esistono diverse ragioni per le quali questo succede, per esempio il fatto che gli USA sono molto grandi e i costi crescono molto con il quadrato delle distanze, e come se non bastasse la densita&amp;rsquo; media della popolazione (&lt;em&gt;ho detto media&lt;/em&gt;) e&amp;rsquo; molto inferiore a quella europea. Questo fa si&amp;rsquo; che le grandi citta&amp;rsquo; siano economicamente convenienti da coprire, mentre i paesi piu&amp;rsquo; piccoli spesso si fermano a 640 Kb/s di una ADSL di prima generazione.&lt;/p&gt;
+
+&lt;p&gt;Ora, il problema di questo e&amp;rsquo; che gli USA procedono col progresso e quindi servizi come Netflix e Spotify, (americani o meno) e con loro le varie Apple TV , Google Film e tutto quanto, cercheranno di raggiungere tutto il territorio degli USA.&lt;/p&gt;
+
+&lt;p&gt;Il guaio e&amp;rsquo; che, usciti dalle citta&amp;rsquo; che ormai sono mercati maturi, si troveranno ad avere a che fare con un tipo particolare di &amp;ldquo;slow lane&amp;rdquo;, che non e&amp;rsquo; dovuta ad un settaggio del QoS, ma ad una infrastruttura obsoleta.&lt;/p&gt;
+
+&lt;p&gt;A quel punto si parlera&amp;rsquo; di investimenti, e qui viene il dramma: i due monopolisti americani hanno gia&amp;rsquo; detto che 10Mbs sono troppi, e che 4 Mb come &amp;ldquo;broadband&amp;rdquo; bastano ed avanzano:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://arstechnica.com/business/2014/09/att-and-verizon-say-10mbps-is-too-fast-for-broadband-4mbps-is-enough/&#34;&gt;http://arstechnica.com/business/2014/09/att-and-verizon-say-10mbps-is-too-fast-for-broadband-4mbps-is-enough/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;E stiamo parlando proprio di USA, proprio quel paese che tutti credono essere quello informaticamente piu&amp;rsquo; avanzato, e che invece passa il tempo ad invidiare gli europei, italiani compresi, con la sola eccezione dei templi della Silicon Valley.&lt;/p&gt;
+
+&lt;p&gt;Adesso immaginate che improvvisamente arrivi NetFlix e dica &amp;ldquo;ma io ho bisogno di piu&amp;rsquo; di 4 Mb per andare bene&amp;rdquo;. Qui non si tratta piu&amp;rsquo; di fast lane o slow lane.&lt;/p&gt;
+
+&lt;p&gt;Qui si tratta di una situazione nella quale gli ISP dicono &amp;ldquo;io non ci guadagno, quindi non investo&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Ed e&amp;rsquo; qui il punto: sinche&amp;rsquo; il traffico non viene pagato, gli iSP non guadagnano. E sinche&amp;rsquo; non guadagnano, non investono.&lt;/p&gt;
+
+&lt;p&gt;Possiamo fare l&amp;rsquo;esempio italiano per capire: supponiamo che Telecom Italia si trovi a dover investire 4 miliardi di euro per portare chi non ne gode a , diciamo , una connessione in fibra ottica.&lt;/p&gt;
+
+&lt;p&gt;Diciamo che intenda portare tutti i suoi utenti DSL alla fibra, diciamo 5 milioni di utenti. Se dividiamo la cifra, otteniamo circa 1000 euro ad utente. Se supponiamo di ammortizzarlo in 42 mesi, otteniamo che il passaggio costera&amp;rsquo; 23 euro aggiuntivi agli utenti. Dico aggiuntivi perche&amp;rsquo; quei soldi vengono spesi in una NUOVA infrastruttura, e quindi devono rientrare , a meno di non poter demolire la vecchia, che pero&amp;rdquo; NON costa 23 euro ad utente, quindi ci sara&amp;rsquo; comunque un delta.&lt;/p&gt;
+
+&lt;p&gt;Se la vecchia infrastruttura costava, diciamo di manutenzione, 5 euro ad utente al mese in media, e li passiamo alla fibra, otteniamo che rimangono 18 euro di costi aggiuntivi, almeno per i primi 3 anni e mezzo.&lt;/p&gt;
+
+&lt;p&gt;E la domanda e&amp;rsquo;: chi paga?&lt;/p&gt;
+
+&lt;p&gt;Se usciamo dalla rete di accesso e andiamo nel mondo carrier, il problema e&amp;rsquo; sempre quello, anche se e&amp;rsquo; mitigato dalle CDN: occorrono altri investimenti se vogliamo che NetFlix arrivi in HD ovunque.&lt;/p&gt;
+
+&lt;p&gt;La verita&amp;rsquo; e&amp;rsquo; che i provider agiranno in questo modo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+ Smetteranno di investire nella rete di accesso.
++ La quantita&#39; di banda sara&#39; troppo bassa per i nuovi servizi streaming.
++ Ciononostante, sara&#39; impossibile accusare gli ISP di usare &amp;quot;slow lanes&amp;quot;
++ Ad un certo punto, i provider dovranno pagare in qualche modo.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Il fatto che per legge non ci possano essere delle slow lines contrattuali non implica che non ci possano essere slow lines. Le telco gestiscono normalmente QoS e subscriber policy, per cui ci sono sempre delle delle priorita&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Quello che succedera&amp;rsquo; e&amp;rsquo; che i vari Netflix , Sporify, Apple TV &amp;amp;co andranno dalle telco e diranno &amp;ldquo;dividiamo le revenues: ti pago 0.5$ per ogni film che mando&amp;rdquo;. A questo punto la telco non firma un contratto per fare una slow line: firma un contratto per dividere le revenues sui film che fa arrivare a casa, tipo una specie di &amp;ldquo;pacchetto film&amp;rdquo; da aggiungere alla propria offerta di banda.&lt;/p&gt;
+
+&lt;p&gt;Poiche&amp;rsquo; viene pagata da Netflix e non dal blog di tuo cugino, la Telco (che pure non ha firmato un contratto per una fast lane ) avra&amp;rsquo; molta piu&amp;rsquo; cura del traffico di NetFlix che del traffico di tuo cugino: il risultato di tutto questo e&amp;rsquo; che in ogni caso si trovera&amp;rsquo; a fare QoS.&lt;/p&gt;
+
+&lt;p&gt;Ma non lo fara&amp;rsquo; per via di un contratto: lo fara&amp;rsquo; come &amp;ldquo;soluzione tecnologica&amp;rdquo; all&amp;rsquo;interno della propria rete.&lt;/p&gt;
+
+&lt;p&gt;In questo modo avranno aggirato la legge, ma quel che e&amp;rsquo; peggio e&amp;rsquo; che avranno aggirato la legge senza che sia possibile alcuna trasparenza.&lt;/p&gt;
+
+&lt;p&gt;LA cosa migliore sarebbe stata quella di fare un compromesso tra le parti, ovvero di discutere su un quid pro quo: ti lascio fare le fast line, se tu porti la banda minima obbligatoria a 25Mb. A quel punto, anche facendo QoS, ovvero dando la precedenza ai pacchetti streaming, resta ancora abbastanza banda per vedere il blog di vostro cugino.&lt;/p&gt;
+
+&lt;p&gt;Obama invece ha agito su una pura posizione di principio, che non tiene conto dei bisogni di una delle parti, e che quindi constringera&amp;rsquo; le telco a giocare molto sporco, semplicemente sospendendo gli invesitmenti al di fuori delle grandi metropoli, sino a quando , per prendere altro mercato, i content provider dovranno offrirsi di finanziare l&amp;rsquo;aggiornamento delle infrastrutture.&lt;/p&gt;
+
+&lt;p&gt;Chi festeggia, quindi, non ha ben capito quale fosse la situazione sul campo, e specialmente, che genere di comportamento avranno adesso le telco americane.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

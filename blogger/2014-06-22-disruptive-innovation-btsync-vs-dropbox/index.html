@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content="  Disruptive innovation: btsync vs Dropbox. &middot;  KEIN PFUSCH, BITTE!" />
+  <meta property="og:site_name" content="KEIN PFUSCH, BITTE!" />
+  <meta property="og:url" content="http://www.wolfstep.cc/blogger/2014-06-22-disruptive-innovation-btsync-vs-dropbox/" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2014-06-22T12:15:50&#43;01:00" />
+  
+  
+
+  <title>
+      Disruptive innovation: btsync vs Dropbox. &middot;  KEIN PFUSCH, BITTE!
+  </title>
+
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/main.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/github.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="http://www.wolfstep.cc//images/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://www.wolfstep.cc//images/apple-touch-icon.png" />
+  <link href="" rel="alternate" type="application/rss+xml" title="KEIN PFUSCH, BITTE!" />
+</head>
+<body>
+
+
+  <header class="global-header">
+    <section class="header-text">
+      <h1><a href="http://www.wolfstep.cc/">KEIN PFUSCH, BITTE!</a></h1>
+      
+      <div class="tag-line">
+        Comunicare, ammesso sia possibile, e&#39; perfettamente inutile
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+      
+      <a href="http://www.wolfstep.cc/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary"> Disruptive innovation: btsync vs Dropbox.</h1>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2014-06-22T12:15:50&#43;01:00">
+          Jun 22, 2014
+        </time>
+      </div>
+      <div class="pull-right">
+        
+      </div>
+    </div>
+  </header>
+  <section>
+<div style="text-align: justify;">
+    <div class='post'>
+<div style="text-align: justify;">Un esempio classico di quello che viene&nbsp; chiamato "Disruptive Innovation" , di cui ho parlato in passato, e' un software per la sincronizzazione remota di file e cartelle, che produce un effetto simile a Dropbox (cioe' avete una copia dei file su ogni macchina ove installate il client) ma non usa alcun server centrale. Ne ho parlato poco (sebbene io lo usi) per una ragione: <i>ha un serio problema di sicurezza sul "layer 8", </i>cioe' riguardante comportamento dell'utente.<i> </i></div><br /><a name='more'></a><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Di per se' btsync funziona cosi': lo installate (scaricate il file e lo mettete li') da questo sito <a href="http://www.bittorrent.com/intl/it/sync">http://www.bittorrent.com/intl/it/sync</a> e si configura praticamente da solo. Esistono anche le versioni per Linux e FreeBSD, che anziche' fornire un'interfaccia si piazzano in ascolto sulla porta 8888 e offrono un'interfaccia web amministrativa. ( <a href="http://127.0.0.1/8888">http://127.0.0.1/8888</a> ) insomma.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Una volta condivisa una cartella , vi fornisce una ID, sotto forma di un hash piuttosto lungo, che potrete copiaincollare e salvare. Se installate su una macchina diversa lo stesso software, create una cartella condivisa e inserite lo stesso ID (anziche' farlo generare al momento), i due software si allineeranno e le due cartelle diventeranno identiche.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Il programma offre anche un ID in "sola lettura", il che significa che chi sincronizza la sua cartella non potra' fare modifiche ai file: se lo fara', la versione originale prendera' il posto dei file modificati.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Di per se', quindi, btsync e' una killer app per servizi come Dropbox e Mega, per diverse ragioni:</div><div style="text-align: justify;"><br /></div><ul style="text-align: justify;"><li>Consente una condivisione illimitata di file. Se avete 4TB di roba a casa la condividete e siete a posto. Non pagate di piu'.&nbsp;</li><li>Producono una copia replicata dei dati su ogni dispositivo. Significa che se volete mettere al sicuro una copia dei vostri file, lo piazzate su un server da qualche parte e la copia si ricostruira'.</li><li>NON HA un servizio centrale di archiviazione: funziona su P2P e SENZA un'azienda che si mette di mezzo. E qui siamo al punto, O QUASI.</li></ul><div style="text-align: justify;"><br /></div><div style="text-align: justify;">&nbsp;dico "o quasi" perche' btsync usa la tecnologia di bit torrent. Quando aggiungete o modificate un file in una cartella, il servizio non fa altro che creare un torrent per quel file, e ne annuncia l' hash al tracker o al DHT.&nbsp; Dopodiche' condivide il file, criptandolo con AES-128 , usando una chiave che e' ricavabile dall'hash segreto che avete impostato sui due client.</div><div style="text-align: right;">&nbsp; </div><div style="text-align: justify;">E qui siamo al punto: occorre capire quale sia il ruolo del tracker ed il ruolo dell'host reflector. Se lasciamo che btsync usi un tracker,&nbsp; quello che fara' sara' di chiedere a qualche tracker dove si trovi il suo peer. Nel fare questo, e nell'ottenere risposta, il tracker riceve l'indirizzo IP, la porta, l'hash e i metadati del file.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Se sniffate un pochino il traffico dopo averlo installato, trovate che c'e' una macchina, un tracker, che si connette sulla porta 3000 (che va lasciata aperta sul firewall se volete che funzioni cosi' com'e' il servizio).&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Nel mio caso si trattava di&nbsp; 67.215.229.106, che come potete verificare e' una macchina dell'azienda che produce bittorrent.&nbsp; Si tratta del loro tracker.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Quindi, se volete usarlo per scopi aziendali, potete usare alcune features, piu' interessanti.</div><div style="text-align: justify;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-EmFrAHduISM/U6XnQtscgGI/AAAAAAAAMSU/3pkant4OSyg/s1600/Screenshot+-+21.06.2014+-+21:47:00.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-EmFrAHduISM/U6XnQtscgGI/AAAAAAAAMSU/3pkant4OSyg/s1600/Screenshot+-+21.06.2014+-+21:47:00.png" height="298" width="400" /></a></div><div style="text-align: justify;">come potete vedere, ho disabilitato il tracker completamente (e l'ho bloccato dal firewall , ma ho lasciato "Cerca Rete LAN" e "Cerca rete DHT". Poi spiego la storia degli host predefiniti.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Il discorso "cerca rete LAN" significa che btsync puo' lavorare anche senza mai connettersi ad Internet. Se non gli aprite le porte che gli servono (3838, 3000 e una che potete anche configurare o lasciar estrarre a casaccio) , btsync lavora in LAN lanciando dei broadcast sino a trovare gli altri server. Da quel momento, le cartelle sincronizzano dentro la vostra rete locale anche SENZA un tracker, ed anche senza bisogno di internet.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Questa e' sicuramente una buona notizia, ma magari voi volete portare a casa il portatile e sincronizzarlo da li' col computer che avete al lavoro. Allora, entra in gioco DHT: Distributerd HAsh Table e' un metodo che consiste di "distribuire" i tracker usando gli stessi client come "tracker", anche se ovviamente qualcuno dovra' dir loro di contattare quel client li' per comunicare le "coordinate" del vostro btsync personale.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Ed e' qui il bello: non avete bisogno di mettere su un tracker in azienda, perche' usando DHT qualsiasi client btsync mettera' un cache le macchine e gli share che conosce.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Allora, se volete usare btsync su internet, vi serve:</div><div style="text-align: justify;"><br /></div><ul><li>Una istanza virtuale (un FreeBSD con 256 MB di ram basta) su cui girera' un btsync SENZA FILE.</li><li>Un firewall/router capace di reindirizzare le porte necessarie sulla macchina "bridge".</li><li>Un servizio di DNS dinamico (dyndns, no-ip, o altri). </li></ul><div style="text-align: justify;"><br /></div><div style="text-align: justify;">&nbsp;la cosa che realizzerete e' piu' o meno cosi':</div><div style="text-align: justify;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-Kz-E4Mq8UzA/U6Xo-qvXFpI/AAAAAAAAMSg/fCdLpRrJ_0E/s1600/Diagram1.bmp" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-Kz-E4Mq8UzA/U6Xo-qvXFpI/AAAAAAAAMSg/fCdLpRrJ_0E/s1600/Diagram1.bmp" height="237" width="400" /></a></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">&nbsp;come vedete, abbiamo creato un server (sync.ddns.com , per esempio) in ascolto sulla porta 10000 , e il firewall gli porta all'indietro il traffico.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Sulle macchine ove tenete i file configurerete l'indirizzo su rete interna della macchina (che nell'esempio che mo messo sopra e' 192.168.172.66:20000, (indirizzo che uso tanto per mettere in chiaro che e' una rete locale).&nbsp; Su questo indirizzo/porta il nostro firewall NAT indirizza la porta 10000 esposta ad internet.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">A quel punto, sul nostro client esterno, diciamo il PC di casa (o il client sul cellulare) configuriamo l'equivalente di questo:</div><div style="text-align: justify;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-DjWVUCr4fNI/U6XqMRRppRI/AAAAAAAAMSo/ZYTiX_Y7Tv8/s1600/Screenshot+-+21.06.2014+-+22:24:24.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-DjWVUCr4fNI/U6XqMRRppRI/AAAAAAAAMSo/ZYTiX_Y7Tv8/s1600/Screenshot+-+21.06.2014+-+22:24:24.png" height="308" width="400" /></a></div><div style="text-align: justify;">&nbsp;succedera' allora che la rete DHT iniziera' a distribuire gli hash verso il vostro server (vuoto), che pero' conosce sia i vostri hash che quelli delle altre macchine della rete interna. Non appena il server "vuoto" sara' a conoscenza degli hash, iniziera' ad informare le macchine interne (che contengono i dati) dell'esistenza di una macchina la' fuori, cui inviarli. Da cui, i server contatteranno poi il vostro pc o il vostro portatile e si scambieranno i file. E questo SENZA coinvolgere un tracker vero e proprio.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Qual'e' allora il "problema di sicurezza" di cui parlo? Esattamente quello che ho descritto sopra: occorre sapere che cosa sia DHT, che ruolo abbiano i tracker nella rete bittorrent che cosa siano i forward server, e cosi' via. Si tratta di un problema sul "layer 8" perche' gli utenti non si chiederanno che cosa significhino quei configuration items: noteranno che efettivamente usando il tracker e magari&nbsp; il forward server tutto funzioni meglio ,<b> e quindi informeranno bittorrent INC di tutto cio' che si scambiano.</b></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Attenzione, non sto dicendo che bittorrent INC possa leggere i vostri files: con l'implementazione di AES-128 che viene implementata, non sarebbe possibile nemmeno se il traffico passasse tutto per il tracker, cosa che non e'. Tuttavia, in questo modo per il tracker <u><b>passano un bel pochino di metadati. </b></u></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">E voi sapete che NSA e' GHIOTTA di metadati.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Quindi si, btsync e' una killerapp tremenda per il mondo del cloud, come Dropbox ed altri, e per come funziona (problemi=0 almeno nella versione attuale usando FreeBSD e Linux) probabilmente ha le capacita' di ucciderli entrambi. E' vero che non offre un "backup sul cloud", ma e' anche vero che una volta che avete una copia degli stessi file su piu' dispositivi o piu' dischi, avete tutti i backup che volete.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Tuttavia richiede all'utente di conoscere il ruolo del tracker e il funzionamento della rete DHT, cosa che non e' estendibile su grande scala e ad ogni utente,&nbsp; e quando un utente NON SA cosa stia facendo di preciso, nasce il famoso "problema di sicurezza sul layer 8", ovvero il problema di sicurezza che deriva da una condotta scellerata degli utenti stessi.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Btsync e' potenzialmente la killerapp di Dropbox , questo lo vedremo in futuro, ma di certo richiede un livello di conoscenza del protocollo di bittorrent che non e' comune.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">E non e' comune nemmeno presso i professionisti: siccome bittorrent e' considerato un software borderline, usato per download illegale (anche se non e' vero, ne esistono diverse applicazioni commerciali) moltissimi professionisti non se lo studiano, dal momento che non e' una conoscenza di tipo "enterprise", o non viene vista come "billable".&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Di conseguenza, una sua diffusione nel mondo home e soho e' di per se' un potenziale problema di sicurezza , o meglio di privacy, problema che nasce sul layer 8.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Ovvero sul lato umano.</div></div>
+<h2></h2>
+<div class='comments'>
+</div>
+
+<br>
+<div class="addthis_native_toolbox"></div>
+
+</div>
+
+  </section>
+  <footer>
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        <h1 class="author-name text-primary">Uriel Fanelli</h1>
+        
+        
+      </div>
+      
+      <div class="author-contact col-md-4">
+        <a href="mailto:uriel.fanelli@gmx.de">
+          <i class="fa fa-envelope-o"></i>
+          &nbsp;Contact me
+        </a>
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="http://www.wolfstep.cc/blogger/2014-06-21-ukip-nazisti-e-le-pensioni-dei-parlamentari-grillini/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next"><a href="http://www.wolfstep.cc/blogger/2014-06-23-cosa-succede-in-iraq/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+
+
+
+<iframe id="forum_embed"
+  src="javascript:void(0)"
+  scrolling="no"
+  frameborder="0"
+  width="100%"
+  height="700">
+</iframe>
+
+<script type="text/javascript">
+  document.getElementById('forum_embed').src =
+     'https://groups.google.com/forum/embed/?place=forum/kein-pfusch'
+     + '&showsearch=false&showpopout=true&showtabs=false&hl=it&theme=Light'
+     + '&parenturl=' + encodeURIComponent(window.location.href);
+</script>
+
+
+
+
+
+
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      
+    </div>
+    <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+  </footer>
+
+  <script src="http://www.wolfstep.cc//js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f32bcd406c5e50" async="async"></script>
+
+
+</body>
+</html>
+

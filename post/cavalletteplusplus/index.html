@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content=" I programmofoni &middot;  KEIN PFUSCH, BITTE!" />
+  <meta property="og:site_name" content="KEIN PFUSCH, BITTE!" />
+  <meta property="og:url" content="http://www.wolfstep.cc/post/cavalletteplusplus/" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2015-05-01T13:41:15&#43;02:00" />
+  
+  <meta property="og:article:tag" content="golang" />
+  
+  <meta property="og:article:tag" content="morte" />
+  
+  <meta property="og:article:tag" content="fuffa" />
+  
+  
+
+  <title>
+     I programmofoni &middot;  KEIN PFUSCH, BITTE!
+  </title>
+
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/main.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/github.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="http://www.wolfstep.cc//images/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://www.wolfstep.cc//images/apple-touch-icon.png" />
+  <link href="" rel="alternate" type="application/rss+xml" title="KEIN PFUSCH, BITTE!" />
+</head>
+<body>
+
+
+  <header class="global-header">
+    <section class="header-text">
+      <h1><a href="http://www.wolfstep.cc/">KEIN PFUSCH, BITTE!</a></h1>
+      
+      <div class="tag-line">
+        Comunicare, ammesso sia possibile, e&#39; perfettamente inutile
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+      
+      <a href="http://www.wolfstep.cc/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary">I programmofoni</h1>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2015-05-01T13:41:15&#43;02:00">
+          May 1, 2015
+        </time>
+      </div>
+      <div class="pull-right">
+        
+        <span class="post-tag small"><a href="http://www.wolfstep.cc//tags/golang">#golang</a></span>
+        
+        <span class="post-tag small"><a href="http://www.wolfstep.cc//tags/morte">#morte</a></span>
+        
+        <span class="post-tag small"><a href="http://www.wolfstep.cc//tags/fuffa">#fuffa</a></span>
+        
+      </div>
+    </div>
+  </header>
+  <section>
+<div style="text-align: justify;">
+    <p>Ero in altre faccende affaccendato quando nacque e si sviluppo&rsquo; Java, cosi&rsquo; non ho potuto seguire la sua interminabile morte.(1) Idem per Python ed altri. Sto invece osservando il mondo di golang, non tanto perche&rsquo; intenda darmi alla programmazione ma perche&rsquo; mi sta divertendo. Chi ha scritto golang <em>si e&rsquo; divertito</em> , questo e&rsquo; certo. E sto vedendo come la programmazione diventi merda. Parlandone.</p>
+
+<p>Non sto scherzando. golang e&rsquo; ancora usato per il 2.5% dei progetti del mondo, quindi di per se&rsquo; dovrebbe essere un linguaggio agli albori che discute le sue primitive di base e le sue librerie piu&rsquo; usate. Invece, sono gia&rsquo; arrivati i programmofoni.</p>
+
+<p>I programmofoni si dividono in diverse categorie. Quando ho scritto su un forum che volevo scrivere un programma che facesse un server NNTP e condividesse i post via P2P, chiedendo se qualcuno conoscesse delle librerie ad hoc, mi hanno proposto cinque o sei librerie, tra NNTP, P2P e UPnP. A parte lo stato pietoso del codice (ho dovuto scaricare una copia mia del software dell&rsquo; UpNP e bonificarlo(2) ) , indice di immaturita&rsquo;, ho pensato subito &ldquo;ma guarda quanta bella gente servizievole che c&rsquo;e&rsquo; qui&rdquo;</p>
+
+<p>Invece, poi ho scoperto la verita&rsquo;.</p>
+
+<p>Tutto quel codice fa schifo. E fa schifo perche&rsquo; e&rsquo; stato scritto in fretta senza voler raggiungere un obiettivo. Se voi avete un obiettivo, e avete un programma in mente, dovete fare quello. Se invece scrivete delle librerie dht per scrivere delle librerie dht, ma senza uno use-case in mente, <em>scriverete roba di merda</em>.</p>
+
+<p>Ma allora perche&rsquo; li scrivono? Scrivono perche&rsquo; vogliono diventare programmofoni. Il programmofono e&rsquo; uno che scrive codice, ma non programma: <em>il suo scopo e&rsquo; di essere pagato per parlare di programmazione</em>.</p>
+
+<p>Scrivono librerie sperando che gli altri le usino. Quando gli altri le usano le loro librerie diventeranno famose, e si faranno pagare per i talk alle convention e per gli articoli sui giornali. Niente idee. Niente bisogni da risolvere.</p>
+
+<p>Uno dei tipi piu&rsquo; pericolosi di programmofono e&rsquo; chi scrive i framework. Normalmente per scrivere un framework VERO occorre una squadra di esperti, e occorrono anni di analisi dei requisiti.(3) Invece su golang stanno iniziando a piovere framework (identici a quelli che hanno gia&rsquo; fallito in Java, btw). E non sono framework scritti da team di esperti di grandi aziende che vogliono intercettare i bisogni dei clienti: sono scritti in pochi mesi da UN individuo , spesso giovanissimo.</p>
+
+<p>Perche&rsquo; scrivono framework e non un vero programma? Perche&rsquo; manca loro l&rsquo;idea, o manca il bisogno. Quando ho iniziato a riempire di Raspberry casa mia, ho avuto bisogno di un coso semplice che mi dicesse sul browser in che stato fosse l&rsquo; OS. Avevo un <strong>bisogno</strong>. Quando mi e&rsquo; venuto in mente di scrivere un server NNTP che condividesse i post su P2P anziche&rsquo; usare il sistema centralzzato attuale, avevo un&rsquo;idea.</p>
+
+<p>Chi scrive un framework NON ha un&rsquo;idea. E neanche un bisogno. Si limita a scrivere nella <strong>speranza</strong> che <strong>ALTRI</strong> abbiano qualche idea su come usarlo, o che abbiano <strong>bisogno</strong> di usarlo.</p>
+
+<p>Quando scrivono questo codice senza idee ne&rsquo; bisogni, cioe&rsquo; seza use-case che non siano &ldquo;esempi&rdquo; (In pratica, &ldquo;Hello World&rdquo;) , cosa fanno per prima cosa? I programmofoni. Cioe&rsquo; vanno a dare un talk a qualche convention di go. Se osservate i nuovi &ldquo;framework&rdquo; di golang, saranno <strong>TUTTI</strong> presentati a qualche talk dal loro creatore.</p>
+
+<p>Il quale avra&rsquo; vita facile: andra&rsquo; li&rsquo; e mostrera&rsquo; gli esempi. Solo esempi. Non casi reali. Non <em>case study</em>. No: esempi. Ideati da loro medesimi.</p>
+
+<p>Ho qualcosa contro gli esempi? No. Ma gli esempi non hanno quasi nulla a che fare con la realta&rsquo;. Se per esempio osservate QUALSIASI esempio di Fibonacci, scoprirete che viene usato per spiegare la ricorsione. E funziona BENISSIMO. Per spiegarla, intendo. Ma se prendete un Fibonacci e ci fate una funzione Fibonacci()  e gli date un numero lungo 16 bit in ingresso, ci si aspetta che presumiate di calcolare Fibonacci(65535) in maniera ricorsiva. Non vi consiglio proprio di farlo, per il bene del vostro stack. E&rsquo; un ottimo esempio, ma mi vengono in mente altri modi iterativi.</p>
+
+<p><center>
+<img src="http://upload.wikimedia.org/math/d/6/0/d6003177b224c767463fd1e8fd19bdab.png" alt="fibonacci" />
+
+</center></p>
+
+<p>Questo e&rsquo; il punto degli esempi: servono a capire, ma non necessariamente a fare. Ed e&rsquo; per questo che il nostro programmofono va al &ldquo;talk&rdquo; a sbrodolare fuffa.</p>
+
+<p>Questa e&rsquo; la ragione per la quale tutti mi proponevano librerie dicendo &ldquo;io! io! usa la mia!&rdquo;: volevano poter dire &ldquo;la mia libreria e&rsquo; usata&rdquo;. Per la cronaca, sto implementando un &lsquo;interfaccia NNTP partendo dagli RFC: questa roba che mi offrivano e&rsquo; scritta in fretta e furia (4) , per arrivare primi a calcare i &ldquo;talk&rdquo;. Siccome gli organizzatori hanno poca gente da chiamare , se fai un framework per golang, ti chiamano di sicuro.</p>
+
+<p>Dopo il &ldquo;talk&rdquo; arrivano i giornalisti di informatica-dev e i vari blogger professionali. Che iniziano a parlare dei talk. Il talk di secondo ordine. Allora, innanzitutto occorre che il vostro linguaggio abbia delle parole fiche. Golang e&rsquo; idiomatico. Ovunque leggerete che sia idiomatico. Se osserviamo quanto sia usata l&rsquo;idiomaticita&rsquo;, scopriamo che se ne fa un uso scadentissimo, e sempre (o quasi) a danno della leggibilita&rsquo;.  Ma parlare di &ldquo;idiomaticita&rsquo;&rdquo; fa fico. Evoca l&rsquo;umanizzazione. Sembra quasi intelligenza artificiale.</p>
+
+<p>E allora sbrodoliamoci di idiomaticita&rsquo;.</p>
+
+<p>Questa altra classe di programmofoni, i giornalisti che scrivono di programmazione sulle riviste e sui e&rsquo; simile agli animali da talk, nel senso che ne condivide lo scopo esistenziale: vivere di programmazione SENZA programmazione, ovvero parlando di programmazione. La stessa definizione di programmofono.</p>
+
+<p>A quel punto saltano fuori i programmofoni di <strong>terzo</strong> livello. Quelli che non programmano, ma sono figure tipo &ldquo;solution designer&rdquo; (5), o manager &ldquo;che ti capiscono, perche&rsquo; loro un tempo erano tecnici.&rdquo; Questo tipo di manager, che e&rsquo; normalmente appassionato di talk (molti volevano farsi preti per la libidine di poter parlare da un pulpito. La crisi delle vocazioni ha fatto il resto), vede i brillanti talk di questi personaggi , legge sulle riviste specializzate (perche&rsquo; adesso lui e&rsquo; un  manager, ma si sente ancora attirato dalle origini. Il richiamo della foresta, dicono. ) e allora via, l&rsquo;indomani irrompe in una stanza di programmatori e dice &ldquo; questo framework e&rsquo; quello che ci serve&rdquo;.</p>
+
+<p>Adesso mi chiederete un esempio. Prendero&rsquo; cosi&rsquo; una stringa casuale di cinque lettere, e vi mostrero&rsquo; come diventa , grazie ai programmofoni, un &ldquo;framework Hello World&rdquo;.</p>
+
+<p>Prendiamo una stringa di 5 caratteri a casaccio: &ldquo;Corba&rdquo;. Si tratta della parola &ldquo;Cobra&rdquo; scritta da un dislessico di 6 anni, e non ha significato alcuno, ma come esempio casuale andra&rsquo; benissimo. Tanto nessuno lavorerebbe con una cosa che si chiama &ldquo;Corba&rdquo;.(6)</p>
+
+<p>Allora, ad un certo punto nasce Corba. Una parola senza alcun significato, ma piace un sacco ai programmofoni di primo livello. I quali scrivono codice a casaccio senza avere use case e senza chiedersi se per caso serva a qualcosa, e decidono che &ldquo;adesso ci faccio un talk&rdquo;.</p>
+
+<p>&ldquo;Corba&rdquo; ovviamente non serve a nessuno (come potrebbe , una cosa con un nome cosi&rsquo; stupido?) , e&rsquo; orribilmente RAM-intensive, CPU-intensive, NETWORK-intensive, e chi lo ha scritto non aveva in mente alcuno use-case. MA aveva degli esempi.</p>
+
+<p>Allora i primi programmofoni di ordine uno si presentano ai talk e fanno vedere che hanno due programmi che girano. Uno scrive &ldquo;Ciao Mamma&rdquo;, e sull&rsquo;altro compare una finestra &ldquo;Ciao Mamma&rdquo; . Applausi del pubblico. Delirio. La soluzione di tutti i nostri problemi, dalle emorroidi alla congettura di Poincare&rsquo;.</p>
+
+<p>Di fronte a tale esibizione di un computer che scrive &ldquo;ciao mamma&rdquo; su una finestra e un altro computer che scrive &ldquo;ciao mamma&rdquo; sullo schermo, i giornalisti imparano due o tre parole. Diciamo, a casaccio, &ldquo;serializzazione&rdquo; e &ldquo;interoperabilita&rsquo; &rdquo; e, visto che si siamo, &ldquo;suocerismo&rdquo;. Il suocerismo, alla fine, e&rsquo; l&rsquo;unica cosa buona di Corba, ma tutti lo scopriranno dopo, e nessun programmofono ne parlera&rsquo; mai. Qualcuno di voi ha mai sentiro parlare di Corba come paradigma suoceristico? No? QED.</p>
+
+<p>Comunque, i programmofoni di secondo ordine hanno nuove parole, e possono scrivere articoli e pagine di blog piene di &ldquo;serializzazione&rdquo;, &ldquo;interoperabilita&rsquo;&rdquo; e &ldquo;suocerismo&rdquo;. E cominciano a fare esempi. Meta&rsquo; di loro sono una scopiazzatura bella e buona delle slide del &ldquo;talk&rdquo;. &ldquo;&ldquo;Ciao mamma&rdquo; invade i monitor del mondo.</p>
+
+<p>L&rsquo;altra meta&rsquo; e&rsquo; fatta di &ldquo;guarda come mi diverto&rdquo; e infine qualcuno cerca di farci qualcosa, sentendosi dire che &ldquo;Corba non e&rsquo; nato per questo&rdquo;, che &ldquo;esiste gia&rsquo; il TCP/IP per questo&rdquo; e il resto si sente dire che gli serve il doppio dei server.</p>
+
+<p>A questo punto, quando &ldquo;Corba il greco&rdquo; e&rsquo; ormai sulla bocca di tutti, arriva il programmofono di terzo ordine, che legge tutta questa roba, brucia di invidia per il tipo fico del talk, e piomba l&rsquo;indomani in azienda dicendo che &ldquo;occorre qualcosa di moderno. Ci serve Corba!&rdquo;</p>
+
+<p>Questa cosa, che <em>notoriamente</em> non e&rsquo; mai successa (che diavolo di porcheria potra&rsquo; mai essere una cosa dal nome cosi&rsquo; ridicolo? Dai, siamo seri. ) e&rsquo; un esempio di come i programmofoni distruggono un ambiente lavorativo.</p>
+
+<p>Oggi come oggi,</p>
+
+<blockquote>
+<ul>
+<li>Siamo pieni di framework che funzionano solo sugli esempi di come usarli, e mai nella vita reale.</li>
+<li>Questi framework sono necessari perche&rsquo; sono famosi.</li>
+<li>Questi framework sono famosi perche&rsquo; tutti ne parlano.</li>
+<li>Quando si cerca di usarli per casi reali si scopre che i loro limiti sono tali e tanti che e&rsquo; meglio farsi tutto da soli. E che &ldquo;<em>gli stessi autori consigliano un&rsquo;altra libreria</em>&rdquo;.</li>
+</ul>
+</blockquote>
+
+<p>Nessuno trova lavoro se non conosce uno di questi framework famosi. Nessuno li utilizza davvero, perche&rsquo; il programma reale viene poi splittato su altre 15 librerie. Consigliate dagli stessi autori. Le stesse librerie soffrono il problema, quindi erano nate per fare altro.</p>
+
+<p>Questa merda ha distrutto Java. Ha distrutto Javascript. Python. Perl. Ha distrutto praticamente ogni linguaggio, per una semplice ragione: il programmofono non vuole scrivere programmi. Non ha un problema da risolvere e non ha un&rsquo;idea. Vuole scrivere codice dicendo che servira&rsquo; a chi ha i problemi e le idee. E il suo ruolo nei problemi reali e nell idee reali? Lui fa il talk.</p>
+
+<p>Ma a questo punto arriva in scena il becchino, l&rsquo;ultima categoria di programmofoni. Quelli che discutono a posteriori di paradigmi.</p>
+
+<p>Voi avete delle scimmie che scrivono software di merda, arriva il programmofono e vi fa un bell&rsquo;articolo su un giornale: &ldquo;ma il paradigma OOP ha fallito?&rdquo;. E via di filosofia.</p>
+
+<p>Ora, dire che &ldquo;il paradigma OOP ha fallito&rdquo; non e&rsquo; giusto o sbagliato. E&rsquo; senza senso.</p>
+
+<p>Stiamo parlando di strumenti. Se Michelangelo prende uno scalpello ci fa il David. Se io prendo uno scalpello, ci spacco delle pietre. Ma non posso dire &ldquo;ma il paradigma dello scalpello ha fallito&rdquo;. No. Potrebbe dirlo Michelangelo, e&rsquo; vero: se dopo aver scolpito il David con uno scalpello ne prende un altro e gli riesce una ciofeca, allora puo&rsquo; dire &ldquo;questo paradigma di scalpello cinese ha fallito&rdquo;. Ma puo&rsquo; farlo LUI. E DOPO aver scolpito il David.</p>
+
+<p>Allora adesso arriva un mondo che NON ha MAI prodotto niente di simile a &ldquo;David&rdquo;. Se escludiamo Donald Knuth e pochi altri, roba del genere non si e&rsquo; mai vista. Del resto, Knuth non fa discorsi tipo &ldquo;ma il paradigma OOP ha fallito?&rdquo; (7), lui dice che ha sempre pensato a quel modo, e semmai invece di usare un linguaggio specifico preferisce l&rsquo; AUTODISCIPLINA nel pensare.</p>
+
+<p>Ma il quarto tipo di programmofono ha quasi vent&rsquo;anni di fallimenti da commentare, e quindi puo&rsquo; facilmente scriverci degli articoli.</p>
+
+<p>In realta&rsquo; cosa sia andato storto e&rsquo; chiaro:</p>
+
+<ol>
+<li>Linguaggi vicini alla macchina. Ottimo codice, ma programmatori troppo pagati.</li>
+<li>Linguaggi imperativi classici. Codice ancora decente, ma i programmatori iniziano a essere molti.</li>
+<li>Linguaggi funzionali. Codice &ldquo;abbastanza buono da metterlo sul mercato&rdquo;, e i programmatori sono pagati quanto un operaio.</li>
+<li>Linguaggi OOP: codice di merda, e un programmatore indiano costa $20 al giorno.</li>
+</ol>
+
+<p>Ora, anche tornando ai linguaggi funzionali , e tirando fuori roba tipo erlang o ripescando il prolog, il problema del peggioramento del codice e&rsquo; chiaro: se qualcuno scrive programmi di merda, non e&rsquo; colpa &ldquo;del paradigma&rdquo;. Non e&rsquo; colpa dello scalpello se io non so fare il David.</p>
+
+<p>La velocita&rsquo; con cui nascono e crescono i nuovi linguaggi e&rsquo; aumentata mano a mano che il software diventava piu&rsquo; scadente: in una specie di legge di Moore al contrario, il codice odierno riesce a sprecare piu&rsquo; risorse di quante la legge di Moore riesca a produrre. Il vostro cellulare e&rsquo; quello che vent&rsquo;anni fa vendevo come supercomputer. E alcuni software &ldquo;ci girano a malapena&rdquo;. La gente ci simulava galassie, sul vostro quad core con un GB di RAM. E voi fate fatica a farci una app stabile.</p>
+
+<p>E siccome i fallimenti sono sempre di piu&rsquo;, sempre piu&rsquo; velocemente i programmofoni di quarto ordine devono inventarsi &ldquo;il fallimento del paradigma n-1&rdquo;. Perche&rsquo; si potrebbe seguire l&rsquo;approccio Wirth e dire &ldquo;se questo programma fa cagare, licenzia chi lo ha scritto&rdquo;. Ma ovviamente bisogna salvare la pappa, e allora si dice che &ldquo;ha fallito il padadigma OOP&rdquo;.</p>
+
+<p>Adesso arriva l&rsquo;idiomaticita&rsquo;. Vedo gia&rsquo; codice idiomatico scritto per i talk. Stanno arrivando i programmofoni. Tra qualche anno saremo pieni di codice di merda scritto in golang. Dagli stessi che hanno gia&rsquo; fallito in Python, Ruby, PhP, Java e Scala. E anziche&rsquo; mandare a casa questi programmatori, sapete cosa scriveranno i giornalisti di informatica?</p>
+
+<p>Che &ldquo;ha fallito il paradigma idiomatico&rdquo;. Perche&rsquo; la colpa e&rsquo; sempre dello scalpello.</p>
+
+<p>Succedera&rsquo; anche a golang? Non so. Non e&rsquo; questioni di esserne tifoso o meno, e&rsquo; questione che di fatto si tratta di un C migliorato. Quando programmi in C/C++ per prima cosa ti scrivi le classi per fare le cose di base (accedere file, gestire socket, etc) , il famoso utils.c , poi vai avanti col programma. Golang e&rsquo; semplicemente un c con meno perdite di tempo e tutte queste cose gia&rsquo; scritte. Quindi e&rsquo; molto difficile che sia molto fico per i programofoni, per quanto sia fico dire &ldquo;idiomatico&rdquo;.</p>
+
+<p>Poi, ovviamente, chi vivra&rsquo; vedra&rsquo; , se la colpa e&rsquo; dei pittori o dei pennelli.</p>
+
+<p><center></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BMxaLEGCVdg" frameborder="0" allowfullscreen></iframe>
+
+<p></center></p>
+
+<p>(1) Si, e&rsquo; morto. Lo stipendio medio dei programmatori java sta decrescendo ogni giorno, e Scala e&rsquo; solo un palliativo. In questo momento Java e&rsquo; nello stato di &ldquo;balena spiaggiata&rdquo;: prima che scompaia occorreranno mesi, se non anni, di decomposizione. Ma il fatto che la carcassa di Java dara&rsquo; da mangiare ancora per anni non significa che sia vivo. Significa che e&rsquo; una carcassa molto grande e ci mette molto a decomporsi.</p>
+
+<p>(2) Il cinese che lo ha scritto crede davvero che se un server remoto ti manda qualcosa che non capisci, allora la soluzione migliore sia &ldquo;<a href="http://blog.golang.org/defer-panic-and-recover">panic()</a>&rdquo;. A me invece sembra carino che i programmi sopravvivano alla propria esecuzione. Cosi l&rsquo;ho bonificato gestendo degli errori qui e li&rsquo;.</p>
+
+<p>(3) Altrimenti succede questo: quando usate il framework con gli esempi forniti, siete capaci di scrivere &ldquo;Hello World&rdquo;. Ma quando piazzate il framework in un ambiente lavorativo e dovete farci delle cose senza limitarvi a degli esempi, scoprite che il tale framework questo lo fa ma non cosi&rsquo;, quello lo fa ma non e&rsquo; il suo core business, l&rsquo;altro lo fa ma performa male, e che quell&rsquo;altra tale cosa sarebbe meglio farla con altre librerie, parola degli stessi sviluppatori del framework. Risultato? Il framework esegue benissimo gli esempi di utilizzo e va bene per le minchiatine.</p>
+
+<p>(4)Il software che sto scrivendo e&rsquo; scritto per me stesso, e io <strong>non sono</strong> un programmatore. Non funziona ancora, e lo mando avanti quando mi diverte programmare. Prima o poi lo commentero&rsquo; e lo riordinero&rsquo;. Per ora sto provando tutte le tecniche di golang, una ad una. E&rsquo; un progetto personale e NON pretendo che abbia qualita&rsquo;, almeno non adesso.</p>
+
+<p>(5) E&rsquo; il lato oscuro degli architetti di sistema. Quando ne incontro uno, di solito mi salutano dicendo &ldquo;Io sono tuo padre&rdquo;. Io faccio la parte tecnica. Loro fanno il powerpoint. Riunioni di ore nella quale la loro domanda e&rsquo; &ldquo;ma in che dominio e&rsquo; questo elemento che chiamiamo &ldquo;Billing&rdquo;? Nella zona verde a destra o in quella rosa a sinistra?&rdquo; E io a spiegare che cosa sia un BSS, sinche&rsquo; non mi viene detto &ldquo;non sono cosi&rsquo; tecnico&rdquo;.</p>
+
+<p>(6) Lo so, lo so. Ma nessuno lo ammettera&rsquo; mai. Si vergognano troppo.</p>
+
+<p>(7)<a href="http://tex.loria.fr/historique/interviews/knuth-clb1993.html">http://tex.loria.fr/historique/interviews/knuth-clb1993.html</a></p>
+
+<blockquote>
+<p><strong>CLB</strong>: What about object-oriented programming? Is it just a current buzzword, or does this approach appeal to you?</p>
+
+<p><strong>Knuth</strong>: I&rsquo;ve always thought of programming in that way, but I haven&rsquo;t used languages that help enforce the discipline; <strong><em>I&rsquo;ve always enforced the discipline myself in other languages</em></strong>. Programming languages can now catch you if you make a mistake, and they make it easier for you to hide information from one part of the program to another. In my own programs, with older languages, I wouldn&rsquo;t use what I wasn&rsquo;t supposed to use; I would have to discipline myself to follow these rules. I could, so I did. There weren&rsquo;t programs I couldn&rsquo;t write&hellip; but the new tools do help.</p>
+</blockquote>
+
+<br>
+<div class="addthis_native_toolbox"></div>
+
+</div>
+
+  </section>
+  <footer>
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        <h1 class="author-name text-primary">Uriel Fanelli</h1>
+        
+        
+      </div>
+      
+      <div class="author-contact col-md-4">
+        <a href="mailto:uriel.fanelli@gmx.de">
+          <i class="fa fa-envelope-o"></i>
+          &nbsp;Contact me
+        </a>
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="http://www.wolfstep.cc/post/tirannobaldo/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next"><a href="http://www.wolfstep.cc/post/poliziottimambo/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+
+
+
+<iframe id="forum_embed"
+  src="javascript:void(0)"
+  scrolling="no"
+  frameborder="0"
+  width="100%"
+  height="700">
+</iframe>
+
+<script type="text/javascript">
+  document.getElementById('forum_embed').src =
+     'https://groups.google.com/forum/embed/?place=forum/kein-pfusch'
+     + '&showsearch=false&showpopout=true&showtabs=false&hl=it&theme=Light'
+     + '&parenturl=' + encodeURIComponent(window.location.href);
+</script>
+
+
+
+
+
+
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      
+    </div>
+    <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+  </footer>
+
+  <script src="http://www.wolfstep.cc//js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f32bcd406c5e50" async="async"></script>
+
+
+</body>
+</html>
+

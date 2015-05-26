@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on KEIN PFUSCH, BITTE!</title>
+    <link>http://www.wolfstep.cc/tags/security/</link>
+    <description>Recent content in Security on KEIN PFUSCH, BITTE!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 May 2015 19:39:10 +0200</lastBuildDate>
+    <atom:link href="http://www.wolfstep.cc/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>EAL (Evaluation Assurance Level) e software.</title>
+      <link>http://www.wolfstep.cc/post/asteroid4dummies/</link>
+      <pubDate>Mon, 04 May 2015 19:39:10 +0200</pubDate>
+      
+      <guid>http://www.wolfstep.cc/post/asteroid4dummies/</guid>
+      <description>&lt;p&gt;I miei discorsi sul software sono stati presi con curiosita&amp;rsquo;, nel senso che molti non credono/pensano che esista un sistema di certificazione rigoroso, ne&amp;rsquo; che esistano delle patenti. E molti credono che tutti i sistemi operativi (in realta&amp;rsquo; quelli mainstream ) siano molto diversi, ma misurano tale sicurezza in termini di &amp;ldquo;mio cugino dice che&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;esistenza di livelli di EAL in genere non finisce sulla stampa informatica mainstream, ne&amp;rsquo; se ne occupano molto i programmofoni, perche&amp;rsquo; alla fine dei conti si tratta di roba che non vogliono far sapere. Molti per esempio continuano a pensare che alla fine dei conti l&amp;rsquo; OS &amp;ldquo;A&amp;rdquo; sia piu&amp;rsquo;/meno sicuro dell&amp;rsquo; OS &amp;ldquo;B&amp;rdquo;, e quindi non piacerebbe sapere loro che esistano delle classifiche , i cui risultati probabilmente non sono quelli che vorrebbero.&lt;/p&gt;
+
+&lt;p&gt;EAL e&amp;rsquo; un sistema che classifica software ed appliances a secondo del livello di &amp;ldquo;sicurezza&amp;rdquo;, ovvero un livello minimo di qualita&amp;rsquo; accettabile per piazzare il software a fare una determinata cosa. Mettereste Windows95 a gestire una centrale nucleare? No. Ma che cosa dovreste metterci? Qual&amp;rsquo;e&amp;rsquo; il livello minimo? E che cosa le assicurazioni accetteranno?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Quando si parla di sicurezza non si parla solo di anti-intrusione, ma si intende quella che in italia chiameremmo &amp;ldquo;affidabilita&amp;rsquo; &amp;ldquo;, che comprende anche la sicurezza contro attacchi informatici, ma non solo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Quando dico &amp;ldquo;siete a livello del portale sviluppato da vostro cugino&amp;rdquo; intendo un prolema assicurativo: &lt;em&gt;ok, vostro cugino e&amp;rsquo; bravo, ma siete disposti a mettere nero su bianco che pagherete 100 euro per ogni visitatore per ogni baco trovato?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Allora, EAL elabora una serie di common practices (che e&amp;rsquo; molto lungo studiare) e a seconda della loro applicazione classifica i sistemi in sette livelli. Tali livelli sono mappabili in altri sistemi di classificazione analoghi: EAL1 corrisponde a ITSEC E0-E1, che corrisponde a BSI ITS Q0-Q1, e a TSEC D-C1.&lt;/p&gt;
+
+&lt;table cellpadding=&#34;2&#34; cellspacing=&#34;2&#34;&gt;
+&lt;colgroup&gt;
+    &lt;col style=&#34;width: 15%&#34; /&gt;
+    &lt;col style=&#34;width: 15%&#34; /&gt;
+    &lt;col style=&#34;width: 15%&#34; /&gt;
+    &lt;col style=&#34;width: 15%&#34; /&gt;
+    &lt;col style=&#34;width: 40%&#34; /&gt;
+  &lt;/colgroup&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;th style=&#34;background-color:#BBFFBB&#34;&gt;CC EAL&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBFFBB&#34;&gt;ITSEC E&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBFFBB&#34;&gt;BSI ITS Q&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBFFBB&#34;&gt;TCSEC&lt;/th&gt;
+&lt;th style=&#34;background-color:#EEFFEE&#34;&gt;In sintesi&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;EAL1&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;E0-E1&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;Q0-Q1&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;D-C1&lt;/th&gt;
+&lt;td style=&#34;background-color:#EEEEff&#34;&gt;Il produttore dice che secondo lui funziona. Fidatevi di lui.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th style=&#34;background-color:#BBBBBB&#34;&gt;EAL2&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBBB&#34;&gt;E1&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBBB&#34;&gt;Q1&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBBB&#34;&gt;C1&lt;/th&gt;
+&lt;td style=&#34;background-color:#EEEEEE&#34;&gt;Sono noti i test e le tecniche di sviluppo,ma non ci hanno messo altro sforzo.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;EAL3&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;E2&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;Q2&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;C2&lt;/th&gt;
+&lt;td style=&#34;background-color:#EEEEff&#34;&gt;Una terza parte ci ha dato un occhio e dice che  secondo loro funziona bene.Ma qui lo dicono e qui lo negano. Ancora niente ciccia per le assicurazioni.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th style=&#34;background-color:#BBBBBB&#34;&gt;EAL4&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBBB&#34;&gt;E3&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBBB&#34;&gt;Q3&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBBB&#34;&gt;B1&lt;/th&gt;
+&lt;td style=&#34;background-color:#EEEEEE&#34;&gt;Auditing e separazione della sicurezza tra utenti. Alle assicurazioni sembra sufficiente.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;EAL5&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;E4&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;Q4&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;B2&lt;/th&gt;
+&lt;td style=&#34;background-color:#EEEEff&#34;&gt;Le policy di sicurezza sono formali, ma la verifica e&#39; ancora euristica. &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th style=&#34;background-color:#BBBBBB&#34;&gt;EAL6&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBBB&#34;&gt;E5&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBBB&#34;&gt;Q5&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBBB&#34;&gt;B3&lt;/th&gt;
+&lt;td style=&#34;background-color:#EEEEEE&#34;&gt;Le policy di sicurezza formali sono testate formalmente , i test sono descritti formalmente ma sono eseguiti in maniera semiformale.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;EAL7&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;E6&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;Q6&lt;/th&gt;
+&lt;th style=&#34;background-color:#BBBBff&#34;&gt;A&lt;/th&gt;
+&lt;td style=&#34;background-color:#EEEEff&#34;&gt;Sia i test che le verifiche sono descritte formalmente ed eseguiti formalmente.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;Faccio una carrellata sotto, menzionando solo i sistemi &lt;strong&gt;notevoli&lt;/strong&gt;. Poi, siete sempre in tempo a chiedere che certificazione EAL abbia il vostro OS preferito. San Google vi aiutera&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EAL1&lt;/strong&gt; e&amp;rsquo; dedicato a quei sistemi per i quali si valuta che un malfunzionamento od un problema di robustezza/sicurezza non siano davvero problematici. Ci si aspetta che il software funzioni la maggior parte delle volte, ma non e&amp;rsquo; cosi&amp;rsquo; necessario che il software sia sicuro. Molte console di videogiochi sono su questo livello, specialmente se non si connettono ad Internet. Si, e&amp;rsquo; gradito che funzionino, ma la sicurezza non e&amp;rsquo; qualcosa per la quale un&amp;rsquo;assicurazione pagherebbe mai. Nessuna assiurazione vi assicurera&amp;rsquo; mai un diveogame, insomma. Non sono richieste azioni da parte degli sviluppatori per ottenere questo livello. Siamo al livello del portale sviluppato in php da vostro cugino.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EAL2&lt;/strong&gt; e&amp;rsquo; dedicato a quei sistemi nei quali gli sviluppatori sono tenuti a dirvi solo qualcosa riguardo all&amp;rsquo;architettura (linguaggio usato, OOP o no, etc) e a darvi il risultato dei test eseguiti sotto forma di percentuale di successi. la descrizione dei test non deve essere formale. Nessun altro sforzo e&amp;rsquo; richiesto, per cui potete considerarli un pochino come alcune console o alcuni giochi che vi dicono &amp;ldquo;il motore e&amp;rsquo; sviluppato in c++&amp;rdquo; e vi dicono che hanno testato il gioco con 1000 testers, e il 99% dei testers erano soddisfatti. Siamo ancora a livello &lt;em&gt;bassino&lt;/em&gt;. Siamo a livello dell&amp;rsquo;interprete PHP, o dell&amp;rsquo;opensource.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EAL3&lt;/strong&gt; e&amp;rsquo; quel momento in cui arriva un ente di certificazione esterno a dare un&amp;rsquo;occhiata, ma si tratta di un ente di certificazione che NON si assume alcuna responsabilita&amp;rsquo; assicurativa. E&amp;rsquo; come Casaleggio che paga qualcuno per &amp;ldquo;certificare&amp;rdquo; la sua piattaforma di voto, ma se qualcosa va storto, pazienza. Non e&amp;rsquo; vitale, nessuna infrastruttura dipende da questo, l&amp;rsquo;operazione puo&amp;rsquo; essere ripetuta. Siamo a livello di alcuni prodotti OpenSource con qualche auditing indipendente, ma ancora le assicurazioni non pagano. Tra i membri illustri spicca:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Apple OSX &lt;a href=&#34;https://www.commoncriteriaportal.org/files/epfiles/0536a_pdf.pdf&#34;&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;EAL4&lt;/strong&gt; si inizia a fare sul serio. A questa famiglia appartengono :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;AIX&lt;/li&gt;
+&lt;li&gt;HP-UX&lt;/li&gt;
+&lt;li&gt;FreeBSD&lt;/li&gt;
+&lt;li&gt;Oracle Linux&lt;/li&gt;
+&lt;li&gt;Novell NetWare&lt;/li&gt;
+&lt;li&gt;Solaris&lt;/li&gt;
+&lt;li&gt;SUSE Linux Enterprise Server 9&lt;/li&gt;
+&lt;li&gt;SUSE Linux Enterprise Server 10&lt;/li&gt;
+&lt;li&gt;Red Hat Enterprise Linux 5&lt;/li&gt;
+&lt;li&gt;Windows 2000 Service Pack 3&lt;/li&gt;
+&lt;li&gt;Windows 2003&lt;/li&gt;
+&lt;li&gt;Windows XP&lt;/li&gt;
+&lt;li&gt;Windows Vista&lt;/li&gt;
+&lt;li&gt;Windows 7&lt;/li&gt;
+&lt;li&gt;Windows Server 2008 R2&lt;/li&gt;
+&lt;li&gt;IBM z/VM versione 5.3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;per ottenere questa certificazione occorre garantire ALMENO un livello di accesso alle risorse basato sui privilegi dell&amp;rsquo;utente. occorre che la policy sia descritta formalmente e che sia descritto formalmente il test plan. Tutti i sistemi sopra hanno richiesto ed ottenuto questa certificazione &lt;strong&gt;con successo&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Se andate oltre i requisiti minimi richiesti ma non siete abbastanza bravi per salire a EAL5 allora siete EAL4+:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Trusted Solaris,&lt;/li&gt;
+&lt;li&gt;Solaris 10 Release &lt;sup&gt;11&lt;/sup&gt;&amp;frasl;&lt;sub&gt;06&lt;/sub&gt; Trusted Extensions,&lt;/li&gt;
+&lt;li&gt;La prima versione di  XTS-400 (software per sistemi d&amp;rsquo;arma sviluppato da BAE)&lt;/li&gt;
+&lt;li&gt;VMware ESXi versione 5.0&lt;/li&gt;
+&lt;li&gt;QNX Neutrino (ci stanno provando anche col multicore).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;capite che i programmofoni e i giornali di tifoseria informatica (linuxari, windowsari&amp;amp;co ) non vi diranno mai queste cose. Oltre alla mancanza di Apple che spicca con forza, non tutti i linuxari ammetteranno mai che Linux non sia mai riuscito a salire a EAL4+, e si trovi nello stesso girone di certificazione di Windows Vista.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EAL5&lt;/strong&gt; qui il gioco si fa piu&amp;rsquo; duro. Il livello di pratica richiesto e&amp;rsquo; molto piu&amp;rsquo; duro, le informazioni fornite devono essere molto piu&amp;rsquo; complete, e ci sarebbe da scrivere libri (e non post) a riguardo dei test che si possono fare. I sistemi che arrivano a EAL5 sono:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Smartcard per Carte di credito.&lt;/li&gt;
+&lt;li&gt;Tenix Interactive Link (un sistema di operazioni di rete in uso per la telefonia forense)&lt;/li&gt;
+&lt;li&gt;XTS400 (sviluppato da BAE systems, fabbricanti di sistemi d&amp;rsquo; arma) dallo STOP6 in poi.&lt;/li&gt;
+&lt;li&gt;IBM LPAR su System z.(il sistema di virtualizzatione dei mainframe IBM)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Alcuni sistemi per smartcard hanno bisogno di livelli di sicurezza un pelo superiori ad EAL5, come capita a:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Siemens CardOS M4.3B mask: EAL 5+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;che viene usato su alcune smartcard molto sicure per questioni particolari (accesso a caveau, etc).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EAL6&lt;/strong&gt; qui siamo ad applicazioni che non solo girano soldi, ma se vanno in cacca allora muore gente. Anche con i sistemi d&amp;rsquo;arma di BAE systems muore gente, ma siccome sono sistemi d&amp;rsquo;arma, non sempre e&amp;rsquo; un problema. Qui invece girano soldi , le assicurazioni pagano una marea di soldi e non deve morire nessuno. La lista dei test e dei requisiti e&amp;rsquo; enorme. Abbiamo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HP OpenVMS e SEVMS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;se andate oltre a EAL6, potete ottenere EAL6+ che ha un membro famoso:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Integrity-178B (il sistema RTOS che gira su  B-2, F-16, F-22 and F-35, Airbus A380)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;per capire il livello di &amp;ldquo;paranoia&amp;rdquo;, su questi ultimi sistemi non e&amp;rsquo; consentita l&amp;rsquo;&lt;strong&gt;allocazione dinamica della memoria&lt;/strong&gt;, che e&amp;rsquo; considerata, a questo livello, uno strumento del demonio. Se ne conoscete altri che abbiano EAL6+, ditemelo. Non si finisce mai di imparare, in questo settore.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;EAL7&lt;/strong&gt; qui siamo a dei livelli estremi, ove la sicurezza viene garantita dal fatto che l&amp;rsquo;hardware (di fatto, software implementato sotto forma di ASIC o SoC) abbia certe caratteristiche ed abbia superato delle verifiche formali.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The Tenix Interactive Link Data Diode Device (un sistema di isolamento tra reti che consente solo un ascolto monodirezionale: io vedo te tu non vedi me)&lt;/li&gt;
+&lt;li&gt;Fox-IT Fox Data Diode (il concorrente europeo del sistema di cui sopra)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;si tratta di strumenti per la misura di dati su rete e per la sicurezza estrema nell&amp;rsquo;analisi dei protocolli.Si usano per separare delle reti ordinarie da reti di controllo con dei  Niente che la maggior parte di noi vedra&amp;rsquo; mai all&amp;rsquo;opera.&lt;/p&gt;
+
+&lt;p&gt;Quali sono i test da passare? Si tratta di una serie di certificazioni intermedie, che per la Germania (ove la certificazione raggiunge livelli maniacali) sono riportate in questo modo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;FAU (Sicherheitsprotokollierung)&lt;/li&gt;
+&lt;li&gt;FCO (Kommunikation)&lt;/li&gt;
+&lt;li&gt;FCS (Kryptographische Unterstützung)&lt;/li&gt;
+&lt;li&gt;FDP (Schutz der Benutzerdaten)&lt;/li&gt;
+&lt;li&gt;FIA (Identifikation und Authentisierung)&lt;/li&gt;
+&lt;li&gt;FMT (Sicherheitsmanagement)&lt;/li&gt;
+&lt;li&gt;FPR (Privatsphäre)&lt;/li&gt;
+&lt;li&gt;FPT (Schutz der Sicherheitsfunktionen)&lt;/li&gt;
+&lt;li&gt;FRU (Betriebsmittelnutzung)&lt;/li&gt;
+&lt;li&gt;FTA (Schnittstelle)&lt;/li&gt;
+&lt;li&gt;FTP (vertrauenswürdiger Pfad/Kanal)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ognuna di queste sigle corrisponde ad una serie di test puntualmente mappati da ISO IEC/15408. Una comoda overview la trovate &lt;a href=&#34;http://www.wolfstep.cc/images/FormalSecurityAnalysis.pdf&#34;&gt;da parte di Siemens AG&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Adesso voi vi chiederete come mai si parli poco di questa roba.&lt;/p&gt;
+
+&lt;p&gt;La prima e&amp;rsquo; che si tratta di roba avvilente. Se superiamo il livello tipico dei videogiochi, di Windows &lt;sup&gt;95&lt;/sup&gt;&amp;frasl;&lt;sub&gt;98&lt;/sub&gt;/2k , abbiamo quasi tutti i concorrenti concentrati sul livello EAL4 , sino a EAL4+ . Se gia&amp;rsquo; cerchiamo EAL5 troviamo praticamente IBM ed i militari. Questo fa capire chiaramente per quale motivo oltre un certo livello di criticita&amp;rsquo; trovate sempre dei mainframe IBM: basta scrivere che si vuole EAL5 , e oltre IBM non andrete.&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; inutile che i linuxari si azzuffino, dal momento che dal punto di vista di questi test, Windows Vista e Linux pari sono. Avete voglia di discutere di Zombix Trusted Security Fichissimus 4.5 , tanto da li&amp;rsquo; non vi schiodate. Al massimo fate EAL4+. Non oltre.&lt;/p&gt;
+
+&lt;p&gt;I fan di Apple hanno notizie ancora peggiori. &lt;a href=&#34;https://www.commoncriteriaportal.org/files/epfiles/0536a_pdf.pdf&#34;&gt;Apple MacOS X arriva  ad EAL3&lt;/a&gt; il che significa che ha una certificazione inferiore a Linux e Windows. Apple e&amp;rsquo; meno sicuro e robusto di Windows e Linux. (Se qualcuno mi sa mostrare la certificazione EAL4 di Apple Mac OS ovviamente sto sbagliando, ma attualmente non trovo niente oltre alla EAL3).&lt;/p&gt;
+
+&lt;p&gt;Vedere che nei tre livelli superiori della sicurezza e dell&amp;rsquo;affidabilita&amp;rsquo; ci siano pochissimi sistemi, e che di fatto quasi ogni cosa conosciamo si fermi tra EAL4 ed EAL4+ non e&amp;rsquo; un bel complimento per il software attuale. (Apple dovrebbe svegliarsi , per dire, &lt;strong&gt;se vuole entrare nell&amp;rsquo; era dell&amp;rsquo; IoT&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;p&gt;Perche&amp;rsquo; questo e&amp;rsquo; un problema?&lt;/p&gt;
+
+&lt;p&gt;Andiamo a vedere, per esempio, la centralina elettronica della vostra automobile.
+Abituati a lavorare direttamente con il silicio, ove si fa la verifica formale di tutto, le aspettative di qualita&amp;rsquo; e sicurezza delle case automobilistiche si collocano tra EAL5 ed EAL6+.&lt;/p&gt;
+
+&lt;p&gt;Ma la stragrande maggioranza del software che conosciamo sta SOTTO EAL4.&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; vero che dal momento che una centralina d&amp;rsquo;auto non comunica e non e&amp;rsquo; fisicamente accedibile (se non dal vostro meccanico) sia &amp;ldquo;facile&amp;rdquo; arrivare a questi livelli alti. Ma significa anche che &lt;strong&gt;quasi nessun sistema operativo e&amp;rsquo; adatto per fare IoT sulla vostra auto&lt;/strong&gt;, almeno sino a quando vorrete assicurarla.&lt;/p&gt;
+
+&lt;p&gt;Questo e&amp;rsquo;, almeno su un piano piu&amp;rsquo; &amp;ldquo;formale&amp;rdquo; quello che intendo dire quando dico che col software non ci siamo. Non siamo pronti ne&amp;rsquo; alla IoT ne&amp;rsquo; a tutte quelle brave promesse di Robot che guidano le auto, di robot che fanno i chirurghi, di oggetti che prendono cura del nonno: nessuna assicurazione vorra&amp;rsquo; coprirli, e in molti paesi del mondo praticamente ogni cosa della vostra casa e&amp;rsquo; assicurata. (In Germania, per dire, l&amp;rsquo;assicurazione sulla casa e&amp;rsquo; obbligatoria).&lt;/p&gt;
+
+&lt;p&gt;Perche&amp;rsquo; non si dice sulla stampa &amp;ldquo;specializzata&amp;rdquo;? Perche&amp;rsquo; molti, troppi, vivono convinti che &amp;ldquo;Cuginix e&amp;rsquo; piu&amp;rsquo; sicuro di Wassoretis, e che ovviamente PuppaBSD sia ancora piu&amp;rsquo; sicuro e stabile di Cuginix&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;No: &lt;strong&gt;sono tutti piu&amp;rsquo; o meno li&amp;rsquo;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;E sono tutti insufficienti per il mondo che vorremmo.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;iframe width=&#34;420&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/SpZskQIEMHU&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

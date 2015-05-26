@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content=" Ancora su documentazione e tests &middot;  KEIN PFUSCH, BITTE!" />
+  <meta property="og:site_name" content="KEIN PFUSCH, BITTE!" />
+  <meta property="og:url" content="http://www.wolfstep.cc/post/epsilonmamma/" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2015-04-16T22:13:56&#43;02:00" />
+  
+  <meta property="og:article:tag" content="godoc" />
+  
+  <meta property="og:article:tag" content="c" />
+  
+  <meta property="og:article:tag" content="epsilon" />
+  
+  
+
+  <title>
+     Ancora su documentazione e tests &middot;  KEIN PFUSCH, BITTE!
+  </title>
+
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/main.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/github.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="http://www.wolfstep.cc//images/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://www.wolfstep.cc//images/apple-touch-icon.png" />
+  <link href="" rel="alternate" type="application/rss+xml" title="KEIN PFUSCH, BITTE!" />
+</head>
+<body>
+
+
+  <header class="global-header">
+    <section class="header-text">
+      <h1><a href="http://www.wolfstep.cc/">KEIN PFUSCH, BITTE!</a></h1>
+      
+      <div class="tag-line">
+        Comunicare, ammesso sia possibile, e&#39; perfettamente inutile
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+      
+      <a href="http://www.wolfstep.cc/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary">Ancora su documentazione e tests</h1>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2015-04-16T22:13:56&#43;02:00">
+          Apr 16, 2015
+        </time>
+      </div>
+      <div class="pull-right">
+        
+        <span class="post-tag small"><a href="http://www.wolfstep.cc//tags/godoc">#godoc</a></span>
+        
+        <span class="post-tag small"><a href="http://www.wolfstep.cc//tags/c">#c</a></span>
+        
+        <span class="post-tag small"><a href="http://www.wolfstep.cc//tags/epsilon">#epsilon</a></span>
+        
+      </div>
+    </div>
+  </header>
+  <section>
+<div style="text-align: justify;">
+    <p>E&rsquo; bello scatenare una guerra di religione in un forum moderato perche&rsquo; poi alla fine parlando senza dichiarare guerre sante si arriva a focalizzare meglio i concetti. Nel caso dell&rsquo;articolo che ho scritto sulla programmazione, la questione della documentazione, dei javadoc e dei godoc ha toccato alcuni nervi scoperti. In particolare, quelli di chi dice che &ldquo;il codice si documenta da solo&rdquo; e di chi dice che &ldquo;i test sono documentazione&rdquo;. Vediamo di fare due esempi.</p>
+
+<p>Prendiamo la prima affermazione, &ldquo;il codice si documenta da solo&rdquo;, e facciamo un esempio abnorme usando un linguaggio <strong>abnorme</strong>, in questo caso Perl.</p>
+
+<p>Guardiamo che meraviglia di modo che si usa per documentare &ldquo;map&rdquo;:</p>
+
+<pre>
+my @names = qw(Foo Bar Baz);
+my @invited = map {$_ => 1} @names;
+print "@invited\n"
+</pre>
+
+<p>sembra bello, giusto? Funziona benissimo, se abbiamo tre invitati. E funziona benissimo anche con 100 invitati.
+Domanda: se ci faccio passare un file di log di 200MB, mappando una riga per elemento dell&rsquo;array, che succede?</p>
+
+<p>Beh, chi conosce Perl sa bene che impieghero&rsquo; secoli per manipolarlo. La ragione e&rsquo; legata al fatto che map produrra&rsquo; innanzitutto una copia dell&rsquo;intero array sulla quale lavorare, <strong>e ne fara&rsquo; una diversa ad ogni invocazione di map</strong>. Se quel &ldquo;map&rdquo; su grandi file io lo infilassi in un ciclo di loop, cioe&rsquo;, sarei nella cacca pura.</p>
+
+<p>Ma c&rsquo;e&rsquo; di peggio. Guardiamo un attimo la funzione &ldquo;grep&rdquo; di perl.</p>
+
+<p>Viene documentata , per fare un esempio, cosi&rsquo;:</p>
+
+<pre>
+ #!/usr/bin/perl
+    use strict;
+    use warnings;
+
+    my @strs = qw(potatoes lemons apricots apples bananas ostriches flamingoes);
+    my @short_strs = grep { length $_ < 8 } @strs;
+    for my $str (@short_strs) {
+        print "$str\n";
+    }
+</pre>
+
+<p>Ora, sinche&rsquo; avete roba del genere, funziona. Ma ripeto la domanda: se io ci sbatto dentro un file di log da 200MB, funzionera&rsquo; leggendo ogni riga come un elemento dell&rsquo;array? Sapete bene che avro&rsquo; problemi ancora peggiori che con map: non solo perl costruira&rsquo; una copia del file in memoria, ma lo fara&rsquo; ogni volta che viene invocato grep.</p>
+
+<p>In pratica abbiamo qualcosa (grep, map) che <strong>POSSONO</strong> essere invocate su un array da 200MB di stringhe. E&rsquo; sintatticamente corretto. Ma non e&rsquo; <strong>consigliabile</strong> farlo.</p>
+
+<p>Quando vado a pubblicare il mio <strong>codice come documentazione</strong>, pero&rsquo;, io questo non lo leggo. Leggo un interessante esempio con 7 stringhe, ma non vedo scritto che non possano essere 14 milioni, da nessuna parte. Leggendo il codice <strong>che si documenta da solo</strong> sto leggendo la sintassi , so come invocare grep e map, ma <strong>NON</strong> ho la piu&rsquo; pallida idea di come funzioni la cosa. Otto vanno bene. E nove? Vanno bene. E diciotto milioni? Anche. OOPS.</p>
+
+<p>Ogni pezzo di codice fara&rsquo; delle cose in un certo modo. Questo modo avra&rsquo; dei pro e dei contro. Ad ogni &ldquo;contro&rdquo; corrisponde un&rsquo;azione che, se anche e&rsquo; sintatticamente corretta, NON e&rsquo; per nulla <strong>consigliabile</strong>.</p>
+
+<p>Il problema del dire che il codice &ldquo;si documenta da solo&rdquo; e&rsquo; che  si &ldquo;documenta da sola&rdquo; <strong>la sintassi</strong>. Niente altro che la sintassi. Quando si va a vedere se per caso stiamo anche usando il codice come lo aveva pensato chi lo ha scritto, la semplice sintassi <strong>non ce lo dice</strong>.</p>
+
+<p>Certo, <strong>conoscendo perl</strong> sappiamo che non e&rsquo; il modo giusto di fare il parsing di un file da 200MB. Ma se conosciamo <strong>POCO</strong> il perl, allora sappiamo che &ldquo;perl e&rsquo; fantastico per manipolare stringhe&rdquo;. Lo dicono tutti, giusto?  La prima cosa che ci viene in mente di fare per cercare una riga di log in un file , ovviamente, e&rsquo; usare la grep di perl esattamente come usiamo la grep di unix.</p>
+
+<p>Quindi, non solo usare il codice come documentazione e&rsquo; un errore per via dell&rsquo;incompletezza: e&rsquo; un errore per via dell&rsquo;ambiguita&rsquo; .</p>
+
+<p>Andiamo ad un altro punto: &ldquo;il test e&rsquo; una documentazione sufficiente&rdquo;. No, non lo e&rsquo;.E per dimostrarlo scrivero&rsquo; un codice che ha gigantesche limitazioni concettuali, quasi invisibili sui test, che al massimo mostreranno dei fallimenti puntuali. E lo scrivero&rsquo; semplice. Facile da leggere.</p>
+
+<p>Allora, prendiamo questa formula :</p>
+
+<p><center>
+<img src="http://upload.wikimedia.org/math/9/d/8/9d8a4981a192a8871f949249c67b0f5a.png" alt="derivata" />
+
+</center></p>
+
+<p>e trasformiamola <strong>bovinamente</strong> in c:</p>
+
+<pre>
+
+// "derivata" della stessa 
+
+double derivata( double icszero )
+    {
+    double d1,d,acca;
+    d=0;d1=1;
+    acca = 1;
+    while ( d != d1  ) //vabe', almeno proviamoci
+        {           
+        d1 = d; 
+        d=(funzione(icszero+acca)- funzione(icszero))/(acca);
+        acca = acca / 2.0; 
+        }
+    return d;
+    }
+
+
+
+</pre>
+
+<p>Come vedete, a leggerlo il codice fa ESATTAMENTE quello che dice la formula. Ha senso. Con una scelta oculata dei nomi delle variabili, si <em>pronuncia</em> persino allo stesso modo. Sul piano del codice, potete dire quel che volete, ma e&rsquo; esattamente l&rsquo;esecuzione di quella formula. Quindi, il codice dice che sto facendo quella roba.</p>
+
+<p>Certo, <strong>se potessi documentare</strong> dovrei dire che la funzione NON va a fare alcun controllo sulla derivabilita&rsquo;, tantomeno della continuita&rsquo;. Ma non posso, e quindi dovete capirlo da soli, oppure vedete una formula implementata cosi com&rsquo;e&rsquo;.</p>
+
+<p>Allora mi direte che se scriviamo dei test, allora capiremo tutto. Ok.</p>
+
+<p>Allora:</p>
+
+<pre>
+double funzione(double x)
+    {
+    return x*x ;
+    }
+</pre>
+
+<p>Ehi, funziona! Se deriviamo per x=3, ci restituisce 6! Successone! Siamo gia&rsquo; pronti a lanciarci nel mondo del meraviglioso calcolo differenziale! Siamo dei leoni.</p>
+
+<p>E allora proviamo ancora e&hellip;.</p>
+
+<pre>
+double funzione(double x)
+    {
+    return sin(x);
+    }
+</pre>
+
+<p>Scriviamo il test per x=1 e anche questo va! Fantastico. Siamo gia&rsquo; pronti ad arruolarci nella Dinamo RungeKutta. Ma come ho scritto, questa roba funziona bene nell&rsquo;insieme dei reali, e funziona un <strong>pochino</strong> peggio nel mondo dei numeri discreti.</p>
+
+<p>E allora adesso mettiamo i nostri test negativi. Scriviamo il nostro bel &ldquo;failing_test.c&rdquo; e ci mettiamo i casi in cui fallisce. Uno e&rsquo; ovvio.</p>
+
+<pre>
+double funzione(double x)
+    {
+    return (x != 3)? 1.0 : 0.0 ;
+    }
+</pre>
+
+<p>E siccome siamo personcine amabili, andiamo a calcolare la &ldquo;derivata&rdquo; nel punto x = 3.</p>
+
+<p>Come vedete(1), il risultato e&rsquo; sbagliato. (ovvio, visto che non ne esiste uno giusto). Ma quel che e&rsquo; peggio lo potrete vedere stampando, iterazione dopo iterazione, i valori di &ldquo;d&rdquo; e di &ldquo;acca&rdquo;: <em>terrificante, vero</em>?(1) Specialmente quel &ldquo;saltino&rdquo; da 4.611.686.018.427.387.904 a &hellip; zero, che trovo commovente: del resto stiamo stampando l&rsquo;inverso di un numero piu&rsquo; piccolo dell&rsquo;epsilon di macchina&hellip;</p>
+
+<p><strong>Faccio presente, pero&rsquo;, che se avessi calcolato la derivata in QUALSIASI altro valore di x, non si sarebbe notato nulla.</strong> Avrei potuto scrivere lo stesso test per un altro valore di x  ANCHE nei test che si concludono <strong>con successo</strong>!</p>
+
+<p>Adesso, chi ha studiato sa cosa stia succedendo ma&hellip; voi non scrivereste una cosa simile. Pero&rsquo; siamo al punto in cui chi legge NON SA , e deve capire leggendo i test. Quanto <strong>spiega</strong> questo test fallito, a chi non aveva capito il problema da subito?</p>
+
+<p>Quando io avessi mostrato al tizio che trova su google il nostro sito e vuole un metodo rapido per fare la derivata (che in questo esempio fallisce), cosa ci ha capito?  Cosa capisce da questo  test, che e&rsquo; chiarissimo praticamente per chiunque programmi? Chiarito questo, cosa sa il nostro eroe di quanto succede in un altro caso, diciamo un punto angoloso tipo abs() per x=0?</p>
+
+<p><strong>Se potesse capire, si sarebbe scritto lui lo stesso codice</strong>. Se ha bisogno di un codice del genere, e non ne capisce i limiti a guardarlo, <strong>che cosa dedurra&rsquo; dal fatto che adesso la funzione fallisce?</strong></p>
+
+<p>Se siete fortunati, dira&rsquo; una cosa come &ldquo;<em>si ma le derivate sono per le funzioni coi numeri, mica per gli <strong>if</strong>. Mica e&rsquo; programmazione.</em>&rdquo; Sentito con le mie orecchie.</p>
+
+<p>Cosi&rsquo;, diciamo che di quelli che trovano questo codice su google, circa 30 non hanno capito i suoi limiti, e lo useranno per calcolare la derivata di abs(x) in x=0. Gli altri eviteranno, perche&rsquo; hanno capito il concetto dal primo esempio.</p>
+
+<p>Ma i nostri trenta pensano che se non ci sono if o altri costrutti &ldquo;da programazione&rdquo; la derivata vada bene. Cosi&rsquo; proviamo a proporre questo test fallito, con una funzione semplice, senza if, for, etc. In modo che anche lui possa capire:</p>
+
+<p><pre>
+double funzione(double x)
+    {
+    return sin (1/x);
+    }
+</pre></p>
+
+<p>scriviamo il nostro secondo test, chiediamo &lsquo;derivata(0)&rsquo; e mostriamo che questa roba fallisce. Siamo ancora nelle condizioni mancanti di verifica di derivabilita&rsquo; e nelle stesse condizioni  di comprensione della funzione, ma adesso non c&rsquo;e&rsquo; nessun if. Quindi il nostro eroe che ha imparato a programmare &ldquo;per il web&rdquo; , che cosa capisce da questo fallimento? Quasi nulla. Diciamo che abbiamo qui una settantina di quei 100 che lo useranno senza ritegno , anche in condizioni di cuspidi, discontinuita&rsquo; di ogni genere, e compagnia bella.</p>
+
+<p>Cosi&rsquo; facciamo un esempio ancora piu&rsquo; semplice con una cosa semplicissimissima.</p>
+
+<p>E scriviamo un altro test fallito, e siccome non siamo figli di maria, sempre per x=3:</p>
+
+<pre>
+double funzione(double x)
+    {
+    return (1/x);
+    }
+</pre>
+
+<p>voi direte: ma perche&rsquo; dici che fallisce?</p>
+
+<p>Mettiamola cosi&rsquo;: e&rsquo; concepito per amplificare l&rsquo;errore di macchina. Sul mio compilatore c, in questo momento, usando un double restituisce -0.11111110448837280273 , credendo che sia -<sup>1</sup>&frasl;<sub>9</sub> . Per aver usato dei &ldquo;double&rdquo; potremmo avere di meglio, ma anche usando dei long double, otteniamo -0.11111111112404614687! Un po&rsquo; schifino,  diciamo. Si, i primi decimali sono corretti, ma per essere -<sup>1</sup>&frasl;<sub>9</sub> fa &ldquo;schifetto&rdquo;. Non ha proprio fallito-fallito: ha mostrato i propri limiti di precisione, ecco.</p>
+
+<p>Sono curioso di sapere cosa restituisca in altri linguaggi, ma a meno che i vostri compilatori siano molto furbi, oltre questo non mi aspetto nulla di buono.  Quell&rsquo;algoritmo fa schifo.</p>
+
+<p>Allora, che succede? Abbiamo scritto un pezzo di codice, che sul piano del codice sembra fare esattamente quello che dice la formula matematica. A dire il vero lo fa, con il piccolo dettaglio che siamo in un insieme discreto e non nel mondo dei reali (motivo per il quale l&rsquo;algoritmo termina, btw).</p>
+
+<p>Adesso riflettiamo e chiediamoci, di quei 100 che ci hanno trovato cercando su github un metodo veloce per fare le derivate, quanti hanno capito i tre test falliti. Risposta: quelli che possono capire i tre test falliti il codice se lo scrivono da soli, sono poche righe. Tutti gli altri, da quei test falliti <strong>NON CAPIRANNO NIENTE</strong>.</p>
+
+<p>Che lavoro fanno quelli che non capiscono? Oggi come oggi, potenzialmente sono ovunque. Banche, assicurazioni, ospedali, ovunque. E se pensate che ADA possa fermare il problema, vi sbagliate di grosso: la stessa funzione scritta in ADA nello stesso modo ha gli stessi identici problemi che mi sono cercato.</p>
+
+<p>Se potessimo scrivere documentazione potremmo dire chiaramente che stiamo calcolando una derivata &ldquo;destra&rdquo; , e che in un ambiente discreto in alcuni casi tutto si riduce alla stampa di un inverso dell&rsquo;epsilon di macchina con una verifica che arriva troppo tardi. Potremmo scrivere che non facciamo controlli sulla derivabilita&rsquo;.</p>
+
+<p>Ma avendo solo il codice e i test, posso scommettere quanto volete che un sacco di persone ricicleranno questa funzione, credendo che in fondo si, qualche volta non funziona, ha qualche problema di precisione (LOL) ma  in fondo, si, i numeri che deve macinare li macina.</p>
+
+<p>Quindi no: <strong>ne&rsquo; il codice ne&rsquo; i test possono sostituire la documentazione</strong>. I limiti <strong>concettuali</strong> di un algoritmo NON sono spiegabili con dei test , positivi o negativi che siano. Serve proprio la documentazione.</p>
+
+<p>Se qualcuno prendesse quel pezzo di codice sopra e iniziasse ad usarlo per fare cose serie, i risultati potrebbero essere comici. I problemi salterebbero fuori solo in alcuni casi, gli errori di accumulerebbero lentamente, sino a che &hellip;. paf.  Il vostro conto in banca sparisce.</p>
+
+<p>Il codice pericoloso NON viene fermato ne&rsquo; leggendo il codice ne&rsquo; leggendo i test. Anche quando i test falliscano, e noi forniamo i test che falliscono, <strong>SOLO ALCUNI</strong> avranno capito perche&rsquo; falliscono e quali altri casi analoghi fallirano.</p>
+
+<p>Il resto, se il codice e&rsquo; abbastanza complicato, non capira&rsquo; affatto il problema. Si limiteranno ad usare un codice che e&rsquo; limitatissimo senza averne capiti i limiti concettuali.</p>
+
+<p><center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3Jvui3-dlJA" frameborder="0" allowfullscreen></iframe>
+</center></p>
+
+<p>(1)
+<pre>
+acca 1.00000000000000000000 , D:1.00000000000000000000<br />
+acca 0.50000000000000000000 , D:2.00000000000000000000<br />
+acca 0.25000000000000000000 , D:4.00000000000000000000<br />
+acca 0.12500000000000000000 , D:8.00000000000000000000<br />
+acca 0.06250000000000000000 , D:16.00000000000000000000<br />
+acca 0.03125000000000000000 , D:32.00000000000000000000<br />
+acca 0.01562500000000000000 , D:64.00000000000000000000<br />
+acca 0.00781250000000000000 , D:128.00000000000000000000<br />
+acca 0.00390625000000000000 , D:256.00000000000000000000<br />
+acca 0.00195312500000000000 , D:512.00000000000000000000<br />
+acca 0.00097656250000000000 , D:1024.00000000000000000000<br />
+acca 0.00048828125000000000 , D:2048.00000000000000000000<br />
+acca 0.00024414062500000000 , D:4096.00000000000000000000<br />
+acca 0.00012207031250000000 , D:8192.00000000000000000000<br />
+acca 0.00006103515625000000 , D:16384.00000000000000000000<br />
+acca 0.00003051757812500000 , D:32768.00000000000000000000<br />
+acca 0.00001525878906250000 , D:65536.00000000000000000000<br />
+acca 0.00000762939453125000 , D:131072.00000000000000000000<br />
+acca 0.00000381469726562500 , D:262144.00000000000000000000<br />
+acca 0.00000190734863281250 , D:524288.00000000000000000000<br />
+acca 0.00000095367431640625 , D:1048576.00000000000000000000<br />
+acca 0.00000047683715820312 , D:2097152.00000000000000000000<br />
+acca 0.00000023841857910156 , D:4194304.00000000000000000000<br />
+acca 0.00000011920928955078 , D:8388608.00000000000000000000<br />
+acca 0.00000005960464477539 , D:16777216.00000000000000000000<br />
+acca 0.00000002980232238770 , D:33554432.00000000000000000000<br />
+acca 0.00000001490116119385 , D:67108864.00000000000000000000<br />
+acca 0.00000000745058059692 , D:134217728.00000000000000000000<br />
+acca 0.00000000372529029846 , D:268435456.00000000000000000000<br />
+acca 0.00000000186264514923 , D:536870912.00000000000000000000<br />
+acca 0.00000000093132257462 , D:1073741824.00000000000000000000<br />
+acca 0.00000000046566128731 , D:2147483648.00000000000000000000<br />
+acca 0.00000000023283064365 , D:4294967296.00000000000000000000<br />
+acca 0.00000000011641532183 , D:8589934592.00000000000000000000<br />
+acca 0.00000000005820766091 , D:17179869184.00000000000000000000<br />
+acca 0.00000000002910383046 , D:34359738368.00000000000000000000<br />
+acca 0.00000000001455191523 , D:68719476736.00000000000000000000<br />
+acca 0.00000000000727595761 , D:137438953472.00000000000000000000<br />
+acca 0.00000000000363797881 , D:274877906944.00000000000000000000<br />
+acca 0.00000000000181898940 , D:549755813888.00000000000000000000<br />
+acca 0.00000000000090949470 , D:1099511627776.00000000000000000000<br />
+acca 0.00000000000045474735 , D:2199023255552.00000000000000000000<br />
+acca 0.00000000000022737368 , D:4398046511104.00000000000000000000<br />
+acca 0.00000000000011368684 , D:8796093022208.00000000000000000000<br />
+acca 0.00000000000005684342 , D:17592186044416.00000000000000000000<br />
+acca 0.00000000000002842171 , D:35184372088832.00000000000000000000<br />
+acca 0.00000000000001421085 , D:70368744177664.00000000000000000000<br />
+acca 0.00000000000000710543 , D:140737488355328.00000000000000000000<br />
+acca 0.00000000000000355271 , D:281474976710656.00000000000000000000<br />
+acca 0.00000000000000177636 , D:562949953421312.00000000000000000000<br />
+acca 0.00000000000000088818 , D:1125899906842624.00000000000000000000<br />
+acca 0.00000000000000044409 , D:2251799813685248.00000000000000000000<br />
+acca 0.00000000000000022204 , D:4503599627370496.00000000000000000000<br />
+acca 0.00000000000000011102 , D:9007199254740992.00000000000000000000<br />
+acca 0.00000000000000005551 , D:18014398509481984.00000000000000000000<br />
+acca 0.00000000000000002776 , D:36028797018963968.00000000000000000000<br />
+acca 0.00000000000000001388 , D:72057594037927936.00000000000000000000<br />
+acca 0.00000000000000000694 , D:144115188075855872.00000000000000000000<br />
+acca 0.00000000000000000347 , D:288230376151711744.00000000000000000000<br />
+acca 0.00000000000000000173 , D:576460752303423488.00000000000000000000<br />
+acca 0.00000000000000000087 , D:1152921504606846976.00000000000000000000<br />
+acca 0.00000000000000000043 , D:2305843009213693952.00000000000000000000<br />
+acca 0.00000000000000000022 , D:4611686018427387904.00000000000000000000<br />
+acca 0.00000000000000000011 , D:0.00000000000000000000<br />
+acca 0.00000000000000000005 , D:0.00000000000000000000<br />
+</pre></p>
+
+<br>
+<div class="addthis_native_toolbox"></div>
+
+</div>
+
+  </section>
+  <footer>
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        <h1 class="author-name text-primary">Uriel Fanelli</h1>
+        
+        
+      </div>
+      
+      <div class="author-contact col-md-4">
+        <a href="mailto:uriel.fanelli@gmx.de">
+          <i class="fa fa-envelope-o"></i>
+          &nbsp;Contact me
+        </a>
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="http://www.wolfstep.cc/post/programmazozzi/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next"><a href="http://www.wolfstep.cc/post/antichitalalala/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+
+
+
+<iframe id="forum_embed"
+  src="javascript:void(0)"
+  scrolling="no"
+  frameborder="0"
+  width="100%"
+  height="700">
+</iframe>
+
+<script type="text/javascript">
+  document.getElementById('forum_embed').src =
+     'https://groups.google.com/forum/embed/?place=forum/kein-pfusch'
+     + '&showsearch=false&showpopout=true&showtabs=false&hl=it&theme=Light'
+     + '&parenturl=' + encodeURIComponent(window.location.href);
+</script>
+
+
+
+
+
+
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      
+    </div>
+    <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+  </footer>
+
+  <script src="http://www.wolfstep.cc//js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f32bcd406c5e50" async="async"></script>
+
+
+</body>
+</html>
+

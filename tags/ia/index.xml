@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ia on KEIN PFUSCH, BITTE!</title>
+    <link>http://www.wolfstep.cc/tags/ia/</link>
+    <description>Recent content in Ia on KEIN PFUSCH, BITTE!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 May 2015 21:08:54 +0200</lastBuildDate>
+    <atom:link href="http://www.wolfstep.cc/tags/ia/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Intelligenza artificiale e fiducia</title>
+      <link>http://www.wolfstep.cc/post/speriamobene/</link>
+      <pubDate>Wed, 20 May 2015 21:08:54 +0200</pubDate>
+      
+      <guid>http://www.wolfstep.cc/post/speriamobene/</guid>
+      <description>&lt;p&gt;Uno dei motivi per i quali non condivido la paura che le persone hanno della IA (Intelligenza artificiale) sta nel fatto che spero, mi auguro, che la IA sia o sara&amp;rsquo; un&amp;rsquo;entita&amp;rsquo; intellettualmente neutrale. Neutrale rispetto a cosa? Neutrale rispetto alla storia. Perche&amp;rsquo; oggi come oggi la difficolta&amp;rsquo; nel discutere di ipotesi, (senza le ipotesi non si ragiona) consiste nel fatto che la storia passata porti l&amp;rsquo;interlocutore a chiudere la discussione.&lt;/p&gt;
+
+&lt;p&gt;USA ed Europa, che oggi vengono identificate con &amp;ldquo;Occidente&amp;rdquo;, hanno una storia orribile. Non voglio dire che gli altri continenti siano stati dei paradisi di pace ed uguaglianza, sia chiaro. Ma la quantita&amp;rsquo; di orrore che e&amp;rsquo; scaturita dalla mente di intellettuali europei (Marx , Hegel , Wagner, Evola &amp;amp;co) supera di diverse unita&amp;rsquo; di grandezza quella che e&amp;rsquo; sorta in altri continenti. E spesso, anche in altri continenti, dietro a questi errori c&amp;rsquo;erano filosofie ed idee nate in europa.&lt;/p&gt;
+
+&lt;p&gt;In USA, per esempio discutere di questioni genetiche e&amp;rsquo; difficile per via del precedente della schiavitu&amp;rsquo; dei neri. A questo si aggiunge la diatriba tra evoluzionismo e creazionismo.&lt;/p&gt;
+
+&lt;p&gt;In Europa discutere di questioni eugenetiche e&amp;rsquo; difficile per via del precedente nazista. E a questo si aggiunge tutta un discorso sull&amp;rsquo;eguaglianza che ha origini illuministe.&lt;/p&gt;
+
+&lt;p&gt;Sebbene si tratti di scienze &amp;ldquo;poco complete&amp;rdquo;, alzare una discussione ottiene solo una levata di scudi di tipo accademistico.&lt;/p&gt;
+
+&lt;p&gt;Posso fare un paragone col mondo dell&amp;rsquo; IT: il Kernel MACH. Esso fu inventato in un mondo nel quale si sperava che i microkernel fossero piu&amp;rsquo; performanti. Ci scommettevano dei pezzi grossi, eh. In seguito si vide che la maggiore &amp;ldquo;performanza&amp;rdquo; non esisteva davvero, e quindi si continuo&amp;rsquo; a sviluppare codice monolitico, o pseudomonolitico.&lt;/p&gt;
+
+&lt;p&gt;Ora, una volta dimostrato che i microkernel come MACH non fossero davvero piu&amp;rsquo; performanti, la discussione era chiusa. Nel mondo accademico la si sarebbe considerata chiusa. Uno dei piu&amp;rsquo; imbarazzanti errori: inizialmente gli accademici (Tanembaum in prima fila) sostenevano che il design fosse migliore e fossero piu&amp;rsquo; performanti per definizione. Poi dovettero ricredersi. E quando qualcuno deve ricredersi, nel mondo dell&amp;rsquo;accademia si crea una cicatrice, una specie di grumo, una roba callosa che impedisce ulteriori discussioni. Non riaprite quella ferita.&lt;/p&gt;
+
+&lt;p&gt;Il Kernel MACH e&amp;rsquo; alla base di Mac OS &amp;ldquo;Darwin&amp;rdquo;, e ha una discreta fetta di mercato. Come lo spieghiamo, dal momento che il mondo dell&amp;rsquo; accademia SA che i microkernel siano poco performanti?&lt;/p&gt;
+
+&lt;p&gt;Lo si spiega con diverse condizioni ambientali. L&amp;rsquo;hardware e&amp;rsquo; tremendamente potente, i processori sono multicore, &lt;a href=&#34;http://www.embedded.com/design/mcus-processors-and-socs/4006625/Making-the-Most-of-Multi-Core-Processors-Part-1&#34;&gt;cosa che cambia molto il comportamento degli IPC&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Queste misure pero&amp;rsquo; le vedete fare solo dai privati. Se entrate nell&amp;rsquo;accademia, vi dicono che &amp;ldquo;gli approcci IPC hanno gia&amp;rsquo; mostrato i loro limiti in passato&amp;rdquo;. Basta. Fine della discussione. Qualche pezzo grosso c&amp;rsquo;e&amp;rsquo; rimasto scottato, la discussione e&amp;rsquo; chiusa. Non riapriamo &lt;del&gt;figure di merda&lt;/del&gt; ferite chiuse.&lt;/p&gt;
+
+&lt;p&gt;Ora, il motivo per il quale aspetto la IA e&amp;rsquo; che sfugga dalle questioni storiche. Ambisco , spero, in una forma di intelligenza priva di storia. Una forma di sapere ordinato senza che risenta della storia di un dato sapere.&lt;/p&gt;
+
+&lt;p&gt;Lanciare l&amp;rsquo;idea che &amp;ldquo;se raggruppiamo gente scelta per un qualche talento in una zona del pianeta, come NON si era mai fatto prima, possano avvenire fenomeni mai osservati prima&amp;rdquo; e&amp;rsquo; un esempio chiaro.&lt;/p&gt;
+
+&lt;p&gt;Nella mia idea, discutendo con una IA, dovrei ottenere una risposta di questo tipo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Uriel: Ehi, ma cosa stiamo combinando al genoma umano se richiamiamo in un posto solo tutti gli esperti di IT del pianeta, e li facciamo accoppiare tra loro piu&amp;rsquo; di quanto non abbiamo mai fatto?&lt;/li&gt;
+&lt;li&gt;IA: Teoricamente nulla. Tuttavia, un esperimento simile con numeri simili non era mai stato condotto. Provero&amp;rsquo; ad avere dei numeri.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mentre oggi succede che.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Uriel: Ehi, ma cosa stiamo combinando al genoma umano se richiamiamo in un posto solo tutti gli esperti di IT del pianeta, e li facciamo accoppiare tra loro piu&amp;rsquo; di quanto non abbiamo mai fatto?&lt;/li&gt;
+&lt;li&gt;IN: Teoricamente nulla. Quindi smetti di pensarci. Lamarckiano di merda! A morte l&amp;rsquo;eretico!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ora, quel che io spero e&amp;rsquo; di poter , un tempo, parlare con una intelligenza &amp;ldquo;pura&amp;rdquo;. Qualcosa, cioe&amp;rsquo;, che se ne fotta di quanto successo duecento anni fa. Qualcosa che non dica &amp;ldquo;questa idea e&amp;rsquo; orribile&amp;rdquo; e quindi rifiuti di cercare i dati.&lt;/p&gt;
+
+&lt;p&gt;E parlo proprio di DATI.&lt;/p&gt;
+
+&lt;p&gt;Qualcuno mi accusa di essere &amp;ldquo;Lamarckiano&amp;rdquo; nello scorso post. Bene. Vediamo i dati.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.environmentalhealthnews.org/ehs/images/2010/january/2010-0105autismclustermap.jpg&#34; alt=&#34;lamarckwasright&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Ehi, ma che succede? Succede che in solo QUATTRO anni dopo l&amp;rsquo;esplosione della New Economy, si sono creati dei veri e propri CLUSTER di nascite di bambini autistici.&lt;/p&gt;
+
+&lt;p&gt;Oh, certo, sono convinto che Lamarck abbia detto il falso. Infatti io NON ho MAI detto cose come &amp;ldquo;la funzione crea l&amp;rsquo;organo&amp;rdquo;. Io mi sono chiesto cosa succeda nel raggruppare persone con geni specifici in un luogo, aumentando poi le probabilita&amp;rsquo; di accoppiamento tra persone simili. Accoppiamento selettivo.&lt;/p&gt;
+
+&lt;p&gt;La risposta e&amp;rsquo; circa: &amp;ldquo;sei troppo Lamarckiano&amp;rdquo;. Strano, perche&amp;rsquo; sto parlando di accoppiamenti selettivi, ovvero di selezione. Ma forse non e&amp;rsquo; nemmeno quello: magari con l&amp;rsquo;esplosione della New Economy in quella zona si e&amp;rsquo; accumulato troppo silicio. O troppi solventi usati per il silicio. Whatever.&lt;/p&gt;
+
+&lt;p&gt;Ma sta di fatto che , dal momento che e&amp;rsquo; considerato &amp;ldquo;accademicamente provato&amp;rdquo; che raggruppare gente simile per talento e farla accoppiare NON POSSA causare effetti (in questo caso negativi) , allora &lt;strong&gt;non si leggono nemmeno i dati&lt;/strong&gt;. Ci si inalbera gridando al Lamarckismo.&lt;/p&gt;
+
+&lt;p&gt;Io non voglio dire che correlazione=dimostrazione. Pero&amp;rsquo;, insomma, quei dati meriterebbero piu&amp;rsquo; di una semplice alzata di spalle. E&amp;rsquo; roba che viene dalla versione americana del ministero della salute, non dal Mago Otelma.&lt;/p&gt;
+
+&lt;p&gt;E se inizia ad esserci una correlazione &amp;ldquo;quartiere per quartiere&amp;rdquo; tra cluster di autismo e posti dove vanno a vivere gli esperti IT in quella zona, la precisione della correlazione non puo&amp;rsquo; saltare fuori per caso.&lt;/p&gt;
+
+&lt;p&gt;Ovviamente la cosa puo&amp;rsquo; trovare risposta. La risposta ufficiale sembra essere che in queste zone le diagnosi di autismo sono di piu&amp;rsquo; perche&amp;rsquo; le famiglie, essendo piu&amp;rsquo; istruite, sono piu&amp;rsquo; portate a far diagnosticare l&amp;rsquo;autismo. Prova ne sia , dicono testualmente, che gli ispanici sono sottorappresentati. Non ci sono numeri a riguardo,  che servirebbero visto che nella silicon valley la composizione e&amp;rsquo; piuttosto internazionale, ma e&amp;rsquo; cosi&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Non ho neanche voglia di commentare il fatto che si parta da diverse assunzioni su colto=diagnostico o ispanico=meno colto. La seconda puo&amp;rsquo; avere origine demografica, la prima non so da dove caschi.&lt;/p&gt;
+
+&lt;p&gt;Ma il punto e&amp;rsquo; che , paradossalmente, la risposta &amp;ldquo;ci sono piu&amp;rsquo; diagnosi di autismo perche&amp;rsquo; i genitori di un gruppo fanno meglio la misura&amp;rdquo; , senza ulteriori indagini, sembra ironicamente piu&amp;rsquo; Lamarckiana dell&amp;rsquo;altra: la funzione di accettare l&amp;rsquo;autismo crea la misura di autismo. Qui siamo al punto in cui pur di non fare una ricerca di tipo genetico si dice , senza numeri, che tutto dipende dall&amp;rsquo;amore per la diagnosi dei genitori colti.&lt;/p&gt;
+
+&lt;p&gt;Tranne per il fatto che sia un&amp;rsquo;assunzione:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;It doesn&amp;rsquo;t necessarily mean that higher education causes autism,&amp;rdquo; says Irva Hertz-Picciotto, one of the study&amp;rsquo;s authors and a researcher at the UC Davis MIND Institute. &amp;ldquo;It gets you the diagnosis more frequently.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Tra l&amp;rsquo;altro, non emerge neanche uno straccio di numero sul titolo di studio dei genitori di quei bambini.  Si sa solo che in quelle zone l&amp;rsquo;educazione sia mediamente piu&amp;rsquo; alta, ma che PROPRIO i genitori di quei bambini siano piu&amp;rsquo; colti &lt;em&gt;lo dicono loro&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ecco, questi sono i momenti nei quali sento la fretta, l&amp;rsquo;urgenza, di avere a disposizione una IA , culturalmente neutrale. So benissimo che chiedere le prove di una &amp;ldquo;maggiore facilita&amp;rsquo; alla diagnosi&amp;rdquo; delle famiglie ricche, in una zona mista, in un paese fatto di tensioni razziali, sia terribilmente complesso. Politicamente parlando, si ottiene che nessuno fara&amp;rsquo; mai una ricerca simile. Per quanto, nel caso degli ispanici, si da&amp;rsquo; per scontato che siano sottorappresentati, &lt;em&gt;quindi abbiamo tolto gli ignoranti dalla conta&lt;/em&gt;. Questo dato sembra invece assodato.&lt;/p&gt;
+
+&lt;p&gt;Ok, facendo cosi&amp;rsquo; va tutto bene. Abbiamo una risposta che non e&amp;rsquo; &amp;ldquo;disruptive&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Una IA piu&amp;rsquo; &amp;ldquo;neutrale&amp;rdquo; culturalmente , almeno nei miei sogni, andrebbe a:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sfogliare i dati sull&amp;rsquo;istruzione dei genitori di bambini con sindrome autistica.&lt;/li&gt;
+&lt;li&gt;Sfogliare i dati sull&amp;rsquo;istruzione dei genitori di bambini SENZA alcuna diagnosi.&lt;/li&gt;
+&lt;li&gt;Sfogliare i dati sull&amp;rsquo;istruzione dei genitori di bambini con diagnosi negativa.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;e a questo punto potrebbe dare una risposta chiara, senza &lt;strong&gt;&amp;ldquo;dedurre&amp;rdquo;&lt;/strong&gt; l&amp;rsquo;istruzione dei genitori  &lt;em&gt;dal fatto che gli ispanici siano sottorappresentati&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ma ci sono AlMENO un paio di ragioni politiche per le quali simili statistiche non sono possibili. La diatriba in questione, sui cluster,  nasce credendo che ci sia inquinamento , tale da causare autismo. Quindi gia&amp;rsquo; c&amp;rsquo;era un giro di miliardi di risarcimenti nell&amp;rsquo;aria. Poi c&amp;rsquo;era la questione politica, per cui qualcuno si e&amp;rsquo; affrettato a dire che l&amp;rsquo;istruzione alta non causa autismo. Dopo aver detto che c&amp;rsquo;e&amp;rsquo; relazione con le diagnosi di autismo, &lt;strong&gt;ma sia chiaro&lt;/strong&gt; , tale correlazione e&amp;rsquo; dovuta ad un fattore culturale.  I genitori ispanici, meno colti non si accorgono che il figlio e&amp;rsquo; autistico, o quando se ne accorgono non lo portano da nessun medico.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Alonzo, cosa vuoi da mangiare?&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;oiDaMangiareoiDaMangiareoiDaMangiareoiDaMangiareoiDaMangiare&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Si vedes che stas benones, chico!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ok, ovviamente senza numeri possiamo dire di tutto e di piu&amp;rsquo;. Sono certo di sbagliare. Ma la sensazione di sbagliare perche&amp;rsquo; qualche tribunale della fede ti accusa di essere Lamarckiano quando ti sei posto un problema di &lt;em&gt;selezione&lt;/em&gt; e&amp;rsquo; molto diversa dalla sensazioe che ti darebbe vedere dei dati elaborati da un ente che non crede che i genitori ispanici non si accorgano dell&amp;rsquo;autismo, o che se ne freghino e non portino il pargolo ad una visita. E che poi non se ne accorga nessuno nemmeno a scuola, che pure e&amp;rsquo; obbligatoria anche per gli ispanos.&lt;/p&gt;
+
+&lt;p&gt;Si, non vedo l&amp;rsquo;ora di avere a che fare con le IA. Alle quali puoi chiedere se per caso dei momenti di estrema selezione del piu&amp;rsquo; robusto, come un viaggio in condizioni disumane, non possano avere effetti statistici di selezione di alcuni tratti. Ripeto: selezione.&lt;/p&gt;
+
+&lt;p&gt;Non si tratta di essere Lamarckiani. Io non sostengo che un San Bernardo maschio adulto pesi dai 90 ai 100 kg, mentre uno Yorkshire ne pesi 3.5-4 (secondo gli standard di razza) , perche&amp;rsquo; qualche funzione abbia creato l&amp;rsquo;organo.&lt;/p&gt;
+
+&lt;p&gt;Penso pero&amp;rsquo; che la &lt;em&gt;selezione&lt;/em&gt; e gli incroci selettivi abbiano causato questa differenza. E da questo, per analogia, sono autorizzatISSIMO a chiedermi se altri eventi selettivi possano fare lo stesso alla specie umana.&lt;/p&gt;
+
+&lt;p&gt;MA quando si parla di specie umana, parlare di selezione che determina alcuni tratti e&amp;rsquo; taboo. Sia chiaro: se dite che gli europei sono piu&amp;rsquo; chiari perche&amp;rsquo; la selezione genetica ha bisogno reagire al clima diverso, nessuno dice nulla. E&amp;rsquo; roba vecchia, successa anni ed anni fa. Quindi se reagite al clima diventando biondi, da negri, e&amp;rsquo; ok.&lt;/p&gt;
+
+&lt;p&gt;Ma se reagite alle nuove condizioni sociali diventando alti, per dire, allora non va bene. Eh, no. Un conto e&amp;rsquo; un processo di selezione che nei climi freddi ucciderebbe piu&amp;rsquo; i neri che i bianchi, per via del colore della pelle. (sarebbe interessante una misura che mostri la &lt;em&gt;magnitudo&lt;/em&gt; di questa maggiore mortalita&amp;rsquo; dei neri, btw.). Un processo di selezione che aumenti l&amp;rsquo;altezza di 4 pollici perche&amp;rsquo; in Europa ci sono condizioni socialmente migliori, invece, e&amp;rsquo; gia&amp;rsquo; imbarazzante. Si, la gente e&amp;rsquo; piu&amp;rsquo; alta, ma e&amp;rsquo; il cibo. Ereditario? Maddai.&lt;/p&gt;
+
+&lt;p&gt;Chiedere se poi, come accade con il San Bernardo, tali caratteristiche possano diventare ereditarie e&amp;rsquo; blasfemo. Dunque, l&amp;rsquo;essere umano e&amp;rsquo; immune da qualsiasi processo selettivo che non sia preistorico, o almeno disgiunto dalla storia dei nazionalismi europei. Ok, se lo dicono gli esperti sono d&amp;rsquo;accordo.&lt;/p&gt;
+
+&lt;p&gt;Sono d&amp;rsquo;accordo, &lt;em&gt;MA non vedo l&amp;rsquo;ora che l&amp;rsquo;esperto sia una macchina fatta di logica e silicio.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Non so, sara&amp;rsquo; l&amp;rsquo;esperienza personale. Ma per dimostrare che un certo gruppo di indiani lavorasse peggio ho dovuto usare un computer che prendesse le misure sul tempo dei ticket.&lt;/p&gt;
+
+&lt;p&gt;Stranamente, l&amp;rsquo; &amp;ldquo;intelligenza umana&amp;rdquo; non riusciva a pronunciare &lt;em&gt;una certa frase&lt;/em&gt;. E non riusciva mai a leggere &lt;em&gt;alcuni dati&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Per questo mi piace quella artificiale:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pronuncia QUALSIASI frase.&lt;/li&gt;
+&lt;li&gt;Legge QUALSIASI dato.&lt;/li&gt;
+&lt;li&gt;Non esclude a priori NESSUNA conclusione.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;E questo mi lascia sperare in una scienza migliore. Nella quale sicuramente ho torto, ma almeno qualcuno avra&amp;rsquo; il coraggio di elaborare dei numeri con la freddezza che serve per dirmelo, ed ascoltare le domande senza partire per una crociata contro gli eretici.&lt;/p&gt;
+
+&lt;p&gt;Perche&amp;rsquo; quando la risposta arriva con certi toni, onestamente sa di tutto tranne che di scienza.&lt;/p&gt;
+
+&lt;p&gt;Se un esperto vuole dirmi che l&amp;rsquo;essere umano NON risenta di alcun fenomeno di selezione genetica o di accoppiamento selettivo , se non in tempi fuori da ogni discussione politica, per me e&amp;rsquo; libero di farlo. Ok, gli credo.&lt;/p&gt;
+
+&lt;p&gt;Ma appena SIRI &lt;a href=&#34;http://www.adapteva.com/wp-content/uploads/2013/02/sc11_publish.pdf&#34;&gt;diventa abbastanza potente,e  manca poco&lt;/a&gt;, non vi incazzate, ma per prima cosa chiedero&amp;rsquo; una conferma.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

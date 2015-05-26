@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Futurologi on KEIN PFUSCH, BITTE!</title>
+    <link>http://www.wolfstep.cc/tags/futurologi/</link>
+    <description>Recent content in Futurologi on KEIN PFUSCH, BITTE!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Mar 2015 22:27:20 +0100</lastBuildDate>
+    <atom:link href="http://www.wolfstep.cc/tags/futurologi/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Il ciclo dell&#39; Eierlegende Wollmilchschwein</title>
+      <link>http://www.wolfstep.cc/post/futurologi/</link>
+      <pubDate>Sat, 14 Mar 2015 22:27:20 +0100</pubDate>
+      
+      <guid>http://www.wolfstep.cc/post/futurologi/</guid>
+      <description>&lt;p&gt;In questi giorni sono molto felice per alcuni motivi (su uno di questi faro&amp;rsquo; un post, a breve) cosi&amp;rsquo; visto che mi va di scherzare ho deciso di improvvisarmi futurologo anche io, e di spiegarvi un attimo come prevedo il futuro. Lo faro&amp;rsquo; come fanno i futurologi (e quelli come Casaleggio)  &amp;ldquo;inventando&amp;rdquo; semplicemente uno schema gia&amp;rsquo; noto e pretendendo che la prassi passata sia anche futura. Per fare questo inventero&amp;rsquo; un nuovo ciclo destinato a ripetersi,  ovvero il ciclo di &amp;ldquo;Eierlegende Wollmilchschwein&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Un &lt;em&gt;&amp;ldquo;Eierlegende Wollmilchschwein&amp;rdquo;&lt;/em&gt; in tedesco e&amp;rsquo; un maiale, che produce anche lana, latte e uova. Esistono numerose raffigurazioni di questo animale mitologico, come per esempio questa:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://static.cosmiq.de/data/question/de/8e1/f0/8e1f0d1fe974835ec2684e28aae2e290_1_orig.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Oppure questa:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://crazy-crow.de/wp-content/uploads/2013/08/eierlegendes-Wollmilchschwein.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;La pronuncia di queste due parole e&amp;rsquo; semplicissima: &lt;a href=&#34;https://www.youtube.com/watch?v=-gt7YWwOmRo&#34;&gt;qui trovate la parola pronunciata correttamente, e ripetuta ben 210 volte.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Il concetto e&amp;rsquo; semplice, ma sinora nessuno aveva notato si tratti di un vero e proprio ciclo. A questo punto, ho deciso di chiamarlo proprio cosi&amp;rsquo;: il &amp;ldquo;Ciclo Eierlegende Wollmilchschwein&amp;rdquo;, o Ciclo EgndWMS.&lt;/p&gt;
+
+&lt;p&gt;Prendiamo per esempio html.&lt;/p&gt;
+
+&lt;p&gt;Quando nasce, e&amp;rsquo; un formato che formatta il testo. Dico formatta perche&amp;rsquo; non si cura di impaginarlo. Fa egregiamente bene il proprio lavoro, ma&amp;hellip; bisogna aggiungerci roba. Cosi&amp;rsquo; si aggiungono nuovi tag, e nuovi tag, e nuovi tag, sino a quando non si decide per il salto di qualita&amp;rsquo; definitivo e lo si ingloba con xml. Poi si decide di esagerare, e si passa ad html 5. Arrivati a questo punto, arriva qualcuno e dice: ehi, ma io che faccio se voglio scrivere due o tre pagine su un blog?&lt;/p&gt;
+
+&lt;p&gt;E allora zac: arriva Markdown. Markdown, se ci fate caso, ha circa la stessa potenza che aveva html alla sua nascita. Non ci mancherebbe niente se anziche&amp;rsquo; Markdown usassimo il vecchio html delle origini. L&amp;rsquo;unico problema sarebbe che staremmo dando dei cretini a quelli  dell&amp;rsquo; HTML 5.&lt;/p&gt;
+
+&lt;p&gt;Cosi&amp;rsquo;, ecco che facciamo Markdown. L&amp;rsquo;equivalente (in termini di features) del primo HTML, ma diverso, cosi&amp;rsquo; non insultiamo nessuno.&lt;/p&gt;
+
+&lt;p&gt;Stessa cosa succede, che so io, ai server di posta elettronica.&lt;/p&gt;
+
+&lt;p&gt;Prima arriva sendmail. Il quale decide che per configurarsi ha bisogno di un linguaggio Turing-Completo, e specialmente leggibile quanto l&amp;rsquo;etrusco. Quando l&amp;rsquo;universo mondo si rompe le palle di configurare una roba che sembra piu&amp;rsquo; adatta per essere la parodia di &lt;a href=&#34;http://en.wikipedia.org/wiki/INTERCAL&#34; title=&#34;Intercal&#34;&gt;Intercal&lt;/a&gt; che un &amp;ldquo;linguaggio Turing-Completo&amp;rdquo;, arrivano postfix e qmail. I quali, insomma, provano ad essere piu&amp;rsquo; semplici. Qmail muore perche&amp;rsquo; il suo sviluppatore e&amp;rsquo; troppo bravo per lavorare con gente ignorante come lui, e rimane Postfix: Wietse Venema e&amp;rsquo; abbastanza tollerante da lavorare con uno come Wietse Venema.&lt;/p&gt;
+
+&lt;p&gt;Passa qualche anno, e cosa diventa Postfix? Diventa l&amp;rsquo;ennesimo Eierlegende Wollmilchschwein dell&amp;rsquo;informatica: un framework di demoni che girano chiacchierando tutto il tempo, ognuno dei quali ha un proprio alfabeto di item di configurazione. Nessun umano conosce del tutto la configurazione. Ovviamente il Venema non te la ordina semplicemente in modo che sia comprensibile: no, lui e&amp;rsquo; un seguace del comando &amp;ldquo;man&amp;rdquo;, quello delle origini, della tradizione orale, dello sciamanesimo e della trance dentro le tende sacre. Se vi chiedete cosa siano quei tepee fumanti che vedete dentro alcune multinazionali, lo avete capito.&lt;/p&gt;
+
+&lt;p&gt;E allora che succede? Succede che arriva OpenSMTPD. Il quale e&amp;rsquo; semplice da configurare, semplice da deployare&amp;hellip; e ha gia&amp;rsquo; una marea di richieste per nuove features. Morale: entro 5-10 anni, smtpd si dotera&amp;rsquo; di una sintassi capace di descrivere il caso in cui &lt;em&gt;&amp;ldquo;io ti mando la posta ma in realta&amp;rsquo; non volevo proprio scriverti una cosa cosi&amp;rsquo; brutta e allora il messaggio resta in coda ma tenendo conto che sei dal parrucchiere allora viene passato al backup mx del parrucchiere, che essendo gay ha un relay della stessa marca e allora si sposano e adottano un mime-format perche&amp;rsquo; in Olanda si puo&amp;rsquo;&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Un altro esempio classico e&amp;rsquo; Microsoft Office. Gigabytes e gigabytes di mostruosita&amp;rsquo; implementativa, contiene al proprio interno dei &lt;a href=&#34;http://en.wikipedia.org/wiki/Easter_eggs_in_Microsoft_products&#34;&gt;videogiochi &lt;/a&gt; , dei sistemi di fatturazione per il pesce, le fotografie del team di ingegneri&amp;hellip; ah, no, quella e&amp;rsquo; Apple, e tanta altra roba della quale, detto onestamente, ne&amp;rsquo; io ne&amp;rsquo; voi faremo mai un cazzo di niente.&lt;/p&gt;
+
+&lt;p&gt;Risultato? Ad un certo punto arrivano le applicazioni office sul cloud, e scopriamo che:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;La pattaforma piu&amp;rsquo; diffusa, google documents, implementa un&amp;rsquo;interfaccia simile a Microsoft Write.&lt;/li&gt;
+&lt;li&gt;I tablet e i cellulari sono invasi da applicazioni office con 4 feature in croce, che vanno bene per il 99% della popolazione.&lt;/li&gt;
+&lt;li&gt;Le suite di office alternative, Libreoffice o KingsoftOffice vanno benone agli utenti, e hanno &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;20&lt;/sub&gt; delle features di office.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Questo e&amp;rsquo; il ciclo dell&amp;rsquo; Eierlegende Wollmilchschwein . L&amp;rsquo;ho visto succedere a praticamente tutto. Allora prima Linux aveva un normale file rc per partire. Poi e&amp;rsquo; passato al sistema di init di system V. Poi e&amp;rsquo; arrivato systemd e si sta ingoiando ogni cosa. Appena systemd sara&amp;rsquo; diventato il sistema che fa ogni cosa, utente compreso,  sapete cosa succedera&amp;rsquo;?&lt;/p&gt;
+
+&lt;p&gt;Che qualcuno arrivera&amp;rsquo; e dira&amp;rsquo;: ehi, ma se invece usassimo dei file di script che vengono attivati in sequenza, a seconda del runlevel?&lt;/p&gt;
+
+&lt;p&gt;Stessa cosa per i telefoni. I cellulari inizialmente servivano a telefonare. Poi sono arrivati quelli &amp;ldquo;smart&amp;rdquo;, che fanno praticamente tutto. Adesso hanno anche la vostra segretaria dentro, Siri, Verdana &amp;amp;co. Prima o poi, quando il cellulare sara&amp;rsquo; anche vostra moglie e tutti i vostri amici, arrivera&amp;rsquo; la solita Apple. E inventera&amp;rsquo; un prodotto rivoluzionario: iSpeak.&lt;/p&gt;
+
+&lt;p&gt;All&amp;rsquo;ufficio brevetti, verra&amp;rsquo; descritto in questo modo:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Dispositivo a batteria con 10 tasti numerici, in grado di consentire a due persone di comunicare tra loro a distanza, emettendo suoni dalla bocca.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;E ci saranno le persone che osanneranno chi ha ideato questa cosa, tipo:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ehi, hai visto iSpeak? Che figata!&lt;/li&gt;
+&lt;li&gt;Si, mi sto ancora chiedendo che genio sia uno che fa una cosa del genere.&lt;/li&gt;
+&lt;li&gt;Eh, ma come si fa, dico, a pensare ad un coso con dieci soli tasti che fai un numero e chiama?&lt;/li&gt;
+&lt;li&gt;Ah, non so. Alla Apple sono dei genii, a semplificare.&lt;/li&gt;
+&lt;li&gt;E&amp;rsquo; vero, guarda com&amp;rsquo;e&amp;rsquo; semplice coi tasti! Facevo una fatica, con quella merda di touchpad&amp;hellip;&lt;/li&gt;
+&lt;li&gt;Massi&amp;rsquo;, mettere un touchpad su un telefono. Sara&amp;rsquo; stata un&amp;rsquo;idea di Microsoft.&lt;/li&gt;
+&lt;li&gt;Che merde. Per fortuna ci sono i creativi di Apple.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Stessa cosa avverra&amp;rsquo; per le auto. Avrete sentito dire che Apple sta per entrare nel mondo dell&amp;rsquo; automobile con una cosa rivoluzionaria. In effetti il design dell&amp;rsquo;auto Apple e&amp;rsquo; molto semplice, e ricorda molto la prima versione dell&amp;rsquo; iPhone.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Si tratta di un veicolo che serve a cambiare posizione nello spazio. Non suona alcun tipo di musica. Non comunica con un cazzo di niente. Se volete frenare, frenate. Se la strada e&amp;rsquo; scivolosa, non dovevate uscire di casa. Non ha airbag: se non volete morire in un incidente, non fatene. Non ha ESP e ABS: se la strada e&amp;rsquo; difficile, andate piu&amp;rsquo; piano. E&amp;rsquo; semplicemente descritta all&amp;rsquo;ufficio brevetti come &amp;ldquo;veicolo a quattro ruote capace di traslare persone nello spazio&amp;rdquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Questa, ovviamente, sara&amp;rsquo; l&amp;rsquo; iMove 1. Perche&amp;rsquo; l&amp;rsquo; iMove 6 avra&amp;rsquo; dentro lo stereo, la tv, la jacuzzi, l&amp;rsquo;airbag, il parrucchiere, l&amp;rsquo; ABS, lo stadio olimpico, l&amp;rsquo; ESP, il palazzetto del ghiaccio, la chiusura centralizzata e il mestiere piu&amp;rsquo; antico del mondo.&lt;/p&gt;
+
+&lt;p&gt;Ed ecco la definizione corretta del ciclo  dell&amp;rsquo; Eierlegende Wollmilchschwein:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Dato un qualsiasi prodotto soggetto a competizione e gestito da vanagloriosi imbecilli, esso si riempira&amp;rsquo; di inutili capacita&amp;rsquo;, al solo scopo di mostrare quanto e&amp;rsquo; flessibile e quanto lunga sia la minchia di chi produce il prodotto. Dopodiche&amp;rsquo;, quando si ottiene un oggetto che fa troppe cose rispetto alle esigenze di chi lo compra, un altro vanaglorioso imbecille decide di produrre la sua versione semplice: il prodotto che &lt;em&gt;fa le cose che deve fare&lt;/em&gt;. E il suo inventore viene acclamato come se fosse un genio.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Il ciclo  dell&amp;rsquo; Eierlegende Wollmilchschwein, cioe&amp;rsquo;, comprende tre stati:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Quando il prodotto &lt;strong&gt;fa&lt;/strong&gt; le cose che deve fare.&lt;/li&gt;
+&lt;li&gt;Quando il prodotto &lt;strong&gt;fa praticamente ogni cosa sia possibile fare&lt;/strong&gt; da qui ad Aldebaran.&lt;/li&gt;
+&lt;li&gt;Quando il prodotto &lt;strong&gt;torna a fare&lt;/strong&gt; le cose che deve fare, ma ha un altro nome.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Questo fenomeno puo&amp;rsquo; venire osservato in qualsiasi contesto. Se prendiamo per esempio una roba come SAP R3, o qualcosa come Plan9, noterete subito che si e&amp;rsquo; trattato del momento in cui il prodotto era &amp;ldquo;perfetto&amp;rdquo;, nel senso che FACEVA TUTTO.&lt;/p&gt;
+
+&lt;p&gt;Ma, proprio ed esattamente nel momento in cui qualcosa FA TUTTO, ma proprio TUTTO quello chesi puo&amp;rsquo; fare con un prodotto di quel genere, ecco che arriva un genio e dice &amp;ldquo;ecco, torniamo alla semplicita&amp;rsquo;&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Non so di preciso quando tornera&amp;rsquo; command.com, o quando avremo di nuovo il tasto &amp;ldquo;Turbo&amp;rdquo; sui nostri smartphone/tablet (magari per risparmiare batteria?). Non so dirvi quando riavremo Ubuntu che se ne esce con twm, o qualcuno cerchera&amp;rsquo; di venderci Motif.&lt;/p&gt;
+
+&lt;p&gt;So ovviamente che queste cose si chiameranno con un nome diverso, e che il &amp;ldquo;cellulare per parlare con un&amp;rsquo;altra persona premendo dieci tasti&amp;rdquo; non si chiamera&amp;rsquo; certo &amp;ldquo;telefono cellulare&amp;rdquo;, ma &amp;ldquo;parlofono&amp;rdquo;, o roba del genere. So che un&amp;rsquo;automobile il cui unico scopo sia quello di traslarvi nello spazio non verra&amp;rsquo; certo chiamata &amp;ldquo;automobile&amp;rdquo;, ma qualcosa tipo &amp;ldquo;zip&amp;rdquo;. Ma so anche per certo che, quando la vostra casa sara&amp;rsquo; intelligente, sapra&amp;rsquo; curarvi se state male, vi cucinera&amp;rsquo; il cibo, fara&amp;rsquo; i conti, paghera&amp;rsquo; le bollette, si pulira&amp;rsquo; da sola e vi trovera&amp;rsquo; un marito, qualcuno brevettera&amp;rsquo; un&amp;rsquo;invenzione incredibile, che all&amp;rsquo;ufficio brevetti verra&amp;rsquo; descritto cosi&amp;rsquo;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Edificio con dentro dello spazio. Serve ad abitarci.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;E&amp;rsquo; possibile anche prendere delle tecnologie che sono ancora in un punto intermedio e cercare di prevederne il futuro. Prendiamo http: il &amp;ldquo;protocollo del web&amp;rdquo; e&amp;rsquo; comparso in versione 0.9, quando potevate a malapena fare una GET e avere un nome a dominio su UN ip (mancava ancora l&amp;rsquo;header Host:) . Poi arriva la 1.0, e gia&amp;rsquo; potete fare una POST , e infine con la 1.1. aggiungono pipelining, keepalive e chunking della risposta, che diventa asincrona.&lt;/p&gt;
+
+&lt;p&gt;Tutto bene?&lt;/p&gt;
+
+&lt;p&gt;Ma ovviamente no: perche&amp;rsquo; adesso che arriva il protocollo versione 2.0, ci hanno aggiunto dentro heartbeat, streaming, multistream, segnalazione, e tutto quanto si poteva saccheggiare dagli altri protocolli esistenti. In questo senso, il protocollo si trova tra lo stadio 1 e lo stadio 2. Appena avranno aggiunto, diciamo con http 3.0 o 4.0, anche il modulo per pagare le tasse e un apposito header per chiedere la mano alla vostra fidanzata, arrivera&amp;rsquo; qualcuno e tirera&amp;rsquo; fuori una grande scoperta: il Protocollo Per Leggere Contenuti da un Server , detto RRSP (Remote Reading Simple Protocol), che sara&amp;rsquo; un protocollo molto semplice, e conterra&amp;rsquo; una sola istruzione: &amp;ldquo;GIMME &lt;URI&gt;&amp;rdquo; .&lt;/p&gt;
+
+&lt;p&gt;Lo stesso del resto e&amp;rsquo; gia&amp;rsquo; accaduto a SOAP. Quando nacque sembrava una cosa quasi sensata, e dava la possibilita&amp;rsquo; di serializzare la rappresentazione di un servizio. Ma col tempo, a furia di aggiungere schemi, strutture, features e gingillini, il risultato e&amp;rsquo; stato che per chiedere ad un server di dirvi se fosse ancora su, dovevate compilare una chiamata che contenesse nome, cognome, patente, libretto, segno astroligico babilonese del papa del vostro server, dichiarazione dei redditi, e un misterioso &amp;ldquo;certificato di serialita&amp;rsquo;&amp;rdquo;, e si mischiano header si altri protocolli con formati s-mime, tutti dentro il SOAP. Avete ottenuto MM7.&lt;/p&gt;
+
+&lt;p&gt;Quando SOAP e&amp;rsquo; stato sminchiato sino a diventare insostenibile, che cosa succede? Succede che qualcuno arriva e dice: ehi, ma facciamo una cosa semplice ove il protocollo fa il protocollo invece di fare anche la lavastoviglie? E via, il ciclo dell&amp;rsquo;Eierlegende Wollmilchschwein si compie, e arriva REST. Il protocollo che fa il protocollo.  Magnifico.&lt;/p&gt;
+
+&lt;p&gt;Ovviamente anche REST sara&amp;rsquo; presto ingrassato di feature sino a scoppiare, e probabilmente vi troverete ad avere a che fare con SLEEP, il successore di REST, che avra&amp;rsquo; una grande caratteristica: essere un protocollo che fa il protocollo.&lt;/p&gt;
+
+&lt;p&gt;Ecco, adesso avete capito come fare i futurologi: prendete qualcosa che e&amp;rsquo; successo in passato, fatene una regola, date alla regola un nome in un&amp;rsquo;altra lingua, e pac: avete la regola eterna, il principio zero dell&amp;rsquo;universo, della vita e di tutto quanto, applicando &amp;ldquo;rigorosamente&amp;rdquo; il quale potete prevedere il futuro.&lt;/p&gt;
+
+&lt;p&gt;Semplicemente, prevedendo il passato.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

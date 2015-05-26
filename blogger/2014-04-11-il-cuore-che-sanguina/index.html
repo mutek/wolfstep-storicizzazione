@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content="  Il cuore che sanguina. &middot;  KEIN PFUSCH, BITTE!" />
+  <meta property="og:site_name" content="KEIN PFUSCH, BITTE!" />
+  <meta property="og:url" content="http://www.wolfstep.cc/blogger/2014-04-11-il-cuore-che-sanguina/" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2014-04-11T12:15:50&#43;01:00" />
+  
+  
+
+  <title>
+      Il cuore che sanguina. &middot;  KEIN PFUSCH, BITTE!
+  </title>
+
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/main.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/github.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="http://www.wolfstep.cc//images/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://www.wolfstep.cc//images/apple-touch-icon.png" />
+  <link href="" rel="alternate" type="application/rss+xml" title="KEIN PFUSCH, BITTE!" />
+</head>
+<body>
+
+
+  <header class="global-header">
+    <section class="header-text">
+      <h1><a href="http://www.wolfstep.cc/">KEIN PFUSCH, BITTE!</a></h1>
+      
+      <div class="tag-line">
+        Comunicare, ammesso sia possibile, e&#39; perfettamente inutile
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+      
+      <a href="http://www.wolfstep.cc/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary"> Il cuore che sanguina.</h1>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2014-04-11T12:15:50&#43;01:00">
+          Apr 11, 2014
+        </time>
+      </div>
+      <div class="pull-right">
+        
+      </div>
+    </div>
+  </header>
+  <section>
+<div style="text-align: justify;">
+    <div class='post'>
+<div style="text-align: justify;">Ho visto scrivere tante stronzate sul baco di OpenSSL, e onestamente le sole cose che si sarebbero dovute dire non si sono dette da nessuna parte. Innanzitutto: non perdete tempo a riscrivere la password, semmai eseguite un logout. Oddio, potete fare entrambe le cose, ma eseguire un logout e distruggere OGNI cookie di autenticazione e' piu' importante.</div><a name='more'></a><div style="text-align: justify;"><br /></div><div style="text-align: justify;">La ragione e' semplice: le password non sono quasi mai salvate in chiaro, e anche se venissero copiate in memoria non lo sarebbero in maniera decrittata. I siti di cui parlate eseguono una antenticazione usando digest e hash delle chiavi, hash che sono generati al momento , per sessione.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Peraltro, nei grandi social network, le machine che eseguono l'autenticazione sono diverse da quelle che vi porgono i contenuti.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Il vero pericolo di qualcosa che passa la vita a spazzolare la memoria (e sa solo dio quanta ne devono spazzolare , 64K alla volta, per un google o un facebook) sono quelli che si chiamano cookie di sessione. Quando voi tornate su facebook e il social network vi riconosce, oppure quando nel caso di autenticazione in due fasi "riconosce il browser",succede lo stesso.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Queste cose sono effettivamente salvate nella ram del frontend, ed un exploit del genere ovviamente vi espone. Qualcuno potrebbe copiare quel cookie ed usarlo per riprodurre la sessione.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">La possibilita' che le chiavi siano rubate e' piccola: occorre spazzolarsi tutta la memoria, e sapere cosa , in quell'insalata, sia una chiave, che normalmente viene usata nel suo formato binario e non in armored. Distinguere una chiave crittografica da un insieme di dati casuali non e' banale.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Quindi, e' MOLTO piu' urgente cancellare ogni traccia di sessione, ripulendo ogni cookie , facendo un logout e ripetendo daccapo l'autenticazione, piuttosto che "cambiare una password", che onestamente non sembra il pericolo maggiore, sia nel caso di autenticazione digest/kerberos/NTLM, che per via del fatto che esse non sono salvate mai in chiaro.<br /><br />Sebbene sia teoricamente possibile ottenere chiavi e password (anche se dovrebbero essere scritti molto, molto , molto male come sistemi) , la cosa resa FACILE&nbsp; da questo attacco e' l'attacco ALLA SESSIONE, ovvero ottenere un cookie di sessione. La ragione e' che possiamo spazzolare la memoria alla ricerca di "Cookie: " , "SESSIONID" ed&nbsp; altre stringhe note tipiche del protocollo HTTP. Al contrario, password e username saranno criptati nella gran parte dei casi, e le chiavi saranno dei blocchetti binari che e' molto difficile distinguere da qualsiasi collezione casuale di bit.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">La cosa molto piu' preoccupante e' invece "come si e' arrivati a questo punto", e vorrei dire a riguardo una cosa molto semplice: l' Open Source sta morendo.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Se per Open Source intendete grandi prodotti (Linux, Apache, SSL, SSH, Gnome, GTK, X11, Mozilla&amp;Co, ed altro) , la diagnosi e' impietosa, e onestamente, la storia di OpenSSL e' solo un sintomo.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Prima capiamo cosa si intende per "morte": non intendo che questa roba vada a sparire, ma che semlicemente diventi uno dei tanti prodotti corporate, perdendo cioe' lo spirito e semplicemente diventando una cosa che non ha nulla a che fare con la romantica idea, di "comunita' che lavora per spirito di collaborazione e mutuo altruismo".</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">quando dico "Morte di Linux" intendo dire che presto sara' Linux ad essere un flavour di Android, e non viceversa, insomma. Intendo che sara' Apache a diventare un effetto collaterale di DataPower e non viceversa.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Ci sono diverse cose che stanno concorrendo alla morte ideale di questi sistemi, ma specialmente ci sono atteggiamenti.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Il primo e' che dal mondo opensource tutti prendono a man bassa, ma pochissimi contribuiscono. Delle "migliaia" di contributors, ormai la maggior parte sono team aziendali che hanno interessi specifici, e pochissimi possono ancora essere detti "volontari".</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">La verita' e' che di gente che lotta per il software libero proponendolo nelle scuole, ordinando ai governi di adottarlo, facendo petizioni, il mondo e' pieno. Di gente che ha scritto cinque righe di codice , sempre meno, e sempre peggio.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Facebook fa 24 miliardi di dollari, e tutti i suoi server usano Openssl. I DUE programmatori che lo sviluppano attivamente &nbsp;non riescono a fare fund raising abbastanza da farne un lavoro a tempo pieno. Gli altri del team sono li' occasionalmente. &nbsp;Questo squilibrio non vi dice niente?</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">A me dice molte cose. Innanzitutto sui linguaggi di programmazione. Per scrivere un kernel occorre conoscere un linguaggio compilato che abbia una potente capacita' di accesso indifferenziato alla memoria. Se ne sono scritti anche in Ada, certo, ma il punto e' che se conoscete solo Java, Javascript, HTML, XML e Jquery,&nbsp; ad un kernel non potrete lavorare. Tuttavia, oggi questi sono i linguaggi che si studiano, e il C, anche quando si studia, si studia come un noioso passaggio prima di fare cose "vere".</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">A questo ritmo di mancanza di programmatori in linguaggi che interagiscano con l' hardware a "basso livello", poiche' questi programmatori lavorano in settori sempre piu' di nicchia, prima o poi Torvalds Linus dovra' rassegnarsi: o il suo kernel lo fa scrivere in PHP (LOOOOL!), o diventera' un prodotto aziendale.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Lo stesso dicasi per il C++: le tragiche condizioni di Gnome, il rantolare continuo di Kde, le incertezze attorno a Qt, sono dovute ad un semplice mutamento di mercato, per il quale C++ e' un linguaggio specialistico, ridotto a pochi, e se volete prodotti "grandi", cioe' roba che possa diventare mainstream, dovete sperare che Oracle vi dia Java SDK , che Redhat continui a sponsorizzare open source, che IBM continui a contribuire , che HP continui a contribuire... in pratica, il mondo opensource e' tenuto in piedi da multinazionali, le uniche ad avere ancora budget per i programmatori che lavorano nei linguaggi giusti.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Ma che prodotti finanziano le multinazionali in questione? Quelli che fanno comodo a loro. Quando SGI doveva fare gli Altix con Linux, ha lavorato un sacco nel portare XFS al kernel. IBM per fare lo stesso ha lavorato molto su JFS. Oracle ha aggiunto BtrFs e ha consentito ZFS.&nbsp; Togliete questi supporti, e rimanete con filesystems degli anni '90.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">La verita' e' che oggi, senza il contributo delle multinazionali, se dovessimo purgare una distribuzione qualsiasi dal contributo di qualche multinazionale,&nbsp; di Linux rimarrebbe poco piu' di un Minix del 95.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Dove sono i volontari? Dove sono gli sviluppatori? Oh, ce ne sono tantissimi. Potete cercare queste keywords, e ne trovate moltissimi:</div><div style="text-align: justify;"><br /></div><ul style="text-align: justify;"><li>Lightweight: e' un altro nome di "incompleto", e significa "non sono capace di lavorare in un team grande, preferisco un prodotto mutilato, incompleto e bacato&nbsp; con una release ogni 3 anni".&nbsp; In un mondo ove un laptop ha 8GB di ram, sentiamo tutti il bisogno di un software che risparmia 128K perche' ha cinque icone in meno. Cosi' thunderbird non puo' leggere posta usando EWS, ma avete 300 client di posta elettronica Lightweight, che leggono solo POP3. Bacati. Alpha.</li><li>Web-Based: e' un altro nome di "<i>non so programmare con un vero compilatore, e conosco solo quello che va di moda, il web</i>". Cosi' anziche' avere un client di posta elettronica fate partire una JvM, che fa partire un Web Container, che fa partire una Servlet, che poi, facendo partire un Web Browser, userete per leggere la posta. Wow.</li><li>Python: e' un modo di dire "so scrivere software che gira sul mio PC. Se non gira sul tuo, il motivo e' vattelappesca". VAttelappesca e' bello. Vattelappesca e' indentato. Vattelappesca scrive i messaggi di errore in cinese mandarino autistico. Vattelappesca ha un albero di dipendenze che sembra un mandala. </li><li style="text-align: justify;">Bindings: e' un modo di dire: il lavoro lo ha fatto qualcun altro. Spero. Certo, ogni linguaggio di programmazione per linux ha i "bindings" per GtK e Gnome. E Qt. Aha. E chi fa invece GTK e Gnome? Ehm..."qualcun altro". Sempre <u><b>qualcun altro. </b></u>Qualcun altro cui spesso bisogna anche far passare la voglia di fare, con un adeguato mobbing, polemiche gratuite, discussioni da cineforum del dopolavoro PCI,e via dicendo. <u><b><br /></b></u></li></ul><div style="text-align: justify;"><br /></div><div style="text-align: justify;">tutte queste tendenze vi fanno capire una cosa: che siccome "qualcun altro" e' alla base di tutto, e per fare l'albero ci vuole il seme, quando il seme fallisce, l'albero muore.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Ed e' quello che e' successo con OpenSSL: due persone, che non riescono a cavarci neanche i soldi per vivere, scrivevano il semino, su cui stavano dei bei quercioni grossi tipo Google, Facebook, Twitter.... i quali sono tanto ma tanto BBBBBUONI, e finanziano la foca monaca cingalese per impedirne l'estinzione. Ma se domani quei due di OpenSSL si rompono i coglioni, e dicono "Ehi, vado al mare! Sole! Fica! Sabbia! " , diventa un "problemuccio".</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">E qui andiamo al funding, perche' esso, col nome di crowdfunding, rappresenta l'invasione del piu' mostruoso Pile of Idiots della storia, detto anche "uomo comune", nel mondo delle decisioni dell' It.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Gia'.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Oh, su Indiegogo ci stanno i prodotti del futuro. Se fate un social network , che so io, PalShave, dove postate le fotografie dei vostri augusti coglioni rasati, con una App mobile e ovviamente tanto Apple, e tanto Social e tanto Big Data, verrete finanziati immediatamente. Centomila? Un miloione! Ma per le palle rasate , questo ed altro! Il cielo e' il solo limite di un bel paio di coglioni rasati!</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Ed ecco qui il lettore-tipo&nbsp; di giornali post-Wired che finanziera' senza indugio il vostro social network PalShave! </div><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-DMl8xwy5DmQ/U0egFfWrHII/AAAAAAAAMBA/YX_yyohOTgs/s1600/el-hipster.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-DMl8xwy5DmQ/U0egFfWrHII/AAAAAAAAMBA/YX_yyohOTgs/s1600/el-hipster.jpg" height="400" width="322" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">PalShave e' sicuramente la rivoluzione del social che punta alla webdemocracy attraverso</td><td class="tr-caption" style="text-align: center;"><br /></td><td class="tr-caption" style="text-align: center;">&nbsp;il mobile!</td></tr></tbody></table><br /><div style="text-align: justify;">E non vogliamo parlare di DildoCam, la telecamera cui non basta essere lanciata in alto e scattare fotografie a 360 gradi , cosa utile ma non indispensabile , bensi' scattera' uan foto della vostra cervice mentre... proprio in quel momento li'! Non ci credete? Lo dice iun tipo come questo, che prontamente finanzia questo fondamentale progetto:</div><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-VkYz4ulUv2w/U0egmTMPIII/AAAAAAAAMBI/unHj84MwYXo/s1600/Hipster-Facepalm-9.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-VkYz4ulUv2w/U0egmTMPIII/AAAAAAAAMBI/unHj84MwYXo/s1600/Hipster-Facepalm-9.jpg" height="400" width="266" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Thanks to DildoCam, nobody needs a Vag to be a Pus!</td></tr></tbody></table><br /><div style="text-align: justify;">un tipo di persona che occupa sicuramente il posto adeguato nella catena alimentare, dentro l'ecosistema del Pile of Idiots. Ci sono quegli animaletti che mangiano il caffe' e poi lo cagano, sapete? E c'e' gente che si sente furba perche' beve un infuso di merda di topo sudamericano e la paga un sacco.&nbsp; Ecco, quel tipo li'&nbsp; fa la stessa cosa, ma con l'insalata e le mucche. Un genio, insomma.<br /><br />E vi diro' di piu': se questi prodotti vanno online, i giornali preferiti&nbsp; della Pile of Idiots vi faranno anche il bell'articolo di quella ragazza che si e' salvata dal tumore perche' DildoCam ha postato una foto della sua cervice, e un ginecologo che l'ha vista per caso l'ha avvisata. Ai miei tempi si usavano i 33CL di sperma e i coccodrilli albini nelle fogne e il benvenuto nel mondo dell' Aids scritto col rossetto sullo specchio. Ma vabe', anche la&nbsp;&nbsp; Pile of Idiots ha diritto alle sue leggende metropolitane.<br /><blockquote class="tr_bq"><br /><span style="font-size: large;"><b>Ma nessuno vi raccontera' mai dello sviluppatore della libreria usata da seicento milioni di persone che per caso si accorge di un baco. No, quello non fa abbastanza post-Wired: non e' social, non e' smartcity, non e' big data, non e' quantum computing, non e' internet of things.</b></span></blockquote></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Adesso provate a far finanziare qualcosa che serve, che so io:&nbsp;</div><div style="text-align: justify;"><br /></div><ul style="text-align: justify;"><li>Un layer di virtualizzazione del filesystem con I-Scsi, per lavorare su scala geografica.</li><li>Una nuova serie di librerie di crittografia.</li></ul><div style="text-align: justify;"><br /></div><div style="text-align: justify;">quanto otterrete? Non abbastanza da viverci. Perche' non e' social. Non e' post-Wired. Non e' wireless, non e' mobile. Non e' smartcity, non e' quantum computing, non e' big data.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">MA specialmente, nessuno ha idea di che cazzo sia quella roba, tranne quando, se compare un baco, tutti scoprono che si trova OVUNQUE , in ogni applicazione, in ogni maledetto social network, in ogni big data, che tiene su le smart cities, che lo usano per fare ricerca nel quantum computing, che fa girare ogni fottuto tablet e cellulare.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><blockquote class="tr_bq">Tutti i nuovi meccanismi di funding si dicono ispirati dagli ideali dell' Opensource, ma se andiamo ad osservare quanti pezzi FONDAMENTALI dell'opensource , di quelli che sono lontani dall'interfaccia utente ma non per questo meno fondamentali,&nbsp; ricevono adeguati finanziamenti, beh, qualcosa e' andato storto.</blockquote></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">quello che avete visto con Heartbleed e' solo un sintomo, un sintomo di una malattia per la quale esiste una pila di software, un albero, della cui ombra tutti godono, dei cui frutti molti vivono, <u><b>i cui semi sono sconosciuti, bistrattati e mal finanziati.</b></u></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">E per fare l'albero, ci vuole il seme.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Altrimenti, rimanete senza il tavolo, e le formiche si arrampicano sui voistri short di gessato, per andare a mordervi le depilatissime palle.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Di cui ci fareste vedere le foto su PalShave, se solo non vi avessero ciuffato l'account.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Per cui , la vera domanda che dovreste porvi e':</div><div style="text-align: justify;"><br /></div><ul><li>Su che cosa si basa l'ecosistema che sto usando? Cosa sta alla base della catena alimentare? Risposta: kernel, librerie, compilatori.</li><li>Cosa si basa su queste cose? Social, big data, smart cities, cloud, e lalala.</li><li>Quanti social, big data, smart cities. cloud, lala ho voglia di finanziare? Tanti, c'e' il crowdfounding.</li><li>Quanti kernel, librerie, compilatori ho finanziato o contribuito a sviluppare?</li></ul><div style="text-align: justify;"><br /></div><div style="text-align: justify;">se la risposta all'ultima domanda e' "niente", avete capito il problema di HeartBleed, e avete capito di cosa e' sintomo.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Incuria. L'incuria prepotente della Pile of Idiots , dei radicalbit molto chic modello copertina post-Wired, per cui se non e' abbastanza social e smartcity non si scrive una cazzo di riga sul giornale , e se lo sviluppatore del software non e' abbastanza ggiovane e non e' vestito come un idiota e/o un guru, allora non lo si intervista.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Nei prossimi anni, perderete prima OpenBSD, NetBSD e poi FreeBSD, e farete spallucce. Poi perderete qualsiasi client di posta elettronica, e farete spallucce: ci sono le interfacce Web. Poi perderete Gnome e Kde, e farete spallucce: c'e' sempre Android.&nbsp; Poi perderete Xen, e farete spallucce: c'e' sempre VMWare. Poi perderete Linux - che Torvalds non e' immortale&nbsp; e ha sempre meno volontari - e direte che tanto c'e' Android.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Finche' avrete solo prodotti proprietari, e farete spallucce: <i>non ve li potete permettere. </i>OOPS.</div><br />Niente piu' PalShave e DildoCam.....<br /><br /><div class="separator" style="clear: both; text-align: center;"><object class="BLOGGER-youtube-video" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" data-thumbnail-src="https://ytimg.googleusercontent.com/vi/2Tvy_Pbe5NA/0.jpg" height="266" width="320"><param name="movie" value="https://youtube.googleapis.com/v/2Tvy_Pbe5NA&source=uds" /><param name="bgcolor" value="#FFFFFF" /><param name="allowFullScreen" value="true" /><embed width="320" height="266"  src="https://youtube.googleapis.com/v/2Tvy_Pbe5NA&source=uds" type="application/x-shockwave-flash" allowfullscreen="true"></embed></object></div><br /><br /><br /></div>
+<h2></h2>
+<div class='comments'>
+</div>
+
+<br>
+<div class="addthis_native_toolbox"></div>
+
+</div>
+
+  </section>
+  <footer>
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        <h1 class="author-name text-primary">Uriel Fanelli</h1>
+        
+        
+      </div>
+      
+      <div class="author-contact col-md-4">
+        <a href="mailto:uriel.fanelli@gmx.de">
+          <i class="fa fa-envelope-o"></i>
+          &nbsp;Contact me
+        </a>
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="http://www.wolfstep.cc/blogger/2014-04-10-anestetici/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next"><a href="http://www.wolfstep.cc/blogger/2014-04-11-aridaje/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+
+
+
+<iframe id="forum_embed"
+  src="javascript:void(0)"
+  scrolling="no"
+  frameborder="0"
+  width="100%"
+  height="700">
+</iframe>
+
+<script type="text/javascript">
+  document.getElementById('forum_embed').src =
+     'https://groups.google.com/forum/embed/?place=forum/kein-pfusch'
+     + '&showsearch=false&showpopout=true&showtabs=false&hl=it&theme=Light'
+     + '&parenturl=' + encodeURIComponent(window.location.href);
+</script>
+
+
+
+
+
+
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      
+    </div>
+    <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+  </footer>
+
+  <script src="http://www.wolfstep.cc//js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f32bcd406c5e50" async="async"></script>
+
+
+</body>
+</html>
+

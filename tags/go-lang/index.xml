@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go Lang on KEIN PFUSCH, BITTE!</title>
+    <link>http://www.wolfstep.cc/tags/go-lang/</link>
+    <description>Recent content in Go Lang on KEIN PFUSCH, BITTE!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Apr 2015 21:52:53 +0200</lastBuildDate>
+    <atom:link href="http://www.wolfstep.cc/tags/go-lang/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Il bello del golang</title>
+      <link>http://www.wolfstep.cc/post/programmazozzi/</link>
+      <pubDate>Tue, 14 Apr 2015 21:52:53 +0200</pubDate>
+      
+      <guid>http://www.wolfstep.cc/post/programmazozzi/</guid>
+      <description>&lt;p&gt;Parlo poco di programmazione non essendo (piu&amp;rsquo;) uno sviluppatore , ma dal momento che ho deciso di studiare un pochino Go Lang, e che sul lavoro devo gestire gruppi di sviluppatori, (nonche&amp;rsquo; il parto delle loro menti) , questo tuffo in un lunguaggio di recente concezione mi permette di trarre alcune conclusioni, o perlomeno alcune sensazioni.&lt;/p&gt;
+
+&lt;p&gt;Per prima cosa: sono un seguace di Wirth. Significa che qualsiasi problema della programmazione e&amp;rsquo; prima di tutto un problema di cattivi programmatori. Poi, semmai, si va a cercare il difetto nel linguaggio, nel paradigma, eccetera.&lt;/p&gt;
+
+&lt;p&gt;In ultima analisi si parla sempre di sistemi che sono Turing-Completi, quindi alla fine si parla di roba che non ha senso definire piu&amp;rsquo; o meno potente. Li si puo&amp;rsquo; definire piu&amp;rsquo; comodi, piu&amp;rsquo; adatti allo sviluppo di gruppo, piu&amp;rsquo; vicini al linguaggio umano, ma parlare della &amp;ldquo;potenza&amp;rdquo; di un linguaggio e&amp;rsquo; la tassa per non sapere cosa significhi &amp;ldquo;&lt;a href=&#34;http://en.wikipedia.org/wiki/Turing_completeness&#34;&gt;Turing-Completo&lt;/a&gt;&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Andiamo al Go Lang. Innanzitutto, perche&amp;rsquo; un nuovo linguaggio di programmazione? La risposta e&amp;rsquo;: perche&amp;rsquo; migliorare i programmatori, o assumerne di migliori,  costa molto piu&amp;rsquo; che costruire un nuovo linguaggio di programmazione. Sebbene sia chiaro che la stragrande mancanza dei problemi siano legati ad una cattiva programmazione, si pensa di risolvere la cosa migliorando il linguaggio.&lt;/p&gt;
+
+&lt;p&gt;In particolare, il problema che ossessiona il mondo della programmazione e&amp;rsquo; la complessita&amp;rsquo; del progetto. La complessita&amp;rsquo; del progetto e&amp;rsquo; semplicemente il fatto che se occorrono un milione di righe di codice per spiegare alla macchina come comportarsi, allora:&lt;/p&gt;
+
+&lt;p&gt;&lt;font color=&#39;red&#39;&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Nessuno puo&amp;rsquo; averle in mente tutte =&amp;gt; serve una squadra.&lt;/li&gt;
+&lt;li&gt;Nessuno puo&amp;rsquo; capire tutte le interazioni =&amp;gt; serve un modello di astrazione&lt;/li&gt;
+&lt;li&gt;Nessuno puo&amp;rsquo; prevedere davvero tutti i possibili problemi =&amp;gt; serve un modello sintetico&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/font&gt;&lt;/p&gt;
+
+&lt;p&gt;Il guaio di queste tre cose e&amp;rsquo; che alla fine tutte queste cose le si implementa sul linguaggio, tenendosi i programmatori che ci sono. Poiche&amp;rsquo; migliorare i programmatori costa, mentre inventare un linguaggio costa meno, il mondo sta saltando da un linguaggio all&amp;rsquo;altro nel tentativo di colmare le lacune dei programmatori.  Allora chi disegna i linguaggi di programmazione cosa fa?&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Concepisce sistemi per il lavoro di squadra, cioe&amp;rsquo; inclusione, preprocessori, sistemi di sviluppo distribuito, build systems centralizzati, etc.&lt;/li&gt;
+&lt;li&gt;concepisce sistemi per la modellazione e la rappresentazione del codice, tipo UML &amp;amp;co.&lt;/li&gt;
+&lt;li&gt;Concepisce sistemi di sintesi: librerie, programmazione ad oggetti, eccetera.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Sembrerebbe una strategia vincente, ma non funzione. La quantita&amp;rsquo; di software si e&amp;rsquo; moltiplicata quasi esponenzialmente negli ultimi anni, la qualita&amp;rsquo; rimane scadente, quando non peggiora. Tutto questo lavoro nel creare il nuovo linguaggio del giorno  fallisce regolarmente. Dal almeno 20 anni. Abbiamo ancora sistemi operativi coi virus. Abbiamo ancora eccezioni di null-pointer.&lt;/p&gt;
+
+&lt;p&gt;Ma la prova piu&amp;rsquo; grande del fallimento e&amp;rsquo; la quantita&amp;rsquo; immensa di &lt;em&gt;nuovissimissimissimi paradigmi della programmazione&lt;/em&gt;, paradigmi del project management, paradigmi dello sviluppo, che si sono sviluppati negli ultimi anni.  E che regolarmente vengono rimpiazzati, dopo aver fallito miseramente.&lt;/p&gt;
+
+&lt;p&gt;Quello che succede sul mercato del lavoro e&amp;rsquo; che molti vogliono fare i programmatori. Si gettano sulla programmazione cercando il linguaggio piu&amp;rsquo; semplice da usare. Abbassano il reddito agli altri. Le aziende ci marciano molto (es: Java) sino a quando la gente si rompe di guadagnare poco e si getta sul linguaggio che ricicla il passato ma consente di guadagnare di piu&amp;rsquo; (es:  da java a scala).&lt;/p&gt;
+
+&lt;p&gt;Il guaio e&amp;rsquo; che dopo un anno siamo punto a capo. Framework giganteschi, librerie che da sole costituiscono una competenza verticale, complessita&amp;rsquo; malgestita e di conseguenza livelli di sicurezza infimi. Cosa e&amp;rsquo; successo?&lt;/p&gt;
+
+&lt;p&gt;Riprendiamo le tre assunzioni  di prima e vediamo , anziche&amp;rsquo; applicarle ai linguaggi, come si applicano ai programmatori. Quando un progetto contiene milioni o anche solo migliaia di righe di codice:&lt;/p&gt;
+
+&lt;p&gt;&lt;font color=&#39;red&#39;&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Nessuno puo&amp;rsquo; averle in mente tutte =&amp;gt; serve una squadra.&lt;/li&gt;
+&lt;li&gt;Nessuno puo&amp;rsquo; capire tutte le interazioni =&amp;gt; serve un modello di astrazione&lt;/li&gt;
+&lt;li&gt;Nessuno puo&amp;rsquo; prevedere davvero tutti i possibili problemi =&amp;gt; serve un modello sintetico&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/font&gt;&lt;/p&gt;
+
+&lt;p&gt;Allora, che abilita&amp;rsquo; specifiche devono avere i programmatori perche&amp;rsquo; sia gestibile la complessita&amp;rsquo;?&lt;/p&gt;
+
+&lt;p&gt;&lt;font color=&#39;green&#39;&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Per lavorare in squadra, devono &lt;strong&gt;documentare&lt;/strong&gt; le cose che fanno.&lt;/li&gt;
+&lt;li&gt;Per usare un modello di astrazione condivisibile, devono &lt;strong&gt;stare vicini al linguaggio naturale&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Per poter usare un modello sintetico, &lt;strong&gt;devono scrivere meno codice&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/font&gt;&lt;/p&gt;
+
+&lt;p&gt;Ed e&amp;rsquo; qui che si fallisce miseramente.&lt;/p&gt;
+
+&lt;p&gt;Andiamo sui punti, per ordine: la documentazione.&lt;/p&gt;
+
+&lt;p&gt;Supponiamo che qualcuno sviluppi dentro una squadra e NON documenti quel che scrive. Anzi, oggigiorno diamolo pure per scontato. Ovviamente gli altri dovranno capire come riutilizzare il suo codice. Ma lui risponde che &amp;ldquo;il codice e&amp;rsquo; documentazione&amp;rdquo;, e vi risponde che chi e&amp;rsquo; un buon programmatore puo&amp;rsquo; leggere il codice (o il javadoc, o il godoc, o qualsiasi cosa) e capirlo.&lt;/p&gt;
+
+&lt;p&gt;La cosa sembra sensata, ma se la estendiamo ad una squadra non lo e&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;Supponiamo che per capire come utilizzare il tuo codice di oggi e fare un paio di test occorra un&amp;rsquo;ora. E che siamo in una squadra di 8 persone. Abbiamo 8 persone che spendono un&amp;rsquo;ora per capire ed usare il tuo codice. Il problema non viene nel fatto che hai gettato una giornata uomo. Anche se lo avessi documentato, qualcuno avrebbe dovuto leggere tale documentazione.&lt;/p&gt;
+
+&lt;p&gt;Il problema e&amp;rsquo; un altro:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hai impattato sui tempi di sviluppo altrui. Non sappiamo di preciso quanto tempo ci mettera&amp;rsquo; il tuo collega a capire il tuo codice. Hai &lt;strong&gt;inserito una variabile aleatoria nella pianificazione&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Hai impattato sulla qualita&amp;rsquo;. Se documenti il codice e ci metti gli esempi di uso standard, l&amp;rsquo;uso del codice sara&amp;rsquo; &lt;strong&gt;sano&lt;/strong&gt;. Se ci fidiamo della corretta comprensione che una persona diversa ha del tuo codice, &lt;strong&gt;ci esponiamo al rischio che lui capisca male&lt;/strong&gt;. Hai introdotto l&amp;rsquo;errore umano dove poteva non esserci.&lt;/li&gt;
+&lt;li&gt;Analogamente, hai impattato sulla sicurezza. Il collega che legge il codice andra&amp;rsquo; a vedere come usarlo. Non andra&amp;rsquo; ad esaminarlo nel dettaglio. &lt;strong&gt;Quindi, ci esponiamo al rischio che il collega ne faccia un uso insicuro&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;E tutto questo, solo perche&amp;rsquo; non hai scritto documentazione che mostri l&amp;rsquo;uso STANDARD della tua libreria. Se non standard, almeno quello che avevi in mente.&lt;/p&gt;
+
+&lt;p&gt;Secondo punto, &lt;strong&gt;stare vicini al linguaggio naturale&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;A me le &amp;ldquo;interfacce{}&amp;rdquo; del golang piacciono un sacco. Vengono subito dopo le emorroidi. Esse sono concepite per rappresentare un processo di astrazione che non esiste in natura. O meglio. Se vostra moglie di dice &amp;ldquo;prendi il coso che c&amp;rsquo;e&amp;rsquo; dentro il robo, nell&amp;rsquo;altra stanza&amp;rdquo;, senza indicare la stanza, il coso e il robo, ha semplicemente fatto quello che in golang si fa con un&amp;rsquo;interfaccia.&lt;/p&gt;
+
+&lt;p&gt;Ma se voi fate quello che si fa in golang con un&amp;rsquo;interfaccia, deducete che in questo momento vorreste un calzascarpe, andate in corridoio , lo prendete dalla scarpiera, infilate la scarpa e lo portate a vostra moglie.  &lt;strong&gt;Dal punto di vista del golang&lt;/strong&gt; avete usato alla perfezione il concetto di interfaccia.&lt;/p&gt;
+
+&lt;p&gt;Il guaio e&amp;rsquo; che vostra moglie aveva in mente il battibistecche.&lt;/p&gt;
+
+&lt;p&gt;Qual&amp;rsquo;e&amp;rsquo; il problema dell&amp;rsquo;interfaccia di golang?&lt;/p&gt;
+
+&lt;p&gt;Il problema e&amp;rsquo; che parte dall&amp;rsquo;idea che:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Programmatore &lt;strong&gt;A&lt;/strong&gt; , che ha l&amp;rsquo; idea &lt;strong&gt;iA&lt;/strong&gt; , scriva l&amp;rsquo;interfaccia.&lt;/li&gt;
+&lt;li&gt;Programmatore &lt;strong&gt;B&lt;/strong&gt;, che ha l&amp;rsquo;idea &lt;strong&gt;iB&lt;/strong&gt; , popoli l&amp;rsquo;interfaccia.&lt;font color=&#39;red&#39;&gt;&lt;/li&gt;
+&lt;li&gt;Per un qualche magico motivo, programmatore &lt;strong&gt;B&lt;/strong&gt; sappia che diavolo avesse in mente programmatore &lt;strong&gt;A&lt;/strong&gt;, facendo un uso &lt;strong&gt;opportuno&lt;/strong&gt; dell&amp;rsquo;interfaccia.&lt;/font&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Quanto e&amp;rsquo; probabile questa cosa? E&amp;rsquo; probabile quanto e&amp;rsquo; probabile che vostra moglie vi chieda &amp;ldquo;prendi il coso che c&amp;rsquo;e&amp;rsquo; nel robo dell&amp;rsquo;altra stanza&amp;rdquo; e voi gli portate la cosa giusta.&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; vero, succede.&lt;/p&gt;
+
+&lt;p&gt;Ne deduciamo quindi che le interfacce del golang siano concepite per programmatori sposati tra loro.&lt;/p&gt;
+
+&lt;p&gt;Ne prendo atto: il golang ha i valori della Famiglia. Ok.&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;errore di questa cosa consiste nel disegnare un concetto che e&amp;rsquo; troppo lontano dal modo di pensare della mente umana, disegnarlo in modo che non solo venga capito, ma debba anche essere &lt;strong&gt;condiviso&lt;/strong&gt;, e poi &lt;em&gt;ci si aspetti che tutto funzioni&lt;/em&gt;. Se anche il singolo individuo puo&amp;rsquo; percepire l&amp;rsquo;astrazione - che non esiste nel linguaggio naturale - , &lt;em&gt;la probabilita&amp;rsquo; che l&amp;rsquo;uso corretto di quell&amp;rsquo;interfaccia passi da una mente all&amp;rsquo;altra e&amp;rsquo; microscopica&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Non esiste niente di simile alle interfacce nel linguaggio naturale, e quando esiste funziona solo tra coppie sposate. A meno che golang non sia un linguaggio concepito coi valori della famiglia in mente, onestamente se ne faceva anche a meno. Le interfacce andavano bene in ADA95, perche&amp;rsquo; &lt;strong&gt;restringevano&lt;/strong&gt; la quantita&amp;rsquo; di cose che si potevano fare con un dato. Qui nel golang, esse &lt;strong&gt;aumentano enormemente&lt;/strong&gt; la possibilita&amp;rsquo; di fare. E quindi, diminuiscono la probabilita&amp;rsquo; che voi facciate la cosa giusta.&lt;/p&gt;
+
+&lt;p&gt;Andiamo all&amp;rsquo;ultimo punto: scrivere meno codice.&lt;/p&gt;
+
+&lt;p&gt;Scrivere meno codice e&amp;rsquo; essenziale per la buona programmazione.&lt;/p&gt;
+
+&lt;p&gt;E&amp;rsquo; vero: per avere il certificato A , nella vita normale, devo avere il certificato B, l&amp;rsquo;attestato C, e poi portarle all&amp;rsquo;ufficio Z. In Germania ci mettete 5 minuti, ma dovete sapere quale sia l&amp;rsquo;ufficio esatto ove andare. E&amp;rsquo; scritto nel &amp;ldquo;Manuale della Germania&amp;rdquo;, che pero&amp;rsquo; non e&amp;rsquo; in vendita. (La gente crede sia una catena montuosa, viste le dimensioni.).&lt;/p&gt;
+
+&lt;p&gt;Allo stesso modo, nei linguaggi di programmazione moderni, per non parlare dei framework moderni, c&amp;rsquo;e&amp;rsquo; il disprezzo totale, inesorabile ed assoluto verso le variabili globali, che riducono enormemente la quantita&amp;rsquo; di codice da scrivere. (&lt;em&gt;contemporaneamente i programmatori fanno gara a passare variabili e funzioni usando un puntatore, per mostrare quanto lo hanno grosso. Il fatto che &lt;strong&gt;qualsiasi argomento contro una variabile globale&lt;/strong&gt; possa venire usato contro un puntatore , cioe&amp;rsquo; una variabile assoluta, evidentemente non li coglie&lt;/em&gt;). Questo si risolve mettendo le variabili dentro dei contenitori locali, e poi scrivendo altro codice per recuperarne il valore ed assegnarlo ad una variabile locale.&lt;/p&gt;
+
+&lt;p&gt;Risultato: in fase di troubleshooting, la gente deve fare come l&amp;rsquo;ispettore Derrick e mettersi ad investigare &lt;strong&gt;sul movente&lt;/strong&gt; del programmatore: come mai qui c&amp;rsquo;e&amp;rsquo; questa roba? Serve solo per recuperare sta cosa da un altro posto? E da quale posto? E quale cosa? Cui prodest? &lt;del&gt;Cave canem?&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;Queste tre grandi cattive abitudini, che sono&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Non documentare librerie e classi.&lt;/li&gt;
+&lt;li&gt;Non stare vicini al linguaggio naturale.&lt;/li&gt;
+&lt;li&gt;Scrivere troppo codice.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;resistono a tutti i tentativi di produrre un &amp;ldquo;&amp;ldquo;mondo del software&amp;rdquo;&amp;rdquo; migliore, per una ragione: qualsiasi &lt;strong&gt;linguaggio di programmazione puo&amp;rsquo; essere abusato&lt;/strong&gt;. MA specialmente, &lt;strong&gt;qualsiasi linguaggio&lt;/strong&gt; verra&amp;rsquo; abusato. Il problema non sta nel linguaggio. Stai nei programmatori.&lt;/p&gt;
+
+&lt;p&gt;Sia chiaro, non parlo di  vizi dei programmatori moderni. Anzi, quel viziaccio e&amp;rsquo; nato spesso  dagli accademici, che non pagando i programmatori disegnavano protocolli e software mettendoci dentro unghie incarnite come se piovessero. In questi giorni, per divertimento, sto facendo una specie di server che risponde al protocollo NNTP su localhost e poi usa un altro protocollo per trovare gli altri server e distribuire i messaggi ed i newsgroup. I server si trovano da soli e si scambiano i messaggi. Una specie di usenet senza server dell&amp;rsquo; ISP, peer to peer.&lt;/p&gt;
+
+&lt;p&gt;Ora, io non sono nemmeno un programmatore full-time, e sto buttando giu&amp;rsquo; idee, sinora il mio server crea un cluster DHT/Pastry , e risponde ad alcuni comandi NNTP. Cioe&amp;rsquo; non fa ancora nulla. Ma persino costruendo un giocattolo per me stesso, vedo ancora esempi di come, anche in passato, si sia ragionato male.&lt;/p&gt;
+
+&lt;p&gt;Il primo esempio e&amp;rsquo; la stessa definizione del protocollo NNTP nell&amp;rsquo; &lt;a href=&#34;https://tools.ietf.org/html/rfc977&#34;&gt;RFC977&lt;/a&gt;. Osservate la definizione di &amp;ldquo;NEWNEWS&amp;rdquo; e di &amp;ldquo;NEXT&amp;rdquo;. Ora, chi facesse un protocollo nell&amp;rsquo;anno di grazia 1986 - non sto scherzando: 1986 - poteva permettersi tutto tranne che sprecare memoria e codice. Nel senso che erano immensamente costosi. Allocare un puntatore (su cui fare NEXT, che e&amp;rsquo; stateful) per ogni utente connesso era costoso. A quell&amp;rsquo;epoca i KILOBYTE di memoria costavano. E anche i programmatori, nel privato costavano molto.&lt;/p&gt;
+
+&lt;p&gt;Stessa cosa con NEWNEWS. Potremmo nominare il fatto che i client avessero ancora meno memoria dei mainframe o dei server, ma rimane il fatto che quel design sembra sensato SOLO SE NON PAGHI I PROGRAMMATORI. Nel 1986, solo l&amp;rsquo;espansione di quell&amp;rsquo; asterisco COSTAVA.Rendere stateful una sessione, che poi oggi e&amp;rsquo; banale, all&amp;rsquo;epoca era pensabile solo su grandi macchine. Che loro, evidentemente, non pagavano.&lt;/p&gt;
+
+&lt;p&gt;Quel mindset, cioe&amp;rsquo;, e&amp;rsquo; rimasto sin dal 1986. Immagino che chi ha disegnato quella roba sia passato dal C al C++, poi quando non riusciva piu&amp;rsquo; a gestire il codice abbia deciso che Java fosse una ficata, poi quando e&amp;rsquo; impazzito di librerie non documentate sia passato a C#, e alla fine sia finito su Python, per divertirsi con l&amp;rsquo;indentazione, oppure su Scala.&lt;/p&gt;
+
+&lt;p&gt;Ma per quanti linguaggi cambino, questi personaggi non potranno mai pensare a roba decente. Non potranno perche&amp;rsquo; &lt;strong&gt;pensano&lt;/strong&gt; malissimo.&lt;/p&gt;
+
+&lt;p&gt;Il golang me lo dimostra. E&amp;rsquo; un linguaggio fantastico, sia chiaro. Ha tolto dalle palle quasi tutti gli elementi fastidiosi della programmazione. Ha tolto moltissime delle cose che seccavano. Cross compilazione in pochi secondi.
+Sintassi chiara. Compilazione semplice. Eseguibili senza dipendenze.&lt;/p&gt;
+
+&lt;p&gt;Ma nella ricerca di librerie che ho fatto per scrivere il mio programma, mi sono sentito dire che:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Vuoi la documentazione? Basta leggere il codice. Il codice e&amp;rsquo; documentazione.&lt;/li&gt;
+&lt;li&gt;Se il codice non e&amp;rsquo; chiaro, non e&amp;rsquo; perche&amp;rsquo; ho scritto array di liste di FIFO di  interfacce a puntatori di ring. Sei tu che non pensi come Spock sotto LSD.&lt;/li&gt;
+&lt;li&gt;Il fatto che si possa fare la stessa cosa con un terzo del codice testimonia quanto sono fico: posso scrivere tre volte il codice che serve per puro divertimento.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La mia sensazione, cioe&amp;rsquo;, e&amp;rsquo; che su golang stiano cercando di riciclarsi quelli che:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;hanno fallito in Java.&lt;/li&gt;
+&lt;li&gt;Hanno fallito in Php.&lt;/li&gt;
+&lt;li&gt;Hanno fallito in Python.&lt;/li&gt;
+&lt;li&gt;Hanno fallito in C#/.net&lt;/li&gt;
+&lt;li&gt;Hanno fallito con Javascript/CSS/Jquery&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;sento odore delle stesse minchiate. Girando per librerie di protocolli, e cercando la documentazione, vedo chiaramente il mindset di tutto cio&amp;rsquo; che e&amp;rsquo; andato storto nel passato. Roba mal documentata o non documentata e venduta come &amp;ldquo;libreria&amp;rdquo;, un modo di programmare lontanissimo dal linguaggio naturale, codice inutile ovunque, scritto solo per dimostrare &amp;ldquo;mamma, guarda, so usare un&amp;rsquo;interfaccia{}!&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Vedo poi arrivare i primi &amp;ldquo;framework&amp;rdquo;. La pestilenza del software. Fuori dal mondo enterprise, i framework  sono la cosa piu&amp;rsquo; stupida ed inutile che esista, e servono solo a creare &lt;em&gt;la persona che sul CV scrive che conosce il tale framework&lt;/em&gt;. &amp;ldquo;Conosce&amp;rdquo; significa che siccome la documentazione manca e il codice e&amp;rsquo; brutto e ridondante, allora lui ci ha sbattuto la testa e per questo tempo speso in trial&amp;amp;errors vuole essere pagato.&lt;/p&gt;
+
+&lt;p&gt;Certo, ci sono casi nei quali i framework servono. Ma si tratta di casi che capitano con grandi progetti, nella media basterebbero delle normalissime librerie. Insomma, vedo nubi nere all&amp;rsquo;orizzonte.&lt;/p&gt;
+
+&lt;p&gt;Il motivo per il quale temo per il golang pero&amp;rsquo; e&amp;rsquo; diverso: si presta troppo bene a programmare &lt;strong&gt;da soli&lt;/strong&gt;. E quando programmi da solo, non ti serve documentare. Hai tutto in mente. Non ti serve usare codice chiaro: tu leggi benissimo la tua calligrafia assirobabilonese. E neanche scrivere poco codice: anzi, sofistichiamo un pochino, che quando torna la mamma glielo faccio vedere prima di aiutarla a portare in casa la spesa.&lt;/p&gt;
+
+&lt;p&gt;Golang e&amp;rsquo; bellissimo, ma aiuta troppo il programmatore solitario. Ha il merito di essere il piu&amp;rsquo; meraviglioso oggetto per hobbysti dopo il Borland Turbo Pascal, ma dall&amp;rsquo;altro lato, aiuta troppo il programmatore solitario.&lt;/p&gt;
+
+&lt;p&gt;Il mio timore e&amp;rsquo; di veder piombare nel mondo del lavoro gente che non ha capito una cosa: &lt;strong&gt;nell&amp;rsquo; IT, devi lavorare con-gli-altri&lt;/strong&gt;. Il tuo codice verra&amp;rsquo; fatto girare da un gruppo di operations. Il tuo codice verra&amp;rsquo; osservato dalla security IT. Dovrai implementare sul codice di altri. Gli altri implementeranno sul tuo.&lt;/p&gt;
+
+&lt;p&gt;In definitiva, cioe&amp;rsquo;, il peggior difetto dei programmatori e&amp;rsquo; quello di saper lavorare solo sul proprio pc e da soli. Se gia&amp;rsquo; il programmatore ha la tendenza a diventare solitario, questa tendenza era attenuata da build tool come maven e altri sistemi  che di fatto spingevano gli sviluppatori sulla strada del &lt;em&gt;lavorare con gli altri&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Adesso arriva golang, e vedo che e&amp;rsquo; fantasticamente disegnato per consentire ad un programmatore di lavorare da solo. Certo, ha una serie di strumenti magnifici per lo sviluppo di squadra, ma rimane troppo buono per divertirsi da soli.&lt;/p&gt;
+
+&lt;p&gt;In pratica, ho paura di sentirmi dire daccapo &amp;ldquo;ma sul computer dove l&amp;rsquo;ho provato funziona benissimo&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Dal mio punto di vista, mi ci sto solo divertendo nel poco tempo libero, ma cercare di immaginare un mondo nel quale si concentreranno tutti quelli che non sanno lavorare &lt;strong&gt;con gli altri&lt;/strong&gt; e &lt;strong&gt;hanno tutte le cattive abitudini degli ultimi 20 anni&lt;/strong&gt; un pochino, onestamente, mi preoccupa.&lt;/p&gt;
+
+&lt;p&gt;Spero di sbagliare.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;iframe width=&#34;420&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/K1T4lXfEfyQ&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

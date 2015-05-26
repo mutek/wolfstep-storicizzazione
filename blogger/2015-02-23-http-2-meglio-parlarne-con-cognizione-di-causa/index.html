@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content="  HTTP/2, meglio parlarne con cognizione di causa. &middot;  KEIN PFUSCH, BITTE!" />
+  <meta property="og:site_name" content="KEIN PFUSCH, BITTE!" />
+  <meta property="og:url" content="http://www.wolfstep.cc/blogger/2015-02-23-http-2-meglio-parlarne-con-cognizione-di-causa/" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2015-02-23T12:15:50&#43;01:00" />
+  
+  
+
+  <title>
+      HTTP/2, meglio parlarne con cognizione di causa. &middot;  KEIN PFUSCH, BITTE!
+  </title>
+
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/main.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://www.wolfstep.cc//css/github.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="http://www.wolfstep.cc//images/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://www.wolfstep.cc//images/apple-touch-icon.png" />
+  <link href="" rel="alternate" type="application/rss+xml" title="KEIN PFUSCH, BITTE!" />
+</head>
+<body>
+
+
+  <header class="global-header">
+    <section class="header-text">
+      <h1><a href="http://www.wolfstep.cc/">KEIN PFUSCH, BITTE!</a></h1>
+      
+      <div class="tag-line">
+        Comunicare, ammesso sia possibile, e&#39; perfettamente inutile
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+      
+      <a href="http://www.wolfstep.cc/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary"> HTTP/2, meglio parlarne con cognizione di causa.</h1>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2015-02-23T12:15:50&#43;01:00">
+          Feb 23, 2015
+        </time>
+      </div>
+      <div class="pull-right">
+        
+      </div>
+    </div>
+  </header>
+  <section>
+<div style="text-align: justify;">
+    <div class='post'>
+<div style="text-align: justify;">Il fatto che il draft finale di HTTP/2 sia disponibile al pubblico consente ai tecnici di leggerne le specifiche, ( <a href="https://tools.ietf.org/html/draft-ietf-httpbis-http2-17">https://tools.ietf.org/html/draft-ietf-httpbis-http2-17</a> ) e di trarne delle impressioni. Questo pero' contrasta con la descrizione "diversamente competente" che ne sta facendo la stampa, nel senso che si limitano a dire "piu' velocita' "o "piu' sicurezza" cosa che NON e' affatto implicita nel protocollo, senza aver capito bene che cosa abbia animato la definizione del protocollo, ovvero la capacita' di disegnare facilmente servizi migliori usando uno standard unico.</div><br /><a name='more'></a>Se dovessi spiegare i principali vantaggi che vedo in HTTP/2, li riassumerei in questo modo:<br /><br /><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><blockquote class="tr_bq">HTTP/2 rappresenta uno standard UNIFICATO che consente il design di servizi IP/HTTP esistenti,&nbsp; secondo una serie di specifiche tecniche COMUNI. In sostanza, anziche' richiedere agli sviluppatori (Netflix, Whats'app, Facebook, Youtube, etc) di sviluppare il proprio standard per risolvere i problemi piu' comuni, fornisce una risposta standardizzata.</blockquote></div><br /><div style="text-align: justify;">&nbsp;I vantaggi di questo standard per l'utente sono INDIRETTI. Il fatto che esista una conoscenza comune attraverso la quale uno sviluppatore di Twitter possa usare le stesse tecniche dentro l'infrastruttura, che so, di Youtube, fa si' che disegnare un servizio e farlo interagire con altri richieda meno lavoro di integrazione, ovvero meno costi.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Per esempio, prendiamo le CDN: fare caching locale dei contenuti di Twitter consisteva nel tenere conto di tutte le soluzioni usate da Twitter per ottimizzare la fruibilita' del proprio servizio, soluzioni che magari non erano le stesse di Facebook.&nbsp; Adesso HTTP/2 consolida queste soluzioni dicendo: "volete fare chat e videochat? Vi offriamo una tecnologia chiamata stream ed una chiamata frame, e potete farne anche in parallelo". A quel punto, la CDN potra' offrirsi come CDN anche per la chat, dal momento (e nella misura in cui) tutti useranno le features di HTTP/2 per la chat, anziche' dover supportare soluzioni proprietarie.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">I vantaggi innanzitutto sono dei grandi OTT, e (si spera o si presume) che l'utente ne benefici ricevendo servizi piu' economici. Il fatto che poi il costo di integrazine dei servizi sia minore significa che, a parita' di budget, sia possibile "mettere piu' carne al fuoco" nel disegnare un servizio. Quindi, l'offerta di servizi sta per arricchirsi sul piano delle features.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">COme hanno realizzato queste cose? Che cosa hanno inventato?</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">In realta' proprio nulla. Hanno semplicemente "migrato" su HTTP alcune caratteristiche di altri protocolli, come SIP, RDP, SMPP , SCTP, ed altri.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Innanzitutto, come avviene la transizione. Siccome il client non puo' sapere che lingua parli il nuovo server, ovvero se il server usi questo protocollo, la prima fase della connessine HTTP e' una vera e propria fase di session initiation, concetto preso da SIP.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Il server lancera' una richiesta in HTTP 1.1, ma essa conterra' una richiesta di upgrade, cui il server dovra' rispondere. Se esso risponde con un OK 101, o un altro 1XX, allora l'upgrade e' accettato e si passa ad HTTP 2.0. Questo trasforma HTTP in un protocollo che definisce la sessione.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Le features prese da SIP non finiscono qui. Successivamente alla definizione del protocollo da usare, vengono introdotti i frames e gli stream.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Chi ha esperienza nel mondo telco, ed in particolare con SIP, sa che ci troviamo di fronte ad un cosiddetto SDP, Session Definition Protocol. Sia il client che il server possono chiedere l'inizio di una sessione di streaming , o di una sessione di scambio di frames. La cosa interessante e' che le sessioni sono possibili anche in parallelo, sulla stessa connessione.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Non esiste , come succedeva a SIP, la possibilita' di agire come proxy per la connessione, ovvero di agire come registration server e mettere in contatto i due peer,&nbsp; MA ricordiamo che la cosa non e' necessaria dal momento che HTTP/2 conserva la 301 e la 302: il server potra' sempre redirigere il vostro browser su un altro indirizzo/porta, compreso... quello di un altro client! Poteva farlo anche prima, ma con HTTP/2 il client ha, di fatto , le stesse capacita' del server nel definire frames e streams.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">L'introduzione di questi due paradigmi forti, molto simili a quelli di SIP, vanno a modificare la natura di HTTP/2, che puo' oggi diventare piu' vicino di prima ad un protocollo P2P, visto che alla fine ogni capacita' del client (chiedere un nuovo stream, o definire un nuovo frame) e' identica nel server, e viceversa. Di fatto, si tratta di un "ammorbidimento" del paradigma client-server.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Queste cose, sia chiaro, erano fattibili anche prima usando diversi espedienti. Il problema e' che esisteva una grande varieta' di espedienti, e nessuno standard di fatto: la CDN che si occupasse di rendere piu' performante il servizio doveva spendere piu' soldi per supportarli tutti.</div><div style="text-align: justify;"><br />Con HTTP/2, tornando all'esempio di prima, nella misura in cui queste tecniche verranno adottate, il lavoro delle grandi CDN e dei grandi cloud e' inferiore, perche' avviene una standardizzazione, ovvero un possibile consolidamento. (1)</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Fin qui, tutto cio' che hanno preso da SIP.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Andiamo a vedere cosa abbiano preso da SMPP . SMPP e' un protocollo molto usato per la trasmissione di messaggi SMS, e introduce due cose. Una e' il concetto di "Bind", ovvero una connessione unica numerata la cui persistenza viene verificata tramine un "enquire link", cioe' un finto SMS il cui scopo e' quello di ottenere indietro un ACK per vedere che risponda.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">In questo senso, l'enquire link si comporta come una verifica del contratto di servizio: "caro ESME, sei ancora dispobibile a scambiare traffico con me su questo canale?". Se non arriva un ACK entro tot tempo, si deduce che il trasporto sia negato e si stabilisce una nuova "bind". Se la nuova BIND viene negata, evidentemente ci sono problemi, che andrebbero segnalati nello Status.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Il concetto e' ripreso con la PUSH_PROMISE dal PING. La Push promise e' una tecnica con la quale si invia un apposito frame, richiedendo alla controparte di allocare risorse, in attesa che si faccia il traffico. Si dice alla controparte "Guarda che potrei usare questo canale per inviare contenuti". Se la controparte puo' allocare risorse, ed e' in grado di rispondere, chiaramente mandera' indietro una risposta positiva. Se non puo', chi ha inviato la PUSH_PROMISE e' informato che non potra' usare questa connessione per trasmettere.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Il PING e' l'equivalente quasi esatto della ENQUIRE LINK del protocollo SMPP (nonche' di CIMD2, UCP&amp;co).</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">HTTP/2 introduce anche alcune tecniche tipiche della segnalazione, da usarsi per il&nbsp; flow control. Significa che una serie di headers, come GOAWAY o CONTINUATION e la stessa PUSH_PROMISE sono in grado di dare ai frames una vera e propria semantica da segnalazione, indicando alle controparti che il trasporto e' cambiato. Anche questo , ad ovvio vantaggio degli OTT che usano le CDN, cosi' come di quelle aziende che da oggi vorranno usare HTTP/2 per proporre servizi simili a quelli delle telco.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Del protocollo SMPP notiamo anche la tecnica usata per trasmettere i setting delle connessioni, che richiama molto l' UDHI che si usa nelle PDU nel mondo degli SMS. Lo stesso concetto di "frame" richiama molto il concetto di PDU.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">E' importante notare il fatto che tutto questo sia definito a livello di Headers, il che esclude soluzioni simili ai vecchi protocolli come Parlay-X, OneAPI o MM7, basate sul body o in generale sull'idea di SOA. Il fatto di mettere tutto negli headers indica un mindset piu' simile a REST che a SOAP.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Continuiamo, e andiamo a vedere cosa si sia preso da RDP &amp; simili.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">La definizione degli stream concorrenti e dei frame per il controllo degli stream e' chiaramente una eredita' dei protocolli di streaming. Le estensioni usate per la segnalazione nel mondo dello streaming sono importate quasi di sana pianta dentro il protocollo.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Abbiamo in particolare frames per la definizione della continuazione di uno stream, della sua prioritizzazione e specialmente della sua RE-prioritizzazione, il che fa pensare che siano state ascoltate le esigenze delle aziende che fanno streaming usando il mondo mobile come media (LTE, in particolare).</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Nel capitolo 5.3.3, infatti, si nota un esempio che mostra la soluzione di un problema di provisioning tipico dei flussi video oggi eseguiti in multicast. Il fatto che la priorita' dei flussi possa essere dipendente significa che una connessione HTTP/2 potra' di fatto avere sottostream "dipendenti": per esempio, si potra' dire che tutte le connessioni prioritizzate come VOIP dipendono dalla prima connessione VOIP, e tutte le connessioni usate per i film dipendono dalla priorita' usata da una prima connessione video. Netflix &amp;co , come Spotify, saranno molto felici di questo.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Ancora, l' header "SETTINGS" consente di scambiare, dentro un frame che definisce un dato stream, la lista di costraints. Questo e' simile sia alle tecniche di definizione di sessione di SIP, ma anche alle tecniche usate dai client multimediali per esprimere la lista dei codec supportati, tipiche dei protocolli RDP.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Esistono poi un paio di features che vengono dal mondo SCTP, ovvero il controllo del traffico, e anche il PING e', ancora una volta, una implementazione dell'heartbeat delle associazioni SCTP. Ma da SCTP e' preso anche un sistema di gestione della congestione,&nbsp; ovvero la possibilita' di negoziare una window_size. Come dice il nome, la WINDOW_SIZE e' genericamente&nbsp; la quantita' di pacchetti che si possono inviare prima di avere una risposta di conferma. Se la window_size e' uguale ad uno allora ogni messaggio deve ricevere risposta prima che il messaggio successivo venga inviato. Se la settate a 10, potete inviare 10 messaggi in fila, aspettare le risposte. E' un header esplicito che definisce il controllo di traffico, che era mancante nel "Pipelining" del protocollo HTTP 1.1.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">&nbsp;Tale window puo' essere cambiata in qualsiasi momento, con un WINDOW_UPDATE.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Andiamo a come viene venduta la cosa sui giornali, tipo "piu' sicurezza" o "piu' velocita'".</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Cominciamo con la velocita'.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Questa cosa vi dara' piu' velocita'? NI. Per esempio, avere molti handshaking in piu' amplifica il terribile peso della latenza. Il fatto che esista il PING consente di misurare il roundtrip e di variare la finestra di trasmissione, volendo, ma questo non e' una garanzia di velocita' piu' alta: al massimo e' garanzia di velocita' ADEGUATA al media. Il vantaggio e' quasi tutto dal lato infrastruttura, visto che l'infrastruttura e' meno impegnata ad allocare risorse per un terminale che magari e' in GPRS e ha pochissimo trasporto a disposizione.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Non avrete piu' velocita', ma avrete una allocazione migliore delle risorse , E2E: nessuna CDN e nessun servizio allocheranno piu' le stesse risorse per tutti, come ora, quando magari la vostra connessione e' da 3 Mb/s in download, mentre oggi una CDN alloca mediamente la stessa quantita' di risorse a chi ha la fibra e ha 100Mb/s e a chi ha una ADSL sgrausa e ne fa al massimo 3.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">A questo scopo , nei frame di definizione, e' definito un header dal nome divertente di "   ENHANCE_YOUR_CALM " ovvero se il vostro browser si presenta dicendo "dammi il mondo, subito", il server calcola che non ha abbastanza risorse e gli risponde "stai calmino, ciccio".&nbsp; Brutta notizia per chi tenta il DDOS.</div><div style="text-align: justify;"></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Passiamo alla sicurezza. Per la sicurezza vale ancora il discorso di prima. Vi connettete usando http1.1, e chiedete un upgrade a "h2". A quel punto si passa alla negoziazione di un protocollo criptato, ma ci sono diverse novita'. Anche qui si definiscono dei frame di segnalazione che consentono alle parti di richiedere o meno una determinata sicurezza. Significa che , in teoria, diventa possibile dire al Browser che non accettate connessioni "meno sicure di tot". A questo scopo viene messo in gioco un header (da inserire nel frame) chiamato " INADEQUATE_SECURITY"</div><div style="text-align: justify;"></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Questo header consente di rispondere al peer che la sicurezza non e' ritenuta sufficiente, e chiudere la connessione. Lo stesso dicasi per il server, che puo' decidere di NON servire dei browser incapaci di usare un dato livello di sicurezza.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Questo "aumenta" la sicurezza? In generale no, visto che HTTP/2 non definisce nuove cifrature: aumenta la facilita' con la quale e' possibile garantire contrattualmente la sicurezza.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Supponiamo che la banca X faccia un contratto con l'azienda Y per un sistema di home banking. Allora l'azienda si mettera' a chiedere a tutti di installare il certificato lato client, e fara' test di penetrazone su una serie di browser e di sistemi operativi. ma che succede se io mi connetto con un client scritto da me, o da qualche client tipo Konqueror versione X.y.z, che esiste in una incontrollabile varieta' di versioni?&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Oggi come oggi l'azienda Y per controllare puo' soltanto testare X browsers, verificare lo User-Agent, e poi proibire l'accesso a browser non certificati. La proliferazione del mondo mobile e del numero di piattaforme client rende necessaria una verifica piu' puntuale: agendo solo per "client supportati" si rischia un infinito ciclo di test , mentre oggi si potra' aprire uno stream meno sicuro , per esempio per darvi le icone del sito di home banking, ma poi la parte con la ciccia puo' richiedere uno stream concorrente a sicurezza maggiore.&nbsp;</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Di conseguenza, non parliamo di "piu' sicurezza", ma di una migliore possibilita' di adattare la sicurezza alle esigenze del contenuto. Faccio notare che questo espone ad una maggiore varieta' di errori, nella misura in cui il tale contenuto viene ritenuto "neutrale".</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Per esempio, in una chat io potrei decidere di mandare in chiaro il video - per risparmiare risorse - e di criptare solo la voce. Questo puo' essere giusto o meno, o richiesto da una legislazione particolare, e definire il "livello adeguato" : voi potreste difendervi solo definendo un livello aadeguato&nbsp;&nbsp; di criptazione generale, molto alto, sul vostro browser.&nbsp; Se siete capaci di farlo.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">In generale, se dovessi promettere qualcosa legato a HTTP/2, non prometterei piu' velocita' o piu' sicurezza (anzi, i rischi mi sembrano aumentati in caso di implementazioni povere), ma una nuova varieta' di servizi, piu' ricchi, dal momento che il consolidamento delle funzionalita' consente di ridurre i costi di design e di integrazione.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Avrete quindi servizi piu' ricchi ed economici.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Quanto a sicurezza e velocita', dipende tutto da quanto e' bravo il vostro ISP e da quanto competente e' chi difende il vostro PC.</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Come al solito.<br /><br />In definitiva:<br /><br /><ol><li>E' sbagliato dire che HTTP/2 introduce nuove possibilita': queste cose venivano gia' fatte, usando semantiche e soluzioni proprietarie. Quello che fa HTTP/2 e' di indicare uno standard comune.</li><li>E' sbagliato dire che HTTP/2 faccia cose nuove. Si tratta di cose gia' presenti in altri protocolli di successo, dispersi in un numero enorme di standard: HTTP/2 si limita ad un CONSOLIDAMENTO di queste idee gia' collaudatissime.</li><li>E' sbagliato dire che HTTP/2 sia "piu' veloce' " o "piu' sicuro": la velocita' rimane in mano a chi trasmette e a chi trasporta, e la sicurezza e' in gran parte affidata all'implementazione: negoziare o meno una data criptazione non e' il problema di oggi: come abbiamo visto negli ultimi anni, il problema e' quasi sempre di implementazione. Quello che fa HTTP/2 e' offrire una serie di ottimizzazioni, che pero'&nbsp; offriranno risultati molto dipendenti dall'implementazione.&nbsp;</li><li><span style="color: red;">E' corretto dire che abbassando i costi di design, implementazione e integrazione, HTTP/2 apre le porte a servizi piu' ricchi di features e di contenuti fruibili, a costi inferiori <b>per il fornitore di servizio , per il fornitore di trasporto, per le CDN.</b></span> <u><b><span style="color: red;">Se i costi si abbasseranno per gli utenti, lo vedremo.</span></b></u></li></ol></div><div style="text-align: justify;"><br /></div><div class="separator" style="clear: both; text-align: center;"><iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://ytimg.googleusercontent.com/vi/n6n72p5yMCs/0.jpg" frameborder="0" height="266" src="http://www.youtube.com/embed/n6n72p5yMCs?feature=player_embedded" width="320"></iframe></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">(1) Ovviamente Microsoft fara' il suo standard proprietario non interoperabile, come al solito. Scoprira' poi che tutti usano lo standard aperto, e il mercato si trovera' il solito standard proprietario usato solo da Exchange , da Sharepoint e da Internet Explorer/Spartan. Cosi' muore una grande azienda che non capisce Internet sin dal primo giorno.</div></div>
+<h2></h2>
+<div class='comments'>
+</div>
+
+<br>
+<div class="addthis_native_toolbox"></div>
+
+</div>
+
+  </section>
+  <footer>
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        <h1 class="author-name text-primary">Uriel Fanelli</h1>
+        
+        
+      </div>
+      
+      <div class="author-contact col-md-4">
+        <a href="mailto:uriel.fanelli@gmx.de">
+          <i class="fa fa-envelope-o"></i>
+          &nbsp;Contact me
+        </a>
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous"><a href="http://www.wolfstep.cc/blogger/2015-02-22-libia-chi-vuole-l-italia-in-guerra/"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next"><a href="http://www.wolfstep.cc/blogger/2015-02-25-nsa-e-la-psywar-contro-pgp-gpg/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+
+
+
+<iframe id="forum_embed"
+  src="javascript:void(0)"
+  scrolling="no"
+  frameborder="0"
+  width="100%"
+  height="700">
+</iframe>
+
+<script type="text/javascript">
+  document.getElementById('forum_embed').src =
+     'https://groups.google.com/forum/embed/?place=forum/kein-pfusch'
+     + '&showsearch=false&showpopout=true&showtabs=false&hl=it&theme=Light'
+     + '&parenturl=' + encodeURIComponent(window.location.href);
+</script>
+
+
+
+
+
+
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      
+    </div>
+    <div class="sns-links hidden-print">
+  
+  <a href="https://twitter.com/@Uriel_fanelli" target="_blank">
+      <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://vk.com/uriel.fanelli" target="_blank">
+    <i class="fa fa-vk"></i>
+  </a>
+  
+  
+  <a href="https://github.com/uriel-fanelli" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  <a href="https://plus.google.com/u/0/b/115168008878786945937/115168008878786945937" target="_blank">
+    <i class="fa fa-google-plus"></i>
+  </a>
+  
+<br>
+  
+  <a href="/books/" target="_blank">
+    <i class="fa fa-book"></i>
+  </a>
+  
+
+
+  <a href="/pages/datenschutz/" target="_blank">
+    <i class="fa fa-gavel"></i>
+  </a>
+  
+
+
+
+  <a href="/pages/contattarmi/" target="_blank">
+    <i class="fa fa-beer"></i>
+  </a>
+  
+
+
+  <a href="/pages/faq/" target="_blank">
+    <i class="fa fa-warning"></i>
+  </a>
+  
+
+
+
+
+</div>
+<br>
+  </footer>
+
+  <script src="http://www.wolfstep.cc//js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f32bcd406c5e50" async="async"></script>
+
+
+</body>
+</html>
+
